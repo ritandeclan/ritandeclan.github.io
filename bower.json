@@ -1,0 +1,20 @@
+{
+  "name": "wedding",
+  "version": "0.0.0",
+  "homepage": "https://github.com/declanandrita/weddingwebsite",
+  "authors": [
+    "declanv <declanv@gmail.com>"
+  ],
+  "description": "Rita and Declan Wedding Site",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

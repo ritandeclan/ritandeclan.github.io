@@ -1,1 +1,44 @@
-wedding.css
+body {
+  background-color: grey;
+  color: white;
+}
+body #info-section,
+body #rsvp-section,
+body #map-section {
+  width: 100%;
+  color: grey;
+  display: block;
+  position: relative;
+}
+body #info-section .intro {
+  width: 750px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+body #info-section .intro .intro-lead {
+  color: white;
+  font-size: 50px;
+}
+body #info-section .intro .intro-message {
+  color: white;
+  font-size: 18px;
+}
+body #rsvp-section .form-container {
+  width: 750px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+body #map-section .map-container {
+  width: 750px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
