@@ -1,3 +1,43 @@
+// fonts
+// Lato
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+// Arvo
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,700italic);
+
+// mixins
+
+.body-font-thin() {
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+.body-font-light() {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.body-font-normal() {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.head-font-normal() {
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+}
+
+.head-font-heavy() {
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+}
+
+.head-font-heavy-italic() {
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 body {
 
   background-color: grey;
@@ -27,11 +67,13 @@ body {
 
       .intro-lead {
         color: white;
+       .head-font-heavy-italic();
         font-size: 50px;
       }
 
       .intro-message {
         color: white;
+       .body-font-light();
         font-size: 18px;
       }
 
