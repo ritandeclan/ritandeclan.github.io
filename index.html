@@ -8,7 +8,7 @@
   <meta name="description" content="Our Wedding Site">
   <meta name="author" content="Declan and Megan Van Welie">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="public/assets/css/wedding.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,18 +22,38 @@
     <div>
     </div>
   </section>
-  <section id="info">
+
+  <section id="info-section">
     <div class="intro">
-      <h3 class="intro-message">
-        Hi there! We're getting married!
+      <h3 class="intro-lead">
+        We're getting married!
       </h3>
-      <form action="//formspree.io/declanandrita@gmail.com"
-      method="POST">
+      <p class="intro-message">
+        As many of you know (and I'm sure not surprised) we are going to celebrate 10 years together by getting married!  Join us April 30th, 2016 in sunny Naples FL, at the hotel escalante. Weather permitting, we will be having a beach ceremony, and an outdoor reception.  Wear your coolest (in both senses of the word) informal wedding attire and fill out an rsvp. We will be updating this site with more details about wedding timing, food options, before and after events, hotel suggestions and room blocks, fun things to do nearby and places to eat. We are viewing this as a wedding vacation and hope to see you at the wedding, as well as at the beach, on an airboat tour through the Everglades and much much more!
+      </p>
+    </div>
+  </section>
+
+  <section id="rsvp-section">
+    <div class="form-container">
+
+      <p class="form-intro-message">
+        Choose your own adventure...
+      </p>
+
+      <form action="//formspree.io/declanandrita@gmail.com" method="POST">
         <input type="text" name="name">
         <input type="email" name="_replyto">
         <input type="submit" value="Send">
       </form>
     </div>
   </section>
+
+  <section id="map-section">
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57305.34255184805!2d-81.79182915!3d26.145106499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dae19b73c2d7ad%3A0x673f5318d72c9aaa!2sNaples%2C+FL!5e0!3m2!1sen!2sus!4v1435025771987" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </section>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
-  "name": "ls",
+  "name": "Wedding",
   "version": "1.0.0",
-  "description": "",
+  "description": "A silly wedding website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/declanandrita/declanandrita.github.io.git"
   },
-  "author": "",
+  "author": "Megan and Declan Van Welie",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/declanandrita/declanandrita.github.io/issues"
@@ -19,11 +19,17 @@
   "dependencies": {
     "del": "^1.2.0",
     "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
     "gulp-concat": "^2.5.2",
+    "gulp-if": "^1.2.5",
     "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.1.6",
     "gulp-plumber": "^1.0.1",
     "gulp-require": "^0.1.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.5",
+    "gulp-watch": "^4.2.4",
     "lodash": "^3.9.3"
   }
 }
