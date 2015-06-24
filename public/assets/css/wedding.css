@@ -11,6 +11,7 @@ body #map-section {
   color: grey;
   display: block;
   position: relative;
+  margin: 100px auto;
 }
 body #info-section .intro {
   width: 750px;
@@ -40,6 +41,11 @@ body #rsvp-section .form-container {
   margin: 0 auto;
   color: white;
   text-align: center;
+}
+body #rsvp-section .form-container .form-intro-message {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
 }
 body #map-section .map-container {
   width: 750px;
