@@ -43,6 +43,33 @@ body {
   background-color: grey;
   color: white;
 
+  #header-section {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: darkgrey;
+    height: 50px;
+
+    .header-link-container {
+
+      .head-font-normal();
+
+      width: 700px;
+      margin: 0 auto;
+
+      .info-link,
+      .rsvp-link,
+      .map-link {
+        position: inline;
+        float: left;
+        width: 200px;
+        height: 50px;
+      }
+    }
+  }
+
   #info-section,
   #rsvp-section,
   #map-section {
