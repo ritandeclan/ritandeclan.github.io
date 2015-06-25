@@ -32,9 +32,11 @@ body #info-section,
 body #rsvp-section,
 body #map-section {
   width: 100%;
+  height: auto;
   display: block;
   position: relative;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 body #info-section {
   background-color: #dc4580;
