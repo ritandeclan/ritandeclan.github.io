@@ -55,7 +55,9 @@ body #info-section .intro .intro-lead {
   font-family: 'Arvo', serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 50px;
+  font-size: 90px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
 }
 body #info-section .intro .intro-message {
   color: white;
