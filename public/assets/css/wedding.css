@@ -115,6 +115,7 @@ body #map-section {
 }
 body #map-section .map-container {
   width: 900px;
+  border: 10px double white;
   height: auto;
   margin: 0 auto;
   color: white;
