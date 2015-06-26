@@ -27,8 +27,9 @@ body #header-section .header-link-container .rsvp-link,
 body #header-section .header-link-container .map-link {
   position: inline;
   float: left;
-  width: 200px;
+  width: 33%;
   height: 50px;
+  text-align: center;
 }
 body #info-section,
 body #rsvp-section,
@@ -69,8 +70,8 @@ body #info-section .intro .intro-message {
   color: #656478;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 40px;
   width: 900px;
   margin: 70px auto;
 }
