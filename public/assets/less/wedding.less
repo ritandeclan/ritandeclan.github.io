@@ -12,16 +12,28 @@
 
 @hot-pink: #f257be;
 @hot-blue: #236188;
-@hot-orange: ff6533;
+@hot-orange: #ff6533;
 @hot-light-green: #90cca9;
-@hot-dark-blue: 231f40;
+@hot-dark-blue: #231f40;
+
+// art deco 1
+
+@deco-light-pink: #f7b7c7;
+@deco-grey: #656478;
+@deco-blue: #75d0bb;
+@deco-yellow: #f18d11;
+@deco-red: #e9243c;
+
 
 // fonts
 // Lato
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
 // Arvo
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,700italic);
+
+// Lobster
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
 
 // mixins
 
@@ -42,6 +54,11 @@
   font-weight: 400;
 }
 
+.body-font-bold() {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
 .head-font-normal() {
   font-family: 'Arvo', serif;
   font-weight: 400;
@@ -58,16 +75,33 @@
   font-style: italic;
 }
 
+.lobster-bold-italic() {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
 // width / height mixins
 
 .content-full-width() {
-  width: 700px;
+  width: 900px;
+}
+
+// border mixins
+
+.double-border(@color) {
+  border: 10px double @color;
+}
+
+.double-border-bottom(@color) {
+  border-bottom: 10px double @color;
 }
 
 body {
 
-  background-color: @bouqet-light-green;
-  color: white;
+  background-color: @deco-blue;
+  color: @deco-grey;
   margin: 0;
 
   #header-section {
@@ -76,14 +110,15 @@ body {
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: @bouqet-dark-blue;
+    background-color: @deco-blue;
     height: 50px;
+    .double-border-bottom(white);
 
     .header-link-container {
 
-      .head-font-normal();
+      .body-font-normal();
 
-      width: 700px;
+      .content-full-width();
       margin: 0 auto;
 
       .info-link,
@@ -113,11 +148,11 @@ body {
 
   #info-section {
 
-    background-color: @bouqet-pink;
+    background-color: @deco-light-pink;
+    .double-border-bottom(white);
 
     .intro {
-
-      width: 750px;
+      .content-full-width();
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -126,17 +161,44 @@ body {
       text-align: center;
 
       .intro-lead {
+        .double-border(@deco-red);
         color: white;
-       .head-font-heavy-italic();
-        font-size: 90px;
-        text-transform: uppercase;
-        letter-spacing: 8px;
+        //border-radius: 12px;
+       //.head-font-heavy-italic();
+       .lobster-bold-italic();
+        font-size: 120px;
+        line-height: 120px;
+        padding: 20px 0;
+        //text-transform: uppercase;
+        //letter-spacing: 6px;
+        margin: 20px auto;
       }
 
       .intro-message {
+        color: @deco-grey;
+       .body-font-normal();
+        font-size: 25px;
+        line-height: 30px;
+        .content-full-width();
+        margin: 70px auto;
+
+        &.btwn {
+          .body-font-bold();
+          font-size: 25px;
+          line-height: 25px;
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase;
+        }
+
+      }
+
+      .standout-text {
         color: white;
-       .body-font-light();
-        font-size: 18px;
+        .lobster-bold-italic();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 30px auto;
       }
 
     }
@@ -144,12 +206,15 @@ body {
 
     #rsvp-section {
 
+    background-color: @deco-yellow;
+    .double-border-bottom(white);
+
     .form-container {
-      width: 750px;
+      .content-full-width();
       height: auto;
       background-color: transparent;
       margin: 0 auto;
-      color: @bouqet-umber-red;
+      color: white;
       text-align: center;
 
       .form-intro-message {
@@ -162,21 +227,16 @@ body {
 
   #map-section {
 
+    background-color: @deco-grey;
+
     .map-container {
-      width: 750px;
+      .content-full-width();
       height: auto;
-      background-color: transparent;
       margin: 0 auto;
       color: white;
       text-align: center;
     }
 
   }
-
-
-
-
-
-
 
 }
