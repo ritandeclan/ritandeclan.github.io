@@ -14,7 +14,7 @@ body #header-section {
   z-index: 10;
   background-color: #75d0bb;
   height: 50px;
-  border-bottom: 10px double white;
+  border-bottom: 6px double white;
 }
 body #header-section .header-link-container {
   font-family: 'Lato', sans-serif;
@@ -43,7 +43,7 @@ body #map-section {
 }
 body #info-section {
   background-color: #f7b7c7;
-  border-bottom: 10px double white;
+  border-bottom: 6px double white;
 }
 body #info-section .intro {
   width: 900px;
@@ -81,7 +81,7 @@ body #info-section .intro .intro-message.btwn {
   font-size: 25px;
   line-height: 25px;
   margin: 0;
-  padding: 0;
+  padding: 15px 0 0 0;
   text-transform: uppercase;
 }
 body #info-section .intro .standout-text {
@@ -94,9 +94,21 @@ body #info-section .intro .standout-text {
   line-height: 90px;
   margin: 30px auto;
 }
+body #info-section .intro .us-img-container {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 50px auto;
+  border: 10px double white;
+}
+body #info-section .intro .us-img-container .us-img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+}
 body #rsvp-section {
   background-color: #f18d11;
-  border-bottom: 10px double white;
+  border-bottom: 6px double white;
 }
 body #rsvp-section .form-container {
   width: 900px;
@@ -117,8 +129,12 @@ body #map-section {
 body #map-section .map-container {
   width: 900px;
   border: 10px double white;
-  height: auto;
+  height: 500px;
   margin: 0 auto;
   color: white;
   text-align: center;
+}
+body #map-section .map-container #map-canvas {
+  height: 100%;
+  width: 100%;
 }
