@@ -125,10 +125,12 @@ body #rsvp-section .form-container .form-intro-message {
 }
 body #weather-section {
   background-color: #f7b7c7;
+  border-bottom: 6px double white;
 }
 body #weather-section .weather-container {
   width: 900px;
-  border: 10px double white;
+  height: 500px;
+  padding: 30px 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -145,9 +147,12 @@ body #weather-section .weather-container .your-weather .message {
 body #weather-section .weather-container .naples-weather .message.italic,
 body #weather-section .weather-container .your-weather .message.italic {
   font-style: italic;
+  margin: 0;
+  padding: 30px 0 15px 0;
+  text-transform: none;
 }
-body #weather-section .weather-container .naples-weather .message.temp,
-body #weather-section .weather-container .your-weather .message.temp {
+body #weather-section .weather-container .naples-weather .message.italic.temp,
+body #weather-section .weather-container .your-weather .message.italic.temp {
   color: white;
   font-family: 'Lobster Two', cursive;
   font-weight: 700;
@@ -155,7 +160,11 @@ body #weather-section .weather-container .your-weather .message.temp {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 30px auto;
+  margin: 0px auto 30px auto;
+  padding: 0;
+}
+body #weather-section .weather-container .your-weather .message.italic.temp {
+  padding-bottom: 0;
 }
 body #map-section {
   background-color: #656478;

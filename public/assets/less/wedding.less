@@ -229,7 +229,7 @@ body {
     }
   }
 
-    #rsvp-section {
+  #rsvp-section {
 
     background-color: @deco-yellow;
     .double-border-bottom(white);
@@ -250,13 +250,15 @@ body {
 
   }
 
-    #weather-section {
+  #weather-section {
 
     background-color: @deco-light-pink;
+       .double-border-bottom(white);
 
     .weather-container {
       .content-full-width();
-      .double-border(white);
+      height: 500px;
+      padding: 30px 0;
       margin: 0 auto;
       text-align: center;
 
@@ -272,22 +274,31 @@ body {
 
           &.italic {
             font-style: italic;
+            margin: 0;
+            padding: 30px 0 15px 0;
+            text-transform: none;
           }
 
-          &.temp {
+          &.italic.temp {
 
           color: white;
           .lobster-bold-italic();
           font-size: 90px;
           line-height: 90px;
-          margin: 30px auto;
+          margin: 0px auto 30px auto;
+          padding: 0;
 
           }
 
-
-
         }
       }
+
+      .your-weather {
+        .message.italic.temp {
+          padding-bottom: 0;
+        }
+      }
+
     }
 
   }
