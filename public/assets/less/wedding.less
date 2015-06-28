@@ -59,6 +59,12 @@
   font-weight: 700;
 }
 
+.body-font-bold-italic() {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
 .head-font-normal() {
   font-family: 'Arvo', serif;
   font-weight: 400;
@@ -223,7 +229,7 @@ body {
     }
   }
 
-    #rsvp-section {
+  #rsvp-section {
 
     background-color: @deco-yellow;
     .double-border-bottom(white);
@@ -240,6 +246,59 @@ body {
         .body-font-light();
         font-size: 18px;
       }
+    }
+
+  }
+
+  #weather-section {
+
+    background-color: @deco-light-pink;
+       .double-border-bottom(white);
+
+    .weather-container {
+      .content-full-width();
+      height: 500px;
+      padding: 30px 0;
+      margin: 0 auto;
+      text-align: center;
+
+      .naples-weather,
+      .your-weather {
+        .message {
+          .body-font-bold();
+          font-size: 25px;
+          line-height: 25px;
+          margin: 0;
+          padding: 15px 0 0 0;
+          text-transform: uppercase;
+
+          &.italic {
+            font-style: italic;
+            margin: 0;
+            padding: 30px 0 15px 0;
+            text-transform: none;
+          }
+
+          &.italic.temp {
+
+          color: white;
+          .lobster-bold-italic();
+          font-size: 90px;
+          line-height: 90px;
+          margin: 0px auto 30px auto;
+          padding: 0;
+
+          }
+
+        }
+      }
+
+      .your-weather {
+        .message.italic.temp {
+          padding-bottom: 0;
+        }
+      }
+
     }
 
   }

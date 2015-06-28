@@ -129,14 +129,29 @@ $(document).ready(function(){
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+  var yourWeather = 'Not so perfect';
+
   if ("geolocation" in navigator) {
     /* geolocation is available */
     navigator.geolocation.getCurrentPosition(function(position) {
       console.log(position.coords.latitude, position.coords.longitude);
-    });
-  } else {
-    /* geolocation IS NOT available */
-    console.log("no geolocation available")
+
+      $.ajax({
+        url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&units=imperial",
+        crossDomain: true
+      }).success(function(data) {
+          console.log("your weather data", data);
+
+          console.log(" your description", data.weather[0].description);
+          console.log(" your main", data.weather[0].main);
+          console.log(" your temp", data.main.temp);
+
+          $("#your-weather").html(data.weather[0].description);
+          $("#your-temp").html(data.main.temp + '&deg;' + ' F');
+
+        });
+      });
+
   }
 
 // Ajax call for Naples temp, desc, and weather.
@@ -149,6 +164,9 @@ $(document).ready(function(){
       console.log("description", data.weather[0].description);
       console.log("main", data.weather[0].main);
       console.log("temp", data.main.temp);
+
+        $("#naples-weather").html(data.weather[0].description);
+        $("#naples-temp").html(data.main.temp + '&deg;' + ' F');
 
     });
 
