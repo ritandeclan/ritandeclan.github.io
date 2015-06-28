@@ -117,8 +117,12 @@ body #map-section {
 body #map-section .map-container {
   width: 900px;
   border: 10px double white;
-  height: auto;
+  height: 500px;
   margin: 0 auto;
   color: white;
   text-align: center;
+}
+body #map-section .map-container #map-canvas {
+  height: 100%;
+  width: 100%;
 }
