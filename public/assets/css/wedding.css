@@ -30,6 +30,7 @@ body #header-section .header-link-container .map-link {
   width: 33%;
   height: 50px;
   text-align: center;
+  text-transform: uppercase;
 }
 body #info-section,
 body #rsvp-section,
