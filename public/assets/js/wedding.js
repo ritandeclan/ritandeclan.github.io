@@ -129,4 +129,28 @@ $(document).ready(function(){
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+  if ("geolocation" in navigator) {
+    /* geolocation is available */
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log(position.coords.latitude, position.coords.longitude);
+    });
+  } else {
+    /* geolocation IS NOT available */
+    console.log("no geolocation available")
+  }
+
+// Ajax call for Naples temp, desc, and weather.
+  $.ajax({
+    url: "http://api.openweathermap.org/data/2.5/weather?id=4165565&units=imperial",
+    crossDomain: true
+  }).success(function(data) {
+      console.log("naples weather data", data);
+
+      console.log("description", data.weather[0].description);
+      console.log("main", data.weather[0].main);
+      console.log("temp", data.main.temp);
+
+    });
+
+
 });
