@@ -123,6 +123,40 @@ body #rsvp-section .form-container .form-intro-message {
   font-weight: 300;
   font-size: 18px;
 }
+body #weather-section {
+  background-color: #f7b7c7;
+}
+body #weather-section .weather-container {
+  width: 900px;
+  border: 10px double white;
+  margin: 0 auto;
+  text-align: center;
+}
+body #weather-section .weather-container .naples-weather .message,
+body #weather-section .weather-container .your-weather .message {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+}
+body #weather-section .weather-container .naples-weather .message.italic,
+body #weather-section .weather-container .your-weather .message.italic {
+  font-style: italic;
+}
+body #weather-section .weather-container .naples-weather .message.temp,
+body #weather-section .weather-container .your-weather .message.temp {
+  color: white;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+}
 body #map-section {
   background-color: #656478;
 }

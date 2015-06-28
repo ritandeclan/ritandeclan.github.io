@@ -59,6 +59,12 @@
   font-weight: 700;
 }
 
+.body-font-bold-italic() {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
 .head-font-normal() {
   font-family: 'Arvo', serif;
   font-weight: 400;
@@ -239,6 +245,48 @@ body {
       .form-intro-message {
         .body-font-light();
         font-size: 18px;
+      }
+    }
+
+  }
+
+    #weather-section {
+
+    background-color: @deco-light-pink;
+
+    .weather-container {
+      .content-full-width();
+      .double-border(white);
+      margin: 0 auto;
+      text-align: center;
+
+      .naples-weather,
+      .your-weather {
+        .message {
+          .body-font-bold();
+          font-size: 25px;
+          line-height: 25px;
+          margin: 0;
+          padding: 15px 0 0 0;
+          text-transform: uppercase;
+
+          &.italic {
+            font-style: italic;
+          }
+
+          &.temp {
+
+          color: white;
+          .lobster-bold-italic();
+          font-size: 90px;
+          line-height: 90px;
+          margin: 30px auto;
+
+          }
+
+
+
+        }
       }
     }
 
