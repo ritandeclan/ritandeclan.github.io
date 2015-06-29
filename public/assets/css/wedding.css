@@ -160,8 +160,10 @@ body #rsvp-section .form-container form.form input.btn-submit {
   text-transform: uppercase;
 }
 body #rsvp-section .form-container form.form input.btn-submit:hover {
-  background-color: #e9243c;
+  background-color: white;
   cursor: pointer;
+  color: #f18d11;
+  border: 10px double #f18d11;
 }
 body #weather-section {
   background-color: #f7b7c7;
