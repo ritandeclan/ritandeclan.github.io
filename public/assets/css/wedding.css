@@ -119,10 +119,49 @@ body #rsvp-section .form-container {
   color: white;
   text-align: center;
 }
+body #rsvp-section .form-container .rsvp-message {
+  color: white;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+}
 body #rsvp-section .form-container .form-intro-message {
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+body #rsvp-section .form-container form.form {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 18px;
+  text-transform: uppercase;
+}
+body #rsvp-section .form-container form.form .answer {
+  width: 200px;
+  height: 30px;
+}
+body #rsvp-section .form-container form.form input.btn-submit {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 10px double white;
+  padding: 10px auto;
+  margin: 15px auto;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+body #rsvp-section .form-container form.form input.btn-submit:hover {
+  background-color: #e9243c;
+  cursor: pointer;
 }
 body #weather-section {
   background-color: #f7b7c7;
