@@ -129,13 +129,14 @@ $(document).ready(function(){
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var yourWeather = 'Not so perfect';
+  var yourWeather = 'Mediocre';
+  var yourTemp = 'Meh&deg; F';
 
   if ("geolocation" in navigator) {
     /* geolocation is available */
     navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position.coords.latitude, position.coords.longitude);
 
+      // Ajax call for your weather
       $.ajax({
         url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&units=imperial",
         crossDomain: true
@@ -146,13 +147,25 @@ $(document).ready(function(){
           console.log(" your main", data.weather[0].main);
           console.log(" your temp", data.main.temp);
 
-          $("#your-weather").html(data.weather[0].description);
-          $("#your-temp").html(data.main.temp + '&deg;' + ' F');
+          yourWeather = data.weather[0].description;
+          yourTemp = data.main.temp + '&deg;' + ' F';
 
+          $("#your-weather").html(yourWeather);
+          $("#your-temp").html(yourTemp);
+
+        }).error(function(){
+          $("#your-weather").html(yourWeather);
+          $("#your-temp").html(yourTemp);
         });
       });
 
+  } else {
+    $("#your-weather").html(yourWeather);
+    $("#your-temp").html(yourTemp);
   }
+
+  $("#your-weather").html(yourWeather);
+  $("#your-temp").html(yourTemp);
 
 // Ajax call for Naples temp, desc, and weather.
   $.ajax({
