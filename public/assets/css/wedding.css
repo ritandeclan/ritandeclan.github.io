@@ -34,9 +34,18 @@ body #header-section .header-link-container .map-link h3 a {
   text-align: center;
   text-transform: uppercase;
 }
+body #header-section .header-link-container .info-link h3 a:hover,
+body #header-section .header-link-container .rsvp-link h3 a:hover,
+body #header-section .header-link-container .map-link h3 a:hover {
+  color: white;
+  cursor: pointer;
+}
 body #info-section,
 body #rsvp-section,
-body #map-section {
+body #map-section,
+body #countdown-section,
+body #weather-section {
+  border-bottom: 6px double white;
   width: 100%;
   height: auto;
   display: block;
@@ -46,7 +55,6 @@ body #map-section {
 }
 body #info-section {
   background-color: #f7b7c7;
-  border-bottom: 6px double white;
 }
 body #info-section .intro {
   width: 900px;
@@ -109,9 +117,47 @@ body #info-section .intro .us-img-container .us-img {
   width: 100%;
   border-radius: 50%;
 }
+body #countdown-section .countdown-container {
+  width: 900px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 0 0 30px 0;
+  color: white;
+  text-align: center;
+}
+body #countdown-section .countdown-container .unit {
+  color: #656478;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  display: inline;
+  position: relative;
+  padding: 0 5px;
+}
+body #countdown-section .countdown-container .countdown,
+body #countdown-section .countdown-container .number {
+  color: white;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+  display: inline;
+  position: relative;
+}
+body #countdown-section .countdown-container .countdown {
+  display: block;
+  margin-top: 0;
+}
 body #rsvp-section {
   background-color: #f18d11;
-  border-bottom: 6px double white;
 }
 body #rsvp-section .form-container {
   width: 900px;
@@ -178,7 +224,6 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit:hov
 }
 body #weather-section {
   background-color: #f7b7c7;
-  border-bottom: 6px double white;
 }
 body #weather-section .weather-container {
   width: 900px;
@@ -221,6 +266,7 @@ body #weather-section .weather-container .your-weather .message.italic.temp {
 }
 body #map-section {
   background-color: #656478;
+  border-bottom: none;
 }
 body #map-section .map-container {
   width: 900px;
