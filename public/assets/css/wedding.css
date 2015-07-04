@@ -44,7 +44,8 @@ body #info-section,
 body #rsvp-section,
 body #map-section,
 body #countdown-section,
-body #weather-section {
+body #weather-section,
+body #insta-gallery-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
