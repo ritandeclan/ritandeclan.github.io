@@ -258,4 +258,19 @@ var cardContainer = document.getElementById("cards-container");
 
 // }, 5000);
 
+// Make Instagram API call to pull photos with the hashtag #ritandeclan
+
+// Ajax call for Naples temp, desc, and weather.
+  $.ajax({
+    url: "https://api.instagram.com/v1/tags/ritandeclan/media/recent?client_id=8953bce455c5461f910bf9050de3891f",
+    crossDomain: true
+  }).success(function(data) {
+      console.log("naples weather data", data['images']['standard_resolution']['url']);
+
+
+        $("#insta-gallery").html(data['images']['standard_resolution']['url']);
+
+
+    });
+
 });
