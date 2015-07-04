@@ -267,11 +267,20 @@ var cardContainer = document.getElementById("cards-container");
     crossDomain: true,
     dataType: 'jsonp'
   }).success(function(data) {
-      // console.log("insta data", data[0]['images']['standard_resolution']['url']);
-      console.log("insta data", data['data'][0]['images']['standard_resolution']['url']);
 
-        // $("#insta-gallery").html(data[0]['images']['standard_resolution']['url']);
-        $("#insta-gallery").append("<img src="+ data['data'][0]['images']['standard_resolution']['url'] + "></img>");
+      var instas = data['data'];
+
+
+      for (var i = 0; i < instas.length; i++) {
+         console.log("insta data i", i);
+
+               $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
+         // more statements
+      }
+
+      // var fraction = instas.length / 4;
+
+      // $('instas').css("width" = fraction);
 
 
     });
