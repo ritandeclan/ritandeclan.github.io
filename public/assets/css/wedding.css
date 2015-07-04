@@ -297,7 +297,10 @@ body #insta-gallery-section .insta-gallery-container .gallery-title {
   line-height: 90px;
   margin: 0 0 30px auto;
 }
-body #insta-gallery-section .insta-gallery-container .gallery-instructions {
+body #insta-gallery-section .insta-gallery-container .gallery-message {
+  margin: 15px 0;
+}
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
   color: #656478;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -308,15 +311,14 @@ body #insta-gallery-section .insta-gallery-container .gallery-instructions {
   text-transform: uppercase;
   display: block;
   position: relative;
-  padding: 15px 5px;
+  padding: 15px 5px 0 5px;
   width: 100%;
   margin: 15px 0;
+  line-height: 35px;
 }
-body #insta-gallery-section .insta-gallery-container .gallery-instructions.btm {
-  margin-bottom: 30px;
-}
-body #insta-gallery-section .insta-gallery-container .gallery-instructions:last-of-kind {
-  margin-bottom: 30px;
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions.white {
+  color: white;
+  padding-bottom: 15px;
 }
 body #insta-gallery-section .insta-gallery-container #insta-gallery {
   width: 100%;
