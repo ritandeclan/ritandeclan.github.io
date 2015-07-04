@@ -328,5 +328,7 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
   display: inline;
   position: relative;
   height: auto;
-  width: 33%;
+  width: 28%;
+  margin: 5px;
+  border: 10px solid white;
 }
