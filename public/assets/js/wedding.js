@@ -263,12 +263,15 @@ var cardContainer = document.getElementById("cards-container");
 // Ajax call for Naples temp, desc, and weather.
   $.ajax({
     url: "https://api.instagram.com/v1/tags/ritandeclan/media/recent?client_id=8953bce455c5461f910bf9050de3891f",
-    crossDomain: true
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'jsonp'
   }).success(function(data) {
-      console.log("naples weather data", data['images']['standard_resolution']['url']);
+      // console.log("insta data", data[0]['images']['standard_resolution']['url']);
+      console.log("insta data", data['data'][0]['images']['standard_resolution']['url']);
 
-
-        $("#insta-gallery").html(data['images']['standard_resolution']['url']);
+        // $("#insta-gallery").html(data[0]['images']['standard_resolution']['url']);
+        $("#insta-gallery").append("<img src="+ data['data'][0]['images']['standard_resolution']['url'] + "></img>");
 
 
     });
