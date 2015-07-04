@@ -292,3 +292,9 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery {
   display: block
         position: relative;
 }
+body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+  display: inline;
+  position: relative;
+  height: auto;
+  width: 33%;
+}
