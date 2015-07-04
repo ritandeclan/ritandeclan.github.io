@@ -283,8 +283,40 @@ body #map-section .map-container #map-canvas {
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
+  text-align: center;
+}
+body #insta-gallery-section .insta-gallery-container .gallery-title {
+  color: white;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0 0 30px auto;
+}
+body #insta-gallery-section .insta-gallery-container .gallery-instructions {
+  color: #656478;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  padding: 15px 5px;
+  width: 100%;
+  margin: 15px 0;
+}
+body #insta-gallery-section .insta-gallery-container .gallery-instructions.btm {
+  margin-bottom: 30px;
+}
+body #insta-gallery-section .insta-gallery-container .gallery-instructions:last-of-kind {
+  margin-bottom: 30px;
 }
 body #insta-gallery-section .insta-gallery-container #insta-gallery {
   width: 100%;
