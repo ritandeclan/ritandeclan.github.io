@@ -469,7 +469,7 @@ body {
           .lobster-bold-italic();
           font-size: 90px;
           line-height: 90px;
-          margin: 30px auto;
+          margin: 0 0 30px auto;
         }
 
         .gallery-instructions {
@@ -479,6 +479,16 @@ body {
           padding: 15px 5px;
           width: 100%;
           margin: 15px 0;
+
+          &.btm {
+            margin-bottom: 30px;
+          }
+        }
+
+        .gallery-instructions {
+          &:last-of-kind {
+            margin-bottom: 30px;
+          }
         }
 
       #insta-gallery {
