@@ -272,7 +272,7 @@ var cardContainer = document.getElementById("cards-container");
 
       for (var i = 0; i < instas.length; i++) {
         if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
-          $("#insta-gallery").append("<video src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
+          $("#insta-gallery").append("<video class='instas' src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
         } else {
           $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
         }

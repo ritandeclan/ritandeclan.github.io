@@ -333,4 +333,9 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
   width: 28%;
   margin: 5px;
   border: 10px solid white;
+  background-color: #f18d11;
+}
+body #insta-gallery-section .insta-gallery-container #insta-gallery .instas video {
+  margin: 5px;
+  border: 10px solid #white;
 }
