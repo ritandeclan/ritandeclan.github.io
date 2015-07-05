@@ -270,18 +270,14 @@ var cardContainer = document.getElementById("cards-container");
 
       var instas = data['data'];
 
-
       for (var i = 0; i < instas.length; i++) {
-         console.log("insta data i", i);
+        if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
+          $("#insta-gallery").append("<video src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
+        } else {
+          $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
+        }
 
-               $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
-         // more statements
       }
-
-      // var fraction = instas.length / 4;
-
-      // $('instas').css("width" = fraction);
-
 
     });
 
