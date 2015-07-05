@@ -24,19 +24,21 @@ body #header-section .header-link-container {
 }
 body #header-section .header-link-container .info-link h3 a,
 body #header-section .header-link-container .rsvp-link h3 a,
-body #header-section .header-link-container .map-link h3 a {
+body #header-section .header-link-container .map-link h3 a,
+body #header-section .header-link-container .insta-gallery-link h3 a {
   color: #656478;
   text-decoration: none;
   position: inline;
   float: left;
-  width: 33%;
+  width: 25%;
   height: 50px;
   text-align: center;
   text-transform: uppercase;
 }
 body #header-section .header-link-container .info-link h3 a:hover,
 body #header-section .header-link-container .rsvp-link h3 a:hover,
-body #header-section .header-link-container .map-link h3 a:hover {
+body #header-section .header-link-container .map-link h3 a:hover,
+body #header-section .header-link-container .insta-gallery-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
@@ -45,7 +47,8 @@ body #rsvp-section,
 body #map-section,
 body #countdown-section,
 body #weather-section,
-body #insta-gallery-section {
+body #insta-gallery-section,
+body #card-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -267,7 +270,6 @@ body #weather-section .weather-container .your-weather .message.italic.temp {
 }
 body #map-section {
   background-color: #656478;
-  border-bottom: none;
 }
 body #map-section .map-container {
   width: 900px;
@@ -280,6 +282,45 @@ body #map-section .map-container {
 body #map-section .map-container #map-canvas {
   height: 100%;
   width: 100%;
+}
+body #card-section {
+  background-color: #f18d11;
+  padding: 0;
+  overflow: hidden;
+}
+body #card-section .card-container {
+  width: 100%;
+  height: 575px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+body #card-section .card-container .card {
+  width: 900px;
+  height: auto;
+  position: absolute;
+  display: inline;
+  left: 0;
+  top: 0;
+}
+body #card-section .card-container .card img {
+  width: 100%;
+  height: auto;
+  display: inline;
+  position: relative;
+}
+body #card-section .card-container .card.one {
+  left: 0px;
+}
+body #card-section .card-container .card.two {
+  left: 900px;
+}
+body #card-section .card-container .card.three {
+  left: 1800px;
+}
+body #card-section .card-container .card.four {
+  left: 2700px;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
