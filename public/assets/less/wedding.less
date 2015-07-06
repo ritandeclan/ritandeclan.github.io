@@ -175,14 +175,15 @@ body {
 
       .info-link,
       .rsvp-link,
-      .map-link {
+      .map-link,
+      .insta-gallery-link {
         h3 {
           a {
             color: @deco-grey;
             text-decoration: none;
             position: inline;
             float: left;
-            width: 33%;
+            width: 25%;
             height: 50px;
             text-align: center;
             text-transform: uppercase;
@@ -202,7 +203,8 @@ body {
   #map-section,
   #countdown-section,
   #weather-section,
-  #insta-gallery-section {
+  #insta-gallery-section,
+  #card-section {
 
     .double-border-bottom(white);
 
@@ -322,6 +324,37 @@ body {
     }
   }
 
+  #card-section {
+
+    background-color: @deco-yellow;
+    position: relative;
+    display: block;
+    height: 566px;
+    padding: 0;
+    overflow: hidden;
+
+    .card {
+       position: absolute;
+       left: 0;
+       top: 0;
+       height: 566px;
+       width: 300%;
+       -webkit-animation: slideshow 45s linear infinite;
+       -moz-animation: slideshow 45s linear infinite;
+     }
+
+    @-webkit-keyframes slideshow {
+      0% { left: 0; }
+      100% { left: -200%; }
+    }
+
+    @-moz-keyframes slideshow {
+      0% { left: 0; }
+      100% { left: -200%; }
+    }
+
+  }
+
   #rsvp-section {
 
     background-color: @deco-yellow;
@@ -439,7 +472,6 @@ body {
   #map-section {
 
     background-color: @deco-grey;
-    border-bottom: none;
 
     .map-container {
       .content-full-width();
