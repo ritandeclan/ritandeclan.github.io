@@ -129,6 +129,7 @@ body #countdown-section .countdown-container {
   padding: 0 0 30px 0;
   color: white;
   text-align: center;
+  height: 200px;
 }
 body #countdown-section .countdown-container .unit {
   color: #656478;
@@ -173,7 +174,7 @@ body #card-section .card {
   left: 0;
   top: 0;
   height: 566px;
-  width: 300%;
+  width: 5421px;
   -webkit-animation: slideshow 45s linear infinite;
   -moz-animation: slideshow 45s linear infinite;
 }
