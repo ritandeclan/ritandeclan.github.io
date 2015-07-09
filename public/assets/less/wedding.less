@@ -204,7 +204,8 @@ body {
   #countdown-section,
   #weather-section,
   #insta-gallery-section,
-  #card-section {
+  #card-section,
+  #signature-section {
 
     .double-border-bottom(white);
 
@@ -425,13 +426,14 @@ body {
 
     .weather-container {
       .content-full-width();
-      height: 500px;
+      height: auto;
       padding: 30px 0;
       margin: 0 auto;
       text-align: center;
 
       .naples-weather,
       .your-weather {
+
         .message {
           .body-font-bold();
           font-size: 25px;
@@ -457,6 +459,18 @@ body {
           padding: 0;
 
           }
+
+        }
+      }
+
+      .naples-weather {
+        .fa.fa-sun-o.fa-5x.fa-spin.custom {
+          color: @deco-yellow;
+          font-size: 90px;
+          opacity: 1;
+
+          -webkit-animation:fa-spin 30s infinite linear;
+          animation:fa-spin 30s infinite linear;
 
         }
       }
@@ -551,6 +565,49 @@ body {
 
       }
     }
+  }
+
+  #signature-section {
+
+    padding: 0;
+    border-bottom: none;
+
+    .signature-container {
+        .content-full-width();
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px 0;
+
+        .message {
+          display: inline;
+          position: relative;
+
+          .signature {
+            position: relative;
+            display: inline;
+            .medium-text-uppercase();
+            font-size: 14px;
+            display: block;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 15px;
+
+            .heart {
+              position: relative;
+              display: inline;
+              color: @deco-red;
+              font-size: 20px;
+              line-height: 20px;
+              padding: 0 5px;
+            }
+          }
+
+        }
+    }
+
   }
 
 }

@@ -48,7 +48,8 @@ body #map-section,
 body #countdown-section,
 body #weather-section,
 body #insta-gallery-section,
-body #card-section {
+body #card-section,
+body #signature-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -265,7 +266,7 @@ body #weather-section {
 }
 body #weather-section .weather-container {
   width: 900px;
-  height: 500px;
+  height: auto;
   padding: 30px 0;
   margin: 0 auto;
   text-align: center;
@@ -298,6 +299,13 @@ body #weather-section .weather-container .your-weather .message.italic.temp {
   line-height: 90px;
   margin: 0px auto 30px auto;
   padding: 0;
+}
+body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-spin.custom {
+  color: #f18d11;
+  font-size: 90px;
+  opacity: 1;
+  -webkit-animation: fa-spin 30s infinite linear;
+  animation: fa-spin 30s infinite linear;
 }
 body #weather-section .weather-container .your-weather .message.italic.temp {
   padding-bottom: 0;
@@ -374,4 +382,44 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
 body #insta-gallery-section .insta-gallery-container #insta-gallery .instas video {
   margin: 5px;
   border: 10px solid #white;
+}
+body #signature-section {
+  padding: 0;
+  border-bottom: none;
+}
+body #signature-section .signature-container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0;
+}
+body #signature-section .signature-container .message {
+  display: inline;
+  position: relative;
+}
+body #signature-section .signature-container .message .signature {
+  display: inline;
+  color: #656478;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+body #signature-section .signature-container .message .signature .heart {
+  position: relative;
+  display: inline;
+  color: #e9243c;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 0 5px;
 }
