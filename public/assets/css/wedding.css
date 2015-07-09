@@ -83,6 +83,7 @@ body #info-section .intro .intro-card {
 body #info-section .intro .intro-lead {
   width: 80%;
   left: 10%;
+  border: 10px double #e9243c;
   color: white;
   font-family: 'Lobster Two', cursive;
   font-weight: 700;
