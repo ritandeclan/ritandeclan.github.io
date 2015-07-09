@@ -161,7 +161,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 20;
     background-color: @deco-blue;
     height: 50px;
     .double-border-bottom(white);
@@ -234,7 +234,8 @@ body {
       text-align: center;
 
       .intro-card {
-        .content-full-width();
+        //.content-full-width();
+        width: 100%;
         height: auto;
         margin: 0 auto;
         position: absolute;
@@ -246,7 +247,9 @@ body {
 
       .intro-lead {
         // .content-full-width();
-        width: 700px;
+        //width: 700px;
+        width: 80%;
+        left: 10%;
         //.double-border(@deco-red);
         color: white;
         //border-radius: 12px;
@@ -261,7 +264,7 @@ body {
         z-index: 10;
         position: absolute;
         top: 50px;
-        left: 100px;
+        //left: 100px;
       }
 
       .intro-message {

@@ -11,7 +11,7 @@ body #header-section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   background-color: #75d0bb;
   height: 50px;
   border-bottom: 6px double white;
@@ -73,7 +73,7 @@ body #info-section .intro {
   text-align: center;
 }
 body #info-section .intro .intro-card {
-  width: 900px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   position: absolute;
@@ -81,7 +81,8 @@ body #info-section .intro .intro-card {
   z-index: 0;
 }
 body #info-section .intro .intro-lead {
-  width: 700px;
+  width: 80%;
+  left: 10%;
   color: white;
   font-family: 'Lobster Two', cursive;
   font-weight: 700;
@@ -94,7 +95,6 @@ body #info-section .intro .intro-lead {
   z-index: 10;
   position: absolute;
   top: 50px;
-  left: 100px;
 }
 body #info-section .intro .intro-message {
   color: #656478;
