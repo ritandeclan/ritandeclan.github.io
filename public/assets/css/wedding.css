@@ -63,6 +63,8 @@ body #info-section {
 }
 body #info-section .intro {
   width: 900px;
+  position: relative;
+  display: block;
   height: auto;
   background-color: transparent;
   margin: 0 auto;
@@ -70,8 +72,16 @@ body #info-section .intro {
   color: white;
   text-align: center;
 }
+body #info-section .intro .intro-card {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
 body #info-section .intro .intro-lead {
-  border: 10px double #e9243c;
+  width: 700px;
   color: white;
   font-family: 'Lobster Two', cursive;
   font-weight: 700;
@@ -81,6 +91,10 @@ body #info-section .intro .intro-lead {
   line-height: 120px;
   padding: 20px 0;
   margin: 20px auto;
+  z-index: 10;
+  position: absolute;
+  top: 50px;
+  left: 100px;
 }
 body #info-section .intro .intro-message {
   color: #656478;
@@ -114,7 +128,7 @@ body #info-section .intro .us-img-container {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  margin: 50px auto;
+  margin: 600px auto 0 auto;
   border: 10px double white;
 }
 body #info-section .intro .us-img-container .us-img {
