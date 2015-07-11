@@ -150,6 +150,37 @@
   text-transform: uppercase;
 }
 
+// Animation mixins
+
+.keyframe-animation(@name, @varOne, @varTwo) {
+
+  @-webkit-keyframes @name {
+    0%   { @varOne }
+    100% { @varTwo }
+  }
+  @-moz-keyframes @name {
+    0%   { @varOne }
+    100% { @varTwo }
+  }
+  @-o-keyframes @name {
+    0%   { @varOne }
+    100% { @varTwo }
+  }
+  @keyframes @name {
+    0%   { @varOne }
+    100% { @varTwo }
+  }
+}
+
+.animation (@name, @interval, @mode) {
+
+  -webkit-animation: @name @interval @mode; /* Safari 4+ */
+  -moz-animation:    @name @interval @mode; /* Fx 5+ */
+  -o-animation:      @name @interval @mode; /* Opera 12+ */
+  animation:         @name @interval @mode; /* IE 10+, Fx 29+ */
+
+}
+
 body {
 
   background-color: @deco-blue;
@@ -478,6 +509,13 @@ body {
       .your-weather {
         .message.italic.temp {
           padding-bottom: 0;
+        }
+
+        .fa.fa-cloud.fa-5x {
+
+          .keyframe-animation(fadeIn, opacity: 0, opacity: 1);
+          .animation(fadeIn, 5s, infinite);
+
         }
       }
 
