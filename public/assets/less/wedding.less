@@ -29,9 +29,6 @@
 // Lato
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
-// Arvo
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,700italic);
-
 // Lobster
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
 
@@ -281,14 +278,10 @@ body {
       .intro-lead {
         .double-border(@deco-red);
         color: white;
-        //border-radius: 12px;
-       //.head-font-heavy-italic();
        .lobster-bold-italic();
         font-size: 120px;
         line-height: 120px;
         padding: 20px 0;
-        //text-transform: uppercase;
-        //letter-spacing: 6px;
         margin: 20px auto;
       }
 
@@ -384,13 +377,13 @@ body {
     overflow: hidden;
 
     .card {
-       position: absolute;
-       left: 0;
-       top: 0;
-       height: 566px;
-       width: 5421px;
-       -webkit-animation: slideshow 45s linear infinite;
-       -moz-animation: slideshow 45s linear infinite;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 566px;
+      width: 5421px;
+      -webkit-animation: slideshow 45s linear infinite;
+      -moz-animation: slideshow 45s linear infinite;
      }
 
     @-webkit-keyframes slideshow {
@@ -571,44 +564,43 @@ body {
           }
 
           @-webkit-keyframes fadeOutLeft {
-              0% {
-                  opacity: 0;
-                  -webkit-transform: translateX(0);
-              }
-              20% {
-                  opacity: 0.5;
-              }
-              40% {
-                  opacity: 1;
-              }
-              80% {
-                  opacity: 0.5;
-              }
-              100% {
-                  opacity: 0;
-                  -webkit-transform: translateX(-20px);
-              }
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(0);
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+            }
           }
           @keyframes fadeOutLeft {
-              0% {
-                  opacity: 0;
-                  -webkit-transform: translateX(0);
-              }
-              20% {
-                  opacity: 0.5;
-              }
-              40% {
-                  opacity: 1;
-              }
-              80% {
-                  opacity: 0.5;
-              }
-              100% {
-                  opacity: 0;
-                  -webkit-transform: translateX(-20px);
-              }
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(0);
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+            }
           }
-
 
         }
 
@@ -640,38 +632,39 @@ body {
 
   #insta-gallery-section {
     .insta-gallery-container {
-        .content-full-width();
-        height: auto;
-        margin: 0 auto;
-        text-align: center;
 
-        .gallery-title {
-          color: white;
-          .lobster-bold-italic();
-          font-size: 90px;
-          line-height: 90px;
-          margin: 0 0 30px auto;
-        }
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
 
-        .gallery-message {
+      .gallery-title {
+        color: white;
+        .lobster-bold-italic();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 0 0 30px auto;
+      }
 
+      .gallery-message {
+
+        margin: 15px 0;
+
+        .gallery-instructions {
+          .medium-text-uppercase();
+          display: block;
+          position: relative;
+          padding: 15px 5px 0 5px;
+          width: 100%;
           margin: 15px 0;
+          line-height: 35px;
 
-            .gallery-instructions {
-              .medium-text-uppercase();
-              display: block;
-              position: relative;
-              padding: 15px 5px 0 5px;
-              width: 100%;
-              margin: 15px 0;
-              line-height: 35px;
-
-              &.white {
-                color: white;
-                padding-bottom: 15px;
-              }
-            }
+          &.white {
+            color: white;
+            padding-bottom: 15px;
+          }
         }
+      }
 
       #insta-gallery {
 
@@ -695,7 +688,6 @@ body {
           }
         }
 
-
       }
     }
   }
@@ -706,39 +698,101 @@ body {
     border-bottom: none;
 
     .signature-container {
-        .content-full-width();
-        height: auto;
-        margin: 0 auto;
-        text-align: center;
-        padding: 15px 0;
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+      padding: 15px 0;
 
-        .message {
-          display: inline;
+      .message {
+        display: inline;
+        position: relative;
+
+        .signature {
           position: relative;
-
-          .signature {
-            position: relative;
-            display: inline;
-            .medium-text-uppercase();
-            font-size: 14px;
-            display: block;
-            position: relative;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            line-height: 15px;
-
-            .heart {
-              position: relative;
-              display: inline;
-              color: @deco-red;
-              font-size: 20px;
-              line-height: 20px;
-              padding: 0 5px;
-            }
-          }
+          display: inline;
+          .medium-text-uppercase();
+          font-size: 14px;
+          //display: block;
+          position: relative;
+          //width: 100%;
+          margin: 0;
+          padding: 0;
+          line-height: 25px;
+          height: 25px;
 
         }
+
+        .heart-container {
+
+          width: 50px;
+          position: relative;
+          display: inline;
+
+          .heart {
+            position: relative;
+            display: inline;
+            color: @deco-red;
+            font-size: 16px;
+            line-height: 18px;
+            height: 25px
+            padding: 0;
+            margin: 0 10px;
+            width: 30px;
+
+            -webkit-animation: heartBeat 2s ease-in-out infinite; /* Safari 4+ */
+            -moz-animation:    heartBeat 2s ease-in-out infinite; /* Fx 5+ */
+            -o-animation:      heartBeat 2s ease-in-out infinite; /* Opera 12+ */
+            animation:         heartBeat 2s ease-in-out infinite; /* IE 10+, Fx 29+ */
+          }
+
+          @-webkit-keyframes heartBeat {
+            0% {
+              font-size: 16px;
+            }
+            50% {
+              font-size: 18px;
+            }
+            100% {
+              font-size: 16px;
+            }
+          }
+          @-moz-keyframes heartBeat {
+            0% {
+              font-size: 16px;
+            }
+            50% {
+              font-size: 18px;
+            }
+            100% {
+              font-size: 16px;
+            }
+          }
+          @-o-keyframes heartBeat {
+            0% {
+              font-size: 16px;
+            }
+            50% {
+              font-size: 18px;
+            }
+            100% {
+              font-size: 16px;
+            }
+          }
+          @keyframes heartBeat {
+            0% {
+              font-size: 16px;
+            }
+            50% {
+              font-size: 18px;
+            }
+            100% {
+              font-size: 16px;
+            }
+          }
+        }
+
+      }
     }
 
   }

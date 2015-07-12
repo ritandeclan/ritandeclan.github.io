@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
 body {
   background-color: #75d0bb;
@@ -483,22 +482,80 @@ body #signature-section .signature-container .message .signature {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 25px;
-  line-height: 25px;
   padding: 15px 0 0 0;
   text-transform: uppercase;
   font-size: 14px;
-  display: block;
   position: relative;
-  width: 100%;
   margin: 0;
   padding: 0;
-  line-height: 15px;
+  line-height: 25px;
+  height: 25px;
 }
-body #signature-section .signature-container .message .signature .heart {
+body #signature-section .signature-container .message .heart-container {
+  width: 50px;
+  position: relative;
+  display: inline;
+}
+body #signature-section .signature-container .message .heart-container .heart {
   position: relative;
   display: inline;
   color: #e9243c;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 0 5px;
+  font-size: 16px;
+  line-height: 18px;
+  height: 25px
+            padding: 0;
+  margin: 0 10px;
+  width: 30px;
+  -webkit-animation: heartBeat 2s ease-in-out infinite;
+  /* Safari 4+ */
+  -moz-animation: heartBeat 2s ease-in-out infinite;
+  /* Fx 5+ */
+  -o-animation: heartBeat 2s ease-in-out infinite;
+  /* Opera 12+ */
+  animation: heartBeat 2s ease-in-out infinite;
+  /* IE 10+, Fx 29+ */
+}
+@-webkit-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@-moz-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@-o-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
 }
