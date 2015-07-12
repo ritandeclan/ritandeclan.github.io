@@ -535,81 +535,82 @@ body {
           padding-bottom: 0;
         }
 
-        .fa.fa-cloud.fa-5x {
+        .clouds {
+          width: 200px;
+          position: relative;
+          margin: 0 auto;
+          display: block;
+          height: 90px;
 
-          -webkit-animation-duration: 20s;
-          animation-duration: 20s;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-          -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count:infinite;
-          -webkit-animation-iteration-count:infinite;
+          .fa.fa-cloud.fa-5x {
 
-          -webkit-animation-name: fadeOutLeft;
-          animation-name: fadeOutLeft;
-
-          &.above {
+            font-size: 90px;
             position: absolute;
             z-index: 5;
-            left: 50%;
+            left: 5%;
 
-          -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+            animation: fadeOutLeft 20s both ease-in-out infinite alternate;
+            -webkit-animation: fadeOutLeft 20s both ease-in-out infinite alternate;
+
+            &.above {
+              left: 40%;
+
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+
+            }
+
+            &.behind {
+              left: 50%;
+
+            -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+
+            }
 
           }
 
-          &.behind {
-            position: absolute;
-            z-index: 5;
-            left: 60%;
-
-          -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-
+          @-webkit-keyframes fadeOutLeft {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateX(0);
+              }
+              20% {
+                  opacity: 0.5;
+              }
+              40% {
+                  opacity: 1;
+              }
+              80% {
+                  opacity: 0.5;
+              }
+              100% {
+                  opacity: 0;
+                  -webkit-transform: translateX(-20px);
+              }
+          }
+          @keyframes fadeOutLeft {
+              0% {
+                  opacity: 0;
+                  -webkit-transform: translateX(0);
+              }
+              20% {
+                  opacity: 0.5;
+              }
+              40% {
+                  opacity: 1;
+              }
+              80% {
+                  opacity: 0.5;
+              }
+              100% {
+                  opacity: 0;
+                  -webkit-transform: translateX(-20px);
+              }
           }
 
-        }
 
-        @-webkit-keyframes fadeOutLeft {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
-            }
-            20% {
-                opacity: 0.5;
-            }
-            40% {
-                opacity: 1;
-            }
-            80% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
-            }
         }
-        @keyframes fadeOutLeft {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
-            }
-            20% {
-                opacity: 0.5;
-            }
-            40% {
-                opacity: 1;
-            }
-            80% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
-            }
-        }
-
 
       }
 
