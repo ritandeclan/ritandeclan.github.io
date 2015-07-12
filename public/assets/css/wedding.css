@@ -271,6 +271,19 @@ body #weather-section .weather-container {
   margin: 0 auto;
   text-align: center;
 }
+body #weather-section .weather-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #weather-section .weather-container .naples-weather,
+body #weather-section .weather-container .your-weather {
+  width: 49.5%;
+  position: relative;
+  float: left;
+}
 body #weather-section .weather-container .naples-weather .message,
 body #weather-section .weather-container .your-weather .message {
   font-family: 'Lato', sans-serif;
@@ -307,8 +320,75 @@ body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-s
   -webkit-animation: fa-spin 30s infinite linear;
   animation: fa-spin 30s infinite linear;
 }
+body #weather-section .weather-container .your-weather {
+  border-left: 6px double #656478;
+}
 body #weather-section .weather-container .your-weather .message.italic.temp {
   padding-bottom: 0;
+}
+body #weather-section .weather-container .your-weather .fa.fa-cloud.fa-5x {
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+body #weather-section .weather-container .your-weather .fa.fa-cloud.fa-5x.above {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+body #weather-section .weather-container .your-weather .fa.fa-cloud.fa-5x.behind {
+  position: absolute;
+  z-index: 5;
+  left: 60%;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
 }
 body #map-section {
   background-color: #656478;
