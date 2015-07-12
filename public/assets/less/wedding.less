@@ -104,6 +104,10 @@
   border-bottom: 6px double @color;
 }
 
+.double-border-left(@color) {
+  border-left: 6px double @color;
+}
+
 // Button mixins
 
 .button() {
@@ -152,33 +156,45 @@
 
 // Animation mixins
 
-.keyframe-animation(@name, @varOne, @varTwo) {
+// .keyframe-animation(@name; @varOne; @varTwo) {
+//
+//   @-webkit-keyframes @name {
+//     0%   { @varOne }
+//     100% { @varTwo }
+//   }
+//   @-moz-keyframes @name {
+//     0%   { @varOne }
+//     100% { @varTwo }
+//   }
+//   @-o-keyframes @name {
+//     0%   { @varOne }
+//     100% { @varTwo }
+//   }
+//   @keyframes @name {
+//     0%   { @varOne }
+//     100% { @varTwo }
+//   }
+// }
+//
+// .animation (@name; @interval; @mode) {
+//
+//   -webkit-animation: @name @interval @mode; /* Safari 4+ */
+//   -moz-animation:    @name @interval @mode; /* Fx 5+ */
+//   -o-animation:      @name @interval @mode; /* Opera 12+ */
+//   animation:         @name @interval @mode; /* IE 10+, Fx 29+ */
+//
+// }
 
-  @-webkit-keyframes @name {
-    0%   { @varOne }
-    100% { @varTwo }
-  }
-  @-moz-keyframes @name {
-    0%   { @varOne }
-    100% { @varTwo }
-  }
-  @-o-keyframes @name {
-    0%   { @varOne }
-    100% { @varTwo }
-  }
-  @keyframes @name {
-    0%   { @varOne }
-    100% { @varTwo }
-  }
-}
+// Clearfix mixin
 
-.animation (@name, @interval, @mode) {
-
-  -webkit-animation: @name @interval @mode; /* Safari 4+ */
-  -moz-animation:    @name @interval @mode; /* Fx 5+ */
-  -o-animation:      @name @interval @mode; /* Opera 12+ */
-  animation:         @name @interval @mode; /* IE 10+, Fx 29+ */
-
+.cf() {
+  &:after {
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+  }
 }
 
 body {
@@ -461,9 +477,14 @@ body {
       padding: 30px 0;
       margin: 0 auto;
       text-align: center;
+      .cf();
+
 
       .naples-weather,
       .your-weather {
+        width: 49.5%;
+        position: relative;
+        float: left;
 
         .message {
           .body-font-bold();
@@ -507,16 +528,89 @@ body {
       }
 
       .your-weather {
+        // margin-left: 9%;
+        .double-border-left(@deco-grey);
+
         .message.italic.temp {
           padding-bottom: 0;
         }
 
         .fa.fa-cloud.fa-5x {
 
-          .keyframe-animation(fadeIn, opacity: 0, opacity: 1);
-          .animation(fadeIn, 5s, infinite);
+          -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count:infinite;
+          -webkit-animation-iteration-count:infinite;
+
+          -webkit-animation-name: fadeOutLeft;
+          animation-name: fadeOutLeft;
+
+          &.above {
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+
+          -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+
+          }
+
+          &.behind {
+            position: absolute;
+            z-index: 5;
+            left: 60%;
+
+          -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+
+          }
 
         }
+
+        @-webkit-keyframes fadeOutLeft {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(0);
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+            }
+        }
+        @keyframes fadeOutLeft {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateX(0);
+            }
+            20% {
+                opacity: 0.5;
+            }
+            40% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateX(-20px);
+            }
+        }
+
+
       }
 
     }
