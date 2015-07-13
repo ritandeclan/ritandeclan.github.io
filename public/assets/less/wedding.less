@@ -25,12 +25,20 @@
 @deco-red: #e9243c;
 
 
-// fonts
+// Fonts
+
 // Lato
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
 // Lobster
-@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
+// @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
+
+// Mission-Script
+@font-face {
+font-family: Lavanderia-Regular;
+src: url("../fonts/Lavanderia-Regular.otf") format("opentype");
+}
+
 
 // mixins
 
@@ -79,7 +87,7 @@
 }
 
 .lobster-bold-italic() {
-  font-family: 'Lobster Two', cursive;
+  font-family: 'Lavanderia-Regular', cursive;
   font-weight: 700;
   font-style: italic;
   letter-spacing: 1px;
