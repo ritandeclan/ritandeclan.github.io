@@ -127,7 +127,7 @@ $(document).ready(function(){
 
 // function initialize() {
 
-  var escalante = new google.maps.LatLng(-81.803361, 26.140098);
+  var escalante = new google.maps.LatLng(26.140098, -81.803361);
   var marker;
   var map;
 
@@ -140,19 +140,12 @@ $(document).ready(function(){
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
-  // var mapOptions = {
-  //   center: { lat: 26.1451065, lng: -81.7918291},
-  //   zoom: 12,
-  //   styles: mapStyles
-  // };
-
-
-  // marker = new google.maps.Marker({
-  //   map:map,
-  //   draggable:true,
-  //   animation: google.maps.Animation.DROP,
-  //   position: escalante
-  // });
+  marker = new google.maps.Marker({
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: escalante
+  });
 
 //   function toggleBounce() {
 
