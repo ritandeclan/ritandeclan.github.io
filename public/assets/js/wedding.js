@@ -117,16 +117,59 @@ $(document).ready(function(){
       }
     ];
 
-  var mapOptions = {
-    center: { lat: 26.1451065, lng: -81.7918291},
-    zoom: 12,
-    styles: mapStyles
-  };
+
 
   // map.setOptions({styles: styles});
 
+
+
+
+
+// function initialize() {
+
+  var escalante = new google.maps.LatLng(-81.803361, 26.140098);
+  var marker;
+  var map;
+
+  var mapOptions = {
+    zoom: 12,
+    center: escalante,
+    styles: mapStyles
+  };
+
   var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+    mapOptions);
+
+  // var mapOptions = {
+  //   center: { lat: 26.1451065, lng: -81.7918291},
+  //   zoom: 12,
+  //   styles: mapStyles
+  // };
+
+
+  // marker = new google.maps.Marker({
+  //   map:map,
+  //   draggable:true,
+  //   animation: google.maps.Animation.DROP,
+  //   position: escalante
+  // });
+
+//   function toggleBounce() {
+
+//   if (marker.getAnimation() != null) {
+//     marker.setAnimation(null);
+//   } else {
+//     marker.setAnimation(google.maps.Animation.BOUNCE);
+//   }
+// }
+
+//   google.maps.event.addListener(marker, 'click', toggleBounce);
+
+// }
+
+
+
+// google.maps.event.addDomListener(window, 'load', initialize);
 
   var yourWeather = 'Mediocre';
   var yourTemp = 'Meh&deg; F';
