@@ -122,9 +122,6 @@ $(document).ready(function(){
   // map.setOptions({styles: styles});
 
 
-
-
-
 // function initialize() {
 
   var escalante = new google.maps.LatLng(26.140098, -81.803361);
@@ -145,7 +142,21 @@ $(document).ready(function(){
     draggable:true,
     animation: google.maps.Animation.DROP,
     position: escalante
+  })
+
+var contentString =
+'<div class="marker-content">'+
+  '<h1 class="marker-info-header" >The Hotel Escalante</h1>' +
+'</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
   });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+
 
 //   function toggleBounce() {
 

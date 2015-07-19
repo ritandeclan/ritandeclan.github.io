@@ -410,6 +410,9 @@ body #map-section .map-container #map-canvas {
   height: 100%;
   width: 100%;
 }
+body #map-section .map-container #map-canvas .marker-content .marker-info-header {
+  color: #e9243c;
+}
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
   height: auto;
