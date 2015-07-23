@@ -74,7 +74,7 @@ body #info-section {
   background-color: #f7b7c7;
 }
 body #info-section .intro {
-  width: 900px;
+  width: 90%;
   height: auto;
   background-color: transparent;
   margin: 0 auto;
@@ -88,8 +88,8 @@ body #info-section .intro .intro-lead {
   font-family: 'delicious', cursive;
   font-weight: normal;
   letter-spacing: 1px;
-  font-size: 120px;
-  line-height: 120px;
+  font-size: 175px;
+  line-height: 175px;
   padding: 20px 0;
   margin: 20px auto;
 }
@@ -107,9 +107,10 @@ body #info-section .intro .intro-message.btwn {
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
-  margin: 0;
+  margin: 0 auto;
   padding: 15px 0 0 0;
   text-transform: uppercase;
+  width: 900px;
 }
 body #info-section .intro .standout-text {
   color: white;

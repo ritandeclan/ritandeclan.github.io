@@ -273,7 +273,8 @@ body {
     background-color: @deco-light-pink;
 
     .intro {
-      .content-full-width();
+      //.content-full-width();
+      width: 90%;
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -285,8 +286,8 @@ body {
         .double-border(@deco-red);
         color: white;
        .delicious();
-        font-size: 120px;
-        line-height: 120px;
+        font-size: 175px;
+        line-height: 175px;
         padding: 20px 0;
         margin: 20px auto;
       }
@@ -303,9 +304,10 @@ body {
           .body-font-bold();
           font-size: 25px;
           line-height: 25px;
-          margin: 0;
+          margin: 0 auto;
           padding: 15px 0 0 0;
           text-transform: uppercase;
+          .content-full-width();
         }
 
       }
