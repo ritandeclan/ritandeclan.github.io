@@ -221,15 +221,18 @@ body #rsvp-section .form-container .rsvp-message {
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
-  line-height: 90px;
-  margin: 30px auto;
+  line-height: 60px;
+  margin: 30px auto 0 auto;
 }
-body #rsvp-section .form-container .rsvp-message .rsvp,
-body #rsvp-section .form-container .rsvp-message .please {
+body #rsvp-section .form-container .rsvp-message h3.rsvp,
+body #rsvp-section .form-container .rsvp-message h3.please {
   position: relative;
-  display: inline-block;
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  font-weight: 400;
 }
-body #rsvp-section .form-container .rsvp-message .rsvp {
+body #rsvp-section .form-container .rsvp-message h3.rsvp {
   letter-spacing: 1px;
 }
 body #rsvp-section .form-container .form-intro-message {
@@ -270,6 +273,7 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit {
   font-size: 18px;
   text-transform: uppercase;
   margin-top: 20px;
+  padding-top: 8px;
 }
 body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover {
   background-color: white;
@@ -302,31 +306,35 @@ body #weather-section .weather-container .your-weather {
 }
 body #weather-section .weather-container .naples-weather .message,
 body #weather-section .weather-container .your-weather .message {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 25px;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  line-height: 30px;
   margin: 0;
   padding: 15px 0 0 0;
-  text-transform: uppercase;
+  color: white;
 }
 body #weather-section .weather-container .naples-weather .message.italic,
 body #weather-section .weather-container .your-weather .message.italic {
-  font-style: italic;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-style: regular;
   margin: 0;
-  padding: 30px 0 15px 0;
+  padding: 20px 0;
   text-transform: none;
+  color: #656478;
 }
 body #weather-section .weather-container .naples-weather .message.italic.temp,
 body #weather-section .weather-container .your-weather .message.italic.temp {
   color: white;
-  font-family: 'delicious', cursive;
-  font-weight: normal;
-  letter-spacing: 1px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
   font-size: 90px;
   line-height: 90px;
   margin: 0px auto 30px auto;
   padding: 0;
+  letter-spacing: 3px;
 }
 body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-spin.custom {
   color: #f18d11;

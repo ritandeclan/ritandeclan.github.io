@@ -420,14 +420,17 @@ body {
         color: white;
         .delicious();
         font-size: 90px;
-        line-height: 90px;
-        margin: 30px auto;
-        .rsvp,
-        .please {
+        line-height: 60px;
+        margin: 30px auto 0 auto;
+        h3.rsvp,
+        h3.please {
           position: relative;
-          display: inline-block;
+          display: block;
+          margin: 30px auto;
+          padding: 0;
+          font-weight: 400;
         }
-        .rsvp {
+        h3.rsvp {
           letter-spacing: 1px;
         }
       }
@@ -464,6 +467,7 @@ body {
           input.btn-submit {
             .button();
             margin-top: 20px;
+            padding-top: 8px;
           }
 
         }
@@ -494,29 +498,30 @@ body {
         float: left;
 
         .message {
-          .body-font-bold();
-          font-size: 25px;
-          line-height: 25px;
+          .delicious();
+          font-size: 30px;
+          line-height: 30px;
           margin: 0;
           padding: 15px 0 0 0;
-          text-transform: uppercase;
+          color: white;
 
           &.italic {
-            font-style: italic;
+            .body-font-bold();
+            font-style: regular;
             margin: 0;
-            padding: 30px 0 15px 0;
+            padding: 20px 0;
             text-transform: none;
+            color: @deco-grey;
           }
 
           &.italic.temp {
-
           color: white;
-          .delicious();
+          .body-font-bold();
           font-size: 90px;
           line-height: 90px;
           margin: 0px auto 30px auto;
           padding: 0;
-
+          letter-spacing: 3px;
           }
 
         }

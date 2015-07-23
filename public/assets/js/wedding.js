@@ -128,8 +128,8 @@ $(document).ready(function(){
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var yourWeather = 'Mediocre';
-  var yourTemp = 'Meh&deg; F';
+  var yourWeather = 'mediocre';
+  var yourTemp = 'meh&deg; f';
 
   if ("geolocation" in navigator) {
     /* geolocation is available */
@@ -142,7 +142,7 @@ $(document).ready(function(){
       }).success(function(data) {
 
           yourWeather = data.weather[0].description;
-          yourTemp = data.main.temp + '&deg;' + ' F';
+          yourTemp = data.main.temp + '&deg;' + ' f';
 
           $("#your-weather").html(yourWeather);
           $("#your-temp").html(yourTemp);
@@ -168,7 +168,7 @@ $(document).ready(function(){
   }).success(function(data) {
 
         $("#naples-weather").html(data.weather[0].description);
-        $("#naples-temp").html(data.main.temp + '&deg;' + ' F');
+        $("#naples-temp").html(data.main.temp + '&deg;' + ' f');
 
     });
 
