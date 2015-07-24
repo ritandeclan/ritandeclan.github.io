@@ -83,6 +83,8 @@ body #info-section .intro {
   text-align: center;
 }
 body #info-section .intro .intro-lead {
+  position: relative;
+  display: block;
   border: 10px double #e9243c;
   color: white;
   font-family: 'delicious', cursive;
@@ -92,6 +94,41 @@ body #info-section .intro .intro-lead {
   line-height: 175px;
   padding: 20px 0;
   margin: 20px auto;
+}
+body #info-section .intro .intro-lead:before,
+body #info-section .intro .intro-lead:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+body #info-section .intro .intro-lead:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
 }
 body #info-section .intro .intro-message {
   color: #656478;
