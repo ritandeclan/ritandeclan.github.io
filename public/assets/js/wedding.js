@@ -140,11 +140,6 @@ $(document).ready(function(){
         url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&units=imperial",
         crossDomain: true
       }).success(function(data) {
-          console.log("your weather data", data);
-
-          console.log(" your description", data.weather[0].description);
-          console.log(" your main", data.weather[0].main);
-          console.log(" your temp", data.main.temp);
 
           yourWeather = data.weather[0].description;
           yourTemp = data.main.temp + '&deg;' + ' F';
@@ -171,11 +166,6 @@ $(document).ready(function(){
     url: "http://api.openweathermap.org/data/2.5/weather?id=4165565&units=imperial",
     crossDomain: true
   }).success(function(data) {
-      console.log("naples weather data", data);
-
-      console.log("description", data.weather[0].description);
-      console.log("main", data.weather[0].main);
-      console.log("temp", data.main.temp);
 
         $("#naples-weather").html(data.weather[0].description);
         $("#naples-temp").html(data.main.temp + '&deg;' + ' F');
@@ -230,8 +220,6 @@ setInterval(function () {
     hoursElement.innerHTML = hours;
     minutesElement.innerHTML = minutes;
     secondsElement.innerHTML = seconds;
-
-    console.log("time", days + "d, " + hours + "h, " + minutes + "m, " + seconds + "s");
 
 }, 1000);
 
