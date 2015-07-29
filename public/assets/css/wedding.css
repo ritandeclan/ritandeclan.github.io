@@ -1,4 +1,38 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,300italic,400italic,700italic);
+@font-face {
+  font-family: 'GillSans-Light';
+  src: url('GillSans-Light.eot');
+  src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'), url('GillSans-Light.woff2') format('woff2'), url('GillSans-Light.woff') format('woff'), url('GillSans-Light.ttf') format('truetype'), url('GillSans-Light.svg#GillSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url('GillSans.eot');
+  src: url('GillSans.eot?#iefix') format('embedded-opentype'), url('GillSans.woff2') format('woff2'), url('GillSans.woff') format('woff'), url('GillSans.ttf') format('truetype'), url('GillSans.svg#GillSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Italic';
+  src: url('GillSans-Italic.eot');
+  src: url('GillSans-Italic.eot?#iefix') format('embedded-opentype'), url('GillSans-Italic.woff2') format('woff2'), url('GillSans-Italic.woff') format('woff'), url('GillSans-Italic.ttf') format('truetype'), url('GillSans-Italic.svg#GillSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Bold';
+  src: url('GillSans-Bold.eot');
+  src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'), url('GillSans-Bold.woff2') format('woff2'), url('GillSans-Bold.woff') format('woff'), url('GillSans-Bold.ttf') format('truetype'), url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-BoldItalic';
+  src: url('GillSans-BoldItalic.eot');
+  src: url('GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('GillSans-BoldItalic.woff2') format('woff2'), url('GillSans-BoldItalic.woff') format('woff'), url('GillSans-BoldItalic.ttf') format('truetype'), url('GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: 'delicious';
   src: url('../fonts/delicious-webfont.eot');
@@ -22,7 +56,7 @@ body #header-section {
   border-bottom: 6px double white;
 }
 body #header-section .header-link-container {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   width: 900px;
   margin: 0 auto;
@@ -132,7 +166,7 @@ body #info-section .intro .intro-lead:after {
 }
 body #info-section .intro .intro-message {
   color: #656478;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
@@ -140,7 +174,7 @@ body #info-section .intro .intro-message {
   margin: 70px auto;
 }
 body #info-section .intro .intro-message.btwn {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -182,7 +216,7 @@ body #countdown-section .countdown-container {
 }
 body #countdown-section .countdown-container .unit {
   color: #656478;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -274,14 +308,14 @@ body #rsvp-section .form-container .rsvp-message h3.rsvp {
   letter-spacing: 1px;
 }
 body #rsvp-section .form-container .form-intro-message {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 body #rsvp-section .form-container form.form {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -306,7 +340,7 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit {
   padding: 10px auto;
   margin: 15px auto;
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -355,7 +389,7 @@ body #weather-section .weather-container .your-weather .message {
 }
 body #weather-section .weather-container .naples-weather .message.italic,
 body #weather-section .weather-container .your-weather .message.italic {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-style: regular;
   margin: 0;
@@ -366,7 +400,7 @@ body #weather-section .weather-container .your-weather .message.italic {
 body #weather-section .weather-container .naples-weather .message.italic.temp,
 body #weather-section .weather-container .your-weather .message.italic.temp {
   color: white;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 90px;
   line-height: 90px;
@@ -485,7 +519,7 @@ body #insta-gallery-section .insta-gallery-container .gallery-message {
 }
 body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
   color: #656478;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -540,7 +574,7 @@ body #signature-section .signature-container .message {
 body #signature-section .signature-container .message .signature {
   display: inline;
   color: #656478;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   padding: 15px 0 0 0;
