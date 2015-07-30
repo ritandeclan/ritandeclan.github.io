@@ -144,7 +144,7 @@ body #info-section .intro .intro-message.btwn {
   font-size: 25px;
   line-height: 25px;
   margin: 0 auto;
-  padding: 15px 0 0 0;
+  padding: 0;
   text-transform: uppercase;
   width: 900px;
 }
@@ -155,7 +155,7 @@ body #info-section .intro .standout-text {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 30px auto;
+  margin: 32px auto;
 }
 body #info-section .intro .us-img-container {
   width: 500px;
@@ -320,7 +320,7 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit {
   font-size: 18px;
   text-transform: uppercase;
   margin-top: 20px;
-  padding-top: 8px;
+  padding-top: 2px;
 }
 body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover {
   background-color: white;
