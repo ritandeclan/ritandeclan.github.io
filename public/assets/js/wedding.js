@@ -320,7 +320,7 @@ var cardContainer = document.getElementById("cards-container");
               "<option value='Vegetarian'>Vegetarian</option>" +
             "</select>" +
             "<p>" +
-              "A song guest # " + guestNumber + "would dance to" +
+              "A song guest # " + guestNumber + " would dance to" +
             "</p>" +
             "<input class='answer' type='text' name='song'>" +
           "</div>"
