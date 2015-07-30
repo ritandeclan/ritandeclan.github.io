@@ -275,7 +275,7 @@ var cardContainer = document.getElementById("cards-container");
 
   guestInput.on('change', function(){
 
-    var guestContainer = $(".guest-container") !== null && $(".guest-container") !== undefined ? $(".guest-container") : 0;
+    var guestContainer = $(".guest-container") !== null && $(".guest-container") !== undefined ? $(".guest-container") : [];
 
     var guestCounter = 0;
 
@@ -333,7 +333,11 @@ var cardContainer = document.getElementById("cards-container");
 
       for (var i = 0; i < guestContainer.length; i++) {
 
-        if (guestContainer[i].getAttribute("data-guest-number") > guests) {
+        var guestDataNumber = guestContainer[i].getAttribute("data-guest-number");
+
+        var guestNumber = parseInt(guestDataNumber);
+
+        if (guestNumber > guests) {
 
           guestContainer[i].remove();
 
