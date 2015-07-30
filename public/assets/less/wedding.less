@@ -1,3 +1,82 @@
+// fonts
+
+// Gill Sans
+
+@font-face {
+  font-family: 'GillSans-Light';
+  src: url('GillSans-Light.eot');
+  src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'),
+       url('GillSans-Light.woff2') format('woff2'),
+       url('GillSans-Light.woff') format('woff'),
+       url('GillSans-Light.ttf') format('truetype'),
+       url('GillSans-Light.svg#GillSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSans';
+  src: url('GillSans.eot');
+  src: url('GillSans.eot?#iefix') format('embedded-opentype'),
+       url('GillSans.woff2') format('woff2'),
+       url('GillSans.woff') format('woff'),
+       url('GillSans.ttf') format('truetype'),
+       url('GillSans.svg#GillSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSans-Italic';
+  src: url('GillSans-Italic.eot');
+  src: url('GillSans-Italic.eot?#iefix') format('embedded-opentype'),
+       url('GillSans-Italic.woff2') format('woff2'),
+       url('GillSans-Italic.woff') format('woff'),
+       url('GillSans-Italic.ttf') format('truetype'),
+       url('GillSans-Italic.svg#GillSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSans-Bold';
+  src: url('GillSans-Bold.eot');
+  src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('GillSans-Bold.woff2') format('woff2'),
+       url('GillSans-Bold.woff') format('woff'),
+       url('GillSans-Bold.ttf') format('truetype'),
+       url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GillSans-BoldItalic';
+  src: url('GillSans-BoldItalic.eot');
+  src: url('GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('GillSans-BoldItalic.woff2') format('woff2'),
+       url('GillSans-BoldItalic.woff') format('woff'),
+       url('GillSans-BoldItalic.ttf') format('truetype'),
+       url('GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Delicious
+
+@font-face {
+    font-family: 'delicious';
+    src: url('../fonts/delicious-webfont.eot');
+    src: url('../fonts/delicious-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/delicious-webfont.woff2') format('woff2'),
+         url('../fonts/delicious-webfont.woff') format('woff'),
+         url('../fonts/delicious-webfont.ttf') format('truetype'),
+         url('../fonts/delicious-webfont.svg#deliciousregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 // Palettes
 
 // bouqet
@@ -24,64 +103,45 @@
 @deco-yellow: #f18d11;
 @deco-red: #e9243c;
 
-
-// fonts
-// Lato
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-
-// Lobster
-@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
-
 // mixins
 
 // font mixins
 
 .body-font-thin() {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Light', sans-serif;
   font-weight: 100;
 }
 
 .body-font-light() {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Light', sans-serif;
   font-weight: 300;
 }
 
 .body-font-normal() {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
 }
 
+.body-font-normal-italic() {
+  font-family: 'GillSans-Italic', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .body-font-bold() {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
 }
 
 .body-font-bold-italic() {
-  font-family: 'Lato', sans-serif;
-  font-style: italic;
-  font-weight: 700;
-}
-
-.head-font-normal() {
-  font-family: 'Arvo', serif;
-  font-weight: 400;
-}
-
-.head-font-heavy() {
-  font-family: 'Arvo', serif;
-  font-weight: 700;
-}
-
-.head-font-heavy-italic() {
-  font-family: 'Arvo', serif;
+  font-family: 'GillSans-BoldItalic', sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
-.lobster-bold-italic() {
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+.delicious() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
 }
 
@@ -135,7 +195,7 @@
 
 .large-text() {
   color: white;
-  .lobster-bold-italic();
+  .delicious();
   font-size: 90px;
   line-height: 90px;
   margin: 30px auto;
@@ -268,7 +328,8 @@ body {
     background-color: @deco-light-pink;
 
     .intro {
-      .content-full-width();
+      //.content-full-width();
+      width: 90%;
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -277,11 +338,13 @@ body {
       text-align: center;
 
       .intro-lead {
+        position: relative;
+        display: block;
         .double-border(@deco-red);
         color: white;
-       .lobster-bold-italic();
-        font-size: 120px;
-        line-height: 120px;
+       .delicious();
+        font-size: 175px;
+        line-height: 175px;
         padding: 20px 0;
         margin: 20px auto;
       }
@@ -298,19 +361,20 @@ body {
           .body-font-bold();
           font-size: 25px;
           line-height: 25px;
-          margin: 0;
-          padding: 15px 0 0 0;
+          margin: 0 auto;
+          padding: 0;
           text-transform: uppercase;
+          .content-full-width();
         }
 
       }
 
       .standout-text {
         color: white;
-        .lobster-bold-italic();
+        .delicious();
         font-size: 90px;
         line-height: 90px;
-        margin: 30px auto;
+        margin: 32px auto;
       }
 
       .us-img-container {
@@ -413,10 +477,21 @@ body {
 
       .rsvp-message {
         color: white;
-        .lobster-bold-italic();
+        .delicious();
         font-size: 90px;
-        line-height: 90px;
-        margin: 30px auto;
+        line-height: 60px;
+        margin: 30px auto 0 auto;
+        h3.rsvp,
+        h3.please {
+          position: relative;
+          display: block;
+          margin: 30px auto;
+          padding: 0;
+          font-weight: 400;
+        }
+        h3.rsvp {
+          letter-spacing: 1px;
+        }
       }
 
       .form-intro-message {
@@ -437,19 +512,17 @@ body {
           height: 30px;
           margin-bottom: 20px;
 
-          font-family: 'Lato', sans-serif;
+          .body-font-normal();
           font-weight: 400;
           font-size: 18px;
           text-transform: uppercase;
           color: @deco-blue;
-
-
         }
 
         .dropdown {
-            -webkit-appearance: none;
-            border-radius: 0;
-            text-align: center;
+          -webkit-appearance: none;
+          border-radius: 0;
+          text-align: center;
         }
 
         .btn-container {
@@ -465,6 +538,7 @@ body {
           input.btn-submit {
             .button();
             margin-top: 20px;
+            padding-top: 2px;
           }
 
         }
@@ -495,29 +569,30 @@ body {
         float: left;
 
         .message {
-          .body-font-bold();
-          font-size: 25px;
-          line-height: 25px;
+          .delicious();
+          font-size: 30px;
+          line-height: 30px;
           margin: 0;
           padding: 15px 0 0 0;
-          text-transform: uppercase;
+          color: white;
 
           &.italic {
-            font-style: italic;
+            .body-font-bold();
+            font-style: regular;
             margin: 0;
-            padding: 30px 0 15px 0;
+            padding: 20px 0;
             text-transform: none;
+            color: @deco-grey;
           }
 
           &.italic.temp {
-
           color: white;
-          .lobster-bold-italic();
+          .body-font-bold();
           font-size: 90px;
           line-height: 90px;
           margin: 0px auto 30px auto;
           padding: 0;
-
+          letter-spacing: 3px;
           }
 
         }
@@ -655,7 +730,7 @@ body {
 
       .gallery-title {
         color: white;
-        .lobster-bold-italic();
+        .delicious();
         font-size: 90px;
         line-height: 90px;
         margin: 0 0 30px auto;
