@@ -14,10 +14,6 @@
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<!-- Lato Google Font -->
-
- <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/assets/css/wedding.css">
 
   <script type="text/javascript"
@@ -152,14 +148,16 @@
           Your Email, please
         </p>
         <input class="answer" type="email" name="_replyto">
-        <p>
-          Number of guests you'll be bringing:
-        </p>
-        <input class="answer" type="number" name="_replyto">
+        <div class="guest-section">
+          <p>
+            Number of guests you'll be bringing:
+          </p>
+          <input class="answer guest-number" type="number">
+        </div>
         <p>
           Your choice of meal
         </p>
-        <select class="answer dropdown" name="select">
+        <select class="answer dropdown meal" name="select">
           <option value="Fish">Fish</option>
           <option value="Meat" selected>Meat</option>
           <option value="Vegetarian">Vegetarian</option>

@@ -269,4 +269,54 @@ var cardContainer = document.getElementById("cards-container");
 
     });
 
+  // Form conditional work
+
+  var guestInput = $(".guest-number");
+
+  guestInput.on('change', function(){
+
+    console.log("guest input changed");
+
+    var guests = guestInput.val();
+
+    console.log("Here's the number of guests:", guests);
+
+    if (guests > 0) {
+
+      var guestSection = $(".guest-section");
+
+      for (var i = 0; i < guests; i++) {
+
+        var guestNumber = i + 1;
+
+        guestSection.append(
+          "<div class='guest-container'>" +
+            "<p>" +
+              "Guest # " + guestNumber + "'s name, please" +
+            "</p>" +
+            "<input class='answer' type='text' name='name'>" +
+            "<p>" +
+              "Guest # " + guestNumber + "'s email, please" +
+            "</p>" +
+            "<input class='answer' type='email' name='_replyto'>" +
+            "<p>" +
+              "Guest # " + guestNumber + "'s choice of meal" +
+            "</p>" +
+            "<select class='answer dropdown meal' name='select'>" +
+              "<option value='Fish'>Fish</option>" +
+              "<option value='Meat' selected>Meat</option>" +
+              "<option value='Vegetarian'>Vegetarian</option>" +
+            "</select>" +
+            "<p>" +
+              "A song guest # " + guestNumber + "would dance to" +
+            "</p>" +
+            "<input class='answer' type='text' name='song'>" +
+          "</div>"
+        );
+      }
+
+    }
+
+  })
+
 });
