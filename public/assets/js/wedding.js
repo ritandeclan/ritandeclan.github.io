@@ -275,22 +275,34 @@ var cardContainer = document.getElementById("cards-container");
 
   guestInput.on('change', function(){
 
-    console.log("guest input changed");
+    var guestContainer = $(".guest-container") !== null && $(".guest-container") !== undefined ? $(".guest-container") : 0;
 
-    var guests = guestInput.val();
+    var guestCounter = 0;
+
+    var guestInputVal = guestInput.val();
+
+    var guests = parseInt(guestInputVal);
 
     console.log("Here's the number of guests:", guests);
 
-    if (guests > 0) {
+    console.log("Here's the guest container:", guestContainer);
+
+    debugger;
+
+    if (guests > guestCounter) {
+
+      guestCounter = guests;
 
       var guestSection = $(".guest-section");
 
-      for (var i = 0; i < guests; i++) {
+      var guestDifference = guestCounter - guestContainer.length;
 
-        var guestNumber = i + 1;
+      for (var i = 0; i < guestDifference; i++) {
+
+        var guestNumber = guestCounter + i;
 
         guestSection.append(
-          "<div class='guest-container'>" +
+          "<div class='guest-container' data-guest-number='" + guestNumber + "'>" +
             "<p>" +
               "Guest # " + guestNumber + "'s name, please" +
             "</p>" +
@@ -315,8 +327,22 @@ var cardContainer = document.getElementById("cards-container");
         );
       }
 
+    } else {
+
+      guestCounter = guests;
+
+      for (var i = 0; i < guestContainer.length; i++) {
+
+        if (guestContainer[i].getAttribute("data-guest-number") > guests) {
+
+          guestContainer[i].remove();
+
+        }
+
+      }
+
     }
 
-  })
+  });
 
 });
