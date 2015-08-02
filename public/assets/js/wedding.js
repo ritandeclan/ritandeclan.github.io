@@ -301,16 +301,16 @@ var cardContainer = document.getElementById("cards-container");
         "<p>" +
           "Guest's name, please" +
         "</p>" +
-        "<input class='answer' type='text' name='name'>" +
+        "<input class='answer' type='text' name='guest-" + guestCounter + "-name'>" +
         "<p>" +
           "Guest's email, please" +
         "</p>" +
-        "<input class='answer' type='email' name='_replyto'>" +
+        "<input class='answer' type='email' name='guest-" +guestCounter+ "-email'>" +
         "<p>" +
           "Guest's choice of meal" +
         "</p>" +
         "<div class='meal-options'>" +
-          "<select class='answer dropdown' id='meal-" + guestCounter + "' name='select'>" +
+          "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
             "<option value='Fish'>Fish</option>" +
             "<option value='Beef' selected>Beef</option>" +
             "<option value='Vegetarian'>Vegetarian</option>" +
@@ -319,7 +319,7 @@ var cardContainer = document.getElementById("cards-container");
         "<p>" +
           "A song this guest would dance to" +
         "</p>" +
-        "<input class='answer' type='text' name='song'>" +
+        "<input class='answer' type='text' name='guest-" + guestCounter + "-song'>" +
       "</div>"
     );
 
