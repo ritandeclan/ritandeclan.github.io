@@ -337,7 +337,6 @@ body #rsvp-section .form-container form.form .guest-section {
 body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
   width: 200px;
   height: 30px;
-  margin-bottom: 20px;
   margin: 0 auto;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
@@ -357,12 +356,56 @@ body #rsvp-section .form-container form.form .guest-section .answer.add-guest:ac
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container {
   background-color: #f7b7c7;
+  border: 10px double white;
+  margin: 30px auto;
+  padding-bottom: 30px;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container .answer {
   display: inline-block;
-  float: left;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button {
+  width: 200px;
+  height: 30px;
+  margin: 5px;
+  float: right;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #f7b7c7;
+  color: white;
+  padding-top: 8px;
+  border: 10px double #e9243c;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:active {
+  cursor: pointer;
+  background-color: #e9243c;
+  color: white;
+  border: 10px double white;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container:nth-of-type(even) {
+  background-color: #656478;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container:nth-of-type(even) .delete-guest .delete-guest-button {
+  background-color: #656478;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container:nth-of-type(even) .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container:nth-of-type(even) .delete-guest .delete-guest-button:active {
   background-color: #e9243c;
 }
 body #weather-section {

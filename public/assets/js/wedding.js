@@ -281,9 +281,9 @@ var cardContainer = document.getElementById("cards-container");
 
     var guestSection = $(".guest-section");
 
-    guestSection.append(
+    guestSection.prepend(
       "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
-        "<div class='delete-guest' data-guest-number='" + guestCounter + "' >REMOVE GUEST</div>" +
+        "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
         "<p>" +
           "Guest's name, please" +
         "</p>" +
@@ -297,7 +297,7 @@ var cardContainer = document.getElementById("cards-container");
         "</p>" +
         "<select class='answer dropdown meal' name='select'>" +
           "<option value='Fish'>Fish</option>" +
-          "<option value='Meat' selected>Meat</option>" +
+          "<option value='Beef' selected>Beef</option>" +
           "<option value='Vegetarian'>Vegetarian</option>" +
         "</select>" +
         "<p>" +
