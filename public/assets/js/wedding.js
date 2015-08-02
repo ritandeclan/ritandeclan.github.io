@@ -322,6 +322,8 @@ var cardContainer = document.getElementById("cards-container");
 
   });
 
+  guestNumberClass = undefined;
+
   });
 
 });
