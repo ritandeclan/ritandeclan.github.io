@@ -271,79 +271,49 @@ var cardContainer = document.getElementById("cards-container");
 
   // Form conditional work
 
-  var guestInput = $(".guest-number");
+  var addGuestButton = $(".add-guest");
 
-  guestInput.on('change', function(){
+  var guestCounter = 1;
 
-    var guestContainer = $(".guest-container") !== null && $(".guest-container") !== undefined ? $(".guest-container") : [];
+  addGuestButton.on('click', function(){
 
-    var guestCounter = 0;
+    console.log("clicked the add guest button");
 
-    var guestInputVal = guestInput.val();
+    var guestSection = $(".guest-section");
 
-    var guests = parseInt(guestInputVal);
+    guestSection.append(
+      "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
+        "<div class='delete-guest' data-guest-number='" + guestCounter + "' >REMOVE GUEST</div>" +
+        "<p>" +
+          "Guest's name, please" +
+        "</p>" +
+        "<input class='answer' type='text' name='name'>" +
+        "<p>" +
+          "Guest's email, please" +
+        "</p>" +
+        "<input class='answer' type='email' name='_replyto'>" +
+        "<p>" +
+          "Guest's choice of meal" +
+        "</p>" +
+        "<select class='answer dropdown meal' name='select'>" +
+          "<option value='Fish'>Fish</option>" +
+          "<option value='Meat' selected>Meat</option>" +
+          "<option value='Vegetarian'>Vegetarian</option>" +
+        "</select>" +
+        "<p>" +
+          "A song this guest would dance to" +
+        "</p>" +
+        "<input class='answer' type='text' name='song'>" +
+      "</div>"
+    );
 
-    console.log("Here's the number of guests:", guests);
+  $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
 
-    console.log("Here's the guest container:", guestContainer);
+    $(this).parent().remove();
 
-    if (guests > guestCounter) {
+  });
 
-      guestCounter = guests;
-
-      var guestSection = $(".guest-section");
-
-      var guestDifference = guestCounter - guestContainer.length;
-
-      for (var i = 0; i < guestDifference; i++) {
-
-        var guestNumber = guestCounter + i;
-
-        guestSection.append(
-          "<div class='guest-container' data-guest-number='" + guestNumber + "'>" +
-            "<p>" +
-              "Guest # " + guestNumber + "'s name, please" +
-            "</p>" +
-            "<input class='answer' type='text' name='name'>" +
-            "<p>" +
-              "Guest # " + guestNumber + "'s email, please" +
-            "</p>" +
-            "<input class='answer' type='email' name='_replyto'>" +
-            "<p>" +
-              "Guest # " + guestNumber + "'s choice of meal" +
-            "</p>" +
-            "<select class='answer dropdown meal' name='select'>" +
-              "<option value='Fish'>Fish</option>" +
-              "<option value='Meat' selected>Meat</option>" +
-              "<option value='Vegetarian'>Vegetarian</option>" +
-            "</select>" +
-            "<p>" +
-              "A song guest # " + guestNumber + " would dance to" +
-            "</p>" +
-            "<input class='answer' type='text' name='song'>" +
-          "</div>"
-        );
-      }
-
-    } else {
-
-      guestCounter = guests;
-
-      for (var i = 0; i < guestContainer.length; i++) {
-
-        var guestDataNumber = guestContainer[i].getAttribute("data-guest-number");
-
-        var guestNumber = parseInt(guestDataNumber);
-
-        if (guestNumber > guests) {
-
-          $(guestContainer[i]).detach();
-
-        }
-
-      }
-
-    }
+  guestCounter += 1;
 
   });
 

@@ -328,6 +328,43 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit:hov
   color: #f18d11;
   border: 10px double #f18d11;
 }
+body #rsvp-section .form-container form.form .guest-section {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 30px auto 0 auto;
+}
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #75d0bb;
+  color: white;
+  padding-top: 8px;
+  border: 10px double white;
+}
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover,
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest:active {
+  cursor: pointer;
+  background-color: #f18d11;
+  color: white;
+  border: 10px double #75d0bb;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container {
+  background-color: #f7b7c7;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .answer {
+  display: inline-block;
+  float: left;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest {
+  background-color: #e9243c;
+}
 body #weather-section {
   background-color: #f7b7c7;
 }

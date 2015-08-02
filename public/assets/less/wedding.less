@@ -543,6 +543,54 @@ body {
 
         }
 
+        // Guest Section
+
+        .guest-section {
+
+          position: relative;
+          display: block;
+          width: 100%;
+          margin: 30px auto 0 auto;
+
+          .answer.add-guest {
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+            margin: 0 auto;
+
+            .body-font-normal();
+            font-weight: 400;
+            font-size: 18px;
+            text-transform: uppercase;
+            background-color: @deco-blue;
+            color: white;
+            padding-top: 8px;
+
+            .double-border(white);
+
+            &:hover,
+            &:active {
+              cursor: pointer;
+              background-color: @deco-yellow;
+              color: white;
+              .double-border(@deco-blue);
+            }
+          }
+          .guest-container {
+            background-color: @deco-light-pink;
+
+            .answer {
+              display: inline-block;
+              float: left;
+            }
+
+            .delete-guest {
+              background-color: @deco-red;
+            }
+
+          }
+        }
+
       }
 
     }
