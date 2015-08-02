@@ -281,8 +281,12 @@ var cardContainer = document.getElementById("cards-container");
 
     var guestSection = $(".guest-section");
 
+    function isOdd(num) { return num % 2 === 1;}
+
+    var guestNumberClass = isOdd(guestCounter) ? "" : " even";
+
     guestSection.prepend(
-      "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
+      "<div class='guest-container" + guestNumberClass + "' data-guest-number='" + guestCounter + "'>" +
         "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
         "<p>" +
           "Guest's name, please" +
