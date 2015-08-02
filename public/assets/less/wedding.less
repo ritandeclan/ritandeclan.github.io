@@ -168,23 +168,17 @@
 // Button mixins
 
 .button() {
-  width: 200px;
-  height: 50px;
-  background-color: transparent;
-  .double-border(white);
-  padding: 10px auto;
+  width: 173px;
+  height: 25px;
   margin: 15px auto;
-  color: white;
+  padding: 4px 6px;
 
   .body-font-bold();
   font-size: 18px;
   text-transform: uppercase;
 
   &:hover {
-    background-color: white;
     cursor: pointer;
-    color: @deco-yellow;
-    .double-border(@deco-yellow);
   }
 
 }
@@ -519,10 +513,36 @@ body {
           color: @deco-blue;
         }
 
-        .dropdown {
-          -webkit-appearance: none;
-          border-radius: 0;
-          text-align: center;
+        .meal-options {
+
+          position: relative;
+          display: block;
+
+          height: 34px;
+          width: 200px;
+          margin: 0 auto;
+          background-color: white;
+
+          .answer.dropdown {
+            -webkit-appearance: none;
+            border-radius: 0;
+            text-align: center;
+            background-color: transparent;
+
+            border: none;
+            width: 206px;
+            padding-left: 40.5%;
+
+            &:active,
+            &:hover,
+            &:focus {
+              border: none;
+              outline: none;
+            }
+
+          }
+
+
         }
 
         .btn-container {
@@ -537,10 +557,155 @@ body {
           // Btn submit
           input.btn-submit {
             .button();
+            background-color: @deco-yellow;
+            color: white;
+            .double-border(white);
             margin-top: 20px;
+            width: 205px;
+            height: 50px;
             padding-top: 2px;
+
+            &:hover,
+            &:active {
+              background-color: white;
+              color: @deco-yellow;
+              .double-border(@deco-yellow);
+            }
+
           }
 
+        }
+
+        // Guest Section
+
+        .guest-section {
+          position: relative;
+          display: block;
+
+          width: 100%;
+          margin: 10px auto;
+          padding: 10px 0;
+
+          .answer.add-guest {
+
+            .button();
+            display: inline-block;
+            position: relative;
+            background-color: @deco-yellow;
+            color: white;
+            .double-border(@deco-grey);
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              background-color: @deco-grey;
+              .double-border(@deco-yellow);
+              color: white;
+            }
+
+          }
+          .guest-container {
+            background-color: @deco-light-pink;
+            .double-border(white);
+            margin: 30px auto;
+            padding-bottom: 30px;
+
+            .answer {
+              display: inline-block;
+              //float: left;
+            }
+
+            .delete-guest {
+              position: relative;
+              display: block;
+              width: 100%;
+              height: 55px;
+              margin: 0;
+              .cf();
+
+              .delete-guest-button {
+
+                .button();
+                background-color: @deco-light-pink;
+                color: white;
+                .double-border(@deco-red);
+                float: right;
+                margin: 5px;
+
+                &:hover,
+                &:active {
+                  background-color: @deco-red;
+                  .double-border(@deco-light-pink);
+                }
+
+              }
+
+            }
+
+            .guest-number {
+
+              .delicious();
+              font-size: 75px;
+              line-height: 75px;
+              font-weight: normal;
+              text-transform: none;
+              margin: 10px auto 0 auto;
+              padding: 0;
+
+            }
+
+            .meal-options {
+
+              position: relative;
+              display: block;
+
+              height: 34px;
+              width: 200px;
+              margin: 0 auto;
+              background-color: white;
+
+              .answer.dropdown {
+                -webkit-appearance: none;
+                border-radius: 0;
+                text-align: center;
+                background-color: transparent;
+
+                border: none;
+                width: 206px;
+                padding-left: 40.5%;
+
+                &:active,
+                &:hover,
+                &:focus {
+                  border: none;
+                  outline: none;
+                }
+
+              }
+
+
+            }
+
+            &.even {
+              background-color: @deco-blue;
+
+              .delete-guest {
+                .delete-guest-button {
+
+                  .button();
+                  background-color: @deco-blue;
+                  margin: 5px;
+
+
+                  &:hover,
+                  &:active {
+                    background-color: @deco-red;
+                    .double-border(@deco-blue);
+                  }
+                }
+              }
+            }
+          }
         }
 
       }

@@ -269,4 +269,114 @@ var cardContainer = document.getElementById("cards-container");
 
     });
 
+  // Form conditional work
+
+  var addGuestButton = $(".add-guest");
+
+  var guestCounter = 0;
+
+  function isOdd(num) { return num % 2 === 1;}
+
+  addGuestNumber = function(currentGuestContainer) {
+    var guestNumber = parseInt($(currentGuestContainer).index());
+
+    if ( !isOdd(guestNumber) ) {
+      $(currentGuestContainer).addClass("even");
+    }
+
+    $(currentGuestContainer).find(".guest-number").html("Guest # " + guestNumber);
+  }
+
+  addGuestButton.on('click', function(){
+
+    guestCounter += 1;
+
+    var guestSection = $(".guest-section");
+
+    guestSection.append(
+      "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
+        "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
+        "<p class='guest-number'>" +
+        "</p>" +
+        "<p>" +
+          "Guest's name, please" +
+        "</p>" +
+        "<input class='answer' type='text' name='name'>" +
+        "<p>" +
+          "Guest's email, please" +
+        "</p>" +
+        "<input class='answer' type='email' name='_replyto'>" +
+        "<p>" +
+          "Guest's choice of meal" +
+        "</p>" +
+        "<div class='meal-options'>" +
+          "<select class='answer dropdown' id='meal-" + guestCounter + "' name='select'>" +
+            "<option value='Fish'>Fish</option>" +
+            "<option value='Beef' selected>Beef</option>" +
+            "<option value='Vegetarian'>Vegetarian</option>" +
+          "</select>" +
+        "</div>" +
+        "<p>" +
+          "A song this guest would dance to" +
+        "</p>" +
+        "<input class='answer' type='text' name='song'>" +
+      "</div>"
+    );
+
+  $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
+
+    $(this).parent().remove();
+
+  });
+
+  var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
+
+  addGuestNumber(currentGuestContainer);
+
+  guestNumberClass = undefined;
+
+    // Select dropdown styling fix:
+
+  $("#meal-" + guestCounter).on("change", function(){
+
+    var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
+
+    switch (value) {
+      case 'vegetarian':
+         $(this).css("padding-left", "23.5%");
+         break;
+      case 'fish':
+        $(this).css("padding-left", "41.5%");
+      case 'beef':
+        $(this).css("padding-left", "40.5%");
+      default:
+        $(this).css("padding-left", "41.5%");
+        break;
+    }
+
+  });
+
+  });
+
+// Select dropdown styling fix:
+
+$("#meal").on("change", function(){
+
+  var value= $("#meal option:selected").val().toLowerCase();
+
+  switch (value) {
+    case 'vegetarian':
+       $(this).css("padding-left", "23.5%");
+       break;
+    case 'fish':
+      $(this).css("padding-left", "41.5%");
+    case 'beef':
+      $(this).css("padding-left", "40.5%");
+    default:
+      $(this).css("padding-left", "41.5%");
+      break;
+  }
+
+});
+
 });
