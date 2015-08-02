@@ -291,8 +291,6 @@ var cardContainer = document.getElementById("cards-container");
 
     guestCounter += 1;
 
-    console.log("clicked the add guest button");
-
     var guestSection = $(".guest-section");
 
     guestSection.append(
