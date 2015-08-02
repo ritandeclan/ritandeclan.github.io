@@ -513,10 +513,36 @@ body {
           color: @deco-blue;
         }
 
-        .dropdown {
-          -webkit-appearance: none;
-          border-radius: 0;
-          text-align: center;
+        .meal-options {
+
+          position: relative;
+          display: block;
+
+          height: 34px;
+          width: 200px;
+          margin: 0 auto;
+          background-color: white;
+
+          .answer.dropdown {
+            -webkit-appearance: none;
+            border-radius: 0;
+            text-align: center;
+            background-color: transparent;
+
+            border: none;
+            width: 206px;
+            padding-left: 40.5%;
+
+            &:active,
+            &:hover,
+            &:focus {
+              border: none;
+              outline: none;
+            }
+
+          }
+
+
         }
 
         .btn-container {
@@ -567,11 +593,12 @@ body {
             position: relative;
             background-color: @deco-yellow;
             color: white;
-            .double-border(@deco-blue);
+            .double-border(@deco-grey);
+            margin: 0 auto;
 
             &:hover,
             &:active {
-              background-color: @deco-blue;
+              background-color: @deco-grey;
               .double-border(@deco-yellow);
               color: white;
             }
@@ -617,20 +644,20 @@ body {
 
 
             &.even {
-              background-color: @deco-grey;
+              background-color: @deco-blue;
 
               .delete-guest {
                 .delete-guest-button {
 
                   .button();
-                  background-color: @deco-grey;
+                  background-color: @deco-blue;
                   margin: 5px;
 
 
                   &:hover,
                   &:active {
                     background-color: @deco-red;
-                    .double-border(@deco-grey);
+                    .double-border(@deco-blue);
                   }
                 }
               }

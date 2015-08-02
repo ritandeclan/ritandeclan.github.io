@@ -326,4 +326,25 @@ var cardContainer = document.getElementById("cards-container");
 
   });
 
+// Select dropdown styling fix:
+
+$("#meal").on("change", function(){
+
+  var value= $("#meal option:selected").val().toLowerCase();
+
+  switch (value) {
+    case 'vegetarian':
+       $(this).css("padding-left", "23.5%");
+       break;
+    case 'fish':
+      $(this).css("padding-left", "41.5%");
+    case 'beef':
+      $(this).css("padding-left", "40.5%");
+    default:
+      $(this).css("padding-left", "41.5%");
+      break;
+  }
+
+});
+
 });

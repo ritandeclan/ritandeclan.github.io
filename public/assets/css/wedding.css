@@ -295,10 +295,28 @@ body #rsvp-section .form-container form.form .answer {
   text-transform: uppercase;
   color: #75d0bb;
 }
-body #rsvp-section .form-container form.form .dropdown {
+body #rsvp-section .form-container form.form .meal-options {
+  position: relative;
+  display: block;
+  height: 34px;
+  width: 200px;
+  margin: 0 auto;
+  background-color: white;
+}
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
   text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 206px;
+  padding-left: 40.5%;
+}
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:focus {
+  border: none;
+  outline: none;
 }
 body #rsvp-section .form-container form.form .btn-container {
   position: relative;
@@ -353,14 +371,15 @@ body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
   position: relative;
   background-color: #f18d11;
   color: white;
-  border: 10px double #75d0bb;
+  border: 10px double #656478;
+  margin: 0 auto;
 }
 body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover {
   cursor: pointer;
 }
 body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover,
 body #rsvp-section .form-container form.form .guest-section .answer.add-guest:active {
-  background-color: #75d0bb;
+  background-color: #656478;
   border: 10px double #f18d11;
   color: white;
 }
@@ -411,7 +430,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .de
   border: 10px double #f7b7c7;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container.even {
-  background-color: #656478;
+  background-color: #75d0bb;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button {
   width: 173px;
@@ -422,7 +441,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container.eve
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
-  background-color: #656478;
+  background-color: #75d0bb;
   margin: 5px;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover {
@@ -431,7 +450,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container.eve
 body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover,
 body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:active {
   background-color: #e9243c;
-  border: 10px double #656478;
+  border: 10px double #75d0bb;
 }
 body #weather-section {
   background-color: #f7b7c7;
