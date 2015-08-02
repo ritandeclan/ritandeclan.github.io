@@ -287,8 +287,6 @@ var cardContainer = document.getElementById("cards-container");
 
     console.log("Here's the guest container:", guestContainer);
 
-    debugger;
-
     if (guests > guestCounter) {
 
       guestCounter = guests;
@@ -339,7 +337,7 @@ var cardContainer = document.getElementById("cards-container");
 
         if (guestNumber > guests) {
 
-          guestContainer[i].remove();
+          $(guestContainer[i]).detach();
 
         }
 
