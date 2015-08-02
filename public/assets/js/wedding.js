@@ -273,9 +273,11 @@ var cardContainer = document.getElementById("cards-container");
 
   var addGuestButton = $(".add-guest");
 
-  var guestCounter = 1;
+  var guestCounter = 0;
 
   addGuestButton.on('click', function(){
+
+    guestCounter += 1;
 
     console.log("clicked the add guest button");
 
@@ -285,9 +287,12 @@ var cardContainer = document.getElementById("cards-container");
 
     var guestNumberClass = isOdd(guestCounter) ? "" : " even";
 
-    guestSection.prepend(
+    guestSection.append(
       "<div class='guest-container" + guestNumberClass + "' data-guest-number='" + guestCounter + "'>" +
         "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
+        "<p>" +
+          guestCounter +
+        "</p>" +
         "<p>" +
           "Guest's name, please" +
         "</p>" +
@@ -316,8 +321,6 @@ var cardContainer = document.getElementById("cards-container");
     $(this).parent().remove();
 
   });
-
-  guestCounter += 1;
 
   });
 
