@@ -261,23 +261,24 @@ body #rsvp-section .form-container .rsvp-message {
   line-height: 60px;
   margin: 30px auto 0 auto;
 }
-body #rsvp-section .form-container .rsvp-message h3.rsvp,
-body #rsvp-section .form-container .rsvp-message h3.please {
+body #rsvp-section .form-container .rsvp-message h3.rsvp {
   position: relative;
   display: block;
   margin: 30px auto;
   padding: 0;
   font-weight: 400;
-}
-body #rsvp-section .form-container .rsvp-message h3.rsvp {
   letter-spacing: 1px;
+  line-height: 85px;
 }
 body #rsvp-section .form-container .form-intro-message {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 35px auto 30px auto;
+}
+body #rsvp-section .form-container .form-intro-message .superscript {
+  text-transform: none;
 }
 body #rsvp-section .form-container form.form {
   font-family: 'GillSans', sans-serif;
@@ -302,6 +303,7 @@ body #rsvp-section .form-container form.form .meal-options {
   width: 200px;
   margin: 0 auto;
   background-color: white;
+  margin-bottom: 38px;
 }
 body #rsvp-section .form-container form.form .meal-options .answer.dropdown {
   -webkit-appearance: none;
@@ -438,6 +440,29 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .gu
   text-transform: none;
   margin: 10px auto 0 auto;
   padding: 0;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options {
+  position: relative;
+  display: block;
+  height: 34px;
+  width: 200px;
+  margin: 0 auto;
+  background-color: white;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 206px;
+  padding-left: 40.5%;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:focus {
+  border: none;
+  outline: none;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container.even {
   background-color: #75d0bb;
