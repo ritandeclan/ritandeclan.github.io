@@ -446,7 +446,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .me
   display: block;
   height: 34px;
   width: 200px;
-  margin: 0 auto;
+  margin: 0 auto 38px auto;
   background-color: white;
 }
 body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown {
