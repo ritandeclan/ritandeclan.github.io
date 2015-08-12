@@ -2,15 +2,18 @@ $(document).ready(function(){
 
   //  Formspree
 
-$(".btn-submit").on("submit", function() {
+$(".form .btn-submit").on("click", function(e) {
 
-  var message = $(".form").serializeArray();
+  e.preventDefault();
 
+  var formMessage = $(".form").serializeArray();
+
+  console.log("Here's the form message", formMessage);
 
   $.ajax({
     url: "//formspree.io/declanandrita@gmail.com",
     method: "POST",
-    data: message,
+    data: {message: formMessage},
     dataType: "json"
   }).done(function (data){
     console.log("Here's the test data", data);
