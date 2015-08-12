@@ -1,5 +1,26 @@
 $(document).ready(function(){
 
+  //  Formspree
+
+$("#form-test .btn-submit-test").on("click", function(e) {
+
+  e.preventDefault();
+
+  var formMessage = $(".form").serializeArray();
+
+  console.log("Here's the form message", formMessage);
+
+  $.ajax({
+    url: "//formspree.io/declanandrita@gmail.com",
+    method: "POST",
+    data: {message: formMessage},
+    dataType: "json"
+  }).done(function (data){
+    console.log("Here's the test data", data);
+  });
+
+});
+
   var mapStyles =
     [
       {
