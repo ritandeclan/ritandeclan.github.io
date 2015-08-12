@@ -6,7 +6,7 @@ $("#form-test .btn-submit-test").on("click", function(e) {
 
   e.preventDefault();
 
-  var formMessage = $(".form").serializeArray();
+  var formMessage = $("#form-test").serializeArray();
 
   console.log("Here's the form message", formMessage);
 
