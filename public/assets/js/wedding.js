@@ -175,8 +175,8 @@ var contentString =
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 
-  var yourWeather = 'Mediocre';
-  var yourTemp = 'Meh&deg; F';
+  var yourWeather = 'mediocre';
+  var yourTemp = 'meh&deg; f';
 
   if ("geolocation" in navigator) {
     /* geolocation is available */
@@ -187,14 +187,9 @@ var contentString =
         url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&units=imperial",
         crossDomain: true
       }).success(function(data) {
-          console.log("your weather data", data);
-
-          console.log(" your description", data.weather[0].description);
-          console.log(" your main", data.weather[0].main);
-          console.log(" your temp", data.main.temp);
 
           yourWeather = data.weather[0].description;
-          yourTemp = data.main.temp + '&deg;' + ' F';
+          yourTemp = data.main.temp + '&deg;' + ' f';
 
           $("#your-weather").html(yourWeather);
           $("#your-temp").html(yourTemp);
@@ -218,14 +213,9 @@ var contentString =
     url: "http://api.openweathermap.org/data/2.5/weather?id=4165565&units=imperial",
     crossDomain: true
   }).success(function(data) {
-      console.log("naples weather data", data);
-
-      console.log("description", data.weather[0].description);
-      console.log("main", data.weather[0].main);
-      console.log("temp", data.main.temp);
 
         $("#naples-weather").html(data.weather[0].description);
-        $("#naples-temp").html(data.main.temp + '&deg;' + ' F');
+        $("#naples-temp").html(data.main.temp + '&deg;' + ' f');
 
     });
 
@@ -278,8 +268,6 @@ setInterval(function () {
     minutesElement.innerHTML = minutes;
     secondsElement.innerHTML = seconds;
 
-    console.log("time", days + "d, " + hours + "h, " + minutes + "m, " + seconds + "s");
-
 }, 1000);
 
 // The list of cards
@@ -327,5 +315,115 @@ var cardContainer = document.getElementById("cards-container");
       }
 
     });
+
+  // Form conditional work
+
+  var addGuestButton = $(".add-guest");
+
+  var guestCounter = 0;
+
+  function isOdd(num) { return num % 2 === 1;}
+
+  addGuestNumber = function(currentGuestContainer) {
+    var guestNumber = parseInt($(currentGuestContainer).index());
+
+    if ( !isOdd(guestNumber) ) {
+      $(currentGuestContainer).addClass("even");
+    }
+
+    $(currentGuestContainer).find(".guest-number").html("Guest # " + guestNumber);
+  }
+
+  addGuestButton.on('click', function(){
+
+    guestCounter += 1;
+
+    var guestSection = $(".guest-section");
+
+    guestSection.append(
+      "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
+        "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
+        "<p class='guest-number'>" +
+        "</p>" +
+        "<p>" +
+          "Guest's name, please" +
+        "</p>" +
+        "<input class='answer' type='text' name='guest-" + guestCounter + "-name'>" +
+        "<p>" +
+          "Guest's email, please" +
+        "</p>" +
+        "<input class='answer' type='email' name='guest-" +guestCounter+ "-email'>" +
+        "<p>" +
+          "Guest's choice of meal" +
+        "</p>" +
+        "<div class='meal-options'>" +
+          "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
+            "<option value='Fish'>Fish</option>" +
+            "<option value='Beef' selected>Beef</option>" +
+            "<option value='Vegetarian'>Vegetarian</option>" +
+          "</select>" +
+        "</div>" +
+        "<p>" +
+          "A song this guest would dance to" +
+        "</p>" +
+        "<input class='answer' type='text' name='guest-" + guestCounter + "-song'>" +
+      "</div>"
+    );
+
+  $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
+
+    $(this).parent().remove();
+
+  });
+
+  var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
+
+  addGuestNumber(currentGuestContainer);
+
+  guestNumberClass = undefined;
+
+    // Select dropdown styling fix:
+
+  $("#meal-" + guestCounter).on("change", function(){
+
+    var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
+
+    switch (value) {
+      case 'vegetarian':
+         $(this).css("padding-left", "23.5%");
+         break;
+      case 'fish':
+        $(this).css("padding-left", "41.5%");
+      case 'beef':
+        $(this).css("padding-left", "40.5%");
+      default:
+        $(this).css("padding-left", "41.5%");
+        break;
+    }
+
+  });
+
+  });
+
+// Select dropdown styling fix:
+
+$("#meal").on("change", function(){
+
+  var value= $("#meal option:selected").val().toLowerCase();
+
+  switch (value) {
+    case 'vegetarian':
+       $(this).css("padding-left", "23.5%");
+       break;
+    case 'fish':
+      $(this).css("padding-left", "41.5%");
+    case 'beef':
+      $(this).css("padding-left", "40.5%");
+    default:
+      $(this).css("padding-left", "41.5%");
+      break;
+  }
+
+});
 
 });

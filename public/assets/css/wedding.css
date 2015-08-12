@@ -1,5 +1,45 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic);
+@font-face {
+  font-family: 'GillSans-Light';
+  src: url('GillSans-Light.eot');
+  src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'), url('GillSans-Light.woff2') format('woff2'), url('GillSans-Light.woff') format('woff'), url('GillSans-Light.ttf') format('truetype'), url('GillSans-Light.svg#GillSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url('GillSans.eot');
+  src: url('GillSans.eot?#iefix') format('embedded-opentype'), url('GillSans.woff2') format('woff2'), url('GillSans.woff') format('woff'), url('GillSans.ttf') format('truetype'), url('GillSans.svg#GillSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Italic';
+  src: url('GillSans-Italic.eot');
+  src: url('GillSans-Italic.eot?#iefix') format('embedded-opentype'), url('GillSans-Italic.woff2') format('woff2'), url('GillSans-Italic.woff') format('woff'), url('GillSans-Italic.ttf') format('truetype'), url('GillSans-Italic.svg#GillSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Bold';
+  src: url('GillSans-Bold.eot');
+  src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'), url('GillSans-Bold.woff2') format('woff2'), url('GillSans-Bold.woff') format('woff'), url('GillSans-Bold.ttf') format('truetype'), url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-BoldItalic';
+  src: url('GillSans-BoldItalic.eot');
+  src: url('GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('GillSans-BoldItalic.woff2') format('woff2'), url('GillSans-BoldItalic.woff') format('woff'), url('GillSans-BoldItalic.ttf') format('truetype'), url('GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'delicious';
+  src: url('../fonts/delicious-webfont.eot');
+  src: url('../fonts/delicious-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/delicious-webfont.woff2') format('woff2'), url('../fonts/delicious-webfont.woff') format('woff'), url('../fonts/delicious-webfont.ttf') format('truetype'), url('../fonts/delicious-webfont.svg#deliciousregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: #75d0bb;
   color: #656478;
@@ -16,7 +56,7 @@ body #header-section {
   border-bottom: 6px double white;
 }
 body #header-section .header-link-container {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   width: 900px;
   margin: 0 auto;
@@ -68,7 +108,7 @@ body #info-section {
   background-color: #f7b7c7;
 }
 body #info-section .intro {
-  width: 900px;
+  width: 90%;
   height: auto;
   background-color: transparent;
   margin: 0 auto;
@@ -77,20 +117,21 @@ body #info-section .intro {
   text-align: center;
 }
 body #info-section .intro .intro-lead {
+  position: relative;
+  display: block;
   border: 10px double #e9243c;
   color: white;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
-  font-size: 120px;
-  line-height: 120px;
+  font-size: 175px;
+  line-height: 175px;
   padding: 20px 0;
   margin: 20px auto;
 }
 body #info-section .intro .intro-message {
   color: #656478;
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
@@ -98,23 +139,23 @@ body #info-section .intro .intro-message {
   margin: 70px auto;
 }
 body #info-section .intro .intro-message.btwn {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
-  margin: 0;
-  padding: 15px 0 0 0;
+  margin: 0 auto;
+  padding: 0;
   text-transform: uppercase;
+  width: 900px;
 }
 body #info-section .intro .standout-text {
   color: white;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 30px auto;
+  margin: 32px auto;
 }
 body #info-section .intro .us-img-container {
   width: 500px;
@@ -140,7 +181,7 @@ body #countdown-section .countdown-container {
 }
 body #countdown-section .countdown-container .unit {
   color: #656478;
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -154,9 +195,8 @@ body #countdown-section .countdown-container .unit {
 body #countdown-section .countdown-container .countdown,
 body #countdown-section .countdown-container .number {
   color: white;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
@@ -214,23 +254,34 @@ body #rsvp-section .form-container {
 }
 body #rsvp-section .form-container .rsvp-message {
   color: white;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
-  line-height: 90px;
+  line-height: 60px;
+  margin: 30px auto 0 auto;
+}
+body #rsvp-section .form-container .rsvp-message h3.rsvp {
+  position: relative;
+  display: block;
   margin: 30px auto;
+  padding: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 85px;
 }
 body #rsvp-section .form-container .form-intro-message {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 35px auto 30px auto;
+}
+body #rsvp-section .form-container .form-intro-message .superscript {
+  text-transform: none;
 }
 body #rsvp-section .form-container form.form {
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -239,6 +290,35 @@ body #rsvp-section .form-container form.form .answer {
   width: 200px;
   height: 30px;
   margin-bottom: 20px;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #75d0bb;
+}
+body #rsvp-section .form-container form.form .meal-options {
+  position: relative;
+  display: block;
+  height: 34px;
+  width: 200px;
+  margin: 0 auto;
+  background-color: white;
+  margin-bottom: 38px;
+}
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 206px;
+  padding-left: 40.5%;
+}
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form.form .meal-options .answer.dropdown:focus {
+  border: none;
+  outline: none;
 }
 body #rsvp-section .form-container form.form .btn-container {
   position: relative;
@@ -248,24 +328,164 @@ body #rsvp-section .form-container form.form .btn-container {
   padding: 10px 0;
 }
 body #rsvp-section .form-container form.form .btn-container input.btn-submit {
-  width: 200px;
-  height: 50px;
-  background-color: transparent;
-  border: 10px double white;
-  padding: 10px auto;
+  width: 173px;
+  height: 25px;
   margin: 15px auto;
-  color: white;
-  font-family: 'Lato', sans-serif;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+  background-color: #f18d11;
+  color: white;
+  border: 10px double white;
   margin-top: 20px;
+  width: 205px;
+  height: 50px;
+  padding-top: 2px;
 }
 body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover {
-  background-color: white;
   cursor: pointer;
+}
+body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover,
+body #rsvp-section .form-container form.form .btn-container input.btn-submit:active {
+  background-color: white;
   color: #f18d11;
   border: 10px double #f18d11;
+}
+body #rsvp-section .form-container form.form .guest-section {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+}
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  background-color: #f18d11;
+  color: white;
+  border: 10px double #656478;
+  margin: 0 auto;
+}
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover {
+  cursor: pointer;
+}
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover,
+body #rsvp-section .form-container form.form .guest-section .answer.add-guest:active {
+  background-color: #656478;
+  border: 10px double #f18d11;
+  color: white;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container {
+  background-color: #f7b7c7;
+  border: 10px double white;
+  margin: 30px auto;
+  padding-bottom: 30px;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .answer {
+  display: inline-block;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 55px;
+  margin: 0;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #f7b7c7;
+  color: white;
+  border: 10px double #e9243c;
+  float: right;
+  margin: 5px;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:hover {
+  cursor: pointer;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:active {
+  background-color: #e9243c;
+  border: 10px double #f7b7c7;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .guest-number {
+  font-family: 'delicious', cursive;
+  letter-spacing: 1px;
+  font-size: 75px;
+  line-height: 75px;
+  font-weight: normal;
+  text-transform: none;
+  margin: 10px auto 0 auto;
+  padding: 0;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options {
+  position: relative;
+  display: block;
+  height: 34px;
+  width: 200px;
+  margin: 0 auto 38px auto;
+  background-color: white;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 206px;
+  padding-left: 40.5%;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:focus {
+  border: none;
+  outline: none;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container.even {
+  background-color: #75d0bb;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #75d0bb;
+  margin: 5px;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover {
+  cursor: pointer;
+}
+body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:active {
+  background-color: #e9243c;
+  border: 10px double #75d0bb;
 }
 body #weather-section {
   background-color: #f7b7c7;
@@ -292,32 +512,35 @@ body #weather-section .weather-container .your-weather {
 }
 body #weather-section .weather-container .naples-weather .message,
 body #weather-section .weather-container .your-weather .message {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 25px;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  line-height: 30px;
   margin: 0;
   padding: 15px 0 0 0;
-  text-transform: uppercase;
+  color: white;
 }
 body #weather-section .weather-container .naples-weather .message.italic,
 body #weather-section .weather-container .your-weather .message.italic {
-  font-style: italic;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-style: regular;
   margin: 0;
-  padding: 30px 0 15px 0;
+  padding: 20px 0;
   text-transform: none;
+  color: #656478;
 }
 body #weather-section .weather-container .naples-weather .message.italic.temp,
 body #weather-section .weather-container .your-weather .message.italic.temp {
   color: white;
-  font-family: 'Lobster Two', cursive;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
-  font-style: italic;
-  letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
   margin: 0px auto 30px auto;
   padding: 0;
+  letter-spacing: 3px;
 }
 body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-spin.custom {
   color: #f18d11;
@@ -421,9 +644,8 @@ body #insta-gallery-section .insta-gallery-container {
 }
 body #insta-gallery-section .insta-gallery-container .gallery-title {
   color: white;
-  font-family: 'Lobster Two', cursive;
-  font-weight: 700;
-  font-style: italic;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
@@ -434,7 +656,7 @@ body #insta-gallery-section .insta-gallery-container .gallery-message {
 }
 body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
   color: #656478;
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -489,7 +711,7 @@ body #signature-section .signature-container .message {
 body #signature-section .signature-container .message .signature {
   display: inline;
   color: #656478;
-  font-family: 'Lato', sans-serif;
+  font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
   padding: 15px 0 0 0;

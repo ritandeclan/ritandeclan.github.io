@@ -14,14 +14,6 @@
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<!-- Lato Google Font -->
-
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,700italic' rel='stylesheet' type='text/css'>
-
-<!-- Lobster Google Font -->
-
-  <link href='http://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="public/assets/css/wedding.css">
 
   <script type="text/javascript"
@@ -75,9 +67,11 @@
         <img class="us-img" src="public/assets/img/beach-raspberries-edit.jpg"></img>
       </div>
       <p class="intro-message">
-        As many of you know (and I'm sure are not surprised by),
+        As many of you may know,
+        we're celebrating 10 years
         <br>
-        we're celebrating 10 years together by tying the knot!
+        together by tying the knot!
+        (surprise, surprise)
       </p>
       <p class="intro-message btwn">
         Where
@@ -137,31 +131,41 @@
   <section id="rsvp-section">
     <div class="form-container">
 
-      <h3 class="rsvp-message">
-        please RSVP
-      </h3>
+      <div class="rsvp-message">
+        <h3 class="rsvp">Please <br/> Reply</h3>
+      </div>
 
       <p class="form-intro-message">
-        Choose your own adventure
+        by October 1<sup class="superscript">st</sup>, 2015
       </p>
 
       <form class="form" action="//formspree.io/declanandrita@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="/#rsvp-section" />
         <p>
           Your name, please
         </p>
-          <input class="answer" type="text" name="name">
-        <p>
-          Your choice of meal
-        </p>
-          <input class="answer" type="text" name="meal">
-        <p>
-          A song you would dance to
-        </p>
-          <input class="answer" type="text" name="song">
+        <input class="answer" type="text" name="name">
         <p>
           Your Email, please
         </p>
-          <input class="answer" type="email" name="_replyto">
+        <input class="answer" type="email" name="_replyto">
+        <p>
+          Your choice of meal
+        </p>
+        <div class="meal-options">
+          <select class="answer dropdown" id="meal" name="select">
+            <option value="Fish">Fish</option>
+            <option value="Beef" selected>Beef</option>
+            <option value="Vegetarian">Vegetarian</option>
+          </select>
+        </div>
+        <p>
+          A song you would dance to
+        </p>
+        <input class="answer" type="text" name="song">
+        <div class="guest-section">
+          <div class="answer add-guest">Add a guest</div>
+        </div>
         <div class="btn-container">
           <input class="btn-submit" type="submit" value="Send">
         </div>
@@ -178,7 +182,7 @@
       <div class="naples-weather">
         <i class="fa fa-sun-o fa-5x fa-spin custom"></i>
         <p class="message">
-            Naples, FL weather:
+            Naples, Florida weather:
         </p>
         <p id="naples-weather" class="message italic">
         </p>
