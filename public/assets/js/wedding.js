@@ -19,13 +19,15 @@ $("#form-test .btn-submit-test").on("click", function(e) {
 
       console.log("Success, Here's the test data", data);
 
-      $("#submit-success-message").addClass("fade");
+      $("#submit-success-message").fadeIn(3000,'swing',function(){
+        $('#submit-success-message').fadeOut(5000, 'slow');
+      });
 
     }).fail(function (jqXHR,status,err) {
 
       console.log("failure, Here's the error", err);
 
-      $("#submit-failure-message").addClass("fade");
+      $("#submit-failure-message").addClass("display");
 
     });
 

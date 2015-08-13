@@ -282,15 +282,12 @@ body #rsvp-section .form-container .form-intro-message .superscript {
 }
 body #rsvp-section .form-container #submit-success-message,
 body #rsvp-section .form-container #submit-failure-message {
+  position: relative;
+  display: none;
   width: 900px;
   border: 10px double white;
-  position: relative;
   margin: 50px auto 0 auto;
-  height: 0;
-  margin-top: 0;
-  z-index: 0;
-  display: block;
-  opacity: 0;
+  height: auto;
 }
 body #rsvp-section .form-container #submit-success-message .submit-message,
 body #rsvp-section .form-container #submit-failure-message .submit-message {
@@ -319,93 +316,11 @@ body #rsvp-section .form-container #submit-success-message.display,
 body #rsvp-section .form-container #submit-failure-message.display {
   display: block;
 }
-body #rsvp-section .form-container #submit-success-message.fade,
-body #rsvp-section .form-container #submit-failure-message.fade {
-  -webkit-animation: fade-in-out 8s ease-in-out 1;
-  /* Safari 4+ */
-  -moz-animation: fade-in-out 8s ease-in-out 1;
-  /* Fx 5+ */
-  -o-animation: fade-in-out 8s ease-in-out 1;
-  /* Opera 12+ */
-  animation: fade-in-out 8s ease-in-out 1;
-}
-@-webkit-keyframes fade-in-out {
-  0% {
-    opacity: 0;
-    height: 0;
-    margin-top: 50px;
-  }
-  50% {
-    opacity: 1;
-    height: auto;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-    margin-top: 0;
-  }
-}
-@-moz-keyframes fade-in-out {
-  0% {
-    opacity: 0;
-    height: 0;
-    margin-top: 50px;
-  }
-  50% {
-    opacity: 1;
-    height: auto;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-    margin-top: 0;
-  }
-}
-@-o-keyframes fade-in-out {
-  0% {
-    opacity: 0;
-    height: 0;
-    margin-top: 50px;
-  }
-  50% {
-    opacity: 1;
-    height: auto;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-    margin-top: 0;
-  }
-}
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-    height: 0;
-    margin-top: 50px;
-  }
-  50% {
-    opacity: 1;
-    height: auto;
-  }
-  100% {
-    opacity: 0;
-    height: 0;
-    margin-top: 0;
-  }
-}
 body #rsvp-section .form-container #submit-success-message {
   background-color: #75d0bb;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  height: 0;
 }
 body #rsvp-section .form-container #submit-failure-message {
   background-color: #e9243c;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  height: 0;
 }
 body #rsvp-section .form-container form#form-test {
   font-family: 'GillSans', sans-serif;
