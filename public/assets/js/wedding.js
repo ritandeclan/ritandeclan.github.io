@@ -19,8 +19,8 @@ $("#form-test .btn-submit").on("click", function(e) {
 
       console.log("Success, Here's the test data", data);
 
-      $("#submit-success-message").fadeIn(3000,'swing',function(){
-        $('#submit-success-message').fadeOut(5000, 'swing');
+      $("#submit-success-message").fadeIn(3000, 'swing', function(){
+        $('#submit-success-message').fadeOut(5000);
       });
 
     }).fail(function (jqXHR,status,err) {
