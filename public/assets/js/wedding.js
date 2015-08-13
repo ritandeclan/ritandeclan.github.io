@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //  Formspree
 
-$("#form-test .btn-submit-test").on("click", function(e) {
+$("#form-test .btn-submit").on("click", function(e) {
 
   e.preventDefault();
 
