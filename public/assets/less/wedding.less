@@ -177,6 +177,40 @@
 
 }
 
+// Opacity mixins
+
+.opacity (@opacity) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+
+// Animation mixins
+
+.animation (@name; @duration; @delay; @ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+// Transition mixins
+
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+
+// Transform mixins
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+
 // Text styling mixins
 
 // Large text
@@ -498,7 +532,7 @@ body {
         .content-full-width();
         .double-border(white);
         position: relative;
-        display: none;
+        display: block;
         margin: 50px auto 0 auto;
 
         .submit-message {
@@ -527,10 +561,12 @@ body {
 
       #submit-success-message {
         background-color: @deco-blue;
+        .opacity(0);
       }
 
       #submit-failure-message {
         background-color: @deco-red;
+        display: none;
       }
 
       form.form {
@@ -806,7 +842,7 @@ body {
         .fa.fa-sun-o.fa-5x.fa-spin.custom {
           color: @deco-yellow;
           font-size: 90px;
-          opacity: 1;
+          .opacity(1);
 
           -webkit-animation:fa-spin 30s infinite linear;
           animation:fa-spin 30s infinite linear;
@@ -859,40 +895,40 @@ body {
 
           @-webkit-keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
           @keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
 

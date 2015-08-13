@@ -285,7 +285,7 @@ body #rsvp-section .form-container #submit-failure-message {
   width: 900px;
   border: 10px double white;
   position: relative;
-  display: none;
+  display: block;
   margin: 50px auto 0 auto;
 }
 body #rsvp-section .form-container #submit-success-message .submit-message,
@@ -317,9 +317,13 @@ body #rsvp-section .form-container #submit-failure-message.display {
 }
 body #rsvp-section .form-container #submit-success-message {
   background-color: #75d0bb;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
 }
 body #rsvp-section .form-container #submit-failure-message {
   background-color: #e9243c;
+  display: none;
 }
 body #rsvp-section .form-container form.form {
   font-family: 'GillSans', sans-serif;
@@ -586,6 +590,8 @@ body #weather-section .weather-container .your-weather .message.italic.temp {
 body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-spin.custom {
   color: #f18d11;
   font-size: 90px;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
   opacity: 1;
   -webkit-animation: fa-spin 30s infinite linear;
   animation: fa-spin 30s infinite linear;
@@ -623,40 +629,72 @@ body #weather-section .weather-container .your-weather .clouds .fa.fa-cloud.fa-5
 }
 @-webkit-keyframes fadeOutLeft {
   0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   20% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   40% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
     opacity: 1;
   }
   80% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
   }
 }
 @keyframes fadeOutLeft {
   0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   20% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   40% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
     opacity: 1;
   }
   80% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
   }
 }
 body #map-section {
