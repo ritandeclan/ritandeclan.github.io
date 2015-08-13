@@ -4,60 +4,60 @@
 
 @font-face {
   font-family: 'GillSans-Light';
-  src: url('GillSans-Light.eot');
-  src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'),
-       url('GillSans-Light.woff2') format('woff2'),
-       url('GillSans-Light.woff') format('woff'),
-       url('GillSans-Light.ttf') format('truetype'),
-       url('GillSans-Light.svg#GillSans-Light') format('svg');
+  src: url('../fonts/GillSans-Light.eot');
+  src: url('../fonts/GillSans-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GillSans-Light.woff2') format('woff2'),
+       url('../fonts/GillSans-Light.woff') format('woff'),
+       url('../fonts/GillSans-Light.ttf') format('truetype'),
+       url('../fonts/GillSans-Light.svg#GillSans-Light') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GillSans';
-  src: url('GillSans.eot');
-  src: url('GillSans.eot?#iefix') format('embedded-opentype'),
-       url('GillSans.woff2') format('woff2'),
-       url('GillSans.woff') format('woff'),
-       url('GillSans.ttf') format('truetype'),
-       url('GillSans.svg#GillSans') format('svg');
+  src: url('../fonts/GillSans.eot');
+  src: url('../fonts/GillSans.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GillSans.woff2') format('woff2'),
+  url('../fonts/GillSans.woff') format('woff'),
+  url('../fonts/GillSans.ttf') format('truetype'),
+  url('../fonts/GillSans.svg#GillSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GillSans-Italic';
-  src: url('GillSans-Italic.eot');
-  src: url('GillSans-Italic.eot?#iefix') format('embedded-opentype'),
-       url('GillSans-Italic.woff2') format('woff2'),
-       url('GillSans-Italic.woff') format('woff'),
-       url('GillSans-Italic.ttf') format('truetype'),
-       url('GillSans-Italic.svg#GillSans-Italic') format('svg');
+  src: url('../fonts/GillSans-Italic.eot');
+  src: url('../fonts/GillSans-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GillSans-Italic.woff2') format('woff2'),
+       url('../fonts/GillSans-Italic.woff') format('woff'),
+       url('../fonts/GillSans-Italic.ttf') format('truetype'),
+       url('../fonts/GillSans-Italic.svg#GillSans-Italic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GillSans-Bold';
-  src: url('GillSans-Bold.eot');
-  src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'),
-       url('GillSans-Bold.woff2') format('woff2'),
-       url('GillSans-Bold.woff') format('woff'),
-       url('GillSans-Bold.ttf') format('truetype'),
-       url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+  src: url('../fonts/GillSans-Bold.eot');
+  src: url('../fonts/GillSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GillSans-Bold.woff2') format('woff2'),
+  url('../fonts/GillSans-Bold.woff') format('woff'),
+  url('../fonts/GillSans-Bold.ttf') format('truetype'),
+  url('../fonts/GillSans-Bold.svg#GillSans-Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GillSans-BoldItalic';
-  src: url('GillSans-BoldItalic.eot');
-  src: url('GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
-       url('GillSans-BoldItalic.woff2') format('woff2'),
-       url('GillSans-BoldItalic.woff') format('woff'),
-       url('GillSans-BoldItalic.ttf') format('truetype'),
-       url('GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
+  src: url('../fonts/GillSans-BoldItalic.eot');
+  src: url('../fonts/GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GillSans-BoldItalic.woff2') format('woff2'),
+       url('../fonts/GillSans-BoldItalic.woff') format('woff'),
+       url('../fonts/GillSans-BoldItalic.ttf') format('truetype'),
+       url('../fonts/GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -181,6 +181,40 @@
     cursor: pointer;
   }
 
+}
+
+// Opacity mixins
+
+.opacity (@opacity) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+
+// Animation mixins
+
+.animation (@name; @duration; @delay; @ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+// Transition mixins
+
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+
+// Transform mixins
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
 }
 
 // Text styling mixins
@@ -499,11 +533,55 @@ body {
         }
       }
 
-      form.form {
+      #submit-success-message,
+      #submit-failure-message {
+
+        position: relative;
+        display: none;
+        .content-full-width();
+        .double-border(white);
+        margin: 50px auto 0 auto;
+        height: auto;
+
+        .submit-message {
+          .delicious();
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        .submit-sub {
+          .body-font-bold();
+          line-height: 28px;
+          text-transform: uppercase;
+          .email-us {
+            color: @deco-blue;
+          }
+        }
+
+        .fa {
+          margin: 15px auto 30px auto;
+        }
+
+        &.display {
+          display: block;
+        }
+
+      }
+
+      #submit-success-message {
+        background-color: @deco-blue;
+      }
+
+      #submit-failure-message {
+        background-color: @deco-red;
+      }
+
+      form#form-test {
 
         .body-font-normal();
         font-size: 18px;
         text-transform: uppercase;
+        z-index: 1;
 
         .answer {
           width: 200px;
@@ -546,7 +624,6 @@ body {
             }
 
           }
-
 
         }
 
@@ -772,7 +849,7 @@ body {
         .fa.fa-sun-o.fa-5x.fa-spin.custom {
           color: @deco-yellow;
           font-size: 90px;
-          opacity: 1;
+          .opacity(1);
 
           -webkit-animation:fa-spin 30s infinite linear;
           animation:fa-spin 30s infinite linear;
@@ -825,40 +902,40 @@ body {
 
           @-webkit-keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
           @keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
 
@@ -936,7 +1013,7 @@ body {
 
         width: 100%;
         height: auto;
-        display: block
+        display: block;
         position: relative;
 
         .instas {
@@ -950,7 +1027,7 @@ body {
 
           video {
             margin: 5px;
-            border: 10px solid #white;
+            border: 10px solid white;
           }
         }
 
@@ -1001,7 +1078,7 @@ body {
             color: @deco-red;
             font-size: 16px;
             line-height: 18px;
-            height: 25px
+            height: 25px;
             padding: 0;
             margin: 0 10px;
             width: 30px;

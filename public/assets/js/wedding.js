@@ -1,5 +1,41 @@
 $(document).ready(function(){
 
+  //  Formspree
+
+$("#form-test .btn-submit").on("click", function(e) {
+
+  e.preventDefault();
+
+  var formMessage = $("#form-test").serializeArray();
+
+  console.log("Here's the form message", formMessage);
+
+  $.ajax({
+    url: "//formspree.io/declanandrita@gmail.com",
+    method: "POST",
+    data: {message: formMessage},
+    dataType: "json"
+  }).done(function (data, status, jqXHR) {
+
+      document.getElementById("form-test").reset();
+
+      console.log("Success, Here's the test data", data);
+
+      $("#submit-success-message").fadeIn(3000, 'swing', function(){
+        $('#submit-success-message').fadeOut(5000);
+      });
+
+    }).fail(function (jqXHR,status,err) {
+
+      console.log("failure, Here's the error", err);
+
+      $("#submit-failure-message").addClass("display");
+
+    });
+
+
+});
+
   var mapStyles =
     [
       {

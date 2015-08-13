@@ -1,35 +1,35 @@
 @font-face {
   font-family: 'GillSans-Light';
-  src: url('GillSans-Light.eot');
-  src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'), url('GillSans-Light.woff2') format('woff2'), url('GillSans-Light.woff') format('woff'), url('GillSans-Light.ttf') format('truetype'), url('GillSans-Light.svg#GillSans-Light') format('svg');
+  src: url('../fonts/GillSans-Light.eot');
+  src: url('../fonts/GillSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-Light.woff2') format('woff2'), url('../fonts/GillSans-Light.woff') format('woff'), url('../fonts/GillSans-Light.ttf') format('truetype'), url('../fonts/GillSans-Light.svg#GillSans-Light') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'GillSans';
-  src: url('GillSans.eot');
-  src: url('GillSans.eot?#iefix') format('embedded-opentype'), url('GillSans.woff2') format('woff2'), url('GillSans.woff') format('woff'), url('GillSans.ttf') format('truetype'), url('GillSans.svg#GillSans') format('svg');
+  src: url('../fonts/GillSans.eot');
+  src: url('../fonts/GillSans.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans.woff2') format('woff2'), url('../fonts/GillSans.woff') format('woff'), url('../fonts/GillSans.ttf') format('truetype'), url('../fonts/GillSans.svg#GillSans') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'GillSans-Italic';
-  src: url('GillSans-Italic.eot');
-  src: url('GillSans-Italic.eot?#iefix') format('embedded-opentype'), url('GillSans-Italic.woff2') format('woff2'), url('GillSans-Italic.woff') format('woff'), url('GillSans-Italic.ttf') format('truetype'), url('GillSans-Italic.svg#GillSans-Italic') format('svg');
+  src: url('../fonts/GillSans-Italic.eot');
+  src: url('../fonts/GillSans-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-Italic.woff2') format('woff2'), url('../fonts/GillSans-Italic.woff') format('woff'), url('../fonts/GillSans-Italic.ttf') format('truetype'), url('../fonts/GillSans-Italic.svg#GillSans-Italic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'GillSans-Bold';
-  src: url('GillSans-Bold.eot');
-  src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'), url('GillSans-Bold.woff2') format('woff2'), url('GillSans-Bold.woff') format('woff'), url('GillSans-Bold.ttf') format('truetype'), url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+  src: url('../fonts/GillSans-Bold.eot');
+  src: url('../fonts/GillSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-Bold.woff2') format('woff2'), url('../fonts/GillSans-Bold.woff') format('woff'), url('../fonts/GillSans-Bold.ttf') format('truetype'), url('../fonts/GillSans-Bold.svg#GillSans-Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'GillSans-BoldItalic';
-  src: url('GillSans-BoldItalic.eot');
-  src: url('GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('GillSans-BoldItalic.woff2') format('woff2'), url('GillSans-BoldItalic.woff') format('woff'), url('GillSans-BoldItalic.ttf') format('truetype'), url('GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
+  src: url('../fonts/GillSans-BoldItalic.eot');
+  src: url('../fonts/GillSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-BoldItalic.woff2') format('woff2'), url('../fonts/GillSans-BoldItalic.woff') format('woff'), url('../fonts/GillSans-BoldItalic.ttf') format('truetype'), url('../fonts/GillSans-BoldItalic.svg#GillSans-BoldItalic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -280,13 +280,56 @@ body #rsvp-section .form-container .form-intro-message {
 body #rsvp-section .form-container .form-intro-message .superscript {
   text-transform: none;
 }
-body #rsvp-section .form-container form.form {
+body #rsvp-section .form-container #submit-success-message,
+body #rsvp-section .form-container #submit-failure-message {
+  position: relative;
+  display: none;
+  width: 900px;
+  border: 10px double white;
+  margin: 50px auto 0 auto;
+  height: auto;
+}
+body #rsvp-section .form-container #submit-success-message .submit-message,
+body #rsvp-section .form-container #submit-failure-message .submit-message {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 35px;
+  line-height: 35px;
+}
+body #rsvp-section .form-container #submit-success-message .submit-sub,
+body #rsvp-section .form-container #submit-failure-message .submit-sub {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+body #rsvp-section .form-container #submit-success-message .submit-sub .email-us,
+body #rsvp-section .form-container #submit-failure-message .submit-sub .email-us {
+  color: #75d0bb;
+}
+body #rsvp-section .form-container #submit-success-message .fa,
+body #rsvp-section .form-container #submit-failure-message .fa {
+  margin: 15px auto 30px auto;
+}
+body #rsvp-section .form-container #submit-success-message.display,
+body #rsvp-section .form-container #submit-failure-message.display {
+  display: block;
+}
+body #rsvp-section .form-container #submit-success-message {
+  background-color: #75d0bb;
+}
+body #rsvp-section .form-container #submit-failure-message {
+  background-color: #e9243c;
+}
+body #rsvp-section .form-container form#form-test {
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
+  z-index: 1;
 }
-body #rsvp-section .form-container form.form .answer {
+body #rsvp-section .form-container form#form-test .answer {
   width: 200px;
   height: 30px;
   margin-bottom: 20px;
@@ -296,7 +339,7 @@ body #rsvp-section .form-container form.form .answer {
   text-transform: uppercase;
   color: #75d0bb;
 }
-body #rsvp-section .form-container form.form .meal-options {
+body #rsvp-section .form-container form#form-test .meal-options {
   position: relative;
   display: block;
   height: 34px;
@@ -305,7 +348,7 @@ body #rsvp-section .form-container form.form .meal-options {
   background-color: white;
   margin-bottom: 38px;
 }
-body #rsvp-section .form-container form.form .meal-options .answer.dropdown {
+body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
   text-align: center;
@@ -314,20 +357,20 @@ body #rsvp-section .form-container form.form .meal-options .answer.dropdown {
   width: 206px;
   padding-left: 40.5%;
 }
-body #rsvp-section .form-container form.form .meal-options .answer.dropdown:active,
-body #rsvp-section .form-container form.form .meal-options .answer.dropdown:hover,
-body #rsvp-section .form-container form.form .meal-options .answer.dropdown:focus {
+body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:focus {
   border: none;
   outline: none;
 }
-body #rsvp-section .form-container form.form .btn-container {
+body #rsvp-section .form-container form#form-test .btn-container {
   position: relative;
   display: block;
   width: 100%;
   margin: 10px auto;
   padding: 10px 0;
 }
-body #rsvp-section .form-container form.form .btn-container input.btn-submit {
+body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -344,23 +387,23 @@ body #rsvp-section .form-container form.form .btn-container input.btn-submit {
   height: 50px;
   padding-top: 2px;
 }
-body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover {
+body #rsvp-section .form-container form#form-test .btn-container input.btn-submit:hover {
   cursor: pointer;
 }
-body #rsvp-section .form-container form.form .btn-container input.btn-submit:hover,
-body #rsvp-section .form-container form.form .btn-container input.btn-submit:active {
+body #rsvp-section .form-container form#form-test .btn-container input.btn-submit:hover,
+body #rsvp-section .form-container form#form-test .btn-container input.btn-submit:active {
   background-color: white;
   color: #f18d11;
   border: 10px double #f18d11;
 }
-body #rsvp-section .form-container form.form .guest-section {
+body #rsvp-section .form-container form#form-test .guest-section {
   position: relative;
   display: block;
   width: 100%;
   margin: 10px auto;
   padding: 10px 0;
 }
-body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
+body #rsvp-section .form-container form#form-test .guest-section .answer.add-guest {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -376,39 +419,39 @@ body #rsvp-section .form-container form.form .guest-section .answer.add-guest {
   border: 10px double #656478;
   margin: 0 auto;
 }
-body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover {
+body #rsvp-section .form-container form#form-test .guest-section .answer.add-guest:hover {
   cursor: pointer;
 }
-body #rsvp-section .form-container form.form .guest-section .answer.add-guest:hover,
-body #rsvp-section .form-container form.form .guest-section .answer.add-guest:active {
+body #rsvp-section .form-container form#form-test .guest-section .answer.add-guest:hover,
+body #rsvp-section .form-container form#form-test .guest-section .answer.add-guest:active {
   background-color: #656478;
   border: 10px double #f18d11;
   color: white;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container {
   background-color: #f7b7c7;
   border: 10px double white;
   margin: 30px auto;
   padding-bottom: 30px;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .answer {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer {
   display: inline-block;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest {
   position: relative;
   display: block;
   width: 100%;
   height: 55px;
   margin: 0;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest:after {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest .delete-guest-button {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -423,15 +466,15 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .de
   float: right;
   margin: 5px;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:hover {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest .delete-guest-button:hover {
   cursor: pointer;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:hover,
-body #rsvp-section .form-container form.form .guest-section .guest-container .delete-guest .delete-guest-button:active {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest .delete-guest-button:active {
   background-color: #e9243c;
   border: 10px double #f7b7c7;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .guest-number {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .guest-number {
   font-family: 'delicious', cursive;
   letter-spacing: 1px;
   font-size: 75px;
@@ -441,7 +484,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .gu
   margin: 10px auto 0 auto;
   padding: 0;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options {
   position: relative;
   display: block;
   height: 34px;
@@ -449,7 +492,7 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .me
   margin: 0 auto 38px auto;
   background-color: white;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
   text-align: center;
@@ -458,16 +501,16 @@ body #rsvp-section .form-container form.form .guest-section .guest-container .me
   width: 206px;
   padding-left: 40.5%;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:active,
-body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:hover,
-body #rsvp-section .form-container form.form .guest-section .guest-container .meal-options .answer.dropdown:focus {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:active,
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:hover,
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:focus {
   border: none;
   outline: none;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container.even {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even {
   background-color: #75d0bb;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .delete-guest .delete-guest-button {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -479,11 +522,11 @@ body #rsvp-section .form-container form.form .guest-section .guest-container.eve
   background-color: #75d0bb;
   margin: 5px;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .delete-guest .delete-guest-button:hover {
   cursor: pointer;
 }
-body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:hover,
-body #rsvp-section .form-container form.form .guest-section .guest-container.even .delete-guest .delete-guest-button:active {
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .delete-guest .delete-guest-button:hover,
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .delete-guest .delete-guest-button:active {
   background-color: #e9243c;
   border: 10px double #75d0bb;
 }
@@ -545,6 +588,8 @@ body #weather-section .weather-container .your-weather .message.italic.temp {
 body #weather-section .weather-container .naples-weather .fa.fa-sun-o.fa-5x.fa-spin.custom {
   color: #f18d11;
   font-size: 90px;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
   opacity: 1;
   -webkit-animation: fa-spin 30s infinite linear;
   animation: fa-spin 30s infinite linear;
@@ -582,40 +627,72 @@ body #weather-section .weather-container .your-weather .clouds .fa.fa-cloud.fa-5
 }
 @-webkit-keyframes fadeOutLeft {
   0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   20% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   40% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
     opacity: 1;
   }
   80% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
   }
 }
 @keyframes fadeOutLeft {
   0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   20% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   40% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
     opacity: 1;
   }
   80% {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
     opacity: 0.5;
   }
   100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
     opacity: 0;
     -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
   }
 }
 body #map-section {
@@ -677,8 +754,8 @@ body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-i
 body #insta-gallery-section .insta-gallery-container #insta-gallery {
   width: 100%;
   height: auto;
-  display: block
-        position: relative;
+  display: block;
+  position: relative;
 }
 body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
   display: inline;
@@ -691,7 +768,7 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
 }
 body #insta-gallery-section .insta-gallery-container #insta-gallery .instas video {
   margin: 5px;
-  border: 10px solid #white;
+  border: 10px solid white;
 }
 body #signature-section {
   padding: 0;
@@ -734,8 +811,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   color: #e9243c;
   font-size: 16px;
   line-height: 18px;
-  height: 25px
-            padding: 0;
+  height: 25px;
+  padding: 0;
   margin: 0 10px;
   width: 30px;
   -webkit-animation: heartBeat 2s ease-in-out infinite;
