@@ -13,7 +13,7 @@ $("#form-test .btn-submit").on("click", function(e) {
   $.ajax({
     url: "//formspree.io/declanandrita@gmail.com",
     method: "POST",
-    data: {formMessage},
+    data: {message: formMessage},
     dataType: "json"
   }).done(function (data, status, jqXHR) {
 
