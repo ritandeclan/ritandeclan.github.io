@@ -17,6 +17,8 @@ $("#form-test .btn-submit").on("click", function(e) {
     dataType: "json"
   }).done(function (data, status, jqXHR) {
 
+      document.getElementById("form-test").reset();
+
       console.log("Success, Here's the test data", data);
 
       $("#submit-success-message").fadeIn(3000, 'swing', function(){
