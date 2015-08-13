@@ -493,6 +493,46 @@ body {
         }
       }
 
+      #submit-success-message,
+      #submit-failure-message {
+        .content-full-width();
+        .double-border(white);
+        position: relative;
+        display: none;
+        margin: 50px auto 0 auto;
+
+        .submit-message {
+          .delicious();
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        .submit-sub {
+          .body-font-bold();
+          line-height: 28px;
+          text-transform: uppercase;
+          .email-us {
+            color: @deco-blue;
+          }
+        }
+
+        .fa {
+          margin: 15px auto 30px auto;
+        }
+
+        &.display {
+          display: block;
+        }
+      }
+
+      #submit-success-message {
+        background-color: @deco-blue;
+      }
+
+      #submit-failure-message {
+        background-color: @deco-red;
+      }
+
       form.form {
 
         .body-font-normal();
