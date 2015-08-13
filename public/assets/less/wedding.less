@@ -177,6 +177,40 @@
 
 }
 
+// Opacity mixins
+
+.opacity (@opacity) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+  opacity:    @opacity;
+}
+
+// Animation mixins
+
+.animation (@name; @duration; @delay; @ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+// Transition mixins
+
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition:    @transition;
+  -ms-transition:     @transition;
+  -o-transition:      @transition;
+}
+
+// Transform mixins
+
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+
 // Text styling mixins
 
 // Large text
@@ -493,11 +527,55 @@ body {
         }
       }
 
-      form.form {
+      #submit-success-message,
+      #submit-failure-message {
+
+        position: relative;
+        display: none;
+        .content-full-width();
+        .double-border(white);
+        margin: 50px auto 0 auto;
+        height: auto;
+
+        .submit-message {
+          .delicious();
+          font-size: 35px;
+          line-height: 35px;
+        }
+
+        .submit-sub {
+          .body-font-bold();
+          line-height: 28px;
+          text-transform: uppercase;
+          .email-us {
+            color: @deco-blue;
+          }
+        }
+
+        .fa {
+          margin: 15px auto 30px auto;
+        }
+
+        &.display {
+          display: block;
+        }
+
+      }
+
+      #submit-success-message {
+        background-color: @deco-blue;
+      }
+
+      #submit-failure-message {
+        background-color: @deco-red;
+      }
+
+      form#form-test {
 
         .body-font-normal();
         font-size: 18px;
         text-transform: uppercase;
+        z-index: 1;
 
         .answer {
           width: 200px;
@@ -540,7 +618,6 @@ body {
             }
 
           }
-
 
         }
 
@@ -766,7 +843,7 @@ body {
         .fa.fa-sun-o.fa-5x.fa-spin.custom {
           color: @deco-yellow;
           font-size: 90px;
-          opacity: 1;
+          .opacity(1);
 
           -webkit-animation:fa-spin 30s infinite linear;
           animation:fa-spin 30s infinite linear;
@@ -819,40 +896,40 @@ body {
 
           @-webkit-keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
           @keyframes fadeOutLeft {
             0% {
-                opacity: 0;
-                -webkit-transform: translateX(0);
+                .opacity(0);
+                .transform(translateX(0));
             }
             20% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             40% {
-                opacity: 1;
+                .opacity(1);
             }
             80% {
-                opacity: 0.5;
+                .opacity(0.5);
             }
             100% {
-                opacity: 0;
-                -webkit-transform: translateX(-20px);
+                .opacity(0);
+                .transform(translateX(-20px));
             }
           }
 

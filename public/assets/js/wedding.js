@@ -13,11 +13,24 @@ $("#form-test .btn-submit-test").on("click", function(e) {
   $.ajax({
     url: "//formspree.io/declanandrita@gmail.com",
     method: "POST",
-    data: {message: formMessage},
+    data: {formMessage},
     dataType: "json"
-  }).done(function (data){
-    console.log("Here's the test data", data);
-  });
+  }).done(function (data, status, jqXHR) {
+
+      console.log("Success, Here's the test data", data);
+
+      $("#submit-success-message").fadeIn(3000,'swing',function(){
+        $('#submit-success-message').fadeOut(5000, 'slow');
+      });
+
+    }).fail(function (jqXHR,status,err) {
+
+      console.log("failure, Here's the error", err);
+
+      $("#submit-failure-message").addClass("display");
+
+    });
+
 
 });
 
