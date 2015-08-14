@@ -332,12 +332,26 @@ body #rsvp-section .form-container form#form-test {
 body #rsvp-section .form-container form#form-test .answer {
   width: 200px;
   height: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border: 10px solid #f18d11;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
   color: #75d0bb;
+}
+body #rsvp-section .form-container form#form-test .answer:focus,
+body #rsvp-section .form-container form#form-test .answer:active {
+  outline: none;
+}
+body #rsvp-section .form-container form#form-test .answer.email:focus {
+  outline: none;
+}
+body #rsvp-section .form-container form#form-test .answer.email:focus:invalid {
+  border: 10px solid #e9243c;
+}
+body #rsvp-section .form-container form#form-test .answer.email:focus:valid {
+  border: 10px solid #75d0bb;
 }
 body #rsvp-section .form-container form#form-test .meal-options {
   position: relative;
