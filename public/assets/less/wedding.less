@@ -612,7 +612,7 @@ body {
           &.email {
             margin-top: -10px;
             margin-bottom: 10px;
-            .single-border(transparent);
+            .single-border(@deco-yellow);
 
             &:focus {
 
@@ -731,6 +731,29 @@ body {
             .answer {
               display: inline-block;
               //float: left;
+
+              &.email {
+                margin-top: -10px;
+                margin-bottom: 10px;
+                .single-border(@deco-light-pink);
+
+                &:focus {
+
+                  outline: none;
+
+                  &:invalid {
+
+                    .single-border(@deco-red);
+
+                  }
+
+                  &:valid {
+                    .single-border(@deco-blue);
+                  }
+                }
+              }
+
+
             }
 
             .delete-guest {
@@ -819,6 +842,29 @@ body {
                   &:active {
                     background-color: @deco-red;
                     .double-border(@deco-blue);
+                  }
+                }
+              }
+
+              .answer {
+                &.email {
+                  margin-top: -10px;
+                  margin-bottom: 10px;
+                  .single-border(@deco-light-pink);
+
+                  &:focus {
+
+                    outline: none;
+
+                    &:invalid {
+
+                      .single-border(@deco-red);
+
+                    }
+
+                    &:valid {
+                      .single-border(@deco-blue);
+                    }
                   }
                 }
               }
