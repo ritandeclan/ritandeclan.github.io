@@ -181,35 +181,43 @@ var restaurants = [
 
   var marker;
   var map;
+  var mapCenter = new google.maps.LatLng(-81.803361, 26.140098);
 
   var mapOptions = {
     zoom: 12,
-    center: escalante,
+    center: mapCenter,
     styles: mapStyles
   };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
-  marker = new google.maps.Marker({
-    map:map,
-    draggable:true,
-    animation: google.maps.Animation.DROP,
-    position: escalante
-  })
+  $.each(attractions, function(index, value){
 
-var contentString =
-'<div class="marker-content">'+
-  '<h1 class="marker-info-header" >The Hotel Escalante</h1>' +
-'</div>';
+    markerName = "attractions-" + marker + "-" + index;
 
-  var infowindow = new google.maps.InfoWindow({
-      content: contentString
+    markerName = new google.maps.Marker({
+      map:map,
+      draggable:true,
+      animation: google.maps.Animation.DROP,
+      position: value[0]
+    })
+
+    var contentString =
+    '<div class="marker-content">'+
+      '<h1 class="marker-info-header" >'+ value[2] +'</h1>' +
+    '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    google.maps.event.addListener( value[3] + marker, 'click', function() {
+      infowindow.open(map, value[3] + marker);
+    });
+
   });
 
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
-  });
 
 
 //   function toggleBounce() {
