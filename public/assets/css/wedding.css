@@ -332,8 +332,7 @@ body #rsvp-section .form-container form#form-test {
 body #rsvp-section .form-container form#form-test .answer {
   width: 200px;
   height: 30px;
-  margin-bottom: 10px;
-  border: 10px solid #f18d11;
+  margin-bottom: 20px;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -343,6 +342,11 @@ body #rsvp-section .form-container form#form-test .answer {
 body #rsvp-section .form-container form#form-test .answer:focus,
 body #rsvp-section .form-container form#form-test .answer:active {
   outline: none;
+}
+body #rsvp-section .form-container form#form-test .answer.email {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border: 10px solid transparent;
 }
 body #rsvp-section .form-container form#form-test .answer.email:focus {
   outline: none;
