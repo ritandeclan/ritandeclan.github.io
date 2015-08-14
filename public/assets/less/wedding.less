@@ -157,6 +157,10 @@
   border: 10px double @color;
 }
 
+.single-border(@color) {
+  border: 10px solid @color;
+}
+
 .double-border-bottom(@color) {
   border-bottom: 6px double @color;
 }
@@ -593,6 +597,38 @@ body {
           font-size: 18px;
           text-transform: uppercase;
           color: @deco-blue;
+
+          &:focus,
+          &:active {
+            outline: none;
+          }
+
+          &:invalid {
+            &::after,
+            &:after {
+            }
+          }
+
+          &.email {
+            margin-top: -10px;
+            margin-bottom: 10px;
+            .single-border(transparent);
+
+            &:focus {
+
+              outline: none;
+
+              &:invalid {
+
+                .single-border(@deco-red);
+
+              }
+
+              &:valid {
+                .single-border(@deco-blue);
+              }
+            }
+          }
         }
 
         .meal-options {
