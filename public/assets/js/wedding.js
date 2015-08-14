@@ -153,14 +153,32 @@ $("#form-test .btn-submit").on("click", function(e) {
       }
     ];
 
-
-
   // map.setOptions({styles: styles});
 
-
 // function initialize() {
+var attractions = [
+  [ [ 26.106907, -81.770609],[ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
+  [ [ 26.170107, -81.790581],[ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
+  [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
+];
 
-  var escalante = new google.maps.LatLng(26.140098, -81.803361);
+var hotels = [
+  [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
+];
+
+var restaurants = [
+  [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
+  [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
+  [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
+];
+
+// for (var key in locations) {
+//   if (locations.hasOwnProperty(key)) {
+//     console.log(key + " -> " + locations[key]);
+//   }
+// }
+
+
   var marker;
   var map;
 
