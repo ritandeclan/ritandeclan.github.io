@@ -1057,10 +1057,20 @@ body {
         .item-description-container {
           padding: 15px 0;
           .item-name {
-            .content-full-width();
+
             margin: 0 auto;
             .body-font-bold();
             line-height: 19px;
+            text-transform: uppercase;
+            padding: 15px 0;
+
+            &.intro {
+              .delicious();
+              text-transform: none;
+              font-size: 50px;
+              line-height: 50px;
+              padding: 5px 0;
+            }
           }
         }
 

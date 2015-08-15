@@ -207,6 +207,16 @@ var locations = [
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
+  function displayDescription(description) {
+
+    var descriptionContainer = $("#map-item-description");
+
+    descriptionContainer.empty();
+
+    descriptionContainer.append(description);
+
+  };
+
   function setMarkerListeners(item, description, marker, infowindow) {
 
     console.log(item);
@@ -214,6 +224,7 @@ var locations = [
     google.maps.event.addListener( marker, 'click', function() {
       infowindow.open(map, marker);
       map.setCenter(marker.getPosition());
+      displayDescription(description);
     });
 
     var itemSelector = $('.'+item);
@@ -222,11 +233,7 @@ var locations = [
 
     itemSelector.on("click", function() {
 
-      var descriptionContainer = $("#map-item-description");
-
-      descriptionContainer.empty();
-
-      descriptionContainer.append(description);
+      displayDescription(description);
 
       console.log("here's my item", item);
 
@@ -241,7 +248,7 @@ var locations = [
 
     });
 
-  }
+  };
 
   // $.each(locations, function(index, value){
   //   for (var k in value){
