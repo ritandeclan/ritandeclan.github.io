@@ -616,7 +616,7 @@ body {
           &.email {
             margin-top: -10px;
             margin-bottom: 10px;
-            .single-border(transparent);
+            .single-border(@deco-yellow);
 
             &:focus {
 
@@ -654,7 +654,7 @@ body {
 
             border: none;
             width: 206px;
-            padding-left: 40.5%;
+            padding-left: 19.5%;
 
             &:active,
             &:hover,
@@ -735,6 +735,29 @@ body {
             .answer {
               display: inline-block;
               //float: left;
+
+              &.email {
+                margin-top: -10px;
+                margin-bottom: 10px;
+                .single-border(@deco-light-pink);
+
+                &:focus {
+
+                  outline: none;
+
+                  &:invalid {
+
+                    .single-border(@deco-red);
+
+                  }
+
+                  &:valid {
+                    .single-border(@deco-blue);
+                  }
+                }
+              }
+
+
             }
 
             .delete-guest {
@@ -794,7 +817,7 @@ body {
 
                 border: none;
                 width: 206px;
-                padding-left: 40.5%;
+                padding-left: 19.5%;
 
                 &:active,
                 &:hover,
@@ -823,6 +846,29 @@ body {
                   &:active {
                     background-color: @deco-red;
                     .double-border(@deco-blue);
+                  }
+                }
+              }
+
+              .answer {
+                &.email {
+                  margin-top: -10px;
+                  margin-bottom: 10px;
+                  .single-border(@deco-light-pink);
+
+                  &:focus {
+
+                    outline: none;
+
+                    &:invalid {
+
+                      .single-border(@deco-red);
+
+                    }
+
+                    &:valid {
+                      .single-border(@deco-blue);
+                    }
                   }
                 }
               }

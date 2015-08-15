@@ -346,7 +346,7 @@ body #rsvp-section .form-container form#form-test .answer:active {
 body #rsvp-section .form-container form#form-test .answer.email {
   margin-top: -10px;
   margin-bottom: 10px;
-  border: 10px solid transparent;
+  border: 10px solid #f18d11;
 }
 body #rsvp-section .form-container form#form-test .answer.email:focus {
   outline: none;
@@ -373,7 +373,7 @@ body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown
   background-color: transparent;
   border: none;
   width: 206px;
-  padding-left: 40.5%;
+  padding-left: 19.5%;
 }
 body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:active,
 body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:hover,
@@ -455,6 +455,20 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer {
   display: inline-block;
 }
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border: 10px solid #f7b7c7;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email:focus {
+  outline: none;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email:focus:invalid {
+  border: 10px solid #e9243c;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email:focus:valid {
+  border: 10px solid #75d0bb;
+}
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .delete-guest {
   position: relative;
   display: block;
@@ -517,7 +531,7 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   background-color: transparent;
   border: none;
   width: 206px;
-  padding-left: 40.5%;
+  padding-left: 19.5%;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:active,
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:hover,
@@ -547,6 +561,20 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .delete-guest .delete-guest-button:active {
   background-color: #e9243c;
   border: 10px double #75d0bb;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border: 10px solid #f7b7c7;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email:focus {
+  outline: none;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email:focus:invalid {
+  border: 10px solid #e9243c;
+}
+body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email:focus:valid {
+  border: 10px solid #75d0bb;
 }
 body #weather-section {
   background-color: #f7b7c7;
