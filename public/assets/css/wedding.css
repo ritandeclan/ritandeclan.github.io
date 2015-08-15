@@ -373,7 +373,7 @@ body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown
   background-color: transparent;
   border: none;
   width: 206px;
-  padding-left: 40.5%;
+  padding-left: 19.5%;
 }
 body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:active,
 body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:hover,
@@ -531,7 +531,7 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   background-color: transparent;
   border: none;
   width: 206px;
-  padding-left: 40.5%;
+  padding-left: 19.5%;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:active,
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .answer.dropdown:hover,
