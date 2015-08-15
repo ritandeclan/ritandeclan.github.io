@@ -795,10 +795,10 @@ body #map-section .map-container #map-item-description .item-description-contain
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
-  color: white;
+  color: #656478;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-description a {
-  color: #656478;
+  color: white;
 }
 body #map-section .map-container #map-legend,
 body #map-section .map-container #map-canvas {

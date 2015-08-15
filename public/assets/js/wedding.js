@@ -177,19 +177,19 @@ var locations = [
       "attractions": [
         [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
         [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
-        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
+        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the gopher tortoises in the greenery along the road."]]
       ]
     },
     {
       "hotels": [
-        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
+        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical, The Escalante is Naples only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
       ]
     },
     {
       "restaurants":   [
-        [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
-        [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
-        [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
+        [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"], ["Let me take you to a place where warm desert moonlight glows upon the sands, creates mystical illusions in far away dunes, and magically gives life to every jewel in it’s path. Silk fabrics entice the touch. World music is heard in the background. Aromas of delicate fragrant spices, sweetness in the air of simmering fruits, and the perfume of jasmine from the garden seduce you. Bold flavors from fresh meats, poultry and fish embrace the palate and soothe it with delicate strokes of the perfect union of flavors. "] ],
+        [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"], ["For over 21 years, Grouper & Chips has been one of Naples' best kept secrets. Local residents have been flocking to a small unpretentious “hole-in-the-wall” restaurant to enjoy Chef Francis Pischner’s unparalleled cuisine. With hundreds of other local area restaurants notwithstanding, regular customers choose to wait for over an hour at times just to get in."]],
+        [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ], ["Pazzo! is a friendly neighborhood restaurant that just happens to have an outstanding world class affordable menu that serves real Italian food, with an incredible wine list. At Pazzo!, we make all of our own sauces, pastas, desserts and everything in between from scratch! At Pazzo!, It’s All About The Food!™"]]
       ]
     }
 ];
@@ -207,6 +207,14 @@ var locations = [
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
+  infoWindows = [];
+
+  function closeAllInfoWindows() {
+    for (var i=0;i<infoWindows.length;i++) {
+       infoWindows[i].close();
+    }
+  }
+
   function displayDescription(description) {
 
     var descriptionContainer = $("#map-item-description");
@@ -219,9 +227,8 @@ var locations = [
 
   function setMarkerListeners(item, description, marker, infowindow) {
 
-    console.log(item);
-
     google.maps.event.addListener( marker, 'click', function() {
+      closeAllInfoWindows();
       infowindow.open(map, marker);
       map.setCenter(marker.getPosition());
       displayDescription(description);
@@ -233,7 +240,7 @@ var locations = [
 
     itemSelector.on("click", function() {
 
-      console.log("here's my item", item);
+      closeAllInfoWindows();
 
       if (clickStatus == false) {
         map.setCenter(marker.getPosition());
@@ -273,7 +280,7 @@ var locations = [
             "<div class='item-description-container'>" +
               "<h3 class='item-name intro'>" + item[2][0] + "</h3>"+
               "<p class='item-description'>" + item[3][0] + "</p>" +
-              "<p class='item-description'><a href='" + item[1][0] + "' target='_blank'>" + item[1][0] + "</a></p>" +
+              "<p class='item-description'><a href='" + item[1][0] + "' target='_blank'>Visit the " + item[2][0] + " website</a></p>" +
             "</div>";
 
           var attractionItem =
@@ -302,6 +309,8 @@ var locations = [
           var infoWindow = new google.maps.InfoWindow({
               content: contentString
           });
+
+          infoWindows.push(infoWindow);
 
           setMarkerListeners(k + "-item-" + i, description, marker, infoWindow);
 
