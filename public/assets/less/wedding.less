@@ -169,8 +169,8 @@
   border-left: 6px double @color;
 }
 
-.double-border-right(@color) {
-  border-right: 6px double @color;
+.double-border-right(@color; @size;) {
+  border-right: @size double @color;
 }
 
 // Button mixins
@@ -1054,14 +1054,51 @@ body {
 
       #map-legend {
         height: 100%;
-        width: 39%;
+        width: 38%;
         background-color: @deco-light-pink;
-        .double-border-right(white);
+        .double-border-right(10px; white;);
+        overflow: scroll;
+
+        #attractions,
+        #hotels,
+        #restaurants {
+          position: relative;
+          display: block;
+          width: 100%;
+
+          .legend-section-name {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-left: 15px;
+            border-bottom: 10px double white;
+            text-align: left;
+            .delicious();
+            font-size: 30px;
+            line-height: 30px;
+          }
+
+          .legend-item {
+            padding: 5px 15px;
+
+            .item-name {
+              .body-font-bold();
+              text-align: left;
+              margin: 0;
+            }
+
+            &:hover {
+              color: @deco-blue;
+              cursor: pointer;
+            }
+
+          }
+        }
       }
 
       #map-canvas {
         height: 100%;
-        width: 60%;
+        width: 60.5%;
         position: relative;
         display: block;
 

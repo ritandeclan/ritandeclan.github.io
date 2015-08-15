@@ -218,8 +218,8 @@ var restaurants = [
     var attractionsContainer = $("#attractions");
 
     var attractionItem =
-      "<div class='attraction-item-" + index + "' data-clicked='nope'>" +
-        "<h3 class='attraction-name'>" + value[2][0] + "</h3>" +
+      "<div class='legend-item attraction attraction-item-" + index + "' data-clicked='nope'>" +
+        "<h3 class='item-name'>" + value[2][0] + "</h3>" +
       "</div>";
 
 

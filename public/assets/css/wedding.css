@@ -760,13 +760,55 @@ body #map-section .map-container #map-canvas {
 }
 body #map-section .map-container #map-legend {
   height: 100%;
-  width: 39%;
+  width: 38%;
   background-color: #f7b7c7;
-  border-right: 6px double white;
+  border-right: white double 10px;
+  overflow: scroll;
+}
+body #map-section .map-container #map-legend #attractions,
+body #map-section .map-container #map-legend #hotels,
+body #map-section .map-container #map-legend #restaurants {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+body #map-section .map-container #map-legend #attractions .legend-section-name,
+body #map-section .map-container #map-legend #hotels .legend-section-name,
+body #map-section .map-container #map-legend #restaurants .legend-section-name {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  border-bottom: 10px double white;
+  text-align: left;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  line-height: 30px;
+}
+body #map-section .map-container #map-legend #attractions .legend-item,
+body #map-section .map-container #map-legend #hotels .legend-item,
+body #map-section .map-container #map-legend #restaurants .legend-item {
+  padding: 5px 15px;
+}
+body #map-section .map-container #map-legend #attractions .legend-item .item-name,
+body #map-section .map-container #map-legend #hotels .legend-item .item-name,
+body #map-section .map-container #map-legend #restaurants .legend-item .item-name {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+body #map-section .map-container #map-legend #attractions .legend-item:hover,
+body #map-section .map-container #map-legend #hotels .legend-item:hover,
+body #map-section .map-container #map-legend #restaurants .legend-item:hover {
+  color: #75d0bb;
+  cursor: pointer;
 }
 body #map-section .map-container #map-canvas {
   height: 100%;
-  width: 60%;
+  width: 60.5%;
   position: relative;
   display: block;
 }
