@@ -772,6 +772,14 @@ body #map-section .map-container #map-canvas {
 }
 body #map-section .map-container #map-canvas .marker-content .marker-info-header {
   color: #e9243c;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+body #map-section .map-container #map-canvas .marker-content .marker-website,
+body #map-section .map-container #map-canvas .marker-content .marker-website a {
+  color: #75d0bb;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;

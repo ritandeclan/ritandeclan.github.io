@@ -172,16 +172,9 @@ var restaurants = [
   [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
 ];
 
-// for (var key in locations) {
-//   if (locations.hasOwnProperty(key)) {
-//     console.log(key + " -> " + locations[key]);
-//   }
-// }
-
-
   var marker;
   var map;
-  var mapCenter = new google.maps.LatLng(-81.803361, 26.140098);
+  var mapCenter = new google.maps.LatLng(26.140098, -81.803361);
 
   var mapOptions = {
     zoom: 12,
@@ -192,48 +185,70 @@ var restaurants = [
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
+  function setMarkerListeners(item, marker, infowindow) {
+
+    console.log(item);
+
+    google.maps.event.addListener( marker, 'click', function() {
+      infowindow.open(map, marker);
+      map.setCenter(marker.getPosition());
+    });
+
+    var itemSelector = $('.'+item);
+
+    var clickStatus = false;
+
+    itemSelector.on("click", function() {
+
+      if (clickStatus == false) {
+        map.setCenter(marker.getPosition());
+        infowindow.open(map, marker);
+        clickStatus = true;
+      } else {
+        infowindow.close(map, marker);
+        clickStatus = false;
+      }
+
+    });
+
+  }
+
   $.each(attractions, function(index, value){
 
-    markerName = "attractions-" + marker + "-" + index;
+    var attractionsContainer = $("#attractions");
 
-    markerName = new google.maps.Marker({
+    var attractionItem =
+      "<div class='attraction-item-" + index + "' data-clicked='nope'>" +
+        "<h3 class='attraction-name'>" + value[2][0] + "</h3>" +
+      "</div>";
+
+
+    attractionsContainer.append( attractionItem );
+
+    var lat = value[0][0];
+    var lng = value[0][1];
+
+    var marker = new google.maps.Marker({
       map:map,
-      draggable:true,
+      draggable:false,
       animation: google.maps.Animation.DROP,
-      position: value[0]
+      position: {lat, lng},
     })
 
     var contentString =
     '<div class="marker-content">'+
-      '<h1 class="marker-info-header" >'+ value[2] +'</h1>' +
+      '<h1 class="marker-info-header" >'+ value[2][0] +'</h1>' +
+      '<p class="marker-website"><a href="' + value[1][0] + '" target="_blank">Visit the '+ value[2][0] + ' website</a></p>' +
     '</div>';
 
-    var infowindow = new google.maps.InfoWindow({
+
+    var infoWindow = new google.maps.InfoWindow({
         content: contentString
     });
 
-    google.maps.event.addListener( value[3] + marker, 'click', function() {
-      infowindow.open(map, value[3] + marker);
-    });
+    setMarkerListeners('attraction-item-' + index, marker, infoWindow);
 
   });
-
-
-
-//   function toggleBounce() {
-
-//   if (marker.getAnimation() != null) {
-//     marker.setAnimation(null);
-//   } else {
-//     marker.setAnimation(google.maps.Animation.BOUNCE);
-//   }
-// }
-
-//   google.maps.event.addListener(marker, 'click', toggleBounce);
-
-// }
-
-
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 
