@@ -724,9 +724,23 @@ body #map-section .map-container {
   color: white;
   text-align: center;
 }
+body #map-section .map-container #map-legend,
+body #map-section .map-container #map-canvas {
+  position: relative;
+  display: block;
+  float: left;
+}
+body #map-section .map-container #map-legend {
+  height: 100%;
+  width: 39%;
+  background-color: #f7b7c7;
+  border-right: 6px double white;
+}
 body #map-section .map-container #map-canvas {
   height: 100%;
-  width: 100%;
+  width: 60%;
+  position: relative;
+  display: block;
 }
 body #map-section .map-container #map-canvas .marker-content .marker-info-header {
   color: #e9243c;

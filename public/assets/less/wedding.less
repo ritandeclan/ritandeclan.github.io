@@ -169,6 +169,10 @@
   border-left: 6px double @color;
 }
 
+.double-border-right(@color) {
+  border-right: 6px double @color;
+}
+
 // Button mixins
 
 .button() {
@@ -995,9 +999,25 @@ body {
       color: white;
       text-align: center;
 
+      #map-legend,
+      #map-canvas {
+        position: relative;
+        display: block;
+        float: left;
+      }
+
+      #map-legend {
+        height: 100%;
+        width: 39%;
+        background-color: @deco-light-pink;
+        .double-border-right(white);
+      }
+
       #map-canvas {
         height: 100%;
-        width: 100%;
+        width: 60%;
+        position: relative;
+        display: block;
 
         .marker-content {
           .marker-info-header {
