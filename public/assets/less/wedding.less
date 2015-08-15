@@ -1055,6 +1055,8 @@ body {
         background-color: @deco-blue;
 
         .item-description-container {
+          .content-full-width();
+          margin: 0 auto;
           padding: 15px 0;
           .item-name {
 
@@ -1071,6 +1073,18 @@ body {
               line-height: 50px;
               padding: 5px 0;
             }
+          }
+
+          .item-description,
+          .item-description a {
+            .body-font-bold();
+            font-size: 18px;
+            line-height: 25px;
+            color: white;
+          }
+
+          .item-description a {
+            color: @deco-grey;
           }
         }
 
@@ -1179,7 +1193,7 @@ body {
         .delicious();
         font-size: 90px;
         line-height: 90px;
-        margin: 0 0 30px auto;
+        margin: 0 0 24px auto;
       }
 
       .gallery-message {

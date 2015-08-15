@@ -768,6 +768,8 @@ body #map-section .map-container #map-item-description {
   background-color: #75d0bb;
 }
 body #map-section .map-container #map-item-description .item-description-container {
+  width: 900px;
+  margin: 0 auto;
   padding: 15px 0;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-name {
@@ -786,6 +788,17 @@ body #map-section .map-container #map-item-description .item-description-contain
   font-size: 50px;
   line-height: 50px;
   padding: 5px 0;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-description,
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
+  color: #656478;
 }
 body #map-section .map-container #map-legend,
 body #map-section .map-container #map-canvas {
@@ -880,7 +893,7 @@ body #insta-gallery-section .insta-gallery-container .gallery-title {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 0 0 30px auto;
+  margin: 0 0 24px auto;
 }
 body #insta-gallery-section .insta-gallery-container .gallery-message {
   margin: 15px 0;

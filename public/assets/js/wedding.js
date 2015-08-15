@@ -175,8 +175,8 @@ $("#form-test .btn-submit").on("click", function(e) {
 var locations = [
     {
       "attractions": [
-        [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
-        [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
+        [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
+        [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
         [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
       ]
     },
@@ -272,7 +272,8 @@ var locations = [
           var description =
             "<div class='item-description-container'>" +
               "<h3 class='item-name intro'>" + item[2][0] + "</h3>"+
-              "<p class='item-description'>" + + "</p>"
+              "<p class='item-description'>" + item[3][0] + "</p>" +
+              "<p class='item-description'><a href='" + item[1][0] + "' target='_blank'>" + item[1][0] + "</a></p>" +
             "</div>";
 
           var attractionItem =
