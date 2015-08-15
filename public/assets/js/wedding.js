@@ -156,20 +156,42 @@ $("#form-test .btn-submit").on("click", function(e) {
   // map.setOptions({styles: styles});
 
 // function initialize() {
-var attractions = [
-  [ [ 26.106907, -81.770609],[ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
-  [ [ 26.170107, -81.790581],[ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
-  [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
-];
+// var attractions = [
+//   [ [ 26.106907, -81.770609],[ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
+//   [ [ 26.170107, -81.790581],[ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
+//   [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
+// ];
 
-var hotels = [
-  [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
-];
+// var hotels = [
+//   [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
+// ];
 
-var restaurants = [
-  [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
-  [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
-  [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
+// var restaurants = [
+//   [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
+//   [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
+//   [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
+// ];
+
+var locations = [
+    {
+      "attractions": [
+        [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
+        [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
+        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
+      ]
+    },
+    {
+      "hotels": [
+        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
+      ]
+    },
+    {
+      "restaurants":   [
+        [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
+        [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
+        [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
+      ]
+    }
 ];
 
   var marker;
@@ -185,7 +207,7 @@ var restaurants = [
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
 
-  function setMarkerListeners(item, marker, infowindow) {
+  function setMarkerListeners(item, description, marker, infowindow) {
 
     console.log(item);
 
@@ -200,6 +222,14 @@ var restaurants = [
 
     itemSelector.on("click", function() {
 
+      var descriptionContainer = $("#map-item-description");
+
+      descriptionContainer.empty();
+
+      descriptionContainer.append(description);
+
+      console.log("here's my item", item);
+
       if (clickStatus == false) {
         map.setCenter(marker.getPosition());
         infowindow.open(map, marker);
@@ -213,40 +243,65 @@ var restaurants = [
 
   }
 
-  $.each(attractions, function(index, value){
+  // $.each(locations, function(index, value){
+  //   for (var k in value){
+  //     if (value.hasOwnProperty(k)) {
+  //          console.log("Key is " + k + ", value is" + value[k][index]);
+  //          debugger;
+  //     }
+  //   }
+  // });
 
-    var attractionsContainer = $("#attractions");
+  $.each(locations, function(index, location){
 
-    var attractionItem =
-      "<div class='legend-item attraction attraction-item-" + index + "' data-clicked='nope'>" +
-        "<h3 class='item-name'>" + value[2][0] + "</h3>" +
-      "</div>";
+    for (var k in location){
+      if (location.hasOwnProperty(k)) {
 
+        var currentCategory = location[k];
 
-    attractionsContainer.append( attractionItem );
+        var itemsContainer = $("#"+ k);
 
-    var lat = value[0][0];
-    var lng = value[0][1];
+        $.each(currentCategory, function(i, item) {
 
-    var marker = new google.maps.Marker({
-      map:map,
-      draggable:false,
-      animation: google.maps.Animation.DROP,
-      position: {lat, lng},
-    })
+          var description =
+            "<div class='item-description-container'" +
+              "<h3 class='item-name'>" + item[2][0] + "</h3>"+
+              "<p class='item-description'>" + + "</p>"
+            "</div>";
 
-    var contentString =
-    '<div class="marker-content">'+
-      '<h1 class="marker-info-header" >'+ value[2][0] +'</h1>' +
-      '<p class="marker-website"><a href="' + value[1][0] + '" target="_blank">Visit the '+ value[2][0] + ' website</a></p>' +
-    '</div>';
+          var attractionItem =
+            "<div class='legend-item " + k + " " + k + "-item-" + i + "' data-clicked='nope'>" +
+              "<h3 class='item-name'>" + item[2][0] + "</h3>" +
+            "</div>";
 
+          itemsContainer.append( attractionItem );
 
-    var infoWindow = new google.maps.InfoWindow({
-        content: contentString
-    });
+          var lat = item[0][0];
+          var lng = item[0][1];
 
-    setMarkerListeners('attraction-item-' + index, marker, infoWindow);
+          var marker = new google.maps.Marker({
+            map:map,
+            draggable:false,
+            animation: google.maps.Animation.DROP,
+            position: {lat, lng},
+          })
+
+          var contentString =
+          '<div class="marker-content">'+
+            '<h1 class="marker-info-header" >'+ item[2][0] +'</h1>' +
+            '<p class="marker-website"><a href="' + item[1][0] + '" target="_blank">Visit the '+ item[2][0] + ' website</a></p>' +
+          '</div>';
+
+          var infoWindow = new google.maps.InfoWindow({
+              content: contentString
+          });
+
+          setMarkerListeners(k + "-item-" + i, description, marker, infoWindow);
+
+        });
+
+      }
+    }
 
   });
 
