@@ -233,13 +233,12 @@ var locations = [
 
     itemSelector.on("click", function() {
 
-      displayDescription(description);
-
       console.log("here's my item", item);
 
       if (clickStatus == false) {
         map.setCenter(marker.getPosition());
         infowindow.open(map, marker);
+        displayDescription(description);
         clickStatus = true;
       } else {
         infowindow.close(map, marker);
@@ -271,8 +270,8 @@ var locations = [
         $.each(currentCategory, function(i, item) {
 
           var description =
-            "<div class='item-description-container'" +
-              "<h3 class='item-name'>" + item[2][0] + "</h3>"+
+            "<div class='item-description-container'>" +
+              "<h3 class='item-name intro'>" + item[2][0] + "</h3>"+
               "<p class='item-description'>" + + "</p>"
             "</div>";
 
