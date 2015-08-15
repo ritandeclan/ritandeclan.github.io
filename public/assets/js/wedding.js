@@ -347,6 +347,7 @@ var cardContainer = document.getElementById("cards-container");
         "</p>" +
         "<div class='meal-options'>" +
           "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
+            "<option value=''>Choose meal</option>" +
             "<option value='Fish'>Fish</option>" +
             "<option value='Beef' selected>Beef</option>" +
             "<option value='Vegetarian'>Vegetarian</option>" +
@@ -378,6 +379,8 @@ var cardContainer = document.getElementById("cards-container");
     var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
 
     switch (value) {
+      case "":
+         $(this).css("padding-left", "18%");
       case 'vegetarian':
          $(this).css("padding-left", "23.5%");
          break;
@@ -386,7 +389,7 @@ var cardContainer = document.getElementById("cards-container");
       case 'beef':
         $(this).css("padding-left", "40.5%");
       default:
-        $(this).css("padding-left", "41.5%");
+        $(this).css("padding-left", "19.5%");
         break;
     }
 
@@ -401,6 +404,9 @@ $("#meal").on("change", function(){
   var value= $("#meal option:selected").val().toLowerCase();
 
   switch (value) {
+    case "":
+       $(this).css("padding-left", "18%");
+       break;
     case 'vegetarian':
        $(this).css("padding-left", "23.5%");
        break;
@@ -409,7 +415,7 @@ $("#meal").on("change", function(){
     case 'beef':
       $(this).css("padding-left", "40.5%");
     default:
-      $(this).css("padding-left", "41.5%");
+      $(this).css("padding-left", "19.5%");
       break;
   }
 
