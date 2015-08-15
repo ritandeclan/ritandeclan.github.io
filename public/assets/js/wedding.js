@@ -381,6 +381,7 @@ var cardContainer = document.getElementById("cards-container");
     switch (value) {
       case "":
          $(this).css("padding-left", "18%");
+         break;
       case 'vegetarian':
          $(this).css("padding-left", "23.5%");
          break;
@@ -389,7 +390,7 @@ var cardContainer = document.getElementById("cards-container");
       case 'beef':
         $(this).css("padding-left", "40.5%");
       default:
-        $(this).css("padding-left", "19.5%");
+        $(this).css("padding-left", "40.5%");
         break;
     }
 
@@ -415,7 +416,7 @@ $("#meal").on("change", function(){
     case 'beef':
       $(this).css("padding-left", "40.5%");
     default:
-      $(this).css("padding-left", "19.5%");
+      $(this).css("padding-left", "40.5");
       break;
   }
 
