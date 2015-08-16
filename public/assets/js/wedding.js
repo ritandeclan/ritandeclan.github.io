@@ -174,6 +174,11 @@ $("#form-test .btn-submit").on("click", function(e) {
 
 var locations = [
     {
+      "venue": [
+        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
+      ]
+    },
+    {
       "attractions": [
         [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
         [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
@@ -184,7 +189,10 @@ var locations = [
     },
     {
       "hotels": [
-        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
+        [ [ 26.211813, -81.810159], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d85227-Reviews-Naples_Grande_Beach_Resort-Naples_Florida.html"], ["Naples Bay Resort"], ["A warm, effortless level of hospitality greets you at Naples Grande Beach Resort. This inviting beach property sets the standard for treating guests and families to endless activities, incredible nearby sights, and an unmatched level of service and attention. Rediscover this unique luxury resort in Naples, Florida and indulge in a truly special getaway."],["Top-rated"]],
+        [ [ 26.161493, -81.797102], [ "http://www.naplesramada.com/"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
+        [ [ 26.209492, -81.801649], [ "http://www3.hilton.com/en/hotels/florida/hilton-naples-APFNHHF/index.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
+        [ [ 26.139215, -81.78242], [ "http://www.ihg.com/holidayinnexpress/hotels/us/en/naples/apfin/hoteldetail"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]]
       ]
     },
     {

@@ -817,6 +817,7 @@ body #map-section .map-container #map-legend {
   border-right: white double 10px;
   overflow: scroll;
 }
+body #map-section .map-container #map-legend #venue,
 body #map-section .map-container #map-legend #attractions,
 body #map-section .map-container #map-legend #hotels,
 body #map-section .map-container #map-legend #airbnb,
@@ -827,6 +828,7 @@ body #map-section .map-container #map-legend #restaurants {
   display: block;
   width: 100%;
 }
+body #map-section .map-container #map-legend #venue .legend-section-name,
 body #map-section .map-container #map-legend #attractions .legend-section-name,
 body #map-section .map-container #map-legend #hotels .legend-section-name,
 body #map-section .map-container #map-legend #airbnb .legend-section-name,
@@ -848,6 +850,7 @@ body #map-section .map-container #map-legend #restaurants .legend-section-name {
   font-size: 30px;
   line-height: 30px;
 }
+body #map-section .map-container #map-legend #venue .legend-item,
 body #map-section .map-container #map-legend #attractions .legend-item,
 body #map-section .map-container #map-legend #hotels .legend-item,
 body #map-section .map-container #map-legend #airbnb .legend-item,
@@ -856,6 +859,7 @@ body #map-section .map-container #map-legend #beaches .legend-item,
 body #map-section .map-container #map-legend #restaurants .legend-item {
   padding: 5px 15px;
 }
+body #map-section .map-container #map-legend #venue .legend-item .item-name,
 body #map-section .map-container #map-legend #attractions .legend-item .item-name,
 body #map-section .map-container #map-legend #hotels .legend-item .item-name,
 body #map-section .map-container #map-legend #airbnb .legend-item .item-name,
@@ -867,6 +871,7 @@ body #map-section .map-container #map-legend #restaurants .legend-item .item-nam
   text-align: left;
   margin: 0;
 }
+body #map-section .map-container #map-legend #venue .legend-item:hover,
 body #map-section .map-container #map-legend #attractions .legend-item:hover,
 body #map-section .map-container #map-legend #hotels .legend-item:hover,
 body #map-section .map-container #map-legend #airbnb .legend-item:hover,
@@ -876,7 +881,7 @@ body #map-section .map-container #map-legend #restaurants .legend-item:hover {
   color: #75d0bb;
   cursor: pointer;
 }
-body #map-section .map-container #map-legend #hotels .legend-section-name {
+body #map-section .map-container #map-legend #venue .legend-section-name {
   margin-top: 0;
 }
 body #map-section .map-container #map-legend #attractions .legend-section-name,
