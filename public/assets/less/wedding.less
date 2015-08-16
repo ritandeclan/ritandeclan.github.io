@@ -1134,6 +1134,7 @@ body {
         width: 25%;
         background-color: @deco-grey;
         .double-border-right(10px; white;);
+        overflow-y: scroll;
 
         #instructions {
           position: relative;
@@ -1147,7 +1148,7 @@ body {
           position: relative;
           display: block;
           width: 100%;
-          height: 360px;
+          height: 400px;
           overflow-y: scroll;
 
           #venue,
@@ -1395,6 +1396,50 @@ body {
       }
     }
 
+  }
+
+  @media (max-width: 1115px) {
+    #map-section {
+      .map-container {
+        #map-canvas {
+          width: 73%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    #map-section {
+      .map-container {
+        #map-item-description {
+          .item-description-container {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 775px) {
+    #map-section {
+      .map-container {
+        #map-item-description {
+          .item-description-container {
+            width: 100%;
+          }
+        }
+
+        #map-legend {
+          width: 100%;
+          border-right: none;
+        }
+        #map-canvas {
+          width: 100%;
+          border-top: 10px double white;
+        }
+
+      }
+    }
   }
 
 }

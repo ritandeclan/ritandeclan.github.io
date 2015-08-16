@@ -835,6 +835,7 @@ body #map-section .map-container #map-legend {
   width: 25%;
   background-color: #656478;
   border-right: white double 10px;
+  overflow-y: scroll;
 }
 body #map-section .map-container #map-legend #instructions {
   position: relative;
@@ -848,7 +849,7 @@ body #map-section .map-container #map-legend #location-list {
   position: relative;
   display: block;
   width: 100%;
-  height: 360px;
+  height: 400px;
   overflow-y: scroll;
 }
 body #map-section .map-container #map-legend #location-list #venue,
@@ -1092,5 +1093,28 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   100% {
     font-size: 16px;
+  }
+}
+@media (max-width: 1115px) {
+  body #map-section .map-container #map-canvas {
+    width: 73%;
+  }
+}
+@media (max-width: 1000px) {
+  body #map-section .map-container #map-item-description .item-description-container {
+    width: 75%;
+  }
+}
+@media (max-width: 775px) {
+  body #map-section .map-container #map-item-description .item-description-container {
+    width: 100%;
+  }
+  body #map-section .map-container #map-legend {
+    width: 100%;
+    border-right: none;
+  }
+  body #map-section .map-container #map-canvas {
+    width: 100%;
+    border-top: 10px double white;
   }
 }
