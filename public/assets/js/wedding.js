@@ -8,8 +8,6 @@ $("#form-test .btn-submit").on("click", function(e) {
 
   var formMessage = $("#form-test").serializeArray();
 
-  console.log("Here's the form message", formMessage);
-
   $.ajax({
     url: "//formspree.io/declanandrita@gmail.com",
     method: "POST",
@@ -19,15 +17,11 @@ $("#form-test .btn-submit").on("click", function(e) {
 
       document.getElementById("form-test").reset();
 
-      console.log("Success, Here's the test data", data);
-
       $("#submit-success-message").fadeIn(3000, 'swing', function(){
         $('#submit-success-message').fadeOut(5000);
       });
 
     }).fail(function (jqXHR,status,err) {
-
-      console.log("failure, Here's the error", err);
 
       $("#submit-failure-message").addClass("display");
 
@@ -277,8 +271,6 @@ var locations = [
 
   function setMarkerListeners(item, description, marker, infowindow) {
 
-    // var clickStatus = false;
-
     function openInfoWindow() {
       closeAllInfoWindows();
       infowindow.open(map, marker);
@@ -291,15 +283,6 @@ var locations = [
     }
 
     google.maps.event.addListener( marker, 'click', function() {
-      // if (clickStatus == false) {
-
-      //   openInfoWindow();
-      //   clickStatus = true;
-      // } else {
-      //   closeInfoWindow();
-      //   clickStatus = false;
-      // }
-
       openInfoWindow();
     });
 
@@ -307,30 +290,12 @@ var locations = [
 
     itemSelector.on("click", function(e) {
       e.stopPropagation();
-
-      // if (clickStatus == false) {
-
-      //   openInfoWindow();
-      //   clickStatus = true;
-      // } else {
-      //   closeInfoWindow();
-      //   clickStatus = false;
-      // }
-
       openInfoWindow();
 
     });
 
   };
 
-  // $.each(locations, function(index, value){
-  //   for (var k in value){
-  //     if (value.hasOwnProperty(k)) {
-  //          console.log("Key is " + k + ", value is" + value[k][index]);
-  //          debugger;
-  //     }
-  //   }
-  // });
 
   $.each(locations, function(index, location){
 
@@ -407,10 +372,8 @@ var locations = [
 
   $(".toggle-trigger").on("click", function(){
     $(this).find(".legend-item").slideToggle()
-    // debugger;
   })
 
-// google.maps.event.addDomListener(window, 'load', initialize);
 
   var yourWeather = 'mediocre';
   var yourTemp = 'meh&deg; f';
