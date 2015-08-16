@@ -305,8 +305,8 @@ var locations = [
 
     var itemSelector = $('.'+item);
 
-    itemSelector.on("click", function() {
-
+    itemSelector.on("click", function(e) {
+      e.stopPropagation();
 
       // if (clickStatus == false) {
 
@@ -402,6 +402,13 @@ var locations = [
     }
 
   });
+
+// Add a slidetoggle animation to open and close sections in the map list
+
+  $(".toggle-trigger").on("click", function(){
+    $(this).find(".legend-item").slideToggle()
+    // debugger;
+  })
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 

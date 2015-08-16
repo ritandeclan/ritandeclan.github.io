@@ -1036,6 +1036,10 @@ body {
   #map-section {
 
     background-color: @deco-grey;
+    position: relative;
+    display: block;
+    height: auto;
+    width: 100%;
 
     .map-container {
       width: 90%;
@@ -1046,155 +1050,185 @@ body {
       text-align: center;
       .cf();
 
-      #map-item-description {
+      #map-description-container {
         position: relative;
         display: block;
         height: auto;
-        width: 100%;
-        border-bottom: 10px double white;
-        background-color: @deco-blue;
 
-        .item-description-container {
-          .content-full-width();
-          margin: 0 auto;
-          padding: 15px 0;
-          .item-name {
+        #map-item-description {
+          position: relative;
+          display: block;
+          float: left;
+          height: auto;
+          width: 74%;
+          border-bottom: 10px double white;
+          background-color: @deco-blue;
 
+          .item-description-container {
+            .content-full-width();
             margin: 0 auto;
-            .body-font-bold();
-            line-height: 19px;
-            text-transform: uppercase;
             padding: 15px 0;
+            .item-name {
 
-            &.intro {
-              .delicious();
-              text-transform: none;
-              font-size: 50px;
-              line-height: 50px;
-              padding: 5px 0;
+              margin: 0 auto;
+              .body-font-bold();
+              line-height: 19px;
+              text-transform: uppercase;
+              padding: 15px 0;
+
+              &.intro {
+                .delicious();
+                text-transform: none;
+                font-size: 50px;
+                line-height: 50px;
+                padding: 5px 0;
+
+              }
 
             }
 
-          }
+            .item-description,
+            .item-details,
+            .item-description a {
+              .body-font-bold();
+              font-size: 18px;
+              line-height: 25px;
+              color: @deco-grey;
+            }
 
-          .item-description,
-          .item-details,
-          .item-description a {
-            .body-font-bold();
-            font-size: 18px;
-            line-height: 25px;
-            color: @deco-grey;
-          }
+            .item-description a {
+              color: white;
+            }
 
-          .item-description a {
-            color: white;
-          }
+            .item-details {
+              color: @deco-grey;
+            }
 
-          .item-details {
-            color: @deco-grey;
           }
 
         }
 
-      }
+        #map-canvas {
+          position: relative;
+          display: block;
+          float: left;
+          width: 74%;
+          height: 500px;
 
-      #map-legend,
-      #map-canvas {
-        position: relative;
-        display: block;
-        float: left;
-        height: 500px;
+          .marker-content {
+            .marker-info-header {
+              color: @deco-red;
+              .delicious();
+              font-size: 25px;
+            }
+
+            .marker-website,
+            .marker-website a {
+              color: @deco-blue;
+            }
+          }
+        }
+
       }
 
       #map-legend {
+        position: relative;
+        display: block;
+        float: left;
+        height: 100%;
         width: 25%;
         background-color: @deco-grey;
         .double-border-right(10px; white;);
-        overflow: scroll;
 
-        #venue,
-        #attractions,
-        #hotels,
-        #airbnb,
-        #bars,
-        #beaches,
-        #restaurants {
+        #instructions {
+          position: relative;
+          display: block;
+          border-bottom: 10px double white;
+          .body-font-bold();
+          padding: 15px;
+        }
+
+        #location-list {
           position: relative;
           display: block;
           width: 100%;
+          height: 100%;
+          overflow-y: scroll;
 
-          .legend-section-name {
+          #venue,
+          #attractions,
+          #hotels,
+          #airbnb,
+          #bars,
+          #beaches,
+          #restaurants {
             position: relative;
             display: block;
-            width: auto;
-            background-color: @deco-light-pink;
-            padding: 10px 0 0 15px;
-            margin: 10px 0;
-            border-bottom: 10px double white;
-            color: @deco-grey;
-            text-align: left;
-            .delicious();
-            font-size: 30px;
-            line-height: 30px;
-          }
+            width: 100%;
 
-          .legend-item {
-            padding: 5px 15px;
-
-            .item-name {
-              .body-font-bold();
+            .legend-section-name {
+              position: relative;
+              display: block;
+              width: auto;
+              background-color: @deco-light-pink;
+              padding: 10px 0 0 15px;
+              margin: 10px 0;
+              border-bottom: 10px double white;
+              color: @deco-grey;
               text-align: left;
-              margin: 0;
+              .delicious();
+              font-size: 30px;
+              line-height: 30px;
+            }
+
+            .legend-item {
+              padding: 5px 15px;
+              display: none;
+
+              .item-name {
+                .body-font-bold();
+                text-align: left;
+                margin: 0;
+              }
+
+              &:hover {
+                color: @deco-blue;
+                cursor: pointer;
+              }
+
             }
 
             &:hover {
-              color: @deco-blue;
               cursor: pointer;
             }
 
           }
-        }
 
-        #venue {
-          .legend-section-name {
-            margin-top: 0;
+          #venue {
+            .legend-section-name {
+              margin-top: 0;
+            }
           }
-        }
 
-        #attractions,
-        #airbnb,
-        #bars,
-        #beaches,
-        #restaurants {
-          .legend-section-name {
-            border-top: 10px double white;
+          #attractions,
+          #airbnb,
+          #bars,
+          #hotels,
+          #beaches,
+          #restaurants {
+            .legend-section-name {
+              border-top: 10px double white;
+            }
           }
-        }
 
-        #beaches {
-          padding-bottom: 15px;
+          #beaches {
+            padding-bottom: 15px;
+          }
+
         }
 
       }
 
-      #map-canvas {
-        width: 74%;
-        position: relative;
-        display: block;
-
-        .marker-content {
-          .marker-info-header {
-            color: @deco-red;
-            .delicious();
-            font-size: 25px;
-          }
-
-          .marker-website,
-          .marker-website a {
-            color: @deco-blue;
-          }
-        }
-      }
     }
 
   }
