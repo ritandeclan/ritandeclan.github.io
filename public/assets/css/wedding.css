@@ -820,6 +820,8 @@ body #map-section .map-container #map-legend {
 body #map-section .map-container #map-legend #attractions,
 body #map-section .map-container #map-legend #hotels,
 body #map-section .map-container #map-legend #airbnb,
+body #map-section .map-container #map-legend #bars,
+body #map-section .map-container #map-legend #beaches,
 body #map-section .map-container #map-legend #restaurants {
   position: relative;
   display: block;
@@ -828,6 +830,8 @@ body #map-section .map-container #map-legend #restaurants {
 body #map-section .map-container #map-legend #attractions .legend-section-name,
 body #map-section .map-container #map-legend #hotels .legend-section-name,
 body #map-section .map-container #map-legend #airbnb .legend-section-name,
+body #map-section .map-container #map-legend #bars .legend-section-name,
+body #map-section .map-container #map-legend #beaches .legend-section-name,
 body #map-section .map-container #map-legend #restaurants .legend-section-name {
   position: relative;
   display: block;
@@ -847,12 +851,16 @@ body #map-section .map-container #map-legend #restaurants .legend-section-name {
 body #map-section .map-container #map-legend #attractions .legend-item,
 body #map-section .map-container #map-legend #hotels .legend-item,
 body #map-section .map-container #map-legend #airbnb .legend-item,
+body #map-section .map-container #map-legend #bars .legend-item,
+body #map-section .map-container #map-legend #beaches .legend-item,
 body #map-section .map-container #map-legend #restaurants .legend-item {
   padding: 5px 15px;
 }
 body #map-section .map-container #map-legend #attractions .legend-item .item-name,
 body #map-section .map-container #map-legend #hotels .legend-item .item-name,
 body #map-section .map-container #map-legend #airbnb .legend-item .item-name,
+body #map-section .map-container #map-legend #bars .legend-item .item-name,
+body #map-section .map-container #map-legend #beaches .legend-item .item-name,
 body #map-section .map-container #map-legend #restaurants .legend-item .item-name {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
@@ -862,6 +870,8 @@ body #map-section .map-container #map-legend #restaurants .legend-item .item-nam
 body #map-section .map-container #map-legend #attractions .legend-item:hover,
 body #map-section .map-container #map-legend #hotels .legend-item:hover,
 body #map-section .map-container #map-legend #airbnb .legend-item:hover,
+body #map-section .map-container #map-legend #bars .legend-item:hover,
+body #map-section .map-container #map-legend #beaches .legend-item:hover,
 body #map-section .map-container #map-legend #restaurants .legend-item:hover {
   color: #75d0bb;
   cursor: pointer;
@@ -871,8 +881,13 @@ body #map-section .map-container #map-legend #hotels .legend-section-name {
 }
 body #map-section .map-container #map-legend #attractions .legend-section-name,
 body #map-section .map-container #map-legend #airbnb .legend-section-name,
+body #map-section .map-container #map-legend #bars .legend-section-name,
+body #map-section .map-container #map-legend #beaches .legend-section-name,
 body #map-section .map-container #map-legend #restaurants .legend-section-name {
   border-top: 10px double white;
+}
+body #map-section .map-container #map-legend #beaches {
+  padding-bottom: 15px;
 }
 body #map-section .map-container #map-canvas {
   width: 74%;
