@@ -1072,10 +1072,13 @@ body {
               font-size: 50px;
               line-height: 50px;
               padding: 5px 0;
+
             }
+
           }
 
           .item-description,
+          .item-details,
           .item-description a {
             .body-font-bold();
             font-size: 18px;
@@ -1086,6 +1089,11 @@ body {
           .item-description a {
             color: white;
           }
+
+          .item-details {
+            color: @deco-grey;
+          }
+
         }
 
       }
@@ -1106,6 +1114,7 @@ body {
 
         #attractions,
         #hotels,
+        #airbnb,
         #restaurants {
           position: relative;
           display: block;
@@ -1150,6 +1159,7 @@ body {
         }
 
         #attractions,
+        #airbnb,
         #restaurants {
           .legend-section-name {
             border-top: 10px double white;

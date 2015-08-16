@@ -177,12 +177,14 @@ var locations = [
       "attractions": [
         [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
         [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
-        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the gopher tortoises in the greenery along the road."]]
+        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the <a href='https://en.wikipedia.org/wiki/Gopher_tortoise' target='_blank'>gopher tortoises</a> in the greenery along the road."]],
+        [ [ 26.374743, -81.603584], [ "http://www.10best.com/destinations/florida/naples/east-naples/attractions/corkscrew-swamp-sanctuary/"], ["Corkscrew Swamp Sanctuary"], ["While Naples is known for its pristine beaches, the city also has flourishing wetlands such as the Corkscrew Swamp Sanctuary - known for its ancient cypress forest and colony of nesting American woodstorks."]],
+        [ [ 26.211233, -81.811903], [ "http://www.tripadvisor.com/Attraction_Review-g34467-d285104-Reviews-Clam_Pass_Park-Naples_Florida.html"], ["Clam Pass Park"], ["This is the perfect kind of beach to do very little but relax. Oh, yes, and dolphin watch!<br> The ride on the little trolley cart is so much fun- winding through a scenic half mile of mangroves on a boardwalk. There is a bathroom and outside shower at the beach as well as a restaurant and a cabana with rentals available. We enjoyed checking out the starfish, sand dollars, and shells."]]
       ]
     },
     {
       "hotels": [
-        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical, The Escalante is Naples only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
+        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
       ]
     },
     {
@@ -191,7 +193,15 @@ var locations = [
         [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"], ["For over 21 years, Grouper & Chips has been one of Naples' best kept secrets. Local residents have been flocking to a small unpretentious “hole-in-the-wall” restaurant to enjoy Chef Francis Pischner’s unparalleled cuisine. With hundreds of other local area restaurants notwithstanding, regular customers choose to wait for over an hour at times just to get in."]],
         [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ], ["Pazzo! is a friendly neighborhood restaurant that just happens to have an outstanding world class affordable menu that serves real Italian food, with an incredible wine list. At Pazzo!, we make all of our own sauces, pastas, desserts and everything in between from scratch! At Pazzo!, It’s All About The Food!™"]]
       ]
-    }
+    },
+    {
+      "airbnb":   [
+        [ [ 26.133448, -81.79354 ], [ "https://www.airbnb.com/rooms/4597666"], ["52-foot Houseboat"], ["This is truly a unique experience. Staying on the water at the dock in Naples Bay, within walking access to the beautiful beaches, Fifth Ave, Third Street, Tin City and much more. Two bicycles are provided. Water taxi comes every hour. Waterfront restaurants within a stone's throw. Boat rentals, jet ski,kayaks, paddleboards, and Segway tours are only a few blocks away. Take a cruise with the Naples Princess and experience the many waterfront homes."],["$295/night | sleeps 4"] ],
+        [ [ 26.165885, -81.799741 ], [ "https://www.airbnb.com/rooms/7555959"], ["Pool Home"], ["The large approximate 1/2 acre (lushly landscaped) manicured lot frames this single-level home boasting a circle driveway and beautifully appointed interior: light-infused living areas, dramatic hi-volume vaulted ceilings, rich wood flooring throughout, custom moldings dressing every room. Spacious living room/dining room combination. Chef's kitchen with solid surface countertops, abundant cabinets opens to great room and breakfast room. French doors open to an expansive fenced back yard-behold the newly finished pool and 8 jet spa surrounded by custom designed travertine decking. "], ["$200/night | sleeps 6 | min. 7-night stay"]],
+        [ [ 26.061761, -81.693262 ], [ "https://www.airbnb.com/rooms/7557988" ], [ "Beautiful Condo, Lazy River" ], ["Our modern two bedroom 2 bath condo with lanai is perfectly located in the Falling Waters gated community. Enjoy your time in the lazy river, playing tennis or the day on the beach at Marco Island. Shops and restaurants are only a short drive away."], ["$150/night | sleeps 2"]],
+        [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/3958140" ], [ "Two Bedroom Resort Suite" ], ["Our modern two bedroom 2 bath condo with lanai is perfectly located in the Falling Waters gated community. Enjoy your time in the lazy river, playing tennis or the day on the beach at Marco Island. Shops and restaurants are only a short drive away."], ["$250/night | sleeps 6"]]
+      ]
+    },
 ];
 
   var marker;
@@ -225,32 +235,50 @@ var locations = [
 
   };
 
+
   function setMarkerListeners(item, description, marker, infowindow) {
 
-    google.maps.event.addListener( marker, 'click', function() {
+    // var clickStatus = false;
+
+    function openInfoWindow() {
       closeAllInfoWindows();
       infowindow.open(map, marker);
       map.setCenter(marker.getPosition());
       displayDescription(description);
+    }
+
+    function closeInfoWindow() {
+      infowindow.close(map, marker);
+    }
+
+    google.maps.event.addListener( marker, 'click', function() {
+      // if (clickStatus == false) {
+
+      //   openInfoWindow();
+      //   clickStatus = true;
+      // } else {
+      //   closeInfoWindow();
+      //   clickStatus = false;
+      // }
+
+      openInfoWindow();
     });
 
     var itemSelector = $('.'+item);
 
-    var clickStatus = false;
-
     itemSelector.on("click", function() {
 
-      closeAllInfoWindows();
 
-      if (clickStatus == false) {
-        map.setCenter(marker.getPosition());
-        infowindow.open(map, marker);
-        displayDescription(description);
-        clickStatus = true;
-      } else {
-        infowindow.close(map, marker);
-        clickStatus = false;
-      }
+      // if (clickStatus == false) {
+
+      //   openInfoWindow();
+      //   clickStatus = true;
+      // } else {
+      //   closeInfoWindow();
+      //   clickStatus = false;
+      // }
+
+      openInfoWindow();
 
     });
 
@@ -276,12 +304,25 @@ var locations = [
 
         $.each(currentCategory, function(i, item) {
 
+          if (item[4] !== null && item[4] !== undefined) {
+
           var description =
+            "<div class='item-description-container'>" +
+              "<h3 class='item-name intro'>" + item[2][0] + "</h3>"+
+              "<p class='item-description'>" + item[3][0] + "</p>" +
+              "<p class='item-details'>" + item[4][0] + "</p>" +
+              "<p class='item-description'><a href='" + item[1][0] + "' target='_blank'>Visit the " + item[2][0] + " website</a></p>" +
+            "</div>";
+
+          } else {
+
+            var description =
             "<div class='item-description-container'>" +
               "<h3 class='item-name intro'>" + item[2][0] + "</h3>"+
               "<p class='item-description'>" + item[3][0] + "</p>" +
               "<p class='item-description'><a href='" + item[1][0] + "' target='_blank'>Visit the " + item[2][0] + " website</a></p>" +
             "</div>";
+          }
 
           var attractionItem =
             "<div class='legend-item " + k + " " + k + "-item-" + i + "' data-clicked='nope'>" +
@@ -293,11 +334,13 @@ var locations = [
           var lat = item[0][0];
           var lng = item[0][1];
 
+          var markerPoint = new google.maps.LatLng(lat, lng);
+
           var marker = new google.maps.Marker({
             map:map,
             draggable:false,
             animation: google.maps.Animation.DROP,
-            position: {lat, lng},
+            position: markerPoint,
           })
 
           var contentString =
