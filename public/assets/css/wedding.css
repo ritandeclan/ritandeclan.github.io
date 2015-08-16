@@ -743,18 +743,201 @@ body #weather-section .weather-container .your-weather .clouds .fa.fa-cloud.fa-5
 }
 body #map-section {
   background-color: #656478;
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
 }
 body #map-section .map-container {
-  width: 900px;
+  width: 90%;
   border: 10px double white;
-  height: 500px;
+  height: auto;
   margin: 0 auto;
   color: white;
   text-align: center;
 }
-body #map-section .map-container #map-canvas {
-  height: 100%;
+body #map-section .map-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #map-section .map-container #map-item-description {
+  position: relative;
+  display: block;
+  float: left;
+  height: auto;
   width: 100%;
+  border-bottom: 10px double white;
+  background-color: #75d0bb;
+}
+body #map-section .map-container #map-item-description .item-description-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-name {
+  margin: 0 auto;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: none;
+  font-size: 50px;
+  line-height: 50px;
+  padding: 5px 0;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-description,
+body #map-section .map-container #map-item-description .item-description-container .item-details,
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #656478;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
+  color: white;
+}
+body #map-section .map-container #map-item-description .item-description-container .item-details {
+  color: #656478;
+}
+body #map-section .map-container #map-canvas {
+  position: relative;
+  display: block;
+  float: left;
+  width: 74%;
+  height: 500px;
+}
+body #map-section .map-container #map-canvas .marker-content .marker-info-header {
+  color: #e9243c;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+body #map-section .map-container #map-canvas .marker-content .marker-website,
+body #map-section .map-container #map-canvas .marker-content .marker-website a {
+  color: #75d0bb;
+}
+body #map-section .map-container #map-legend {
+  position: relative;
+  display: block;
+  float: left;
+  height: 500px;
+  width: 25%;
+  background-color: #656478;
+  border-right: white double 10px;
+}
+body #map-section .map-container #map-legend #instructions {
+  position: relative;
+  display: block;
+  border-bottom: 10px double white;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  padding: 15px;
+}
+body #map-section .map-container #map-legend #location-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 360px;
+  overflow-y: scroll;
+}
+body #map-section .map-container #map-legend #location-list #venue,
+body #map-section .map-container #map-legend #location-list #attractions,
+body #map-section .map-container #map-legend #location-list #hotels,
+body #map-section .map-container #map-legend #location-list #airbnb,
+body #map-section .map-container #map-legend #location-list #bars,
+body #map-section .map-container #map-legend #location-list #beaches,
+body #map-section .map-container #map-legend #location-list #restaurants {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+body #map-section .map-container #map-legend #location-list #venue .legend-section-name,
+body #map-section .map-container #map-legend #location-list #attractions .legend-section-name,
+body #map-section .map-container #map-legend #location-list #hotels .legend-section-name,
+body #map-section .map-container #map-legend #location-list #airbnb .legend-section-name,
+body #map-section .map-container #map-legend #location-list #bars .legend-section-name,
+body #map-section .map-container #map-legend #location-list #beaches .legend-section-name,
+body #map-section .map-container #map-legend #location-list #restaurants .legend-section-name {
+  position: relative;
+  display: block;
+  width: auto;
+  background-color: #f7b7c7;
+  padding: 10px 0 0 15px;
+  margin: 10px 0;
+  border-bottom: 10px double white;
+  color: #656478;
+  text-align: left;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 30px;
+  line-height: 30px;
+}
+body #map-section .map-container #map-legend #location-list #venue .legend-item,
+body #map-section .map-container #map-legend #location-list #attractions .legend-item,
+body #map-section .map-container #map-legend #location-list #hotels .legend-item,
+body #map-section .map-container #map-legend #location-list #airbnb .legend-item,
+body #map-section .map-container #map-legend #location-list #bars .legend-item,
+body #map-section .map-container #map-legend #location-list #beaches .legend-item,
+body #map-section .map-container #map-legend #location-list #restaurants .legend-item {
+  padding: 5px 15px;
+  display: none;
+}
+body #map-section .map-container #map-legend #location-list #venue .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #attractions .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #hotels .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #airbnb .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #bars .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #beaches .legend-item .item-name,
+body #map-section .map-container #map-legend #location-list #restaurants .legend-item .item-name {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+body #map-section .map-container #map-legend #location-list #venue .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #attractions .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #hotels .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #airbnb .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #bars .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #beaches .legend-item:hover,
+body #map-section .map-container #map-legend #location-list #restaurants .legend-item:hover {
+  color: #75d0bb;
+  cursor: pointer;
+}
+body #map-section .map-container #map-legend #location-list #venue:hover,
+body #map-section .map-container #map-legend #location-list #attractions:hover,
+body #map-section .map-container #map-legend #location-list #hotels:hover,
+body #map-section .map-container #map-legend #location-list #airbnb:hover,
+body #map-section .map-container #map-legend #location-list #bars:hover,
+body #map-section .map-container #map-legend #location-list #beaches:hover,
+body #map-section .map-container #map-legend #location-list #restaurants:hover {
+  cursor: pointer;
+}
+body #map-section .map-container #map-legend #location-list #venue .legend-section-name {
+  margin-top: 0;
+}
+body #map-section .map-container #map-legend #location-list #attractions .legend-section-name,
+body #map-section .map-container #map-legend #location-list #airbnb .legend-section-name,
+body #map-section .map-container #map-legend #location-list #bars .legend-section-name,
+body #map-section .map-container #map-legend #location-list #hotels .legend-section-name,
+body #map-section .map-container #map-legend #location-list #beaches .legend-section-name,
+body #map-section .map-container #map-legend #location-list #restaurants .legend-section-name {
+  border-top: 10px double white;
+}
+body #map-section .map-container #map-legend #location-list #beaches .legend-item:last-of-type {
+  padding-bottom: 15px;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
@@ -769,7 +952,7 @@ body #insta-gallery-section .insta-gallery-container .gallery-title {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 0 0 30px auto;
+  margin: 0 0 24px auto;
 }
 body #insta-gallery-section .insta-gallery-container .gallery-message {
   margin: 15px 0;
