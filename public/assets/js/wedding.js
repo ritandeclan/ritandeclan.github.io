@@ -6,27 +6,43 @@ $("#form-test .btn-submit").on("click", function(e) {
 
   e.preventDefault();
 
-  var formMessage = $("#form-test").serializeArray();
+  var requiredFields = $(".name, .email, #meal");
+  var requiredFieldsVal = requiredFields.val();
 
-  $.ajax({
-    url: "//formspree.io/declanandrita@gmail.com",
-    method: "POST",
-    data: {message: formMessage},
-    dataType: "json"
-  }).done(function (data, status, jqXHR) {
+  if (requiredFieldsVal !== "" && requiredFieldsVal !== null && requiredFieldsVal !== undefined) {
 
-      document.getElementById("form-test").reset();
+    requiredFields.removeClass("error");
 
-      $("#submit-success-message").fadeIn(3000, 'swing', function(){
-        $('#submit-success-message').fadeOut(5000);
+    var formMessage = $("#form-test").serializeArray();
+
+    $.ajax({
+      url: "//formspree.io/declanandrita@gmail.com",
+      method: "POST",
+      data: {message: formMessage},
+      dataType: "json"
+    }).done(function (data, status, jqXHR) {
+
+        document.getElementById("form-test").reset();
+
+        $("#submit-success-message").fadeIn(3000, 'swing', function(){
+          $('#submit-success-message').fadeOut(5000);
+        });
+
+      }).fail(function (jqXHR,status,err) {
+
+        $("#submit-failure-message").addClass("display");
+
       });
 
-    }).fail(function (jqXHR,status,err) {
+  } else {
 
-      $("#submit-failure-message").addClass("display");
+    requiredFields.addClass("error");
 
+    $("#required-fields").fadeIn(3000, 'swing', function(){
+      $('#required-fields').fadeOut(5000);
     });
 
+  }
 
 });
 
@@ -548,11 +564,11 @@ var cardContainer = document.getElementById("cards-container");
         "<p>" +
           "Guest's name, please" +
         "</p>" +
-        "<input class='answer' type='text' name='guest-" + guestCounter + "-name'>" +
+        "<input class='answer name' type='text' name='guest-" + guestCounter + "-name'>" +
         "<p>" +
           "Guest's email, please" +
         "</p>" +
-        "<input class='answer' type='email' name='guest-" +guestCounter+ "-email'>" +
+        "<input class='answer email' type='email' name='guest-" +guestCounter+ "-email'>" +
         "<p>" +
           "Guest's choice of meal" +
         "</p>" +
