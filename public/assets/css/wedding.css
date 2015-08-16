@@ -763,26 +763,21 @@ body #map-section .map-container:after {
   clear: both;
   visibility: hidden;
 }
-body #map-section .map-container #map-description-container {
-  position: relative;
-  display: block;
-  height: auto;
-}
-body #map-section .map-container #map-description-container #map-item-description {
+body #map-section .map-container #map-item-description {
   position: relative;
   display: block;
   float: left;
   height: auto;
-  width: 74%;
+  width: 100%;
   border-bottom: 10px double white;
   background-color: #75d0bb;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container {
+body #map-section .map-container #map-item-description .item-description-container {
   width: 900px;
   margin: 0 auto;
   padding: 15px 0;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-name {
+body #map-section .map-container #map-item-description .item-description-container .item-name {
   margin: 0 auto;
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
@@ -790,7 +785,7 @@ body #map-section .map-container #map-description-container #map-item-descriptio
   text-transform: uppercase;
   padding: 15px 0;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-name.intro {
+body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
   font-family: 'delicious', cursive;
   font-weight: normal;
   letter-spacing: 1px;
@@ -799,44 +794,44 @@ body #map-section .map-container #map-description-container #map-item-descriptio
   line-height: 50px;
   padding: 5px 0;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-description,
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-details,
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-description a {
+body #map-section .map-container #map-item-description .item-description-container .item-description,
+body #map-section .map-container #map-item-description .item-description-container .item-details,
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
   color: #656478;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-description a {
+body #map-section .map-container #map-item-description .item-description-container .item-description a {
   color: white;
 }
-body #map-section .map-container #map-description-container #map-item-description .item-description-container .item-details {
+body #map-section .map-container #map-item-description .item-description-container .item-details {
   color: #656478;
 }
-body #map-section .map-container #map-description-container #map-canvas {
+body #map-section .map-container #map-canvas {
   position: relative;
   display: block;
   float: left;
   width: 74%;
   height: 500px;
 }
-body #map-section .map-container #map-description-container #map-canvas .marker-content .marker-info-header {
+body #map-section .map-container #map-canvas .marker-content .marker-info-header {
   color: #e9243c;
   font-family: 'delicious', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 25px;
 }
-body #map-section .map-container #map-description-container #map-canvas .marker-content .marker-website,
-body #map-section .map-container #map-description-container #map-canvas .marker-content .marker-website a {
+body #map-section .map-container #map-canvas .marker-content .marker-website,
+body #map-section .map-container #map-canvas .marker-content .marker-website a {
   color: #75d0bb;
 }
 body #map-section .map-container #map-legend {
   position: relative;
   display: block;
   float: left;
-  height: 100%;
+  height: 500px;
   width: 25%;
   background-color: #656478;
   border-right: white double 10px;
@@ -853,7 +848,7 @@ body #map-section .map-container #map-legend #location-list {
   position: relative;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 360px;
   overflow-y: scroll;
 }
 body #map-section .map-container #map-legend #location-list #venue,
@@ -941,7 +936,7 @@ body #map-section .map-container #map-legend #location-list #beaches .legend-sec
 body #map-section .map-container #map-legend #location-list #restaurants .legend-section-name {
   border-top: 10px double white;
 }
-body #map-section .map-container #map-legend #location-list #beaches {
+body #map-section .map-container #map-legend #location-list #beaches .legend-item:last-of-type {
   padding-bottom: 15px;
 }
 body #insta-gallery-section .insta-gallery-container {
