@@ -12,6 +12,7 @@ $("#form-test .btn-submit").on("click", function(e) {
   if (requiredFieldsVal !== "" && requiredFieldsVal !== null && requiredFieldsVal !== undefined) {
 
     requiredFields.removeClass("error");
+    $(".meal-wrapper").removeClass("error");
 
     var formMessage = $("#form-test").serializeArray();
 
@@ -37,6 +38,7 @@ $("#form-test .btn-submit").on("click", function(e) {
   } else {
 
     requiredFields.addClass("error");
+    $(".meal-wrapper").addClass("error");
 
     $("#required-fields").fadeIn(3000, 'swing', function(){
       $('#required-fields').fadeOut(5000);

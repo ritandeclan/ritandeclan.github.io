@@ -376,18 +376,25 @@ body #rsvp-section .form-container form#form-test .meal-options {
   background-color: white;
   margin-bottom: 38px;
 }
-body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown {
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper {
+  background-color: white;
+}
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper.error {
+  border: 10px solid #e9243c;
+}
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #meal.answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
   text-align: center;
   background-color: transparent;
+  margin-bottom: 0;
   border: none;
   width: 206px;
   padding-left: 19.5%;
 }
-body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:active,
-body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:hover,
-body #rsvp-section .form-container form#form-test .meal-options .answer.dropdown:focus {
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #meal.answer.dropdown:active,
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #meal.answer.dropdown:hover,
+body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #meal.answer.dropdown:focus {
   border: none;
   outline: none;
 }
