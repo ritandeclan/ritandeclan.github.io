@@ -147,7 +147,7 @@
         <p>
           Your name, please
         </p>
-        <input class="answer" type="text" name="name" required>
+        <input class="answer name" type="text" name="name" required>
         <p>
           Your Email, please
         </p>
@@ -156,12 +156,14 @@
           Your choice of meal
         </p>
         <div class="meal-options">
-          <select class="answer dropdown" id="meal" name="select" required>
-            <option value="" selected>Choose meal</option>
-            <option value="Fish">Fish</option>
-            <option value="Beef">Beef</option>
-            <option value="Vegetarian">Vegetarian</option>
-          </select>
+          <div class="meal-wrapper">
+            <select class="answer dropdown" id="meal" name="select" required>
+              <option value="" selected>Choose meal</option>
+              <option value="Fish">Fish</option>
+              <option value="Beef">Beef</option>
+              <option value="Vegetarian">Vegetarian</option>
+            </select>
+          </div>
         </div>
         <p>
           A song you would dance to
@@ -189,6 +191,20 @@
           <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
         </h3>
         <i class="fa fa-meh-o fa-3x"></i>
+      </div>
+      <div id="required-fields">
+        <h3 class="submit-message">We need more info, please!</h3>
+        <h3 class="submit-sub">
+          Please fill in the fields highlighted above
+          <br>
+          then, try submitting the form again.
+          <br>
+          If you're still having problems, email:
+          <br>
+          <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+        </h3>
+        <i class="fa fa-hand-o-up fa-3x"></i>
+
       </div>
     </div>
   </section>
