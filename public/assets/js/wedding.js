@@ -6,18 +6,21 @@ $("#form-test .btn-submit").on("click", function(e) {
 
   e.preventDefault();
 
-  var requiredFields = $(".name, .email, #meal");
+  $.each($(".meal-wrapper"), function(index, mealWrapper){
+    $(mealWrapper).removeClass("error");
+  });
+
+  var requiredFields = $(".name, .email, #meal, .guest-meal");
 
   requiredFields.removeClass("error");
-  $(".meal-wrapper").removeClass("error");
 
   var userInput = true;
 
   $.each(requiredFields, function(index, input){
 
-    if (input.value == "" || input.value == null ) {
+    if (input.value == "") {
       userInput = false;
-      input.id == "meal" ? $(".meal-wrapper").addClass("error"): $(input).addClass("error");
+      input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
     }
 
   });
@@ -583,7 +586,7 @@ var cardContainer = document.getElementById("cards-container");
         "</p>" +
         "<div class='meal-options'>" +
           "<div class='meal-wrapper'>" +
-            "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
+            "<select class='answer dropdown guest-meal' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
               "<option value='' selected>Choose meal</option>" +
               "<option value='Fish'>Fish</option>" +
               "<option value='Beef'>Beef</option>" +

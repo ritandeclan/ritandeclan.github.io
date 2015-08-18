@@ -596,7 +596,8 @@ body {
         .answer {
           width: 200px;
           height: 30px;
-          margin-bottom: 20px;
+          // margin-bottom: 20px;
+          margin: 10px;
 
           .body-font-normal();
           font-weight: 400;
@@ -616,8 +617,7 @@ body {
           }
 
           &.email {
-            margin-top: -10px;
-            margin-bottom: 10px;
+            margin: 0;
             .single-border(@deco-yellow);
 
 
@@ -659,10 +659,12 @@ body {
             position: relative;
             display: block;
             width: 100%;
+            margin: 10px 0;
 
             background-color: white;
             &.error {
               .single-border(@deco-red);
+              margin: 0;
               margin-left: -10px;
             }
 
@@ -671,7 +673,7 @@ body {
               border-radius: 0;
               text-align: center;
               background-color: transparent;
-              margin-bottom: 0;
+              margin: 0;
 
               border: none;
               width: 206px;
@@ -756,6 +758,7 @@ body {
 
             .answer {
               display: inline-block;
+              margin: 10px;
               //float: left;
 
               &.email {
@@ -767,19 +770,22 @@ body {
 
                   outline: none;
 
-                  &:invalid {
+                  //&:invalid {
 
-                    .single-border(@deco-red);
+                 // .single-border(@deco-red);
 
-                  }
+                  //}
 
-                  &:valid {
-                    .single-border(@deco-blue);
-                  }
+                 // &:valid {
+                 //   .single-border(@deco-blue);
+                 // }
                 }
               }
 
-
+              &.error {
+                .single-border(@deco-red);
+                margin: 0;
+              }
             }
 
             .delete-guest {
