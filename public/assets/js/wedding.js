@@ -8,6 +8,9 @@ $("#form-test .btn-submit").on("click", function(e) {
 
   var requiredFields = $(".name, .email, #meal");
 
+  requiredFields.removeClass("error");
+  $(".meal-wrapper").removeClass("error");
+
   var userInput = true;
 
   $.each(requiredFields, function(index, input){
@@ -20,9 +23,6 @@ $("#form-test .btn-submit").on("click", function(e) {
   });
 
   if (userInput) {
-
-    requiredFields.removeClass("error");
-    $(".meal-wrapper").removeClass("error");
 
     var formMessage = $("#form-test").serializeArray();
 
