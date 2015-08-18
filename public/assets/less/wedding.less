@@ -639,6 +639,7 @@ body {
 
           &.error {
             .single-border(@deco-red);
+            margin: 0;
           }
 
         }
@@ -655,10 +656,14 @@ body {
           margin-bottom: 38px;
 
           .meal-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
 
             background-color: white;
             &.error {
               .single-border(@deco-red);
+              margin-left: -10px;
             }
 
             #meal.answer.dropdown {
@@ -826,25 +831,41 @@ body {
               margin: 0 auto 38px auto;
               background-color: white;
 
-              .answer.dropdown {
-                -webkit-appearance: none;
-                border-radius: 0;
-                text-align: center;
-                background-color: transparent;
+              .meal-wrapper {
 
-                border: none;
-                width: 206px;
-                padding-left: 19.5%;
+                position: relative;
+                display: block;
+                width: 100%;
 
-                &:active,
-                &:hover,
-                &:focus {
-                  border: none;
-                  outline: none;
+                background-color: white;
+
+                &.error {
+                  .single-border(@deco-red);
+                  margin-left: -10px;
                 }
 
-              }
+                .answer.dropdown {
+                  -webkit-appearance: none;
+                  border-radius: 0;
+                  text-align: center;
+                  background-color: transparent;
+                  margin: 0;
 
+                  border: none;
+                  width: 206px;
+                  padding-left: 19.5%;
+
+                  &:active,
+                  &:hover,
+                  &:focus {
+                    border: none;
+                    outline: none;
+                  }
+
+                }
+
+
+              }
 
             }
 

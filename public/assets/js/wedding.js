@@ -7,9 +7,19 @@ $("#form-test .btn-submit").on("click", function(e) {
   e.preventDefault();
 
   var requiredFields = $(".name, .email, #meal");
-  var requiredFieldsVal = requiredFields.val();
 
-  if (requiredFieldsVal !== "" && requiredFieldsVal !== null && requiredFieldsVal !== undefined) {
+  var userInput = true;
+
+  $.each(requiredFields, function(index, input){
+
+    if (input.value == "" || input.value == null ) {
+      userInput = false;
+      input.id == "meal" ? $(".meal-wrapper").addClass("error"): $(input).addClass("error");
+    }
+
+  });
+
+  if (userInput) {
 
     requiredFields.removeClass("error");
     $(".meal-wrapper").removeClass("error");
@@ -36,9 +46,6 @@ $("#form-test .btn-submit").on("click", function(e) {
       });
 
   } else {
-
-    requiredFields.addClass("error");
-    $(".meal-wrapper").addClass("error");
 
     $("#required-fields").fadeIn(3000, 'swing', function(){
       $('#required-fields').fadeOut(5000);
@@ -570,17 +577,19 @@ var cardContainer = document.getElementById("cards-container");
         "<p>" +
           "Guest's email, please" +
         "</p>" +
-        "<input class='answer email' type='email' name='guest-" +guestCounter+ "-email'>" +
+        "<input class='answer user-email' type='email' name='guest-" +guestCounter+ "-email'>" +
         "<p>" +
           "Guest's choice of meal" +
         "</p>" +
         "<div class='meal-options'>" +
-          "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
-            "<option value='' selected>Choose meal</option>" +
-            "<option value='Fish'>Fish</option>" +
-            "<option value='Beef'>Beef</option>" +
-            "<option value='Vegetarian'>Vegetarian</option>" +
-          "</select>" +
+          "<div class='meal-wrapper'>" +
+            "<select class='answer dropdown' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
+              "<option value='' selected>Choose meal</option>" +
+              "<option value='Fish'>Fish</option>" +
+              "<option value='Beef'>Beef</option>" +
+              "<option value='Vegetarian'>Vegetarian</option>" +
+            "</select>" +
+          "</div>" +
         "</div>" +
         "<p>" +
           "A song this guest would dance to" +
