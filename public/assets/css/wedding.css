@@ -681,6 +681,9 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email:focus:valid {
   border: 10px solid #75d0bb;
 }
+body #rsvp-section .form-container form#form-test .accept-wrapper {
+  display: none;
+}
 body #weather-section {
   background-color: #f7b7c7;
 }
