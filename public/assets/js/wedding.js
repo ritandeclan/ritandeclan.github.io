@@ -544,6 +544,33 @@ var cardContainer = document.getElementById("cards-container");
 
     });
 
+  // Form accept / decline functions
+
+  var acceptButton = $("#btn-yes");
+  var declineButton = $("#btn-no");
+  var acceptWrapper = $(".accept-wrapper");
+
+
+  accept = function() {
+    acceptWrapper.addClass("yup");
+    acceptButton.addClass("selected");
+    declineButton.removeClass("selected");
+  }
+
+  decline = function() {
+    acceptWrapper.removeClass("yup");
+    declineButton.addClass("selected");
+    acceptButton.removeClass("selected");
+  }
+
+  acceptButton.on("click", function() {
+    accept();
+  });
+
+  declineButton.on("click", function(){
+    decline();
+  })
+
   // Form conditional work
 
   var addGuestButton = $(".add-guest");

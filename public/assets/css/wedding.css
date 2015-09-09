@@ -438,7 +438,7 @@ body #rsvp-section .form-container form#form-test .yes-no-container .btn-contain
   text-transform: uppercase;
   color: white;
   background-color: #75d0bb;
-  border: 10px double #f18d11;
+  border: 10px double white;
   padding-top: 7px;
 }
 body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-yes:hover {
@@ -461,7 +461,7 @@ body #rsvp-section .form-container form#form-test .yes-no-container .btn-contain
   text-transform: uppercase;
   color: white;
   background-color: #e9243c;
-  border: 10px double #f18d11;
+  border: 10px double white;
   padding-top: 7px;
 }
 body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-no:hover {
@@ -683,6 +683,9 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 }
 body #rsvp-section .form-container form#form-test .accept-wrapper {
   display: none;
+}
+body #rsvp-section .form-container form#form-test .accept-wrapper.yup {
+  display: block;
 }
 body #weather-section {
   background-color: #f7b7c7;
