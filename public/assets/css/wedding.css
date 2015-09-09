@@ -404,6 +404,78 @@ body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #m
   border: none;
   outline: none;
 }
+body #rsvp-section .form-container form#form-test .yes-no-container {
+  position: relative;
+  display: block;
+  width: 460px;
+  height: auto;
+  margin: 0 auto;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container {
+  position: relative;
+  display: block;
+  width: auto;
+  float: left;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-yes {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double #f18d11;
+  padding-top: 7px;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-yes:hover {
+  cursor: pointer;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-yes:hover,
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-yes:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-no {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #e9243c;
+  border: 10px double #f18d11;
+  padding-top: 7px;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-no:hover {
+  cursor: pointer;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-no:hover,
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container .btn-no:active {
+  color: #e9243c;
+  background-color: white;
+  border: 10px double #e9243c;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container.right {
+  margin-left: 50px;
+}
 body #rsvp-section .form-container form#form-test .btn-container {
   position: relative;
   display: block;

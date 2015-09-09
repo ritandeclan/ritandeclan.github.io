@@ -175,8 +175,12 @@
 
 // Button mixins
 
+@button-width: 173px;
+@button-height: 50px;
+@button-full-width: 205px;
+
 .button() {
-  width: 173px;
+  width: @button-width;
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
@@ -689,6 +693,73 @@ body {
             }
           }
 
+        }
+
+        // Yes / No Section
+
+        .yes-no-container {
+          position: relative;
+          display: block;
+          width: @button-full-width * 2 + 50;
+          height: auto;
+          margin: 0 auto;
+
+          .cf();
+
+          .btn-container {
+            position: relative;
+            display: block;
+            width: auto;
+            float: left;
+            height: auto;
+            padding: 0;
+            margin: 0 auto;
+
+            .btn-yes {
+              .button();
+              color: white;
+              background-color: @deco-blue;
+              .double-border(@deco-yellow);
+              padding-top: 7px;
+
+              &:hover,
+              &:active {
+                color: @deco-blue;
+                background-color: white;
+                .double-border(@deco-blue);
+              }
+
+              &.selected {
+
+              }
+
+            }
+
+            .btn-no {
+              .button();
+              color: white;
+              background-color: @deco-red;
+              .double-border(@deco-yellow);
+              padding-top: 7px;
+
+              &:hover,
+              &:active {
+                color: @deco-red;
+                background-color: white;
+                .double-border(@deco-red);
+              }
+
+              &.selected {
+
+              }
+
+            }
+
+            &.right {
+              margin-left: 50px;
+            }
+
+          }
         }
 
         .btn-container {
