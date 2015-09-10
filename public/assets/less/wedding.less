@@ -708,7 +708,7 @@ body {
 
           .btn-container {
             position: relative;
-            display: block;
+            display: inline;
             width: auto;
             float: left;
             height: auto;
@@ -733,6 +733,15 @@ body {
 
               }
 
+              &.unselected {
+                opacity: 0.5;
+              }
+
+              .btn-msg {
+                margin: 0;
+                padding: 0;
+              }
+
             }
 
             #btn-no {
@@ -753,7 +762,17 @@ body {
 
               }
 
+              &.unselected {
+                opacity: 0.5;
+              }
+
+              .btn-msg {
+                margin: 0;
+                padding: 0;
+              }
+
             }
+
 
             &.right {
               margin-left: 50px;

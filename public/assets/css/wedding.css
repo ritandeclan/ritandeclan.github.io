@@ -420,7 +420,7 @@ body #rsvp-section .form-container form#form-test .yes-no-container:after {
 }
 body #rsvp-section .form-container form#form-test .yes-no-container .btn-container {
   position: relative;
-  display: block;
+  display: inline;
   width: auto;
   float: left;
   height: auto;
@@ -450,6 +450,13 @@ body #rsvp-section .form-container form#form-test .yes-no-container .btn-contain
   background-color: white;
   border: 10px double #75d0bb;
 }
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-yes.unselected {
+  opacity: 0.5;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-yes .btn-msg {
+  margin: 0;
+  padding: 0;
+}
 body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-no {
   width: 173px;
   height: 25px;
@@ -472,6 +479,13 @@ body #rsvp-section .form-container form#form-test .yes-no-container .btn-contain
   color: #e9243c;
   background-color: white;
   border: 10px double #e9243c;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-no.unselected {
+  opacity: 0.5;
+}
+body #rsvp-section .form-container form#form-test .yes-no-container .btn-container #btn-no .btn-msg {
+  margin: 0;
+  padding: 0;
 }
 body #rsvp-section .form-container form#form-test .yes-no-container .btn-container.right {
   margin-left: 50px;

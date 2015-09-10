@@ -485,13 +485,21 @@ $(document).ready(function(){
   accept = function() {
     acceptWrapper.addClass("yup");
     acceptButton.addClass("selected");
+    acceptButton.removeClass("unselected");
+    acceptButton.find(".btn-msg").html("Awesome!")
+    declineButton.find(".btn-msg").html("Sadly, no")
     declineButton.removeClass("selected");
+    declineButton.addClass("unselected");
   }
 
   decline = function() {
     acceptWrapper.removeClass("yup");
     declineButton.addClass("selected");
+    declineButton.removeClass("unselected");
+    declineButton.find(".btn-msg").html("Bummer!")
+    acceptButton.find(".btn-msg").html("Absolutely")
     acceptButton.removeClass("selected");
+    acceptButton.addClass("unselected");
   }
 
   acceptButton.on("click", function() {
