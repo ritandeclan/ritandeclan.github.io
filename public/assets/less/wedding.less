@@ -700,20 +700,25 @@ body {
         .yes-no-container {
           position: relative;
           display: block;
-          width: @button-full-width * 2 + 50;
+          width: @button-full-width * 2 + 60;
           height: auto;
-          margin: 0 auto;
+          margin: 20px auto;
 
           .cf();
 
-          .btn-container {
+          .answer-btn-container {
             position: relative;
             display: inline;
             width: auto;
             float: left;
             height: auto;
-            padding: 0;
+            padding: 10px;
             margin: 0 auto;
+
+            &.error {
+              padding: 0;
+              border: 10px solid @deco-red;
+            }
 
             #btn-yes {
               .button();
@@ -721,6 +726,7 @@ body {
               background-color: @deco-blue;
               .double-border(white);
               padding-top: 7px;
+              margin: 0 auto;
 
               &:hover,
               &:active {
@@ -750,6 +756,7 @@ body {
               background-color: @deco-red;
               .double-border(white);
               padding-top: 7px;
+              margin: 0 auto;
 
               &:hover,
               &:active {
@@ -775,9 +782,17 @@ body {
 
 
             &.right {
-              margin-left: 50px;
+              margin-left: 20px;
             }
 
+          }
+
+          #answer-radio {
+            display: none;
+            #yes,
+            #no {
+              display: none;
+            }
           }
         }
 

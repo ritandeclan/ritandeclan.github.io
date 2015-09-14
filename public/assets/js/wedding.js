@@ -480,7 +480,8 @@ $(document).ready(function(){
   var acceptButton = $("#btn-yes");
   var declineButton = $("#btn-no");
   var acceptWrapper = $(".accept-wrapper");
-
+  var yes = $("#yes");
+  var no = $("#no");
 
   accept = function() {
     acceptWrapper.addClass("yup");
@@ -490,16 +491,26 @@ $(document).ready(function(){
     declineButton.find(".btn-msg").html("Sadly, no")
     declineButton.removeClass("selected");
     declineButton.addClass("unselected");
+    $("#yes").prop("checked", true);
+    // $("input[name='answer-radio'][value='no']").prop("checked", false);
+    console.log("yup, here's yes", yes);
+    // no.prop("checked", false);
   }
 
   decline = function() {
     acceptWrapper.removeClass("yup");
     declineButton.addClass("selected");
     declineButton.removeClass("unselected");
-    declineButton.find(".btn-msg").html("Bummer!")
-    acceptButton.find(".btn-msg").html("Absolutely")
     acceptButton.removeClass("selected");
     acceptButton.addClass("unselected");
+    declineButton.find(".btn-msg").html("Bummer!")
+    acceptButton.find(".btn-msg").html("Absolutely")
+    $("#no").prop("checked", true);
+    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
+    // yes.prop("checked", false);
+    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
+
+    console.log("nope, here's no", no);
   }
 
   acceptButton.on("click", function() {
@@ -629,32 +640,7 @@ $(document).ready(function(){
 
   });
 
-    //  Formspree
-
-  $("#form-test .btn-submit").on("click", function(e) {
-
-    e.preventDefault();
-
-    $.each($(".meal-wrapper"), function(index, mealWrapper){
-      $(mealWrapper).removeClass("error");
-    });
-
-    var requiredFields = $(".name, .email, #meal, .guest-meal");
-
-    requiredFields.removeClass("error");
-
-    var userInput = true;
-
-    $.each(requiredFields, function(index, input){
-
-      if (input.value == "") {
-        userInput = false;
-        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
-      }
-
-    });
-
-    if (userInput) {
+  submitForm = function() {
 
       var formMessage = $("#form-test").serializeArray();
 
@@ -676,6 +662,85 @@ $(document).ready(function(){
           $("#submit-failure-message").addClass("display");
 
         });
+
+  }
+
+    //  Formspree
+
+  $("#form-test .btn-submit").on("click", function(e) {
+
+    e.preventDefault();
+
+    var attendanceValue = $("input[name='answer-radio']:checked").val();
+
+    $.each($(".meal-wrapper"), function(index, mealWrapper){
+      $(mealWrapper).removeClass("error");
+    });
+
+    var requiredFields = $(".name, .email, #meal, .guest-meal");
+    var attendanceField = $("input[name=answer-radio]");
+
+    var attendanceWrapper = $(".answer-btn-container");
+
+    requiredFields.removeClass("error");
+    attendanceWrapper.removeClass("error");
+
+    debugger;
+
+    var userInput = true;
+
+    $.each(requiredFields, function(index, input){
+
+      if (input.value == "") {
+        userInput = false;
+        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+      }
+
+    });
+
+    // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
+    if (attendanceField.is(":checked") == false) {
+      userInput = false;
+      $.each(attendanceWrapper, function(index, field){
+        $(field).addClass("error");
+      })
+    }
+
+    if (userInput) {
+
+      if (attendanceValue == "no") {
+
+        submitForm();
+
+      } else if (attendanceValue == "yes") {
+
+        var yesRequiredFields = $("#meal, .guest-meal");
+        yesRequiredFields.removeClass("error");
+
+        var yesInput = true;
+
+        $.each(yesRequiredFields, function(index, input){
+
+          if (input.value == "") {
+            yesInput = false;
+            input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+          }
+
+          if (yesInput) {
+
+            submitForm();
+
+          } else {
+
+            $("#required-fields").fadeIn(3000, 'swing', function(){
+              $('#required-fields').fadeOut(5000);
+            });
+
+          }
+
+        });
+
+      }
 
     } else {
 
