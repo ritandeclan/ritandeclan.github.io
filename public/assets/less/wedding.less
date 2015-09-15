@@ -550,12 +550,14 @@ body {
       #submit-decline-message,
       #required-fields {
 
-        position: relative;
+        position: fixed;
+        bottom: 0;
         display: none;
         .content-full-width();
         .double-border(white);
         margin: 50px auto 0 auto;
         height: auto;
+        z-index: 100;
 
         .submit-message {
           .delicious();
