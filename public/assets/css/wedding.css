@@ -284,12 +284,14 @@ body #rsvp-section .form-container #submit-success-message,
 body #rsvp-section .form-container #submit-failure-message,
 body #rsvp-section .form-container #submit-decline-message,
 body #rsvp-section .form-container #required-fields {
-  position: relative;
+  position: fixed;
+  bottom: 0;
   display: none;
   width: 900px;
   border: 10px double white;
   margin: 50px auto 0 auto;
   height: auto;
+  z-index: 100;
 }
 body #rsvp-section .form-container #submit-success-message .submit-message,
 body #rsvp-section .form-container #submit-failure-message .submit-message,

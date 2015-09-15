@@ -661,11 +661,11 @@ $(document).ready(function(){
 
           if (attendanceStatus == "yes") {
             $("#submit-success-message").fadeIn(3000, 'swing', function(){
-              $('#submit-success-message').fadeOut(5000);
+              $("#submit-success-message").fadeOut(5000);
             });
           } else if (attendanceStatus == "no"){
             $("#submit-decline-message").fadeIn(3000, 'swing', function(){
-              $('#submit-decline-message').fadeOut(5000);
+              $("#submit-decline-message").fadeOut(5000);
             });
           }
 
@@ -673,7 +673,9 @@ $(document).ready(function(){
 
           attendanceReset();
 
-          $("#submit-failure-message").addClass("display");
+          $("#submit-failure-message").fadeIn(3000, 'swing', function(){
+            $("#submit-failure-message").fadeOut(7000);
+          });
 
         });
 
