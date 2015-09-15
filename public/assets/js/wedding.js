@@ -1,63 +1,5 @@
 $(document).ready(function(){
 
-  //  Formspree
-
-$("#form-test .btn-submit").on("click", function(e) {
-
-  e.preventDefault();
-
-  $.each($(".meal-wrapper"), function(index, mealWrapper){
-    $(mealWrapper).removeClass("error");
-  });
-
-  var requiredFields = $(".name, .email, #meal, .guest-meal");
-
-  requiredFields.removeClass("error");
-
-  var userInput = true;
-
-  $.each(requiredFields, function(index, input){
-
-    if (input.value == "") {
-      userInput = false;
-      input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
-    }
-
-  });
-
-  if (userInput) {
-
-    var formMessage = $("#form-test").serializeArray();
-
-    $.ajax({
-      url: "//formspree.io/declanandrita@gmail.com",
-      method: "POST",
-      data: {message: formMessage},
-      dataType: "json"
-    }).done(function (data, status, jqXHR) {
-
-        document.getElementById("form-test").reset();
-
-        $("#submit-success-message").fadeIn(3000, 'swing', function(){
-          $('#submit-success-message').fadeOut(5000);
-        });
-
-      }).fail(function (jqXHR,status,err) {
-
-        $("#submit-failure-message").addClass("display");
-
-      });
-
-  } else {
-
-    $("#required-fields").fadeIn(3000, 'swing', function(){
-      $('#required-fields').fadeOut(5000);
-    });
-
-  }
-
-});
-
   var mapStyles =
     [
       {
@@ -194,76 +136,76 @@ $("#form-test .btn-submit").on("click", function(e) {
 //   [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
 // ];
 
-var locations = [
-    {
-      "venue": [
-        [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
-      ]
-    },
-    {
-      "attractions": [
-        [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
-        [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
-        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the <a href='https://en.wikipedia.org/wiki/Gopher_tortoise' target='_blank'>gopher tortoises</a> in the greenery along the road."]],
-        [ [ 26.374743, -81.603584], [ "http://www.10best.com/destinations/florida/naples/east-naples/attractions/corkscrew-swamp-sanctuary/"], ["Corkscrew Swamp Sanctuary"], ["While Naples is known for its pristine beaches, the city also has flourishing wetlands such as the Corkscrew Swamp Sanctuary - known for its ancient cypress forest and colony of nesting American woodstorks."]],
-        [ [ 26.211233, -81.811903], [ "http://www.tripadvisor.com/Attraction_Review-g34467-d285104-Reviews-Clam_Pass_Park-Naples_Florida.html"], ["Clam Pass Park"], ["This is the perfect kind of beach to do very little but relax. Oh, yes, and dolphin watch!<br> The ride on the little trolley cart is so much fun- winding through a scenic half mile of mangroves on a boardwalk. There is a bathroom and outside shower at the beach as well as a restaurant and a cabana with rentals available. We enjoyed checking out the starfish, sand dollars, and shells."]]
-      ]
-    },
-    {
-      "hotels": [
-        [ [ 26.211813, -81.810159], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d85227-Reviews-Naples_Grande_Beach_Resort-Naples_Florida.html"], ["Naples Bay Resort"], ["A warm, effortless level of hospitality greets you at Naples Grande Beach Resort. This inviting beach property sets the standard for treating guests and families to endless activities, incredible nearby sights, and an unmatched level of service and attention. Rediscover this unique luxury resort in Naples, Florida and indulge in a truly special getaway."],["Top-rated"]],
-        [ [ 26.161493, -81.797102], [ "http://www.naplesramada.com/"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
-        [ [ 26.209492, -81.801649], [ "http://www3.hilton.com/en/hotels/florida/hilton-naples-APFNHHF/index.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
-        [ [ 26.139215, -81.78242], [ "http://www.ihg.com/holidayinnexpress/hotels/us/en/naples/apfin/hoteldetail"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]]
-      ]
-    },
-    {
-      "bars": [
-        [ [ 26.251724, -81.800337], [ "https://www.seasons52.com/en/our-menu/current-menu/FL/Naples/4519"], ["Seasons 52"], ["Seasons 52 is a celebration of what’s good now. Seasonally inspired ingredients at their peak of freshness. Rustic cooking techniques that bring out natural flavors. And an ever-changing selection of global wines. All in a casually sophisticated setting. Come discover what’s good now."], ["Full bar | Wine bar"]],
-        [ [ 26.141446, -81.800659], [ "http://avenuewinecafe.wix.com/avenuewinecfe"], ["Avenue Wine Cafe"], ["Great Beer & Comfy sofas to cool down on :-)<br>Excellent wines, craft beers and cheese plates. Great happy hour prices. Friendly, knowledgeable staff. Some have been there since they opened seven years ago. Local following. Cozy, comfortable seating and atmosphere."], ["Full bar | Craft beers"]],
-        [ [ 26.140058, -81.794895 ], [ "http://www.7thavenuesocial.com/" ], [ "7th Avenue Social" ], ["We take great pride in the unique taste and work put into each dish. <br>It's more than a plate of food - it is an art.<br>'Naples' late-night crowd suddenly has options! - News-Press.com'"], ["Full bar | Wine bar"]],
-        [ [ 26.273475, -81.769376 ], [ "http://ciderpresscafe.com/"], ["The Cider Press Café"], ["One of the country’s best plant-based menus can be found at the The Cider Press Café. <br>'I can't believe of all the restaurants in Naples I'm giving a VEGAN place five stars, but by golly they earned it. Not only is the ambiance beautiful, but the hipster staff is sweet and accommodating, and the food is phenomenal. I'm talking about explosion in your mouth great. Literally your brain is thinking 'wait this is cold, and there is no meat, I shouldn't like this, but can I lick the plate?' I highly recommended, you won't be disappointed :)'"], ["Full bar | Cocktails"]],
-        [ [ 26.255050, -81.823368 ], [ "http://www.windwardhospitality.com/naples/subpages/wine-list.html"], ["The Turtle Club"], ["'Best spot to watch the sunset in Naples. Drinks solid, bartenders have been there forever and are friendly. Usually you meet someone on vacation at the bar inside and can make chit chat small talk. Outside dining is great as the sand is with 15 feet of you. I recommend this spot to any local looking for a getaway spot.'"], ["Full bar | Wine bar"]],
-        [ [ 26.253023, -81.79924], [ "http://burnbyrockypatel.com/"], ["BURN By Rocky Patel"], ["You don't have to be a cigar aficionado to enjoy this place, There's a great patio area. Great cigars and the drinks are reasonably priced. The staff is wonderful, and very knowledgable. Wherever you sit you'll be treated well. If you're looking for a great place to sit enjoying a drink Or two, I say stop by. The VIP service is wonderful, just make a reservation to guarantee your spot. No need to look no further for a place to enjoy your night in Naples."], ["Full bar | Cigar Bar"]]
-      ]
-    },
-    {
-      "restaurants":   [
-        [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"], ["Let me take you to a place where warm desert moonlight glows upon the sands, creates mystical illusions in far away dunes, and magically gives life to every jewel in it’s path. Silk fabrics entice the touch. World music is heard in the background. Aromas of delicate fragrant spices, sweetness in the air of simmering fruits, and the perfume of jasmine from the garden seduce you. Bold flavors from fresh meats, poultry and fish embrace the palate and soothe it with delicate strokes of the perfect union of flavors. "] ],
-        [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"], ["For over 21 years, Grouper & Chips has been one of Naples' best kept secrets. Local residents have been flocking to a small unpretentious “hole-in-the-wall” restaurant to enjoy Chef Francis Pischner’s unparalleled cuisine. With hundreds of other local area restaurants notwithstanding, regular customers choose to wait for over an hour at times just to get in."]],
-        [ [ 26.273475, -81.769376 ], [ "http://ciderpresscafe.com/"], ["The Cider Press Café"], ["One of the country’s best plant-based menus can be found at the The Cider Press Café. <br>'I can't believe of all the restaurants in Naples I'm giving a VEGAN place five stars, but by golly they earned it. Not only is the ambiance beautiful, but the hipster staff is sweet and accommodating, and the food is phenomenal. I'm talking about explosion in your mouth great. Literally your brain is thinking 'wait this is cold, and there is no meat, I shouldn't like this, but can I lick the plate?' I highly recommended, you won't be disappointed :)'"]],
-        [ [ 26.141058, -81.766053 ], [ "http://www.rumbacubancafe.com/"], ["Rumba Cuban Cafe"], ["Rumba is without question one of the best restaurants in Naples, and that's saying something given the incredibly high caliber of culinary options in town. The food at Rumba is authentic Cuban, with a unique combination of flavors that all blend into one of the best dining experiences you will ever have. If you're in the mood for an extraordinary Cuban meal served in a casual environment by the most pleasant and attentive bilingual team of servers with cool background music to accompany the Cuban artwork that adorns the walls, then make sure you don't miss Rumba. It's a MUST visit when you're in Naples. Sit back, enjoy a Cerveza Presidente or glass of wine and get ready for delightful authentic Cuban cuisine."]],
-        [ [ 26.191381, -81.800628 ], [ "https://ussnemorestaurant.com/"], ["USS Nemo Restaurant"], ["For the Best Seafood in Naples FL. Of the restaurants in Naples Florida, you’ll find the best seafood and an unforgettable fine dining experience at Nemos, where the food is always fresh and the flavors incomparably delicious."]],
-        [ [ 26.191381, -81.800628 ], [ "http://www.pinchersusa.com/naples-tin-city.php"], ["Pinchers"], ["Stumbled across pinchers, no frills but good food. Excellent crab and blackened shrimp, right on the water in the Tin City docks. Good service and drinks on happy hour are 2 for 1."]],
-        [ [ 26.143597, -81.795287 ], [ "http://www.brooksburgers.com/index.html"], ["Brooks Gourmet Burgers & Dogs"], ["SThis small restaurant in a random strip mall draws huge crowds, helped by its ranking on Tripadvisor as a top 10 burger in the US.  The menu is huge, with a variety of appetizers, salads, and sandwiches. Of course, there are the burgers. There are about 20 different types of burgers, and you can pick any burger with either beef, turkey, chicken, veggie, or bison."]],
-        [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ], ["Pazzo! is a friendly neighborhood restaurant that just happens to have an outstanding world class affordable menu that serves real Italian food, with an incredible wine list. At Pazzo!, we make all of our own sauces, pastas, desserts and everything in between from scratch! At Pazzo!, It’s All About The Food!™"]],
-        [ [ 26.140058, -81.794895 ], [ "http://www.7thavenuesocial.com/" ], [ "7th Avenue Social" ], ["We take great pride in the unique taste and work put into each dish. <br>It's more than a plate of food - it is an art.<br>'Naples' late-night crowd suddenly has options! - News-Press.com'"]],
-        [ [ 26.194004, -81.799574 ], [ "http://www.lamoragarestaurant.com/" ], [ "Lamoraga" ], ["Lamoraga brings sophisticated Spanish tapas to its first U.S. location here in Naples.<br>'This was the best dinner I have ever had. The creativity and twist they put into their food seals the deal! Not to mention they were all incredibly nice. I had the most wonderful dining experience at this restaurant. I can't wait to go back.'"]],
-        [ [ 26.194004, -81.799574 ], [ "http://www.janesonthird.com/j/Home.html" ], [ "Jane’s Garden Cafe" ], ["A fantastic Downtown Naples Garden location with bubbling Koi Pond on the front Courtyard and cosy garden patio at the back, yet a cool interior to relax in during these hot summer days. Offering Breakfast & Lunch with yummy desserts too."], ["Breakfast | Brunch"]],
-        [ [ 26.212829, -81.782594 ], [ "http://www.goldiesrestaurant.com/" ], [ "Goldies Restaurant" ], ["'This is definitely the best place to have breakfast in Naples. Not only is the food superb, but talk about bang for the buck! Tremendous value, and exceptional flavor. Excellent service. Everone is courteous and all smiles.'"], ["Breakfast"]]
-      ]
-    },
-    {
-      "airbnb":   [
-        [ [ 26.133448, -81.79354 ], [ "https://www.airbnb.com/rooms/4597666"], ["52-foot Houseboat"], ["This is truly a unique experience. Staying on the water at the dock in Naples Bay, within walking access to the beautiful beaches, Fifth Ave, Third Street, Tin City and much more. Two bicycles are provided. Water taxi comes every hour. Waterfront restaurants within a stone's throw. Boat rentals, jet ski,kayaks, paddleboards, and Segway tours are only a few blocks away. Take a cruise with the Naples Princess and experience the many waterfront homes."],["$295/night | Sleeps 4"] ],
-        [ [ 26.165885, -81.799741 ], [ "https://www.airbnb.com/rooms/7555959"], ["Pool home in Coquina Sands"], ["The large approximate 1/2 acre (lushly landscaped) manicured lot frames this single-level home boasting a circle driveway and beautifully appointed interior: light-infused living areas, dramatic hi-volume vaulted ceilings, rich wood flooring throughout, custom moldings dressing every room. Spacious living room/dining room combination. Chef's kitchen with solid surface countertops, abundant cabinets opens to great room and breakfast room. French doors open to an expansive fenced back yard-behold the newly finished pool and 8 jet spa surrounded by custom designed travertine decking. "], ["$200/night | Sleeps 6 | Min. 7-night stay"]],
-        [ [ 26.061761, -81.693262 ], [ "https://www.airbnb.com/rooms/7557988" ], [ "Beautiful Condo, Lazy River" ], ["Our modern two bedroom 2 bath condo with lanai is perfectly located in the Falling Waters gated community. Enjoy your time in the lazy river, playing tennis or the day on the beach at Marco Island. Shops and restaurants are only a short drive away."], ["$150/night | Sleeps 2"]],
-        [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/3958140" ], [ "Two Bedroom Resort Suite" ], ["Room for six, this resort suite has a full kitchen and dining room, 2 bathrooms and laundry."], ["$250/night | Sleeps 6"]],
-        [ [ 26.176730, -81.813282 ], [ "https://www.airbnb.com/rooms/7481889" ], [ "Bedroom on the beach" ], ["A prime setting set overlooking a tropical beach on the Gulf of Mexico. Guests will find themselves just a short distance away from the centre of Naples where they can explore its host of shops and restaurants."], ["$375/night | Sleeps 4"]],
-        [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/7578282" ], [ "Pearl Beach House & Cottage" ], ["Walk to everything Naples has to offer ~ Beaches, parks, shopping & dining just a stones throw away! The Pearl Beach house and Cottage is located in the heart of Old Naples’ historic district."], ["$650/night | Sleeps 10 | Min. 4-night stay"]],
-        [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/5478160" ], [ "Tuscan Style Resort: 2 Bedroom Cottage" ], ["Perfectly situated in the heart of Naples. Features a full-service spa, private marina, fantastic pool landscape, various sports facilities, and a beach shuttle."], ["$195/night | Sleeps 4"]],
-        [ [ 26.142004, -81.803291 ], [ "https://www.airbnb.com/rooms/3512408" ], [ "Walk to the beach & 5th Ave!" ], ["This is a quiet condo that is literally footsteps to all of downtown Naples attractions and to it's beautiful, white sandy beaches. 2 bedrooms: one with two single beds and one queen size with en suite bath."], ["$300/night | Sleeps 4 | Not child-friendly"]]
-      ]
-    },
-    {
-      "beaches":   [
-        [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the <a href='https://en.wikipedia.org/wiki/Gopher_tortoise' target='_blank'>gopher tortoises</a> in the greenery along the road."], ["Relaxing"]],
-        [ [ 26.132433, -81.795105], [ "http://www.tripadvisor.com/Attraction_Review-g34467-d1452375-Reviews-Lowdermilk_Beach-Naples_Florida.html"], ["Lowdermilk Beach"], ["Great place to spend some quality beach time during the day or a spectacular sunset! There are decent restrooms, volley ball courts, gazebos and a nice covered area to have some lunch...bring yours or there is a little snack bar located under cover."], ["Relaxing"]],
-        [ [ 28.019848, -82.819627 ], [ "https://www.floridastateparks.org/park/Caladesi-Island"], ["Caladesi Island State Park"], ["As one of the few completely natural islands along Florida´s Gulf Coast, Caladesi´s white sand beaches were rated America's Best Beach in 2008. Beach lovers can enjoy swimming, sunbathing and beachcombing.<br>You can’t reach this beach by car — only by boat — leaving the quiet beach yours to explore. There are great shells here and it is a popular spot for swimming and picnics too."],["Shell Collecting"] ],
-        [ [ 28.019848, -82.819627 ], [ "http://www.sanibel-captiva.org/"], ["Captiva Island"], ["Often considered one of the very best places in the whole state for collecting shells, many people return to Captiva year after year looking for the next great find."],["Shell Collecting"] ]
-      ]
-    }
-];
+  var locations = [
+      {
+        "venue": [
+          [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
+        ]
+      },
+      {
+        "attractions": [
+          [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
+          [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
+          [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the <a href='https://en.wikipedia.org/wiki/Gopher_tortoise' target='_blank'>gopher tortoises</a> in the greenery along the road."]],
+          [ [ 26.374743, -81.603584], [ "http://www.10best.com/destinations/florida/naples/east-naples/attractions/corkscrew-swamp-sanctuary/"], ["Corkscrew Swamp Sanctuary"], ["While Naples is known for its pristine beaches, the city also has flourishing wetlands such as the Corkscrew Swamp Sanctuary - known for its ancient cypress forest and colony of nesting American woodstorks."]],
+          [ [ 26.211233, -81.811903], [ "http://www.tripadvisor.com/Attraction_Review-g34467-d285104-Reviews-Clam_Pass_Park-Naples_Florida.html"], ["Clam Pass Park"], ["This is the perfect kind of beach to do very little but relax. Oh, yes, and dolphin watch!<br> The ride on the little trolley cart is so much fun- winding through a scenic half mile of mangroves on a boardwalk. There is a bathroom and outside shower at the beach as well as a restaurant and a cabana with rentals available. We enjoyed checking out the starfish, sand dollars, and shells."]]
+        ]
+      },
+      {
+        "hotels": [
+          [ [ 26.211813, -81.810159], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d85227-Reviews-Naples_Grande_Beach_Resort-Naples_Florida.html"], ["Naples Bay Resort"], ["A warm, effortless level of hospitality greets you at Naples Grande Beach Resort. This inviting beach property sets the standard for treating guests and families to endless activities, incredible nearby sights, and an unmatched level of service and attention. Rediscover this unique luxury resort in Naples, Florida and indulge in a truly special getaway."],["Top-rated"]],
+          [ [ 26.161493, -81.797102], [ "http://www.naplesramada.com/"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
+          [ [ 26.209492, -81.801649], [ "http://www3.hilton.com/en/hotels/florida/hilton-naples-APFNHHF/index.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
+          [ [ 26.139215, -81.78242], [ "http://www.ihg.com/holidayinnexpress/hotels/us/en/naples/apfin/hoteldetail"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]]
+        ]
+      },
+      {
+        "bars": [
+          [ [ 26.251724, -81.800337], [ "https://www.seasons52.com/en/our-menu/current-menu/FL/Naples/4519"], ["Seasons 52"], ["Seasons 52 is a celebration of what’s good now. Seasonally inspired ingredients at their peak of freshness. Rustic cooking techniques that bring out natural flavors. And an ever-changing selection of global wines. All in a casually sophisticated setting. Come discover what’s good now."], ["Full bar | Wine bar"]],
+          [ [ 26.141446, -81.800659], [ "http://avenuewinecafe.wix.com/avenuewinecfe"], ["Avenue Wine Cafe"], ["Great Beer & Comfy sofas to cool down on :-)<br>Excellent wines, craft beers and cheese plates. Great happy hour prices. Friendly, knowledgeable staff. Some have been there since they opened seven years ago. Local following. Cozy, comfortable seating and atmosphere."], ["Full bar | Craft beers"]],
+          [ [ 26.140058, -81.794895 ], [ "http://www.7thavenuesocial.com/" ], [ "7th Avenue Social" ], ["We take great pride in the unique taste and work put into each dish. <br>It's more than a plate of food - it is an art.<br>'Naples' late-night crowd suddenly has options! - News-Press.com'"], ["Full bar | Wine bar"]],
+          [ [ 26.273475, -81.769376 ], [ "http://ciderpresscafe.com/"], ["The Cider Press Café"], ["One of the country’s best plant-based menus can be found at the The Cider Press Café. <br>'I can't believe of all the restaurants in Naples I'm giving a VEGAN place five stars, but by golly they earned it. Not only is the ambiance beautiful, but the hipster staff is sweet and accommodating, and the food is phenomenal. I'm talking about explosion in your mouth great. Literally your brain is thinking 'wait this is cold, and there is no meat, I shouldn't like this, but can I lick the plate?' I highly recommended, you won't be disappointed :)'"], ["Full bar | Cocktails"]],
+          [ [ 26.255050, -81.823368 ], [ "http://www.windwardhospitality.com/naples/subpages/wine-list.html"], ["The Turtle Club"], ["'Best spot to watch the sunset in Naples. Drinks solid, bartenders have been there forever and are friendly. Usually you meet someone on vacation at the bar inside and can make chit chat small talk. Outside dining is great as the sand is with 15 feet of you. I recommend this spot to any local looking for a getaway spot.'"], ["Full bar | Wine bar"]],
+          [ [ 26.253023, -81.79924], [ "http://burnbyrockypatel.com/"], ["BURN By Rocky Patel"], ["You don't have to be a cigar aficionado to enjoy this place, There's a great patio area. Great cigars and the drinks are reasonably priced. The staff is wonderful, and very knowledgable. Wherever you sit you'll be treated well. If you're looking for a great place to sit enjoying a drink Or two, I say stop by. The VIP service is wonderful, just make a reservation to guarantee your spot. No need to look no further for a place to enjoy your night in Naples."], ["Full bar | Cigar Bar"]]
+        ]
+      },
+      {
+        "restaurants":   [
+          [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"], ["Let me take you to a place where warm desert moonlight glows upon the sands, creates mystical illusions in far away dunes, and magically gives life to every jewel in it’s path. Silk fabrics entice the touch. World music is heard in the background. Aromas of delicate fragrant spices, sweetness in the air of simmering fruits, and the perfume of jasmine from the garden seduce you. Bold flavors from fresh meats, poultry and fish embrace the palate and soothe it with delicate strokes of the perfect union of flavors. "] ],
+          [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"], ["For over 21 years, Grouper & Chips has been one of Naples' best kept secrets. Local residents have been flocking to a small unpretentious “hole-in-the-wall” restaurant to enjoy Chef Francis Pischner’s unparalleled cuisine. With hundreds of other local area restaurants notwithstanding, regular customers choose to wait for over an hour at times just to get in."]],
+          [ [ 26.273475, -81.769376 ], [ "http://ciderpresscafe.com/"], ["The Cider Press Café"], ["One of the country’s best plant-based menus can be found at the The Cider Press Café. <br>'I can't believe of all the restaurants in Naples I'm giving a VEGAN place five stars, but by golly they earned it. Not only is the ambiance beautiful, but the hipster staff is sweet and accommodating, and the food is phenomenal. I'm talking about explosion in your mouth great. Literally your brain is thinking 'wait this is cold, and there is no meat, I shouldn't like this, but can I lick the plate?' I highly recommended, you won't be disappointed :)'"]],
+          [ [ 26.141058, -81.766053 ], [ "http://www.rumbacubancafe.com/"], ["Rumba Cuban Cafe"], ["Rumba is without question one of the best restaurants in Naples, and that's saying something given the incredibly high caliber of culinary options in town. The food at Rumba is authentic Cuban, with a unique combination of flavors that all blend into one of the best dining experiences you will ever have. If you're in the mood for an extraordinary Cuban meal served in a casual environment by the most pleasant and attentive bilingual team of servers with cool background music to accompany the Cuban artwork that adorns the walls, then make sure you don't miss Rumba. It's a MUST visit when you're in Naples. Sit back, enjoy a Cerveza Presidente or glass of wine and get ready for delightful authentic Cuban cuisine."]],
+          [ [ 26.191381, -81.800628 ], [ "https://ussnemorestaurant.com/"], ["USS Nemo Restaurant"], ["For the Best Seafood in Naples FL. Of the restaurants in Naples Florida, you’ll find the best seafood and an unforgettable fine dining experience at Nemos, where the food is always fresh and the flavors incomparably delicious."]],
+          [ [ 26.191381, -81.800628 ], [ "http://www.pinchersusa.com/naples-tin-city.php"], ["Pinchers"], ["Stumbled across pinchers, no frills but good food. Excellent crab and blackened shrimp, right on the water in the Tin City docks. Good service and drinks on happy hour are 2 for 1."]],
+          [ [ 26.143597, -81.795287 ], [ "http://www.brooksburgers.com/index.html"], ["Brooks Gourmet Burgers & Dogs"], ["SThis small restaurant in a random strip mall draws huge crowds, helped by its ranking on Tripadvisor as a top 10 burger in the US.  The menu is huge, with a variety of appetizers, salads, and sandwiches. Of course, there are the burgers. There are about 20 different types of burgers, and you can pick any burger with either beef, turkey, chicken, veggie, or bison."]],
+          [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ], ["Pazzo! is a friendly neighborhood restaurant that just happens to have an outstanding world class affordable menu that serves real Italian food, with an incredible wine list. At Pazzo!, we make all of our own sauces, pastas, desserts and everything in between from scratch! At Pazzo!, It’s All About The Food!™"]],
+          [ [ 26.140058, -81.794895 ], [ "http://www.7thavenuesocial.com/" ], [ "7th Avenue Social" ], ["We take great pride in the unique taste and work put into each dish. <br>It's more than a plate of food - it is an art.<br>'Naples' late-night crowd suddenly has options! - News-Press.com'"]],
+          [ [ 26.194004, -81.799574 ], [ "http://www.lamoragarestaurant.com/" ], [ "Lamoraga" ], ["Lamoraga brings sophisticated Spanish tapas to its first U.S. location here in Naples.<br>'This was the best dinner I have ever had. The creativity and twist they put into their food seals the deal! Not to mention they were all incredibly nice. I had the most wonderful dining experience at this restaurant. I can't wait to go back.'"]],
+          [ [ 26.194004, -81.799574 ], [ "http://www.janesonthird.com/j/Home.html" ], [ "Jane’s Garden Cafe" ], ["A fantastic Downtown Naples Garden location with bubbling Koi Pond on the front Courtyard and cosy garden patio at the back, yet a cool interior to relax in during these hot summer days. Offering Breakfast & Lunch with yummy desserts too."], ["Breakfast | Brunch"]],
+          [ [ 26.212829, -81.782594 ], [ "http://www.goldiesrestaurant.com/" ], [ "Goldies Restaurant" ], ["'This is definitely the best place to have breakfast in Naples. Not only is the food superb, but talk about bang for the buck! Tremendous value, and exceptional flavor. Excellent service. Everone is courteous and all smiles.'"], ["Breakfast"]]
+        ]
+      },
+      {
+        "airbnb":   [
+          [ [ 26.133448, -81.79354 ], [ "https://www.airbnb.com/rooms/4597666"], ["52-foot Houseboat"], ["This is truly a unique experience. Staying on the water at the dock in Naples Bay, within walking access to the beautiful beaches, Fifth Ave, Third Street, Tin City and much more. Two bicycles are provided. Water taxi comes every hour. Waterfront restaurants within a stone's throw. Boat rentals, jet ski,kayaks, paddleboards, and Segway tours are only a few blocks away. Take a cruise with the Naples Princess and experience the many waterfront homes."],["$295/night | Sleeps 4"] ],
+          [ [ 26.165885, -81.799741 ], [ "https://www.airbnb.com/rooms/7555959"], ["Pool home in Coquina Sands"], ["The large approximate 1/2 acre (lushly landscaped) manicured lot frames this single-level home boasting a circle driveway and beautifully appointed interior: light-infused living areas, dramatic hi-volume vaulted ceilings, rich wood flooring throughout, custom moldings dressing every room. Spacious living room/dining room combination. Chef's kitchen with solid surface countertops, abundant cabinets opens to great room and breakfast room. French doors open to an expansive fenced back yard-behold the newly finished pool and 8 jet spa surrounded by custom designed travertine decking. "], ["$200/night | Sleeps 6 | Min. 7-night stay"]],
+          [ [ 26.061761, -81.693262 ], [ "https://www.airbnb.com/rooms/7557988" ], [ "Beautiful Condo, Lazy River" ], ["Our modern two bedroom 2 bath condo with lanai is perfectly located in the Falling Waters gated community. Enjoy your time in the lazy river, playing tennis or the day on the beach at Marco Island. Shops and restaurants are only a short drive away."], ["$150/night | Sleeps 2"]],
+          [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/3958140" ], [ "Two Bedroom Resort Suite" ], ["Room for six, this resort suite has a full kitchen and dining room, 2 bathrooms and laundry."], ["$250/night | Sleeps 6"]],
+          [ [ 26.176730, -81.813282 ], [ "https://www.airbnb.com/rooms/7481889" ], [ "Bedroom on the beach" ], ["A prime setting set overlooking a tropical beach on the Gulf of Mexico. Guests will find themselves just a short distance away from the centre of Naples where they can explore its host of shops and restaurants."], ["$375/night | Sleeps 4"]],
+          [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/7578282" ], [ "Pearl Beach House & Cottage" ], ["Walk to everything Naples has to offer ~ Beaches, parks, shopping & dining just a stones throw away! The Pearl Beach house and Cottage is located in the heart of Old Naples’ historic district."], ["$650/night | Sleeps 10 | Min. 4-night stay"]],
+          [ [ 26.141897, -81.794728 ], [ "https://www.airbnb.com/rooms/5478160" ], [ "Tuscan Style Resort: 2 Bedroom Cottage" ], ["Perfectly situated in the heart of Naples. Features a full-service spa, private marina, fantastic pool landscape, various sports facilities, and a beach shuttle."], ["$195/night | Sleeps 4"]],
+          [ [ 26.142004, -81.803291 ], [ "https://www.airbnb.com/rooms/3512408" ], [ "Walk to the beach & 5th Ave!" ], ["This is a quiet condo that is literally footsteps to all of downtown Naples attractions and to it's beautiful, white sandy beaches. 2 bedrooms: one with two single beds and one queen size with en suite bath."], ["$300/night | Sleeps 4 | Not child-friendly"]]
+        ]
+      },
+      {
+        "beaches":   [
+          [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"], ["The best beach in Naples <br> The sand is powder fine white sand, but bring your beach shoes, because there are lots of shells in the sand. If you walk down to the end of the beach you'll have more luck finding bigger shells, but you have to do a little digging. There is a butterfly garden at Parking lot 1, and you'll be able to see the <a href='https://en.wikipedia.org/wiki/Gopher_tortoise' target='_blank'>gopher tortoises</a> in the greenery along the road."], ["Relaxing"]],
+          [ [ 26.132433, -81.795105], [ "http://www.tripadvisor.com/Attraction_Review-g34467-d1452375-Reviews-Lowdermilk_Beach-Naples_Florida.html"], ["Lowdermilk Beach"], ["Great place to spend some quality beach time during the day or a spectacular sunset! There are decent restrooms, volley ball courts, gazebos and a nice covered area to have some lunch...bring yours or there is a little snack bar located under cover."], ["Relaxing"]],
+          [ [ 28.019848, -82.819627 ], [ "https://www.floridastateparks.org/park/Caladesi-Island"], ["Caladesi Island State Park"], ["As one of the few completely natural islands along Florida´s Gulf Coast, Caladesi´s white sand beaches were rated America's Best Beach in 2008. Beach lovers can enjoy swimming, sunbathing and beachcombing.<br>You can’t reach this beach by car — only by boat — leaving the quiet beach yours to explore. There are great shells here and it is a popular spot for swimming and picnics too."],["Shell Collecting"] ],
+          [ [ 28.019848, -82.819627 ], [ "http://www.sanibel-captiva.org/"], ["Captiva Island"], ["Often considered one of the very best places in the whole state for collecting shells, many people return to Captiva year after year looking for the next great find."],["Shell Collecting"] ]
+        ]
+      }
+  ];
 
   var marker;
   var map;
@@ -447,68 +389,57 @@ var locations = [
 
     });
 
-  // smooth scroll jquery
-  $('a[href^="#"]').on('click', function(event) {
-    var target = $(this.href);
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body, window').animate({
-            scrollTop: target.offset().top
-        }, 5000);
-    }
-  });
+    // set the date we're counting down to
+  var target_date = new Date("April 30, 2016").getTime();
 
-  // set the date we're counting down to
-var target_date = new Date("April 30, 2016").getTime();
+  // variables for time units
+  var days, hours, minutes, seconds;
 
-// variables for time units
-var days, hours, minutes, seconds;
+  // days
+  var daysElement = document.getElementById("days");
+  // hours
+  var hoursElement = document.getElementById("hours");
+  // minutes
+  var minutesElement = document.getElementById("minutes");
+  // seconds
+  var secondsElement = document.getElementById("seconds");
 
-// days
-var daysElement = document.getElementById("days");
-// hours
-var hoursElement = document.getElementById("hours");
-// minutes
-var minutesElement = document.getElementById("minutes");
-// seconds
-var secondsElement = document.getElementById("seconds");
+  // update the tag with id "countdown" every 1 second
+  setInterval(function () {
 
-// update the tag with id "countdown" every 1 second
-setInterval(function () {
+      // find the amount of "seconds" between now and target
+      var current_date = new Date().getTime();
+      var seconds_left = (target_date - current_date) / 1000;
 
-    // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
+      // do some time calculations
+      days = parseInt(seconds_left / 86400);
+      seconds_left = seconds_left % 86400;
 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
+      hours = parseInt(seconds_left / 3600);
+      seconds_left = seconds_left % 3600;
 
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
+      minutes = parseInt(seconds_left / 60);
+      seconds = parseInt(seconds_left % 60);
 
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
+      // format countdown string + set tag value
+      daysElement.innerHTML = days;
+      hoursElement.innerHTML = hours;
+      minutesElement.innerHTML = minutes;
+      secondsElement.innerHTML = seconds;
 
-    // format countdown string + set tag value
-    daysElement.innerHTML = days;
-    hoursElement.innerHTML = hours;
-    minutesElement.innerHTML = minutes;
-    secondsElement.innerHTML = seconds;
+  }, 1000);
 
-}, 1000);
+  // The list of cards
+  var cardArray =
+  [
+   'public/assets/img/card-1.jpg',
+   'public/assets/img/card-2.jpg',
+   'public/assets/img/card-3.jpg',
+   'public/assets/img/card-4.jpg'
+   ];
 
-// The list of cards
-var cardArray =
-[
- 'public/assets/img/card-1.jpg',
- 'public/assets/img/card-2.jpg',
- 'public/assets/img/card-3.jpg',
- 'public/assets/img/card-4.jpg'
- ];
-
-// seconds
-var cardContainer = document.getElementById("cards-container");
+  // seconds
+  var cardContainer = document.getElementById("cards-container");
 
 // Create a for-loop that swaps the href in the container once every 5 seconds.
 // Also include an animation for the transition.
@@ -543,6 +474,52 @@ var cardContainer = document.getElementById("cards-container");
       }
 
     });
+
+  // Form accept / decline functions
+
+  var acceptButton = $("#btn-yes");
+  var declineButton = $("#btn-no");
+  var acceptWrapper = $(".accept-wrapper");
+  var yes = $("#yes");
+  var no = $("#no");
+
+  accept = function() {
+    acceptWrapper.addClass("yup");
+    acceptButton.addClass("selected");
+    acceptButton.removeClass("unselected");
+    acceptButton.find(".btn-msg").html("Awesome!")
+    declineButton.find(".btn-msg").html("Sadly, no")
+    declineButton.removeClass("selected");
+    declineButton.addClass("unselected");
+    $("#yes").prop("checked", true);
+    // $("input[name='answer-radio'][value='no']").prop("checked", false);
+    console.log("yup, here's yes", yes);
+    // no.prop("checked", false);
+  }
+
+  decline = function() {
+    acceptWrapper.removeClass("yup");
+    declineButton.addClass("selected");
+    declineButton.removeClass("unselected");
+    acceptButton.removeClass("selected");
+    acceptButton.addClass("unselected");
+    declineButton.find(".btn-msg").html("Bummer!")
+    acceptButton.find(".btn-msg").html("Absolutely")
+    $("#no").prop("checked", true);
+    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
+    // yes.prop("checked", false);
+    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
+
+    console.log("nope, here's no", no);
+  }
+
+  acceptButton.on("click", function() {
+    accept();
+  });
+
+  declineButton.on("click", function(){
+    decline();
+  })
 
   // Form conditional work
 
@@ -641,26 +618,150 @@ var cardContainer = document.getElementById("cards-container");
 
 // Select dropdown styling fix:
 
-$("#meal").on("change", function(){
+  $("#meal").on("change", function(){
 
-  var value= $("#meal option:selected").val().toLowerCase();
+    var value= $("#meal option:selected").val().toLowerCase();
 
-  switch (value) {
-    case "":
-       $(this).css("padding-left", "18%");
-       break;
-    case 'vegetarian':
-       $(this).css("padding-left", "23.5%");
-       break;
-    case 'fish':
-      $(this).css("padding-left", "41.5%");
-    case 'beef':
-      $(this).css("padding-left", "40.5%");
-    default:
-      $(this).css("padding-left", "40.5");
-      break;
+    switch (value) {
+      case "":
+         $(this).css("padding-left", "18%");
+         break;
+      case 'vegetarian':
+         $(this).css("padding-left", "23.5%");
+         break;
+      case 'fish':
+        $(this).css("padding-left", "41.5%");
+      case 'beef':
+        $(this).css("padding-left", "40.5%");
+      default:
+        $(this).css("padding-left", "40.5");
+        break;
+    }
+
+  });
+
+  submitForm = function() {
+
+      var formMessage = $("#form-test").serializeArray();
+
+          debugger;
+
+      $.ajax({
+        url: "//formspree.io/declanandrita@gmail.com",
+        method: "POST",
+        data: {message: formMessage},
+        dataType: "json"
+      }).done(function (data, status, jqXHR) {
+
+          document.getElementById("form-test").reset();
+
+          $("#submit-success-message").fadeIn(3000, 'swing', function(){
+            $('#submit-success-message').fadeOut(5000);
+          });
+
+        }).fail(function (jqXHR,status,err) {
+
+          $("#submit-failure-message").addClass("display");
+
+        });
+
   }
 
-});
+    //  Formspree
+
+  $("#form-test .btn-submit").on("click", function(e) {
+
+    e.preventDefault();
+
+    $.each($(".meal-wrapper"), function(index, mealWrapper){
+      $(mealWrapper).removeClass("error");
+    });
+
+    var requiredFields = $(".name, .email");
+    var attendanceField = $("input[name=answer-radio]");
+
+    var attendanceWrapper = $(".answer-btn-container");
+    var yesRequiredFields = $("#meal, .guest-meal");
+
+    var attendanceValue = $("input[name='answer-radio']:checked").val();
+
+    requiredFields.removeClass("error");
+    attendanceWrapper.removeClass("error");
+
+    userInput = true;
+
+    $.each(requiredFields, function(index, input){
+
+      if (input.value == "") {
+        userInput = false;
+        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+      }
+
+    });
+
+    // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
+    if (attendanceField.is(":checked") == false) {
+      userInput = false;
+      $.each(attendanceWrapper, function(index, field){
+        $(field).addClass("error");
+      })
+    }
+
+    if (attendanceValue == "yes") {
+
+      $.each(yesRequiredFields, function(index, input){
+
+        if (input.value == "") {
+          yesInput = false;
+          input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+        }
+      });
+    }
+
+    if (userInput) {
+
+      if (attendanceValue == "no") {
+
+        submitForm();
+
+      } else if (attendanceValue == "yes") {
+
+        // var yesRequiredFields = $("#meal, .guest-meal");
+        yesRequiredFields.removeClass("error");
+
+        var yesInput = true;
+
+        $.each(yesRequiredFields, function(index, input){
+
+          if (input.value == "") {
+            yesInput = false;
+            input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+          }
+
+          if (yesInput) {
+
+            submitForm();
+
+          } else {
+
+            $("#required-fields").fadeIn(3000, 'swing', function(){
+              $('#required-fields').fadeOut(5000);
+            });
+
+          }
+
+        });
+
+      }
+
+    } else {
+
+      $("#required-fields").fadeIn(3000, 'swing', function(){
+        $('#required-fields').fadeOut(5000);
+      });
+
+    }
+
+  });
 
 });

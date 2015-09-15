@@ -166,24 +166,41 @@
         </p>
         <input class="answer email" type="email" name="_replyto" required>
         <p>
-          Your choice of meal
+          Are you able to attend?
         </p>
-        <div class="meal-options">
-          <div class="meal-wrapper">
-            <select class="answer dropdown" id="meal" name="select" required>
-              <option value="" selected>Choose meal</option>
-              <option value="Fish">Fish</option>
-              <option value="Beef">Beef</option>
-              <option value="Vegetarian">Vegetarian</option>
-            </select>
+        <div class="yes-no-container">
+          <div class="answer-btn-container">
+            <div id="btn-yes"><h3 class="btn-msg">Absolutely</h3></div>
+          </div>
+          <div class="answer-btn-container right">
+            <div id="btn-no"><h3 class="btn-msg">Sadly, no</h3></div>
+          </div>
+          <div id="answer-radio">
+            <input class="answer-radio" type="radio" name="answer-radio" value="yes" id="yes" required></input>
+            <input class="answer-radio" type="radio" name="answer-radio" value="no"  id="no" required></input>
           </div>
         </div>
-        <p>
-          A song you would dance to
-        </p>
-        <input class="answer" type="text" name="song">
-        <div class="guest-section">
-          <div class="answer add-guest">Add a guest</div>
+        <div class="accept-wrapper">
+          <p>
+            Your choice of meal
+          </p>
+          <div class="meal-options">
+            <div class="meal-wrapper">
+              <select class="answer dropdown" id="meal" name="select" required>
+                <option value="" selected>Choose meal</option>
+                <option value="Fish">Fish</option>
+                <option value="Beef">Beef</option>
+                <option value="Vegetarian">Vegetarian</option>
+              </select>
+            </div>
+          </div>
+          <p>
+            A song you would dance to
+          </p>
+          <input class="answer" type="text" name="song">
+          <div class="guest-section">
+            <div class="answer add-guest">Add a guest</div>
+          </div>
         </div>
         <div class="btn-container">
           <input class="btn-submit" type="submit" value="Send">

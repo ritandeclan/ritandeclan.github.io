@@ -175,8 +175,12 @@
 
 // Button mixins
 
+@button-width: 173px;
+@button-height: 50px;
+@button-full-width: 205px;
+
 .button() {
-  width: 173px;
+  width: @button-width;
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
@@ -691,6 +695,107 @@ body {
 
         }
 
+        // Yes / No Section
+
+        .yes-no-container {
+          position: relative;
+          display: block;
+          width: @button-full-width * 2 + 60;
+          height: auto;
+          margin: 20px auto;
+
+          .cf();
+
+          .answer-btn-container {
+            position: relative;
+            display: inline;
+            width: auto;
+            float: left;
+            height: auto;
+            padding: 10px;
+            margin: 0 auto;
+
+            &.error {
+              padding: 0;
+              border: 10px solid @deco-red;
+            }
+
+            #btn-yes {
+              .button();
+              color: white;
+              background-color: @deco-blue;
+              .double-border(white);
+              padding-top: 7px;
+              margin: 0 auto;
+
+              &:hover,
+              &:active {
+                color: @deco-blue;
+                background-color: white;
+                .double-border(@deco-blue);
+              }
+
+              &.selected {
+
+              }
+
+              &.unselected {
+                opacity: 0.5;
+              }
+
+              .btn-msg {
+                margin: 0;
+                padding: 0;
+              }
+
+            }
+
+            #btn-no {
+              .button();
+              color: white;
+              background-color: @deco-red;
+              .double-border(white);
+              padding-top: 7px;
+              margin: 0 auto;
+
+              &:hover,
+              &:active {
+                color: @deco-red;
+                background-color: white;
+                .double-border(@deco-red);
+              }
+
+              &.selected {
+
+              }
+
+              &.unselected {
+                opacity: 0.5;
+              }
+
+              .btn-msg {
+                margin: 0;
+                padding: 0;
+              }
+
+            }
+
+
+            &.right {
+              margin-left: 20px;
+            }
+
+          }
+
+          #answer-radio {
+            display: none;
+            #yes,
+            #no {
+              display: none;
+            }
+          }
+        }
+
         .btn-container {
 
           position: relative;
@@ -772,13 +877,13 @@ body {
 
                   //&:invalid {
 
-                 // .single-border(@deco-red);
+                  // .single-border(@deco-red);
 
                   //}
 
-                 // &:valid {
-                 //   .single-border(@deco-blue);
-                 // }
+                  // &:valid {
+                  //   .single-border(@deco-blue);
+                  // }
                 }
               }
 
@@ -870,7 +975,6 @@ body {
 
                 }
 
-
               }
 
             }
@@ -884,7 +988,6 @@ body {
                   .button();
                   background-color: @deco-blue;
                   margin: 5px;
-
 
                   &:hover,
                   &:active {
@@ -917,6 +1020,15 @@ body {
                 }
               }
             }
+          }
+        }
+        // end of guest section
+
+        .accept-wrapper {
+          display: none;
+
+          &.yup {
+            display: block;
           }
         }
 
