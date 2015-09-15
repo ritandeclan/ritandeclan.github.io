@@ -644,6 +644,8 @@ $(document).ready(function(){
 
       var formMessage = $("#form-test").serializeArray();
 
+          debugger;
+
       $.ajax({
         url: "//formspree.io/declanandrita@gmail.com",
         method: "POST",
@@ -671,23 +673,22 @@ $(document).ready(function(){
 
     e.preventDefault();
 
-    var attendanceValue = $("input[name='answer-radio']:checked").val();
-
     $.each($(".meal-wrapper"), function(index, mealWrapper){
       $(mealWrapper).removeClass("error");
     });
 
-    var requiredFields = $(".name, .email, #meal, .guest-meal");
+    var requiredFields = $(".name, .email");
     var attendanceField = $("input[name=answer-radio]");
 
     var attendanceWrapper = $(".answer-btn-container");
+    var yesRequiredFields = $("#meal, .guest-meal");
+
+    var attendanceValue = $("input[name='answer-radio']:checked").val();
 
     requiredFields.removeClass("error");
     attendanceWrapper.removeClass("error");
 
-    debugger;
-
-    var userInput = true;
+    userInput = true;
 
     $.each(requiredFields, function(index, input){
 
@@ -706,6 +707,17 @@ $(document).ready(function(){
       })
     }
 
+    if (attendanceValue == "yes") {
+
+      $.each(yesRequiredFields, function(index, input){
+
+        if (input.value == "") {
+          yesInput = false;
+          input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+        }
+      });
+    }
+
     if (userInput) {
 
       if (attendanceValue == "no") {
@@ -714,7 +726,7 @@ $(document).ready(function(){
 
       } else if (attendanceValue == "yes") {
 
-        var yesRequiredFields = $("#meal, .guest-meal");
+        // var yesRequiredFields = $("#meal, .guest-meal");
         yesRequiredFields.removeClass("error");
 
         var yesInput = true;
