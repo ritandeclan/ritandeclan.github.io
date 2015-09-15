@@ -495,6 +495,7 @@ $(document).ready(function(){
   }
 
   decline = function() {
+    $(".guest-container").remove();
     acceptWrapper.removeClass("yup");
     declineButton.addClass("selected");
     declineButton.removeClass("unselected");
@@ -506,6 +507,7 @@ $(document).ready(function(){
   }
 
   attendanceReset = function() {
+    $(".guest-container").remove();
     acceptWrapper.removeClass("yup");
     declineButton.removeClass("selected");
     declineButton.removeClass("unselected");
@@ -697,18 +699,25 @@ $(document).ready(function(){
     var attendanceWrapper = $(".answer-btn-container");
     var yesRequiredFields = $("#meal, .guest-meal");
 
-    var attendanceValue = $("input[name='answer-radio']:checked").val();
+    attendanceValue = $("input[name='answer-radio']:checked").val();
+
+    if (attendanceValue == "no") {
+
+    }
 
     requiredFields.removeClass("error");
     attendanceWrapper.removeClass("error");
 
     userInput = true;
 
+    debugger;
+
     $.each(requiredFields, function(index, input){
 
       if (input.value == "") {
         userInput = false;
-        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+        input.id == "meal" && attendanceValue == "yes" || $(input).hasClass("guest-meal") && attendanceValue == "yes" ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+
       }
 
     });
@@ -719,17 +728,6 @@ $(document).ready(function(){
       $.each(attendanceWrapper, function(index, field){
         $(field).addClass("error");
       })
-    }
-
-    if (attendanceValue == "yes") {
-
-      $.each(yesRequiredFields, function(index, input){
-
-        if (input.value == "") {
-          yesInput = false;
-          input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
-        }
-      });
     }
 
     if (userInput) {
@@ -752,19 +750,19 @@ $(document).ready(function(){
             input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
           }
 
-          if (yesInput) {
-
-            submitForm("yes");
-
-          } else {
-
-            $("#required-fields").fadeIn(3000, 'swing', function(){
-              $('#required-fields').fadeOut(5000);
-            });
-
-          }
-
         });
+
+        if (yesInput) {
+
+          submitForm("yes");
+
+        } else {
+
+          $("#required-fields").fadeIn(3000, 'swing', function(){
+            $('#required-fields').fadeOut(5000);
+          });
+
+        }
 
       }
 
