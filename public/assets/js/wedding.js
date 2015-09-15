@@ -492,9 +492,6 @@ $(document).ready(function(){
     declineButton.removeClass("selected");
     declineButton.addClass("unselected");
     $("#yes").prop("checked", true);
-    // $("input[name='answer-radio'][value='no']").prop("checked", false);
-    console.log("yup, here's yes", yes);
-    // no.prop("checked", false);
   }
 
   decline = function() {
@@ -506,11 +503,18 @@ $(document).ready(function(){
     declineButton.find(".btn-msg").html("Bummer!")
     acceptButton.find(".btn-msg").html("Absolutely")
     $("#no").prop("checked", true);
-    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
-    // yes.prop("checked", false);
-    // $("input[name='answer-radio'][value='yes']").prop("checked", false);
+  }
 
-    console.log("nope, here's no", no);
+  attendanceReset = function() {
+    acceptWrapper.removeClass("yup");
+    declineButton.removeClass("selected");
+    declineButton.removeClass("unselected");
+    acceptButton.removeClass("selected");
+    acceptButton.removeClass("unselected");
+    declineButton.find(".btn-msg").html("Sadly, no");
+    acceptButton.find(".btn-msg").html("Absolutely");
+    $("#no").prop("checked", false);
+    $("#yes").prop("checked", false);
   }
 
   acceptButton.on("click", function() {
@@ -640,11 +644,9 @@ $(document).ready(function(){
 
   });
 
-  submitForm = function() {
+  submitForm = function(attendanceStatus) {
 
       var formMessage = $("#form-test").serializeArray();
-
-          debugger;
 
       $.ajax({
         url: "//formspree.io/declanandrita@gmail.com",
@@ -655,11 +657,21 @@ $(document).ready(function(){
 
           document.getElementById("form-test").reset();
 
-          $("#submit-success-message").fadeIn(3000, 'swing', function(){
-            $('#submit-success-message').fadeOut(5000);
-          });
+          attendanceReset();
+
+          if (attendanceStatus == "yes") {
+            $("#submit-success-message").fadeIn(3000, 'swing', function(){
+              $('#submit-success-message').fadeOut(5000);
+            });
+          } else if (attendanceStatus == "no"){
+            $("#submit-decline-message").fadeIn(3000, 'swing', function(){
+              $('#submit-decline-message').fadeOut(5000);
+            });
+          }
 
         }).fail(function (jqXHR,status,err) {
+
+          attendanceReset();
 
           $("#submit-failure-message").addClass("display");
 
@@ -722,7 +734,7 @@ $(document).ready(function(){
 
       if (attendanceValue == "no") {
 
-        submitForm();
+        submitForm("no");
 
       } else if (attendanceValue == "yes") {
 
@@ -740,7 +752,7 @@ $(document).ready(function(){
 
           if (yesInput) {
 
-            submitForm();
+            submitForm("yes");
 
           } else {
 
