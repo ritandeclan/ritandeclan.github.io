@@ -701,22 +701,19 @@ $(document).ready(function(){
 
     attendanceValue = $("input[name='answer-radio']:checked").val();
 
-    if (attendanceValue == "no") {
-
-    }
-
     requiredFields.removeClass("error");
     attendanceWrapper.removeClass("error");
 
     userInput = true;
 
-    debugger;
-
     $.each(requiredFields, function(index, input){
 
       if (input.value == "") {
         userInput = false;
-        input.id == "meal" && attendanceValue == "yes" || $(input).hasClass("guest-meal") && attendanceValue == "yes" ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+
+        debugger;
+
+        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
 
       }
 
@@ -738,7 +735,6 @@ $(document).ready(function(){
 
       } else if (attendanceValue == "yes") {
 
-        // var yesRequiredFields = $("#meal, .guest-meal");
         yesRequiredFields.removeClass("error");
 
         var yesInput = true;
@@ -767,6 +763,16 @@ $(document).ready(function(){
       }
 
     } else {
+
+      yesRequiredFields.removeClass("error");
+
+      $.each(yesRequiredFields, function(index, input){
+
+        if (input.value == "") {
+          input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+        }
+
+      });
 
       $("#required-fields").fadeIn(3000, 'swing', function(){
         $('#required-fields').fadeOut(5000);
