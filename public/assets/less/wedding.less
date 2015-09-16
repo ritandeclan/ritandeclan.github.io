@@ -350,7 +350,10 @@ body {
   #weather-section,
   #insta-gallery-section,
   #card-section,
-  #signature-section {
+  #signature-section,
+  #directions-section,
+  #staying-section,
+  #what-to-do-section {
 
     .double-border-bottom(white);
 
@@ -1388,6 +1391,71 @@ body {
 
         }
 
+      }
+
+    }
+
+  }
+
+  #directions-section,
+  #staying-section,
+  #what-to-do-section {
+
+    // width: 100%;
+    // display: block;
+    // position: relative;
+
+    .directions-container,
+    .staying-container,
+    .what-to-do-container {
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+
+      .title {
+        color: white;
+        .delicious();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 0 0 24px auto;
+      }
+
+      .intro-message {
+        color: @deco-grey;
+       .body-font-normal();
+        font-size: 30px;
+        line-height: 40px;
+        .content-full-width();
+        margin: 70px auto;
+      }
+
+    }
+  }
+
+  #directions-section {
+    background-color: @deco-light-pink;
+  }
+
+  #staying-section {
+    background-color: @deco-yellow;
+
+    .staying-container {
+
+      .intro-message {
+        color: white;
+      }
+
+    }
+  }
+
+  #what-to-do-section {
+    background-color: @deco-grey;
+
+    .what-to-do-container {
+
+      .intro-message {
+        color: white;
       }
 
     }

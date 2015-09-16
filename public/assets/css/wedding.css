@@ -95,7 +95,10 @@ body #countdown-section,
 body #weather-section,
 body #insta-gallery-section,
 body #card-section,
-body #signature-section {
+body #signature-section,
+body #directions-section,
+body #staying-section,
+body #what-to-do-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -1088,6 +1091,69 @@ body #map-section .map-container #map-legend #location-list #restaurants .legend
 }
 body #map-section .map-container #map-legend #location-list #beaches .legend-item:last-of-type {
   padding-bottom: 15px;
+}
+body #directions-section .directions-container,
+body #staying-section .directions-container,
+body #what-to-do-section .directions-container,
+body #directions-section .staying-container,
+body #staying-section .staying-container,
+body #what-to-do-section .staying-container,
+body #directions-section .what-to-do-container,
+body #staying-section .what-to-do-container,
+body #what-to-do-section .what-to-do-container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+body #directions-section .directions-container .title,
+body #staying-section .directions-container .title,
+body #what-to-do-section .directions-container .title,
+body #directions-section .staying-container .title,
+body #staying-section .staying-container .title,
+body #what-to-do-section .staying-container .title,
+body #directions-section .what-to-do-container .title,
+body #staying-section .what-to-do-container .title,
+body #what-to-do-section .what-to-do-container .title {
+  color: white;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0 0 24px auto;
+}
+body #directions-section .directions-container .intro-message,
+body #staying-section .directions-container .intro-message,
+body #what-to-do-section .directions-container .intro-message,
+body #directions-section .staying-container .intro-message,
+body #staying-section .staying-container .intro-message,
+body #what-to-do-section .staying-container .intro-message,
+body #directions-section .what-to-do-container .intro-message,
+body #staying-section .what-to-do-container .intro-message,
+body #what-to-do-section .what-to-do-container .intro-message {
+  color: #656478;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  width: 900px;
+  margin: 70px auto;
+}
+body #directions-section {
+  background-color: #f7b7c7;
+}
+body #staying-section {
+  background-color: #f18d11;
+}
+body #staying-section .staying-container .intro-message {
+  color: white;
+}
+body #what-to-do-section {
+  background-color: #656478;
+}
+body #what-to-do-section .what-to-do-container .intro-message {
+  color: white;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
