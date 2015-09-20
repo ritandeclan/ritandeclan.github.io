@@ -1376,8 +1376,58 @@ body #staying-section .staying-container .message-item .listings-container .item
 body #what-to-do-section {
   background-color: #656478;
 }
+body #what-to-do-section .what-to-do-container .message-item {
+  position: relative;
+  display: block;
+}
 body #what-to-do-section .what-to-do-container .message-item .intro-message {
+  position: relative;
+  display: block;
   color: white;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+  position: relative;
+  display: block;
+  margin: 30px 0 15px;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message a {
+  color: #75d0bb;
+  text-decoration: none;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas {
+  width: 350px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item {
+  margin: 15px 0;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name {
+  text-decoration: none;
+  color: #f7b7c7;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name:hover {
+  color: #f7b7c7;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor,
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor:hover,
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb:hover {
+  color: #f7b7c7;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
