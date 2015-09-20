@@ -1418,16 +1418,54 @@ body {
         .delicious();
         font-size: 90px;
         line-height: 90px;
-        margin: 0 0 24px auto;
+        margin: 0 auto 40px auto;
       }
 
-      .intro-message {
-        color: @deco-grey;
-       .body-font-normal();
-        font-size: 30px;
-        line-height: 40px;
-        .content-full-width();
-        margin: 70px auto;
+      .message-item {
+
+        margin: 20px auto 30px auto;
+
+        .fa.fa-plane.fa-lg {
+          display: inline;
+          position: relative;
+          padding-right: 15px;
+          color: white;
+        }
+
+        .intro-message {
+          color: @deco-grey;
+         .body-font-normal();
+          font-size: 30px;
+          line-height: 40px;
+          .content-full-width();
+          margin: 12px auto;
+
+          &.btwn {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+
+            a {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+            text-decoration: none;
+            color: @deco-grey;
+            }
+          }
+        }
       }
 
     }

@@ -1121,24 +1121,91 @@ body #what-to-do-section .what-to-do-container .title {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 0 0 24px auto;
+  margin: 0 auto 40px auto;
 }
-body #directions-section .directions-container .intro-message,
-body #staying-section .directions-container .intro-message,
-body #what-to-do-section .directions-container .intro-message,
-body #directions-section .staying-container .intro-message,
-body #staying-section .staying-container .intro-message,
-body #what-to-do-section .staying-container .intro-message,
-body #directions-section .what-to-do-container .intro-message,
-body #staying-section .what-to-do-container .intro-message,
-body #what-to-do-section .what-to-do-container .intro-message {
+body #directions-section .directions-container .message-item,
+body #staying-section .directions-container .message-item,
+body #what-to-do-section .directions-container .message-item,
+body #directions-section .staying-container .message-item,
+body #staying-section .staying-container .message-item,
+body #what-to-do-section .staying-container .message-item,
+body #directions-section .what-to-do-container .message-item,
+body #staying-section .what-to-do-container .message-item,
+body #what-to-do-section .what-to-do-container .message-item {
+  margin: 20px auto 30px auto;
+}
+body #directions-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg {
+  display: inline;
+  position: relative;
+  padding-right: 15px;
+  color: white;
+}
+body #directions-section .directions-container .message-item .intro-message,
+body #staying-section .directions-container .message-item .intro-message,
+body #what-to-do-section .directions-container .message-item .intro-message,
+body #directions-section .staying-container .message-item .intro-message,
+body #staying-section .staying-container .message-item .intro-message,
+body #what-to-do-section .staying-container .message-item .intro-message,
+body #directions-section .what-to-do-container .message-item .intro-message,
+body #staying-section .what-to-do-container .message-item .intro-message,
+body #what-to-do-section .what-to-do-container .message-item .intro-message {
   color: #656478;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
   width: 900px;
-  margin: 70px auto;
+  margin: 12px auto;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn,
+body #staying-section .directions-container .message-item .intro-message.btwn,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+body #directions-section .staying-container .message-item .intro-message.btwn,
+body #staying-section .staying-container .message-item .intro-message.btwn,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn a,
+body #staying-section .directions-container .message-item .intro-message.btwn a,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
+body #directions-section .staying-container .message-item .intro-message.btwn a,
+body #staying-section .staying-container .message-item .intro-message.btwn a,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: #656478;
 }
 body #directions-section {
   background-color: #f7b7c7;
