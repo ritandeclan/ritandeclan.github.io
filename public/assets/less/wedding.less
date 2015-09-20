@@ -320,7 +320,8 @@ body {
       .info-link,
       .rsvp-link,
       .map-link,
-      .insta-gallery-link {
+      .insta-gallery-link,
+      .welcome-link {
         h3 {
           margin: 0;
           a {
@@ -328,7 +329,7 @@ body {
             text-decoration: none;
             position: inline;
             float: left;
-            width: 25%;
+            width: 20%;
             height: 25px;
             text-align: center;
             text-transform: uppercase;
@@ -343,14 +344,17 @@ body {
     }
   }
 
-  #info-section,
+  #welcome-section,
   #rsvp-section,
   #map-section,
   #countdown-section,
   #weather-section,
   #insta-gallery-section,
   #card-section,
-  #signature-section {
+  #signature-section,
+  #directions-section,
+  #staying-section,
+  #what-to-do-section {
 
     .double-border-bottom(white);
 
@@ -363,7 +367,7 @@ body {
 
   }
 
-  #info-section {
+  #welcome-section {
 
     background-color: @deco-light-pink;
 
@@ -1386,6 +1390,307 @@ body {
             }
           }
 
+        }
+
+      }
+
+    }
+
+  }
+
+  #directions-section,
+  #staying-section,
+  #what-to-do-section {
+
+    // width: 100%;
+    // display: block;
+    // position: relative;
+
+    .directions-container,
+    .staying-container,
+    .what-to-do-container {
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+
+      .title {
+        color: white;
+        .delicious();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 0 auto 40px auto;
+      }
+
+      .message-item {
+
+        margin: 20px auto 30px auto;
+
+        .fa.fa-plane.fa-lg {
+          display: inline;
+          position: relative;
+          padding-right: 15px;
+          color: white;
+        }
+
+        .intro-message {
+          color: white;
+         .body-font-normal();
+          font-size: 25px;
+          line-height: 40px;
+          .content-full-width();
+          margin: 12px auto;
+
+          &.btwn {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+
+            a {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+            text-decoration: none;
+            color: @deco-grey;
+            }
+          }
+        }
+
+        .display-listings {
+          .button();
+          margin: 5px;
+          color: white;
+          background-color: @deco-blue;
+          .double-border(white);
+          padding-top: 7px;
+          margin: 10px auto;
+          width: 320px;
+          height: auto;
+          padding: 5px 0;
+
+          h3 {
+            margin: 0;
+          }
+
+          &:hover,
+          &:active {
+            color: @deco-blue;
+            background-color: white;
+            .double-border(@deco-blue);
+          }
+        }
+
+      }
+
+    }
+  }
+
+  #directions-section {
+    background-color: @deco-light-pink;
+  }
+
+  #staying-section {
+    background-color: @deco-yellow;
+
+    .staying-container {
+
+      .message-item {
+        margin: 50px auto 0 auto;
+
+        &.first {
+          margin-top: 20px;
+        }
+
+        &.last {
+
+          .display-listings {
+            margin-top: 25px;
+            background-color: @deco-grey;
+            text-decoration: none;
+            color: white;
+            width: @button-width;
+
+            h3 {
+              a {
+                text-decoration: none;
+                color: white;
+              }
+            }
+
+            &:hover,
+            &:active {
+              color: @deco-grey;
+              background-color: white;
+              .double-border(@deco-grey);
+
+              h3 {
+              a {
+                text-decoration: none;
+                color: @deco-grey;
+              }
+            }
+            }
+
+          }
+
+        }
+
+        .intro-message {
+          color: white;
+
+          &.btwn {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 20px;
+
+            &:hover {
+              color: white;
+            }
+
+            a {
+              font-size: 35px;
+
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+
+        .display-listings {
+          margin-top: 25px;
+        }
+
+        .listings-container {
+          position: relative;
+          display: none;
+          text-align: left;
+          width: 350px;
+          margin: 0 auto;
+          padding: 10px 0;
+
+          .item {
+            margin: 15px 0;
+            .item-name {
+              text-decoration: none;
+              color: @deco-grey;
+              .body-font-bold();
+              font-size: 18px;
+              line-height: 25px;
+              margin: 10px auto;
+              padding: 0;
+              text-transform: uppercase;
+              .content-full-width();
+              position: relative;
+              display: inline;
+
+              &:hover {
+                color: @deco-light-pink;
+              }
+
+              &.tripadvisor,
+              &.airbnb {
+                color: white;
+                font-size: 18px;
+                line-height: 25px;
+
+                &:hover {
+                  color: @deco-light-pink;
+                }
+
+              }
+
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  #what-to-do-section {
+    background-color: @deco-grey;
+
+    .what-to-do-container {
+
+      .message-item {
+        position: relative;
+        display: block;
+
+        .intro-message {
+          position: relative;
+          display: block;
+          color: white;
+
+          &.btwn {
+            position: relative;
+            display: block;
+            margin: 30px 0 15px;
+          }
+
+          a {
+            color: @deco-blue;
+            text-decoration: none;
+
+            &:hover {
+              color: @deco-yellow;
+            }
+
+          }
+        }
+
+      }
+
+      .activity-ideas {
+        width: 350px;
+        margin: 25px auto 40px auto;
+        text-align: left;
+
+        .item {
+          margin: 15px 0;
+          .item-name {
+            text-decoration: none;
+            color: @deco-light-pink;
+            .body-font-bold();
+            font-size: 18px;
+            line-height: 25px;
+            margin: 10px auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+
+            &:hover {
+              color: @deco-blue;
+            }
+
+            &.tripadvisor,
+            &.airbnb {
+              color: white;
+              font-size: 18px;
+              line-height: 25px;
+
+              &:hover {
+                color: @deco-light-pink;
+              }
+
+            }
+
+          }
         }
 
       }

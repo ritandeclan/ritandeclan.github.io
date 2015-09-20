@@ -65,18 +65,20 @@ body #header-section .header-link-container {
 body #header-section .header-link-container .info-link h3,
 body #header-section .header-link-container .rsvp-link h3,
 body #header-section .header-link-container .map-link h3,
-body #header-section .header-link-container .insta-gallery-link h3 {
+body #header-section .header-link-container .insta-gallery-link h3,
+body #header-section .header-link-container .welcome-link h3 {
   margin: 0;
 }
 body #header-section .header-link-container .info-link h3 a,
 body #header-section .header-link-container .rsvp-link h3 a,
 body #header-section .header-link-container .map-link h3 a,
-body #header-section .header-link-container .insta-gallery-link h3 a {
+body #header-section .header-link-container .insta-gallery-link h3 a,
+body #header-section .header-link-container .welcome-link h3 a {
   color: #656478;
   text-decoration: none;
   position: inline;
   float: left;
-  width: 25%;
+  width: 20%;
   height: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -84,18 +86,22 @@ body #header-section .header-link-container .insta-gallery-link h3 a {
 body #header-section .header-link-container .info-link h3 a:hover,
 body #header-section .header-link-container .rsvp-link h3 a:hover,
 body #header-section .header-link-container .map-link h3 a:hover,
-body #header-section .header-link-container .insta-gallery-link h3 a:hover {
+body #header-section .header-link-container .insta-gallery-link h3 a:hover,
+body #header-section .header-link-container .welcome-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
-body #info-section,
+body #welcome-section,
 body #rsvp-section,
 body #map-section,
 body #countdown-section,
 body #weather-section,
 body #insta-gallery-section,
 body #card-section,
-body #signature-section {
+body #signature-section,
+body #directions-section,
+body #staying-section,
+body #what-to-do-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -104,10 +110,10 @@ body #signature-section {
   margin: 0 auto;
   padding: 100px 0;
 }
-body #info-section {
+body #welcome-section {
   background-color: #f7b7c7;
 }
-body #info-section .intro {
+body #welcome-section .intro {
   width: 90%;
   height: auto;
   background-color: transparent;
@@ -116,7 +122,7 @@ body #info-section .intro {
   color: white;
   text-align: center;
 }
-body #info-section .intro .intro-lead {
+body #welcome-section .intro .intro-lead {
   position: relative;
   display: block;
   border: 10px double #e9243c;
@@ -129,7 +135,7 @@ body #info-section .intro .intro-lead {
   padding: 20px 0;
   margin: 20px auto;
 }
-body #info-section .intro .intro-message {
+body #welcome-section .intro .intro-message {
   color: #656478;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
@@ -138,7 +144,7 @@ body #info-section .intro .intro-message {
   width: 900px;
   margin: 70px auto;
 }
-body #info-section .intro .intro-message.btwn {
+body #welcome-section .intro .intro-message.btwn {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -148,7 +154,7 @@ body #info-section .intro .intro-message.btwn {
   text-transform: uppercase;
   width: 900px;
 }
-body #info-section .intro .standout-text {
+body #welcome-section .intro .standout-text {
   color: white;
   font-family: 'delicious', cursive;
   font-weight: normal;
@@ -157,14 +163,14 @@ body #info-section .intro .standout-text {
   line-height: 90px;
   margin: 32px auto;
 }
-body #info-section .intro .us-img-container {
+body #welcome-section .intro .us-img-container {
   width: 500px;
   height: 500px;
   border-radius: 50%;
   margin: 50px auto;
   border: 10px double white;
 }
-body #info-section .intro .us-img-container .us-img {
+body #welcome-section .intro .us-img-container .us-img {
   height: auto;
   width: 100%;
   border-radius: 50%;
@@ -1088,6 +1094,343 @@ body #map-section .map-container #map-legend #location-list #restaurants .legend
 }
 body #map-section .map-container #map-legend #location-list #beaches .legend-item:last-of-type {
   padding-bottom: 15px;
+}
+body #directions-section .directions-container,
+body #staying-section .directions-container,
+body #what-to-do-section .directions-container,
+body #directions-section .staying-container,
+body #staying-section .staying-container,
+body #what-to-do-section .staying-container,
+body #directions-section .what-to-do-container,
+body #staying-section .what-to-do-container,
+body #what-to-do-section .what-to-do-container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+body #directions-section .directions-container .title,
+body #staying-section .directions-container .title,
+body #what-to-do-section .directions-container .title,
+body #directions-section .staying-container .title,
+body #staying-section .staying-container .title,
+body #what-to-do-section .staying-container .title,
+body #directions-section .what-to-do-container .title,
+body #staying-section .what-to-do-container .title,
+body #what-to-do-section .what-to-do-container .title {
+  color: white;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0 auto 40px auto;
+}
+body #directions-section .directions-container .message-item,
+body #staying-section .directions-container .message-item,
+body #what-to-do-section .directions-container .message-item,
+body #directions-section .staying-container .message-item,
+body #staying-section .staying-container .message-item,
+body #what-to-do-section .staying-container .message-item,
+body #directions-section .what-to-do-container .message-item,
+body #staying-section .what-to-do-container .message-item,
+body #what-to-do-section .what-to-do-container .message-item {
+  margin: 20px auto 30px auto;
+}
+body #directions-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg {
+  display: inline;
+  position: relative;
+  padding-right: 15px;
+  color: white;
+}
+body #directions-section .directions-container .message-item .intro-message,
+body #staying-section .directions-container .message-item .intro-message,
+body #what-to-do-section .directions-container .message-item .intro-message,
+body #directions-section .staying-container .message-item .intro-message,
+body #staying-section .staying-container .message-item .intro-message,
+body #what-to-do-section .staying-container .message-item .intro-message,
+body #directions-section .what-to-do-container .message-item .intro-message,
+body #staying-section .what-to-do-container .message-item .intro-message,
+body #what-to-do-section .what-to-do-container .message-item .intro-message {
+  color: white;
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  width: 900px;
+  margin: 12px auto;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn,
+body #staying-section .directions-container .message-item .intro-message.btwn,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+body #directions-section .staying-container .message-item .intro-message.btwn,
+body #staying-section .staying-container .message-item .intro-message.btwn,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn a,
+body #staying-section .directions-container .message-item .intro-message.btwn a,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
+body #directions-section .staying-container .message-item .intro-message.btwn a,
+body #staying-section .staying-container .message-item .intro-message.btwn a,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: #656478;
+}
+body #directions-section .directions-container .message-item .display-listings,
+body #staying-section .directions-container .message-item .display-listings,
+body #what-to-do-section .directions-container .message-item .display-listings,
+body #directions-section .staying-container .message-item .display-listings,
+body #staying-section .staying-container .message-item .display-listings,
+body #what-to-do-section .staying-container .message-item .display-listings,
+body #directions-section .what-to-do-container .message-item .display-listings,
+body #staying-section .what-to-do-container .message-item .display-listings,
+body #what-to-do-section .what-to-do-container .message-item .display-listings {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 5px;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 10px auto;
+  width: 320px;
+  height: auto;
+  padding: 5px 0;
+}
+body #directions-section .directions-container .message-item .display-listings:hover,
+body #staying-section .directions-container .message-item .display-listings:hover,
+body #what-to-do-section .directions-container .message-item .display-listings:hover,
+body #directions-section .staying-container .message-item .display-listings:hover,
+body #staying-section .staying-container .message-item .display-listings:hover,
+body #what-to-do-section .staying-container .message-item .display-listings:hover,
+body #directions-section .what-to-do-container .message-item .display-listings:hover,
+body #staying-section .what-to-do-container .message-item .display-listings:hover,
+body #what-to-do-section .what-to-do-container .message-item .display-listings:hover {
+  cursor: pointer;
+}
+body #directions-section .directions-container .message-item .display-listings h3,
+body #staying-section .directions-container .message-item .display-listings h3,
+body #what-to-do-section .directions-container .message-item .display-listings h3,
+body #directions-section .staying-container .message-item .display-listings h3,
+body #staying-section .staying-container .message-item .display-listings h3,
+body #what-to-do-section .staying-container .message-item .display-listings h3,
+body #directions-section .what-to-do-container .message-item .display-listings h3,
+body #staying-section .what-to-do-container .message-item .display-listings h3,
+body #what-to-do-section .what-to-do-container .message-item .display-listings h3 {
+  margin: 0;
+}
+body #directions-section .directions-container .message-item .display-listings:hover,
+body #staying-section .directions-container .message-item .display-listings:hover,
+body #what-to-do-section .directions-container .message-item .display-listings:hover,
+body #directions-section .staying-container .message-item .display-listings:hover,
+body #staying-section .staying-container .message-item .display-listings:hover,
+body #what-to-do-section .staying-container .message-item .display-listings:hover,
+body #directions-section .what-to-do-container .message-item .display-listings:hover,
+body #staying-section .what-to-do-container .message-item .display-listings:hover,
+body #what-to-do-section .what-to-do-container .message-item .display-listings:hover,
+body #directions-section .directions-container .message-item .display-listings:active,
+body #staying-section .directions-container .message-item .display-listings:active,
+body #what-to-do-section .directions-container .message-item .display-listings:active,
+body #directions-section .staying-container .message-item .display-listings:active,
+body #staying-section .staying-container .message-item .display-listings:active,
+body #what-to-do-section .staying-container .message-item .display-listings:active,
+body #directions-section .what-to-do-container .message-item .display-listings:active,
+body #staying-section .what-to-do-container .message-item .display-listings:active,
+body #what-to-do-section .what-to-do-container .message-item .display-listings:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body #directions-section {
+  background-color: #f7b7c7;
+}
+body #staying-section {
+  background-color: #f18d11;
+}
+body #staying-section .staying-container .message-item {
+  margin: 50px auto 0 auto;
+}
+body #staying-section .staying-container .message-item.first {
+  margin-top: 20px;
+}
+body #staying-section .staying-container .message-item.last .display-listings {
+  margin-top: 25px;
+  background-color: #656478;
+  text-decoration: none;
+  color: white;
+  width: 173px;
+}
+body #staying-section .staying-container .message-item.last .display-listings h3 a {
+  text-decoration: none;
+  color: white;
+}
+body #staying-section .staying-container .message-item.last .display-listings:hover,
+body #staying-section .staying-container .message-item.last .display-listings:active {
+  color: #656478;
+  background-color: white;
+  border: 10px double #656478;
+}
+body #staying-section .staying-container .message-item.last .display-listings:hover h3 a,
+body #staying-section .staying-container .message-item.last .display-listings:active h3 a {
+  text-decoration: none;
+  color: #656478;
+}
+body #staying-section .staying-container .message-item .intro-message {
+  color: white;
+}
+body #staying-section .staying-container .message-item .intro-message.btwn {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+body #staying-section .staying-container .message-item .intro-message.btwn:hover {
+  color: white;
+}
+body #staying-section .staying-container .message-item .intro-message.btwn a {
+  font-size: 35px;
+}
+body #staying-section .staying-container .message-item .intro-message.btwn a:hover {
+  color: white;
+}
+body #staying-section .staying-container .message-item .display-listings {
+  margin-top: 25px;
+}
+body #staying-section .staying-container .message-item .listings-container {
+  position: relative;
+  display: none;
+  text-align: left;
+  width: 350px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+body #staying-section .staying-container .message-item .listings-container .item {
+  margin: 15px 0;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name {
+  text-decoration: none;
+  color: #656478;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name:hover {
+  color: #f7b7c7;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name.tripadvisor,
+body #staying-section .staying-container .message-item .listings-container .item .item-name.airbnb {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name.tripadvisor:hover,
+body #staying-section .staying-container .message-item .listings-container .item .item-name.airbnb:hover {
+  color: #f7b7c7;
+}
+body #what-to-do-section {
+  background-color: #656478;
+}
+body #what-to-do-section .what-to-do-container .message-item {
+  position: relative;
+  display: block;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message {
+  position: relative;
+  display: block;
+  color: white;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+  position: relative;
+  display: block;
+  margin: 30px 0 15px;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message a {
+  color: #75d0bb;
+  text-decoration: none;
+}
+body #what-to-do-section .what-to-do-container .message-item .intro-message a:hover {
+  color: #f18d11;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas {
+  width: 350px;
+  margin: 25px auto 40px auto;
+  text-align: left;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item {
+  margin: 15px 0;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name {
+  text-decoration: none;
+  color: #f7b7c7;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name:hover {
+  color: #75d0bb;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor,
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+}
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor:hover,
+body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb:hover {
+  color: #f7b7c7;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
