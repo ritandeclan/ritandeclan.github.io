@@ -1210,6 +1210,17 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn
   text-decoration: none;
   color: #656478;
 }
+body #directions-section .directions-container .message-item .intro-message.btwn a:hover,
+body #staying-section .directions-container .message-item .intro-message.btwn a:hover,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn a:hover,
+body #directions-section .staying-container .message-item .intro-message.btwn a:hover,
+body #staying-section .staying-container .message-item .intro-message.btwn a:hover,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn a:hover,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn a:hover,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn a:hover,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a:hover {
+  color: #75d0bb;
+}
 body #directions-section .directions-container .message-item .display-listings,
 body #staying-section .directions-container .message-item .display-listings,
 body #what-to-do-section .directions-container .message-item .display-listings,
