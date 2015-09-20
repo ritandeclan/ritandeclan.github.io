@@ -1453,17 +1453,22 @@ body {
             display: inline;
 
             a {
-            .body-font-bold();
-            font-size: 25px;
-            line-height: 25px;
-            margin: 0 auto;
-            padding: 0;
-            text-transform: uppercase;
-            .content-full-width();
-            position: relative;
-            display: inline;
-            text-decoration: none;
-            color: @deco-grey;
+              .body-font-bold();
+              font-size: 25px;
+              line-height: 25px;
+              margin: 0 auto;
+              padding: 0;
+              text-transform: uppercase;
+              .content-full-width();
+              position: relative;
+              display: inline;
+              text-decoration: none;
+              color: @deco-grey;
+
+              &:hover {
+                color: @deco-blue;
+              }
+
             }
           }
         }
