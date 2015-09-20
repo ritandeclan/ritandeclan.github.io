@@ -136,7 +136,7 @@ $(document).ready(function(){
 //   [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
 // ];
 
-  var locations = [
+  locations = [
       {
         "venue": [
           [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"], ["Elegant, Sophisticated, Magical. The Escalante is Naples' only boutique hotel, a romantic hideaway that is reminiscent of a Mediterranean villa."]]
@@ -712,8 +712,6 @@ $(document).ready(function(){
       if (input.value == "") {
         userInput = false;
 
-        debugger;
-
         input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
 
       }
@@ -781,6 +779,31 @@ $(document).ready(function(){
 
     }
 
+  });
+
+// Where to Stay hotel and Airbnb sections
+
+var airbnbListings = $("#airbnb-listings");
+var hotelListings = $("#hotel-listings");
+
+  var hotelList = locations[hotels];
+
+
+  // $.each(hotelList, function(index, hotel){
+
+  //   var hotelItem =
+  //   "<div class='hotel-item " + k + " " + k + "-item-" + i + "' data-clicked='nope'>" +
+  //     "<h3 class='item-name'>" + item[2][0] + "</h3>" +
+  //   "</div>";
+
+  //   itemsContainer.append( attractionItem );
+
+  // });
+
+  hotelListings.on("click", function(){
+
+
+    debugger;
   });
 
 });
