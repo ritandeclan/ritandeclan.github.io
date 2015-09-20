@@ -1433,9 +1433,9 @@ body {
         }
 
         .intro-message {
-          color: @deco-grey;
+          color: white;
          .body-font-normal();
-          font-size: 30px;
+          font-size: 25px;
           line-height: 40px;
           .content-full-width();
           margin: 12px auto;
@@ -1466,6 +1466,31 @@ body {
             }
           }
         }
+
+        .display-listings {
+          .button();
+          margin: 5px;
+          color: white;
+          background-color: @deco-blue;
+          .double-border(white);
+          padding-top: 7px;
+          margin: 10px auto;
+          width: 320px;
+          height: auto;
+          padding: 5px 0;
+
+          h3 {
+            margin: 0;
+          }
+
+          &:hover,
+          &:active {
+            color: @deco-blue;
+            background-color: white;
+            .double-border(@deco-blue);
+          }
+        }
+
       }
 
     }
@@ -1480,8 +1505,65 @@ body {
 
     .staying-container {
 
-      .intro-message {
-        color: white;
+      .message-item {
+        margin: 50px auto 0 auto;
+
+        &.first {
+          margin-top: 20px;
+        }
+
+        &.last {
+
+          .display-listings {
+            margin-top: 25px;
+            background-color: @deco-grey;
+            text-decoration: none;
+            color: white;
+            width: @button-width;
+
+            h3 {
+              a {
+                text-decoration: none;
+                color: white;
+              }
+            }
+
+            &:hover,
+            &:active {
+              color: @deco-grey;
+              background-color: white;
+              .double-border(@deco-grey);
+
+              h3 {
+              a {
+                text-decoration: none;
+                color: @deco-grey;
+              }
+            }
+            }
+
+          }
+
+        }
+
+        .intro-message {
+          color: white;
+
+          &.btwn {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 20px;
+
+            a {
+              font-size: 35px;
+            }
+          }
+        }
+
+        .display-listings {
+          margin-top: 25px;
+        }
+
       }
 
     }
@@ -1492,8 +1574,12 @@ body {
 
     .what-to-do-container {
 
-      .intro-message {
-        color: white;
+      .message-item {
+
+        .intro-message {
+          color: white;
+        }
+
       }
 
     }
