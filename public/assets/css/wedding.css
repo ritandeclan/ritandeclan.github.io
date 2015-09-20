@@ -1394,9 +1394,12 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message a {
   color: #75d0bb;
   text-decoration: none;
 }
+body #what-to-do-section .what-to-do-container .message-item .intro-message a:hover {
+  color: #f18d11;
+}
 body #what-to-do-section .what-to-do-container .activity-ideas {
   width: 350px;
-  margin: 0 auto 30px auto;
+  margin: 25px auto 40px auto;
   text-align: left;
 }
 body #what-to-do-section .what-to-do-container .activity-ideas .item {
@@ -1417,7 +1420,7 @@ body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name 
   display: inline;
 }
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name:hover {
-  color: #f7b7c7;
+  color: #75d0bb;
 }
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor,
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb {
