@@ -65,18 +65,20 @@ body #header-section .header-link-container {
 body #header-section .header-link-container .info-link h3,
 body #header-section .header-link-container .rsvp-link h3,
 body #header-section .header-link-container .map-link h3,
-body #header-section .header-link-container .insta-gallery-link h3 {
+body #header-section .header-link-container .insta-gallery-link h3,
+body #header-section .header-link-container .welcome-link h3 {
   margin: 0;
 }
 body #header-section .header-link-container .info-link h3 a,
 body #header-section .header-link-container .rsvp-link h3 a,
 body #header-section .header-link-container .map-link h3 a,
-body #header-section .header-link-container .insta-gallery-link h3 a {
+body #header-section .header-link-container .insta-gallery-link h3 a,
+body #header-section .header-link-container .welcome-link h3 a {
   color: #656478;
   text-decoration: none;
   position: inline;
   float: left;
-  width: 25%;
+  width: 20%;
   height: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -84,11 +86,12 @@ body #header-section .header-link-container .insta-gallery-link h3 a {
 body #header-section .header-link-container .info-link h3 a:hover,
 body #header-section .header-link-container .rsvp-link h3 a:hover,
 body #header-section .header-link-container .map-link h3 a:hover,
-body #header-section .header-link-container .insta-gallery-link h3 a:hover {
+body #header-section .header-link-container .insta-gallery-link h3 a:hover,
+body #header-section .header-link-container .welcome-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
-body #info-section,
+body #welcome-section,
 body #rsvp-section,
 body #map-section,
 body #countdown-section,
@@ -107,10 +110,10 @@ body #what-to-do-section {
   margin: 0 auto;
   padding: 100px 0;
 }
-body #info-section {
+body #welcome-section {
   background-color: #f7b7c7;
 }
-body #info-section .intro {
+body #welcome-section .intro {
   width: 90%;
   height: auto;
   background-color: transparent;
@@ -119,7 +122,7 @@ body #info-section .intro {
   color: white;
   text-align: center;
 }
-body #info-section .intro .intro-lead {
+body #welcome-section .intro .intro-lead {
   position: relative;
   display: block;
   border: 10px double #e9243c;
@@ -132,7 +135,7 @@ body #info-section .intro .intro-lead {
   padding: 20px 0;
   margin: 20px auto;
 }
-body #info-section .intro .intro-message {
+body #welcome-section .intro .intro-message {
   color: #656478;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
@@ -141,7 +144,7 @@ body #info-section .intro .intro-message {
   width: 900px;
   margin: 70px auto;
 }
-body #info-section .intro .intro-message.btwn {
+body #welcome-section .intro .intro-message.btwn {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -151,7 +154,7 @@ body #info-section .intro .intro-message.btwn {
   text-transform: uppercase;
   width: 900px;
 }
-body #info-section .intro .standout-text {
+body #welcome-section .intro .standout-text {
   color: white;
   font-family: 'delicious', cursive;
   font-weight: normal;
@@ -160,14 +163,14 @@ body #info-section .intro .standout-text {
   line-height: 90px;
   margin: 32px auto;
 }
-body #info-section .intro .us-img-container {
+body #welcome-section .intro .us-img-container {
   width: 500px;
   height: 500px;
   border-radius: 50%;
   margin: 50px auto;
   border: 10px double white;
 }
-body #info-section .intro .us-img-container .us-img {
+body #welcome-section .intro .us-img-container .us-img {
   height: auto;
   width: 100%;
   border-radius: 50%;

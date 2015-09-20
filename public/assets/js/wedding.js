@@ -786,7 +786,7 @@ $(document).ready(function(){
 var airbnbListings = $("#airbnb-listings");
 var hotelListings = $("#hotel-listings");
 
-  var hotelList = locations[hotels];
+
 
 
   // $.each(hotelList, function(index, hotel){
@@ -801,7 +801,7 @@ var hotelListings = $("#hotel-listings");
   // });
 
   hotelListings.on("click", function(){
-
+      var hotelList = locations[2].hotels;
 
     debugger;
   });
