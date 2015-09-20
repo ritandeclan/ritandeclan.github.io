@@ -157,7 +157,7 @@ $(document).ready(function(){
           [ [ 26.161493, -81.797102], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d87442-Reviews-Ramada_Naples-Naples_Florida.html"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
           [ [ 26.209492, -81.801649], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d224315-Reviews-Hilton_Naples-Naples_Florida.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
           [ [ 26.139215, -81.78242], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d249664-Reviews-Holiday_Inn_Express_Suites_Naples-Naples_Florida.html"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]],
-          [ [ 26.174960, -81.800199], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d80240-Reviews-BEST_WESTERN_Naples_Inn_Suites-Naples_Florida.html"], ["Best Western Naples Inn & Suites"], ["The Best Western Naples Inn & Suites, located just one mile from breathtaking Gulf Beaches and situated in the heart of beautiful Naples, is the ideal getaway for both romantic retreats and fun-filled family vacations."],["Most Affordable"]]
+          [ [ 26.174960, -81.800199], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d80240-Reviews-BEST_WESTERN_Naples_Inn_Suites-Naples_Florida.html"], ["Best Western Inn & Suites"], ["The Best Western Naples Inn & Suites, located just one mile from breathtaking Gulf Beaches and situated in the heart of beautiful Naples, is the ideal getaway for both romantic retreats and fun-filled family vacations."],["Most Affordable"]]
         ]
       },
       {
@@ -814,11 +814,36 @@ var airbnbList = locations[5].airbnb;
 
   });
 
+  var shownHotels = false;
+  var shownAirbnbs = false;
+
   hotelListings.on("click", function(){
+
+     if (shownHotels == false)   {
+        shownHotels = true;
+        $(this).find("h3").html("Hide Hotel Listings");
+     }
+     else if (shownHotels == true)
+     {
+        $(this).find("h3").html("Show Hotel Listings");
+        shownHotels = false;
+     }
+
     hotelsContainer.slideToggle();
   });
 
   airbnbListings.on("click", function(){
+
+     if (shownAirbnbs == false)   {
+        shownAirbnbs = true;
+        $(this).find("h3").html("Hide Airbnb Listings");
+     }
+     else if (shownAirbnbs == true)
+     {
+        $(this).find("h3").html("Show Airbnb Listings");
+        shownAirbnbs = false;
+     }
+
     airbnbContainer.slideToggle();
   });
 
