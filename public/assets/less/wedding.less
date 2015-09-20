@@ -1555,14 +1555,65 @@ body {
             font-size: 35px;
             margin-bottom: 20px;
 
+            &:hover {
+              color: white;
+            }
+
             a {
               font-size: 35px;
+
+              &:hover {
+                color: white;
+              }
             }
           }
         }
 
         .display-listings {
           margin-top: 25px;
+        }
+
+        .listings-container {
+          position: relative;
+          display: none;
+          text-align: left;
+          width: 350px;
+          margin: 0 auto;
+          padding: 10px 0;
+
+          .item {
+            margin: 15px 0;
+            .item-name {
+              text-decoration: none;
+              color: @deco-grey;
+              .body-font-bold();
+              font-size: 25px;
+              line-height: 30px;
+              margin: 10px auto;
+              padding: 0;
+              text-transform: uppercase;
+              .content-full-width();
+              position: relative;
+              display: inline;
+
+              &:hover {
+                color: @deco-light-pink;
+              }
+
+              &.tripadvisor,
+              &.airbnb {
+                color: white;
+                font-size: 18px;
+                line-height: 25px;
+
+                &:hover {
+                  color: @deco-grey;
+                }
+
+              }
+
+            }
+          }
         }
 
       }

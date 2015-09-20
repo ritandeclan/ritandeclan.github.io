@@ -154,10 +154,10 @@ $(document).ready(function(){
       {
         "hotels": [
           [ [ 26.211813, -81.810159], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d85227-Reviews-Naples_Grande_Beach_Resort-Naples_Florida.html"], ["Naples Bay Resort"], ["A warm, effortless level of hospitality greets you at Naples Grande Beach Resort. This inviting beach property sets the standard for treating guests and families to endless activities, incredible nearby sights, and an unmatched level of service and attention. Rediscover this unique luxury resort in Naples, Florida and indulge in a truly special getaway."],["Top-rated"]],
-          [ [ 26.161493, -81.797102], [ "http://www.naplesramada.com/"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
-          [ [ 26.209492, -81.801649], [ "http://www3.hilton.com/en/hotels/florida/hilton-naples-APFNHHF/index.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
-          [ [ 26.139215, -81.78242], [ "http://www.ihg.com/holidayinnexpress/hotels/us/en/naples/apfin/hoteldetail"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]],
-          [ [ 26.174960, -81.800199], [ "http://book.bestwestern.com/bestwestern/US/FL/Naples-hotels/BEST-WESTERN-Naples-Inn---Suites/Hotel-Overview.do?iata=00170230&propertyCode=10151&sob=TRIPHWS&cm_mmc=BL-_-TRIP-_-TRIPHWS-_-GENERAL"], ["Best Western Naples Inn & Suites"], ["The Best Western Naples Inn & Suites, located just one mile from breathtaking Gulf Beaches and situated in the heart of beautiful Naples, is the ideal getaway for both romantic retreats and fun-filled family vacations."],["Most Affordable"]]
+          [ [ 26.161493, -81.797102], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d87442-Reviews-Ramada_Naples-Naples_Florida.html"], ["Naples Ramada"], ["Located in the heart of Naples, close to shopping, dining, beaches and attractions, Ramada Naples is the perfect lodging choice for your Gulf Coast getaway."],["More Affordable"]],
+          [ [ 26.209492, -81.801649], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d224315-Reviews-Hilton_Naples-Naples_Florida.html"], ["Hilton Naples"], ["The Hilton Naples hotel’s central location is close to beautiful beaches as well as many attractions, entertainment destinations, shops, and restaurants."],["More Affordable"]],
+          [ [ 26.139215, -81.78242], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d249664-Reviews-Holiday_Inn_Express_Suites_Naples-Naples_Florida.html"], ["Holiday Inn Express & Suites"], ["Take time to unwind pool side on our large deck or refresh yourself in our heated, sparkling tropical pool or Jacuzzi. This award winning hotel is conveniently located within walking distance or a short drive to the pristine Gulf beaches and the historic Naples pier."],["Most Affordable"]],
+          [ [ 26.174960, -81.800199], [ "http://www.tripadvisor.com/Hotel_Review-g34467-d80240-Reviews-BEST_WESTERN_Naples_Inn_Suites-Naples_Florida.html"], ["Best Western Naples Inn & Suites"], ["The Best Western Naples Inn & Suites, located just one mile from breathtaking Gulf Beaches and situated in the heart of beautiful Naples, is the ideal getaway for both romantic retreats and fun-filled family vacations."],["Most Affordable"]]
         ]
       },
       {
@@ -786,24 +786,40 @@ $(document).ready(function(){
 var airbnbListings = $("#airbnb-listings");
 var hotelListings = $("#hotel-listings");
 
+var hotelsContainer = $("#hotel-container");
+var airbnbContainer = $("#airbnb-container");
 
+var hotelList = locations[2].hotels;
+var airbnbList = locations[5].airbnb;
 
+  $.each(hotelList, function(index, hotel){
 
-  // $.each(hotelList, function(index, hotel){
+    var hotelItem =
+    "<div class='item'>" +
+      "<a class='item-name' href='" + hotel[1][0] + "' target='_blank'>" + hotel[2][0] + "</a>" +
+    "</div>";
 
-  //   var hotelItem =
-  //   "<div class='hotel-item " + k + " " + k + "-item-" + i + "' data-clicked='nope'>" +
-  //     "<h3 class='item-name'>" + item[2][0] + "</h3>" +
-  //   "</div>";
+    hotelsContainer.append( hotelItem );
 
-  //   itemsContainer.append( attractionItem );
+  });
 
-  // });
+  $.each(airbnbList, function(index, airbnb){
+
+    var airbnbItem =
+    "<div class='item'>" +
+      "<a class='item-name' href='" + airbnb[1][0] + "' target='_blank'>" + airbnb[2][0] + "</a>" +
+    "</div>";
+
+    airbnbContainer.append( airbnbItem );
+
+  });
 
   hotelListings.on("click", function(){
-      var hotelList = locations[2].hotels;
+    hotelsContainer.slideToggle();
+  });
 
-    debugger;
+  airbnbListings.on("click", function(){
+    airbnbContainer.slideToggle();
   });
 
 });

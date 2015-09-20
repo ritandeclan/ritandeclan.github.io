@@ -1323,11 +1323,55 @@ body #staying-section .staying-container .message-item .intro-message.btwn {
   font-size: 35px;
   margin-bottom: 20px;
 }
+body #staying-section .staying-container .message-item .intro-message.btwn:hover {
+  color: white;
+}
 body #staying-section .staying-container .message-item .intro-message.btwn a {
   font-size: 35px;
 }
+body #staying-section .staying-container .message-item .intro-message.btwn a:hover {
+  color: white;
+}
 body #staying-section .staying-container .message-item .display-listings {
   margin-top: 25px;
+}
+body #staying-section .staying-container .message-item .listings-container {
+  position: relative;
+  display: none;
+  text-align: left;
+  width: 350px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+body #staying-section .staying-container .message-item .listings-container .item {
+  margin: 15px 0;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name {
+  text-decoration: none;
+  color: #656478;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name:hover {
+  color: #f7b7c7;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name.tripadvisor,
+body #staying-section .staying-container .message-item .listings-container .item .item-name.airbnb {
+  color: white;
+  font-size: 18px;
+  line-height: 25px;
+}
+body #staying-section .staying-container .message-item .listings-container .item .item-name.tripadvisor:hover,
+body #staying-section .staying-container .message-item .listings-container .item .item-name.airbnb:hover {
+  color: #656478;
 }
 body #what-to-do-section {
   background-color: #656478;
