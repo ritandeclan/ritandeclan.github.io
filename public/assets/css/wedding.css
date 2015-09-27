@@ -232,7 +232,26 @@ body #countdown-section .countdown-container {
   text-align: center;
   height: 200px;
 }
-body #countdown-section .countdown-container .unit {
+body #countdown-section .countdown-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #countdown-section .countdown-container .days-container,
+body #countdown-section .countdown-container .hours-container,
+body #countdown-section .countdown-container .minutes-container,
+body #countdown-section .countdown-container .seconds-container {
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+body #countdown-section .countdown-container .days-container .unit,
+body #countdown-section .countdown-container .hours-container .unit,
+body #countdown-section .countdown-container .minutes-container .unit,
+body #countdown-section .countdown-container .seconds-container .unit {
   color: #656478;
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
@@ -245,8 +264,10 @@ body #countdown-section .countdown-container .unit {
   position: relative;
   padding: 0 5px;
 }
-body #countdown-section .countdown-container .countdown,
-body #countdown-section .countdown-container .number {
+body #countdown-section .countdown-container .days-container .number,
+body #countdown-section .countdown-container .hours-container .number,
+body #countdown-section .countdown-container .minutes-container .number,
+body #countdown-section .countdown-container .seconds-container .number {
   color: white;
   font-family: 'delicious', cursive;
   font-weight: normal;
@@ -258,6 +279,14 @@ body #countdown-section .countdown-container .number {
   position: relative;
 }
 body #countdown-section .countdown-container .countdown {
+  color: white;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+  position: relative;
   display: block;
   margin-top: 0;
 }
@@ -1669,6 +1698,19 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
 }
 @media (max-width: 400px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
   body #header-section #mobile-menu {
     display: block;
   }
@@ -1701,5 +1743,80 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .welcome-link h3 a {
     width: 100%;
     padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body #welcome-section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+  }
+  body #welcome-section .intro .intro-message {
+    width: 90%;
+    font-size: 27px;
+    line-height: 34px;
+    margin: 25px auto 32px auto;
+  }
+  body #welcome-section .intro .intro-message.btwn {
+    width: 90%;
+  }
+  body #welcome-section .intro .standout-text {
+    font-size: 63px;
+    line-height: 63px;
+  }
+  body #countdown-section .countdown-container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+  body #countdown-section .countdown-container .countdown {
+    font-size: 84px;
+    line-height: 84px;
+  }
+  body #countdown-section .countdown-container .days-container,
+  body #countdown-section .countdown-container .hours-container,
+  body #countdown-section .countdown-container .minutes-container,
+  body #countdown-section .countdown-container .seconds-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  body #rsvp-section .form-container {
+    width: 90%;
+  }
+  body #rsvp-section .form-container .rsvp-message h3.rsvp {
+    font-size: 84px;
+    line-height: 64px;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container {
+    width: 100%;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container {
+    width: 100%;
+    padding: 0;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container.right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
+    margin: 0;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
+    width: 74%;
+    margin: 0 auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
+    width: 90%;
+    margin: 15px auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest .delete-guest-button {
+    float: none;
+    margin: 0 auto;
   }
 }
