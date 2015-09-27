@@ -151,6 +151,22 @@
   width: 900px;
 }
 
+.content-full-width-760() {
+  width: 600px;
+}
+
+.content-full-width-650() {
+  width: 500px;
+}
+
+.content-full-width-500() {
+  width: 300px;
+}
+
+.content-full-width-300() {
+  width: 100%;
+}
+
 // border mixins
 
 .double-border(@color) {
@@ -163,6 +179,10 @@
 
 .double-border-bottom(@color) {
   border-bottom: 6px double @color;
+}
+
+.double-border-top(@color) {
+  border-top: 6px double @color;
 }
 
 .double-border-left(@color) {
@@ -310,21 +330,66 @@ body {
     height: 50px;
     .double-border-bottom(white);
 
+    #mobile-menu {
+      position: relative;
+      display: none;
+      margin: 0 auto;
+      width: 20%;
+      text-align: center;
+      .body-font-bold();
+      padding: 15px 0;
+
+        h3 {
+          margin: 0;
+          position: relative;
+          display: block;
+          width: auto;
+          height: auto;
+          a {
+            display: block;
+            color: @deco-grey;
+            text-decoration: none;
+            position: block;
+            height: auto;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:hover {
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+
+    }
+
     .header-link-container {
 
       .body-font-bold();
       .content-full-width();
       margin: 0 auto;
       padding-top: 15px;
+      background-color: @deco-blue;
+      height: auto;
 
       .info-link,
       .rsvp-link,
       .map-link,
       .insta-gallery-link,
       .welcome-link {
+        background-color: @deco-blue;
+        position: relative;
+        display: block;
+
         h3 {
+          position: relative;
+          display: block;
+          background-color: @deco-blue;
           margin: 0;
           a {
+            position: relative;
+            display: block;
+            background-color: @deco-blue;
             color: @deco-grey;
             text-decoration: none;
             position: inline;
@@ -1914,5 +1979,63 @@ body {
       }
     }
   }
+
+  @media (max-width: 775px) {
+
+
+
+  }
+
+  @media (max-width: 400px) {
+
+
+    #header-section {
+
+
+
+      #mobile-menu {
+        display: block;
+      }
+
+      .header-link-container {
+        width: 100%;
+        display: none;
+        padding: 15px 0;
+        .double-border-bottom(white);
+        .double-border-top(white);
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+          float: none;
+          height: 34px;
+
+          h3 {
+            margin: 0;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
+        }
+
+      }
+    }
+
+
+  }
+
+
+
 
 }

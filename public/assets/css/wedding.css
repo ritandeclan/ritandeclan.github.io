@@ -55,18 +55,62 @@ body #header-section {
   height: 50px;
   border-bottom: 6px double white;
 }
+body #header-section #mobile-menu {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  padding: 15px 0;
+}
+body #header-section #mobile-menu h3 {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+}
+body #header-section #mobile-menu h3 a {
+  display: block;
+  color: #656478;
+  text-decoration: none;
+  position: block;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+body #header-section #mobile-menu h3 a:hover {
+  color: white;
+  cursor: pointer;
+}
 body #header-section .header-link-container {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   width: 900px;
   margin: 0 auto;
   padding-top: 15px;
+  background-color: #75d0bb;
+  height: auto;
+}
+body #header-section .header-link-container .info-link,
+body #header-section .header-link-container .rsvp-link,
+body #header-section .header-link-container .map-link,
+body #header-section .header-link-container .insta-gallery-link,
+body #header-section .header-link-container .welcome-link {
+  background-color: #75d0bb;
+  position: relative;
+  display: block;
 }
 body #header-section .header-link-container .info-link h3,
 body #header-section .header-link-container .rsvp-link h3,
 body #header-section .header-link-container .map-link h3,
 body #header-section .header-link-container .insta-gallery-link h3,
 body #header-section .header-link-container .welcome-link h3 {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
   margin: 0;
 }
 body #header-section .header-link-container .info-link h3 a,
@@ -74,6 +118,9 @@ body #header-section .header-link-container .rsvp-link h3 a,
 body #header-section .header-link-container .map-link h3 a,
 body #header-section .header-link-container .insta-gallery-link h3 a,
 body #header-section .header-link-container .welcome-link h3 a {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
   color: #656478;
   text-decoration: none;
   position: inline;
@@ -1619,5 +1666,40 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #map-section .map-container #map-canvas {
     width: 100%;
     border-top: 10px double white;
+  }
+}
+@media (max-width: 400px) {
+  body #header-section #mobile-menu {
+    display: block;
+  }
+  body #header-section .header-link-container {
+    width: 100%;
+    display: none;
+    padding: 15px 0;
+    border-bottom: 6px double white;
+    border-top: 6px double white;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    float: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
   }
 }

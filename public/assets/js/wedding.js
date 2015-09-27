@@ -847,4 +847,14 @@ var airbnbList = locations[5].airbnb;
     airbnbContainer.slideToggle();
   });
 
+  // Mobile Menu Open / Close
+
+  var mobileMenu = $("#mobile-menu");
+  var headerLinkContainer = $(".header-link-container");
+
+  mobileMenu.on("click", function(){
+    headerLinkContainer.slideToggle();
+    console.log("mobile menu clicked");
+  })
+
 });
