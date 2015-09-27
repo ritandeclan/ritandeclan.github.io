@@ -1819,4 +1819,36 @@ body #signature-section .signature-container .message .heart-container .heart {
     float: none;
     margin: 0 auto;
   }
+  body #card-section {
+    height: 192px;
+  }
+  body #card-section .card {
+    height: auto;
+    width: 2400px;
+  }
+  body #weather-section .weather-container {
+    width: 90%;
+  }
+  body #weather-section .weather-container .naples-weather {
+    float: none;
+    width: 100%;
+  }
+  body #weather-section .weather-container .naples-weather .message {
+    font-size: 27px;
+  }
+  body #weather-section .weather-container .naples-weather #naples-temp.message.italic.temp {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  body #weather-section .weather-container .your-weather {
+    float: none;
+    width: 100%;
+    border-top: 6px double white;
+    padding-top: 30px;
+    border-left: none;
+  }
+  body #weather-section .weather-container .your-weather #your-temp.message.italic.temp {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }

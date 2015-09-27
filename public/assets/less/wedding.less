@@ -2173,6 +2173,47 @@ body {
       }
     }
 
+    #card-section {
+      height: 192px;
+
+      .card {
+        height: auto;
+        width: 2400px;
+      }
+    }
+
+    #weather-section {
+      .weather-container {
+        width: 90%;
+        .naples-weather {
+          float: none;
+          width: 100%;
+          .message {
+            font-size: 27px;
+          }
+
+          #naples-temp.message.italic.temp {
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+        }
+
+       .your-weather {
+         float: none;
+         width: 100%;
+         .double-border-top(white);
+         padding-top: 30px;
+         border-left: none;
+
+         #your-temp.message.italic.temp {
+           font-size: 40px;
+           line-height: 40px;
+         }
+
+       }
+      }
+    }
 
   }
 
