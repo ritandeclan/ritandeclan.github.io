@@ -1851,4 +1851,23 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 40px;
     line-height: 40px;
   }
+  body #directions-section .directions-container {
+    width: 90%;
+  }
+  body #directions-section .directions-container .message-item .intro-message {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #staying-section .staying-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #staying-section .staying-container .message-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #staying-section .staying-container .message-item .intro-message {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
