@@ -1957,5 +1957,10 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
     width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  body #signature-section .signature-container {
+    width: 90%;
   }
 }
