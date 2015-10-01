@@ -1014,7 +1014,7 @@ body #map-section .map-container #map-item-description .item-description-contain
   font-weight: 700;
   line-height: 19px;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 15px;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
   font-family: 'delicious', cursive;
@@ -1747,6 +1747,9 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #welcome-section {
     padding: 90px 0 30px 0;
   }
+  body #welcome-section .intro {
+    padding: 0;
+  }
   body #welcome-section .intro .intro-lead {
     font-size: 84px;
     line-height: 84px;
@@ -1774,6 +1777,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 90%;
     margin: 0 auto;
     height: auto;
+    padding: 0;
   }
   body #countdown-section .countdown-container .countdown {
     font-size: 84px;
@@ -1828,6 +1832,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #weather-section .weather-container {
     width: 90%;
+    padding-bottom: 0;
   }
   body #weather-section .weather-container .naples-weather {
     float: none;
