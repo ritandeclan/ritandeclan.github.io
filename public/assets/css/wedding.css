@@ -1851,32 +1851,97 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 40px;
     line-height: 40px;
   }
+  body #staying-section .staying-container,
+  body #what-to-do-section .staying-container,
+  body #directions-section .staying-container,
+  body #staying-section .what-to-do-container,
+  body #what-to-do-section .what-to-do-container,
+  body #directions-section .what-to-do-container,
+  body #staying-section .directions-container,
+  body #what-to-do-section .directions-container,
   body #directions-section .directions-container {
     width: 90%;
+    margin: 0 auto;
   }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title,
+  body #staying-section .what-to-do-container .title,
+  body #what-to-do-section .what-to-do-container .title,
+  body #directions-section .what-to-do-container .title,
+  body #staying-section .directions-container .title,
+  body #what-to-do-section .directions-container .title,
+  body #directions-section .directions-container .title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #staying-section .staying-container .activity-ideas,
+  body #what-to-do-section .staying-container .activity-ideas,
+  body #directions-section .staying-container .activity-ideas,
+  body #staying-section .what-to-do-container .activity-ideas,
+  body #what-to-do-section .what-to-do-container .activity-ideas,
+  body #directions-section .what-to-do-container .activity-ideas,
+  body #staying-section .directions-container .activity-ideas,
+  body #what-to-do-section .directions-container .activity-ideas,
+  body #directions-section .directions-container .activity-ideas {
+    text-align: center;
+  }
+  body #staying-section .staying-container .message-item,
+  body #what-to-do-section .staying-container .message-item,
+  body #directions-section .staying-container .message-item,
+  body #staying-section .what-to-do-container .message-item,
+  body #what-to-do-section .what-to-do-container .message-item,
+  body #directions-section .what-to-do-container .message-item,
+  body #staying-section .directions-container .message-item,
+  body #what-to-do-section .directions-container .message-item,
+  body #directions-section .directions-container .message-item {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .intro-message,
+  body #what-to-do-section .staying-container .message-item .intro-message,
+  body #directions-section .staying-container .message-item .intro-message,
+  body #staying-section .what-to-do-container .message-item .intro-message,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message,
+  body #directions-section .what-to-do-container .message-item .intro-message,
+  body #staying-section .directions-container .message-item .intro-message,
+  body #what-to-do-section .directions-container .message-item .intro-message,
   body #directions-section .directions-container .message-item .intro-message {
-    width: 90%;
-    margin: 0 auto;
-  }
-  body #staying-section .staying-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  body #staying-section .staying-container .message-item {
-    width: 90%;
-  }
-  body #staying-section .staying-container .message-item .intro-message {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  body #staying-section .staying-container .message-item .intro-message.btwn {
-    width: 90%;
+  body #staying-section .staying-container .message-item .intro-message.btwn,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+  body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
+  body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #staying-section .directions-container .message-item .intro-message.btwn,
+  body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+  body #directions-section .directions-container .message-item .intro-message.btwn {
+    width: 100%;
   }
-  body #staying-section .staying-container .message-item .display-listings {
+  body #staying-section .staying-container .message-item .display-listings,
+  body #what-to-do-section .staying-container .message-item .display-listings,
+  body #directions-section .staying-container .message-item .display-listings,
+  body #staying-section .what-to-do-container .message-item .display-listings,
+  body #what-to-do-section .what-to-do-container .message-item .display-listings,
+  body #directions-section .what-to-do-container .message-item .display-listings,
+  body #staying-section .directions-container .message-item .display-listings,
+  body #what-to-do-section .directions-container .message-item .display-listings,
+  body #directions-section .directions-container .message-item .display-listings {
     width: 80%;
   }
-  body #staying-section .staying-container .message-item .listings-container {
-    width: 90%;
+  body #staying-section .staying-container .message-item .listings-container,
+  body #what-to-do-section .staying-container .message-item .listings-container,
+  body #directions-section .staying-container .message-item .listings-container,
+  body #staying-section .what-to-do-container .message-item .listings-container,
+  body #what-to-do-section .what-to-do-container .message-item .listings-container,
+  body #directions-section .what-to-do-container .message-item .listings-container,
+  body #staying-section .directions-container .message-item .listings-container,
+  body #what-to-do-section .directions-container .message-item .listings-container,
+  body #directions-section .directions-container .message-item .listings-container {
+    width: 100%;
+    text-align: center;
   }
 }

@@ -2215,39 +2215,37 @@ body {
       }
     }
 
-    #directions-section {
+    #staying-section,
+    #what-to-do-section,
+    #directions-section  {
+
+      .staying-container,
+      .what-to-do-container,
       .directions-container {
-        width: 90%;
-
-        .message-item {
-
-          .intro-message {
-            width: 90%;
-            margin: 0 auto;
-          }
-        }
-      }
-    }
-
-    #staying-section {
-      .staying-container {
         width: 90%;
         margin: 0 auto;
 
         .title {
+          font-size: 56px;
+          line-height: 56px;
+
 
         }
 
+        .activity-ideas {
+          text-align: center;
+        }
+
         .message-item {
-          width: 90%;
+          width: 100%;
 
           .intro-message {
-            width: 90%;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
 
             &.btwn {
-              width: 90%;
+              width: 100%;
             }
           }
 
@@ -2256,8 +2254,17 @@ body {
           }
 
           .listings-container {
-            width: 90%;
+            width: 100%;
+            text-align: center;
           }
+        }
+      }
+    }
+
+    #what-to-do-section {
+      .what-to-do-container {
+        .message-item {
+
         }
       }
     }
