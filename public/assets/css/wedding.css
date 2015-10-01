@@ -1684,20 +1684,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 75%;
   }
 }
-@media (max-width: 775px) {
-  body #map-section .map-container #map-item-description .item-description-container {
-    width: 100%;
-  }
-  body #map-section .map-container #map-legend {
-    width: 100%;
-    border-right: none;
-  }
-  body #map-section .map-container #map-canvas {
-    width: 100%;
-    border-top: 10px double white;
-  }
-}
-@media (max-width: 400px) {
+@media (max-width: 960px) {
   body #welcome-section,
   body #rsvp-section,
   body #map-section,
@@ -1711,23 +1698,25 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section {
     padding: 30px 0;
   }
-  body #header-section #mobile-menu {
-    display: block;
-  }
   body #header-section .header-link-container {
-    width: 100%;
-    display: none;
-    padding: 15px 0;
-    border-bottom: 6px double white;
-    border-top: 6px double white;
+    display: block;
+    position: relative;
+    width: 90%;
+    padding: 5px 0 0 0;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
   }
   body #header-section .header-link-container .info-link,
   body #header-section .header-link-container .rsvp-link,
   body #header-section .header-link-container .map-link,
   body #header-section .header-link-container .insta-gallery-link,
   body #header-section .header-link-container .welcome-link {
-    float: none;
     height: 34px;
+    width: 15%;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
   }
   body #header-section .header-link-container .info-link h3,
   body #header-section .header-link-container .rsvp-link h3,
@@ -1959,6 +1948,235 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #insta-gallery-section .insta-gallery-container #insta-gallery {
     width: 90%;
+    margin: 0 auto;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 43%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 775px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
+  body #header-section .header-link-container {
+    display: block;
+    position: relative;
+    width: 90%;
+    padding: 5px 0 0 0;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    height: 34px;
+    width: 15%;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 43%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  body #signature-section .signature-container {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
+  body #header-section #mobile-menu {
+    display: block;
+  }
+  body #header-section .header-link-container {
+    width: 100%;
+    display: none;
+    padding: 15px 0;
+    border-bottom: 6px double white;
+    border-top: 6px double white;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    float: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro {
+    padding: 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body #welcome-section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+  }
+  body #welcome-section .intro .intro-message {
+    width: 90%;
+    font-size: 27px;
+    line-height: 34px;
+    margin: 25px auto 32px auto;
+  }
+  body #welcome-section .intro .intro-message.btwn {
+    width: 90%;
+  }
+  body #welcome-section .intro .standout-text {
+    font-size: 63px;
+    line-height: 63px;
+  }
+  body #countdown-section .countdown-container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0;
+  }
+  body #countdown-section .countdown-container .countdown {
+    font-size: 84px;
+    line-height: 84px;
+  }
+  body #countdown-section .countdown-container .days-container,
+  body #countdown-section .countdown-container .hours-container,
+  body #countdown-section .countdown-container .minutes-container,
+  body #countdown-section .countdown-container .seconds-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  body #rsvp-section .form-container {
+    width: 90%;
+  }
+  body #rsvp-section .form-container .rsvp-message h3.rsvp {
+    font-size: 84px;
+    line-height: 64px;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container {
+    width: 100%;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container {
+    width: 100%;
+    padding: 0;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container.right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
+    margin: 0;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
+    width: 74%;
+    margin: 0 auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
+    width: 90%;
+    margin: 15px auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest .delete-guest-button {
+    float: none;
+    margin: 0 auto;
+  }
+  body #map-section .map-container #map-item-description .item-description-container {
+    width: 100%;
+  }
+  body #map-section .map-container #map-legend {
+    width: 100%;
+    border-right: none;
+  }
+  body #map-section .map-container #map-canvas {
+    width: 100%;
+    border-top: 10px double white;
+  }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+    margin: 0;
   }
   body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
     width: 100%;

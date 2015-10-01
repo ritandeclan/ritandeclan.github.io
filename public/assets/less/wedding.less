@@ -1971,35 +1971,401 @@ body {
     }
   }
 
-  @media (max-width: 775px) {
-    #map-section {
-      .map-container {
-        #map-item-description {
-          .item-description-container {
-            width: 100%;
+  @media (max-width: 960px) {
+
+    #welcome-section,
+    #rsvp-section,
+    #map-section,
+    #countdown-section,
+    #weather-section,
+    #insta-gallery-section,
+    #card-section,
+    #signature-section,
+    #directions-section,
+    #staying-section,
+    #what-to-do-section {
+
+      padding: 30px 0;
+
+    }
+
+
+    #header-section {
+
+      .header-link-container {
+        display: block;
+        position: relative;
+        width: 90%;
+        padding: 5px 0 0 0;
+        border-top: none;
+        border-bottom: none;
+        height: 34px;
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+         // float: none;
+          height: 34px;
+          width: 15%;
+          margin: 0 2%;
+          display: inline-block;
+          position: relative;
+
+          h3 {
+            margin: 0;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
           }
         }
 
-        #map-legend {
-          width: 100%;
-          border-right: none;
-        }
-        #map-canvas {
-          width: 100%;
-          border-top: 10px double white;
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
         }
 
       }
     }
+
+    #welcome-section {
+
+      padding: 90px 0 30px 0;
+
+      .intro {
+        padding: 0;
+
+        .intro-lead {
+
+          font-size: 84px;
+          line-height: 84px;
+          margin: 0 auto;
+        }
+
+        .us-img-container {
+          width: 250px;
+          height: 250px;
+          margin: 25px auto;
+        }
+
+        .intro-message {
+          width: 90%;
+          font-size: 27px;
+          line-height: 34px;
+          margin: 25px auto 32px auto;
+
+          &.btwn {
+            width: 90%;
+          }
+        }
+
+        .standout-text {
+          font-size: 63px;
+          line-height: 63px;
+        }
+      }
+    }
+
+     #countdown-section {
+      .countdown-container {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        padding: 0;
+
+        .countdown {
+          font-size: 84px;
+          line-height: 84px;
+        }
+
+        .days-container,
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    }
+
+    #rsvp-section {
+
+      .form-container {
+        width: 90%;
+
+        .rsvp-message {
+          h3.rsvp {
+            font-size: 84px;
+            line-height: 64px;
+          }
+        }
+
+        form#form-test {
+
+          .yes-no-container {
+            width: 100%;
+            .answer-btn-container {
+              width: 100%;
+              padding: 0;
+
+              &.right {
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .btn-container {
+            input.btn-submit {
+              margin: 0;
+            }
+          }
+
+          .accept-wrapper.yup {
+            .guest-section {
+              .guest-container {
+
+                p {
+                  width: 74%;
+                  margin: 0 auto;
+                }
+                .delete-guest {
+                  width: 90%;
+                  margin: 15px auto;
+                  .delete-guest-button {
+                    float: none;
+                    margin: 0 auto;
+                  }
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    #card-section {
+      height: 192px;
+
+      .card {
+        height: auto;
+        width: 2400px;
+      }
+    }
+
+    #weather-section {
+      .weather-container {
+        width: 90%;
+        padding-bottom: 0;
+
+        .naples-weather {
+          float: none;
+          width: 100%;
+          .message {
+            font-size: 27px;
+          }
+
+          #naples-temp.message.italic.temp {
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+        }
+
+       .your-weather {
+         float: none;
+         width: 100%;
+         .double-border-top(white);
+         padding-top: 30px;
+         border-left: none;
+
+         #your-temp.message.italic.temp {
+           font-size: 40px;
+           line-height: 40px;
+         }
+
+       }
+      }
+    }
+
+    #staying-section,
+    #what-to-do-section,
+    #directions-section  {
+
+      .staying-container,
+      .what-to-do-container,
+      .directions-container {
+        width: 90%;
+        margin: 0 auto;
+
+        .title {
+          font-size: 56px;
+          line-height: 56px;
+
+
+        }
+
+        .activity-ideas {
+          text-align: center;
+        }
+
+        .message-item {
+          width: 100%;
+
+          .intro-message {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.btwn {
+              width: 100%;
+            }
+          }
+
+          .display-listings {
+            width: 80%;
+          }
+
+          .listings-container {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+
+    #insta-gallery-section {
+
+      .insta-gallery-container {
+        width: 90%;
+        .gallery-title {
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: 0;
+        }
+        #insta-gallery {
+          width: 90%;
+          margin: 0 auto;
+          .instas {
+            width: 43%;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+    }
+
   }
 
   @media (max-width: 775px) {
 
+    #welcome-section,
+    #rsvp-section,
+    #map-section,
+    #countdown-section,
+    #weather-section,
+    #insta-gallery-section,
+    #card-section,
+    #signature-section,
+    #directions-section,
+    #staying-section,
+    #what-to-do-section {
 
+      padding: 30px 0;
+
+    }
+
+
+    #header-section {
+
+      .header-link-container {
+        display: block;
+        position: relative;
+        width: 90%;
+        padding: 5px 0 0 0;
+        border-top: none;
+        border-bottom: none;
+        height: 34px;
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+         // float: none;
+          height: 34px;
+          width: 15%;
+          margin: 0 2%;
+          display: inline-block;
+          position: relative;
+
+          h3 {
+            margin: 0;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
+        }
+
+      }
+    }
+
+    #welcome-section {
+
+      padding: 90px 0 30px 0;
+
+    }
+
+
+    #insta-gallery-section {
+
+      .insta-gallery-container {
+        width: 90%;
+        .gallery-title {
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: 0;
+        }
+        #insta-gallery {
+          width: 90%;
+          margin: 0 auto;
+          .instas {
+            width: 43%;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+    }
+
+    #signature-section {
+      .signature-container {
+        width: 90%;
+      }
+    }
 
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
 
     #welcome-section,
     #rsvp-section,
@@ -2177,93 +2543,23 @@ body {
       }
     }
 
-    #card-section {
-      height: 192px;
-
-      .card {
-        height: auto;
-        width: 2400px;
-      }
-    }
-
-    #weather-section {
-      .weather-container {
-        width: 90%;
-        padding-bottom: 0;
-
-        .naples-weather {
-          float: none;
-          width: 100%;
-          .message {
-            font-size: 27px;
-          }
-
-          #naples-temp.message.italic.temp {
-            font-size: 40px;
-            line-height: 40px;
-          }
-
-        }
-
-       .your-weather {
-         float: none;
-         width: 100%;
-         .double-border-top(white);
-         padding-top: 30px;
-         border-left: none;
-
-         #your-temp.message.italic.temp {
-           font-size: 40px;
-           line-height: 40px;
-         }
-
-       }
-      }
-    }
-
-    #staying-section,
-    #what-to-do-section,
-    #directions-section  {
-
-      .staying-container,
-      .what-to-do-container,
-      .directions-container {
-        width: 90%;
-        margin: 0 auto;
-
-        .title {
-          font-size: 56px;
-          line-height: 56px;
-
-
-        }
-
-        .activity-ideas {
-          text-align: center;
-        }
-
-        .message-item {
-          width: 100%;
-
-          .intro-message {
+    #map-section {
+    .map-container {
+        #map-item-description {
+          .item-description-container {
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-
-            &.btwn {
-              width: 100%;
-            }
-          }
-
-          .display-listings {
-            width: 80%;
-          }
-
-          .listings-container {
-            width: 100%;
-            text-align: center;
           }
         }
+
+        #map-legend {
+          width: 100%;
+          border-right: none;
+        }
+        #map-canvas {
+          width: 100%;
+          border-top: 10px double white;
+        }
+
       }
     }
 
@@ -2278,6 +2574,7 @@ body {
         }
         #insta-gallery {
           width: 90%;
+          margin: 0;
           .instas {
             width: 100%;
             margin-left: 8px;
