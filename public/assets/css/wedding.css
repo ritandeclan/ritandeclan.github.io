@@ -1944,4 +1944,18 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     text-align: center;
   }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 100%;
+  }
 }
