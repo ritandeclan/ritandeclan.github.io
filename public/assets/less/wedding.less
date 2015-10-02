@@ -2411,7 +2411,8 @@ body {
       .header-link-container {
         width: 100%;
         display: none;
-        padding: 15px 0;
+        padding: 15px 0 30px 0;
+        height: auto;
         .double-border-bottom(white);
         .double-border-top(white);
 
@@ -2420,8 +2421,12 @@ body {
         .map-link,
         .insta-gallery-link,
         .welcome-link {
-          float: none;
-          height: 34px;
+
+          width: 100%;
+          margin: 0;
+          display: block;
+          position: relative;
+          font-size: 13.5px;
 
           h3 {
             margin: 0;

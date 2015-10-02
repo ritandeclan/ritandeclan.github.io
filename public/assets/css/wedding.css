@@ -2050,7 +2050,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container {
     width: 100%;
     display: none;
-    padding: 15px 0;
+    padding: 15px 0 30px 0;
+    height: auto;
     border-bottom: 6px double white;
     border-top: 6px double white;
   }
@@ -2059,8 +2060,11 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .map-link,
   body #header-section .header-link-container .insta-gallery-link,
   body #header-section .header-link-container .welcome-link {
-    float: none;
-    height: 34px;
+    width: 100%;
+    margin: 0;
+    display: block;
+    position: relative;
+    font-size: 13.5px;
   }
   body #header-section .header-link-container .info-link h3,
   body #header-section .header-link-container .rsvp-link h3,

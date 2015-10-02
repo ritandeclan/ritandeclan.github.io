@@ -852,9 +852,48 @@ var airbnbList = locations[5].airbnb;
   var mobileMenu = $("#mobile-menu");
   var headerLinkContainer = $(".header-link-container");
 
+  var open = false;
+
+  removeWindowListeners = function() {
+
+    $(document).off("mouseup.document");
+
+  }
+
+  clickOutsideClose = function() {
+
+      $(document).on("mouseup.document", function (e) {
+
+        if ($(window).width() < 650 && open && !headerLinkContainer.is(e.target) // if the target of the click isn't the container...
+            && headerLinkContainer.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            headerLinkContainer.slideToggle();
+            open = false;
+            removeWindowListeners();
+        }
+      });
+  }
+
   mobileMenu.on("click", function(){
     headerLinkContainer.slideToggle();
-    console.log("mobile menu clicked");
+    if (!open) {
+      open = true;
+      clickOutsideClose();
+    } else {
+      open = false;
+      removeWindowListeners();
+    }
   })
+
+
+  $(window).on('resize', function () {
+
+    if ($(window).width() > 650) {
+        headerLinkContainer.show();
+    }
+
+  });
+
+
 
 });
