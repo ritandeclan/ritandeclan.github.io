@@ -1854,7 +1854,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .directions-container,
   body #what-to-do-section .directions-container,
   body #directions-section .directions-container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
   }
   body #staying-section .staying-container .title,
@@ -1915,17 +1915,6 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #directions-section .directions-container .message-item .intro-message.btwn {
     width: 100%;
   }
-  body #staying-section .staying-container .message-item .display-listings,
-  body #what-to-do-section .staying-container .message-item .display-listings,
-  body #directions-section .staying-container .message-item .display-listings,
-  body #staying-section .what-to-do-container .message-item .display-listings,
-  body #what-to-do-section .what-to-do-container .message-item .display-listings,
-  body #directions-section .what-to-do-container .message-item .display-listings,
-  body #staying-section .directions-container .message-item .display-listings,
-  body #what-to-do-section .directions-container .message-item .display-listings,
-  body #directions-section .directions-container .message-item .display-listings {
-    width: 80%;
-  }
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
   body #directions-section .staying-container .message-item .listings-container,
@@ -1937,6 +1926,13 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #directions-section .directions-container .message-item .listings-container {
     width: 100%;
     text-align: center;
+  }
+  body #staying-section {
+    padding: 50px 0;
+  }
+  body #staying-section .staying-container .title {
+    font-size: 56px;
+    line-height: 56px;
   }
   body #insta-gallery-section .insta-gallery-container {
     width: 90%;
@@ -1989,6 +1985,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     margin: 0 2%;
     display: inline-block;
     position: relative;
+    font-size: 13.5px;
   }
   body #header-section .header-link-container .info-link h3,
   body #header-section .header-link-container .rsvp-link h3,
@@ -1996,6 +1993,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .insta-gallery-link h3,
   body #header-section .header-link-container .welcome-link h3 {
     margin: 0;
+    padding-top: 2px;
   }
   body #header-section .header-link-container .info-link h3 a,
   body #header-section .header-link-container .rsvp-link h3 a,
@@ -2007,6 +2005,9 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #welcome-section {
     padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 70px;
   }
   body #insta-gallery-section .insta-gallery-container {
     width: 90%;
@@ -2029,7 +2030,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 90%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   body #welcome-section,
   body #rsvp-section,
   body #map-section,
@@ -2166,6 +2167,123 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     border-top: 10px double white;
   }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title,
+  body #staying-section .what-to-do-container .title,
+  body #what-to-do-section .what-to-do-container .title,
+  body #directions-section .what-to-do-container .title,
+  body #staying-section .directions-container .title,
+  body #what-to-do-section .directions-container .title,
+  body #directions-section .directions-container .title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #staying-section .staying-container .activity-ideas,
+  body #what-to-do-section .staying-container .activity-ideas,
+  body #directions-section .staying-container .activity-ideas,
+  body #staying-section .what-to-do-container .activity-ideas,
+  body #what-to-do-section .what-to-do-container .activity-ideas,
+  body #directions-section .what-to-do-container .activity-ideas,
+  body #staying-section .directions-container .activity-ideas,
+  body #what-to-do-section .directions-container .activity-ideas,
+  body #directions-section .directions-container .activity-ideas {
+    text-align: center;
+  }
+  body #staying-section .staying-container .message-item,
+  body #what-to-do-section .staying-container .message-item,
+  body #directions-section .staying-container .message-item,
+  body #staying-section .what-to-do-container .message-item,
+  body #what-to-do-section .what-to-do-container .message-item,
+  body #directions-section .what-to-do-container .message-item,
+  body #staying-section .directions-container .message-item,
+  body #what-to-do-section .directions-container .message-item,
+  body #directions-section .directions-container .message-item {
+    width: 100%;
+    margin-top: 42px;
+  }
+  body #staying-section .staying-container .message-item .activity-ideas,
+  body #what-to-do-section .staying-container .message-item .activity-ideas,
+  body #directions-section .staying-container .message-item .activity-ideas,
+  body #staying-section .what-to-do-container .message-item .activity-ideas,
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas,
+  body #directions-section .what-to-do-container .message-item .activity-ideas,
+  body #staying-section .directions-container .message-item .activity-ideas,
+  body #what-to-do-section .directions-container .message-item .activity-ideas,
+  body #directions-section .directions-container .message-item .activity-ideas {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .intro-message,
+  body #what-to-do-section .staying-container .message-item .intro-message,
+  body #directions-section .staying-container .message-item .intro-message,
+  body #staying-section .what-to-do-container .message-item .intro-message,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message,
+  body #directions-section .what-to-do-container .message-item .intro-message,
+  body #staying-section .directions-container .message-item .intro-message,
+  body #what-to-do-section .directions-container .message-item .intro-message,
+  body #directions-section .directions-container .message-item .intro-message {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body #staying-section .staying-container .message-item .intro-message.btwn,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+  body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
+  body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #staying-section .directions-container .message-item .intro-message.btwn,
+  body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+  body #directions-section .directions-container .message-item .intro-message.btwn {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .display-listings,
+  body #what-to-do-section .staying-container .message-item .display-listings,
+  body #directions-section .staying-container .message-item .display-listings,
+  body #staying-section .what-to-do-container .message-item .display-listings,
+  body #what-to-do-section .what-to-do-container .message-item .display-listings,
+  body #directions-section .what-to-do-container .message-item .display-listings,
+  body #staying-section .directions-container .message-item .display-listings,
+  body #what-to-do-section .directions-container .message-item .display-listings,
+  body #directions-section .directions-container .message-item .display-listings {
+    width: 80%;
+  }
+  body #staying-section .staying-container .message-item .listings-container,
+  body #what-to-do-section .staying-container .message-item .listings-container,
+  body #directions-section .staying-container .message-item .listings-container,
+  body #staying-section .what-to-do-container .message-item .listings-container,
+  body #what-to-do-section .what-to-do-container .message-item .listings-container,
+  body #directions-section .what-to-do-container .message-item .listings-container,
+  body #staying-section .directions-container .message-item .listings-container,
+  body #what-to-do-section .directions-container .message-item .listings-container,
+  body #directions-section .directions-container .message-item .listings-container {
+    width: 100%;
+    text-align: center;
+  }
+  body #staying-section .staying-container,
+  body #what-to-do-section .staying-container,
+  body #directions-section .staying-container {
+    margin-top: 12px;
+  }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title {
+    margin-bottom: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item {
+    margin-top: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .title {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+    margin: 30px auto;
+  }
+  body #insta-gallery-section {
+    padding-top: 50px;
+  }
   body #insta-gallery-section .insta-gallery-container {
     width: 90%;
   }
@@ -2173,6 +2291,9 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 64px;
     line-height: 64px;
     margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
+    padding: 0;
   }
   body #insta-gallery-section .insta-gallery-container #insta-gallery {
     width: 90%;
@@ -2182,6 +2303,9 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
+  }
+  body #signature-section {
+    padding: 20px 0;
   }
   body #signature-section .signature-container {
     width: 90%;
