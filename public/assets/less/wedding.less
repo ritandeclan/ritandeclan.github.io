@@ -439,6 +439,7 @@ body {
     .intro {
       //.content-full-width();
       width: 90%;
+      max-width: 1500px;
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -1287,6 +1288,7 @@ body {
 
     .map-container {
       width: 90%;
+      max-width: 1500px;
       .double-border(white);
       height: auto;
       margin: 0 auto;
@@ -1947,6 +1949,14 @@ body {
       }
     }
 
+  }
+
+  @media (min-width: 1500px) {
+    #insta-gallery-section {
+      .insta-gallery-container {
+        width: 90%;
+      }
+    }
   }
 
   @media (max-width: 1115px) {

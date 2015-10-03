@@ -162,6 +162,7 @@ body #welcome-section {
 }
 body #welcome-section .intro {
   width: 90%;
+  max-width: 1500px;
   height: auto;
   background-color: transparent;
   margin: 0 auto;
@@ -981,6 +982,7 @@ body #map-section {
 }
 body #map-section .map-container {
   width: 90%;
+  max-width: 1500px;
   border: 10px double white;
   height: auto;
   margin: 0 auto;
@@ -1672,6 +1674,11 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   100% {
     font-size: 16px;
+  }
+}
+@media (min-width: 1500px) {
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
   }
 }
 @media (max-width: 1115px) {
