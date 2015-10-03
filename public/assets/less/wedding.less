@@ -151,6 +151,22 @@
   width: 900px;
 }
 
+.content-full-width-760() {
+  width: 600px;
+}
+
+.content-full-width-650() {
+  width: 500px;
+}
+
+.content-full-width-500() {
+  width: 300px;
+}
+
+.content-full-width-300() {
+  width: 100%;
+}
+
 // border mixins
 
 .double-border(@color) {
@@ -163,6 +179,10 @@
 
 .double-border-bottom(@color) {
   border-bottom: 6px double @color;
+}
+
+.double-border-top(@color) {
+  border-top: 6px double @color;
 }
 
 .double-border-left(@color) {
@@ -310,21 +330,66 @@ body {
     height: 50px;
     .double-border-bottom(white);
 
+    #mobile-menu {
+      position: relative;
+      display: none;
+      margin: 0 auto;
+      width: 20%;
+      text-align: center;
+      .body-font-bold();
+      padding: 15px 0;
+
+        h3 {
+          margin: 0;
+          position: relative;
+          display: block;
+          width: auto;
+          height: auto;
+          a {
+            display: block;
+            color: @deco-grey;
+            text-decoration: none;
+            position: block;
+            height: auto;
+            text-align: center;
+            text-transform: uppercase;
+
+            &:hover {
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+
+    }
+
     .header-link-container {
 
       .body-font-bold();
       .content-full-width();
       margin: 0 auto;
       padding-top: 15px;
+      background-color: @deco-blue;
+      height: auto;
 
       .info-link,
       .rsvp-link,
       .map-link,
       .insta-gallery-link,
       .welcome-link {
+        background-color: @deco-blue;
+        position: relative;
+        display: block;
+
         h3 {
+          position: relative;
+          display: block;
+          background-color: @deco-blue;
           margin: 0;
           a {
+            position: relative;
+            display: block;
+            background-color: @deco-blue;
             color: @deco-grey;
             text-decoration: none;
             position: inline;
@@ -374,6 +439,7 @@ body {
     .intro {
       //.content-full-width();
       width: 90%;
+      max-width: 1500px;
       height: auto;
       background-color: transparent;
       margin: 0 auto;
@@ -454,22 +520,34 @@ body {
       color: white;
       text-align: center;
       height: 200px;
+      .cf();
 
-      .unit {
-        .medium-text-uppercase();
-        display: inline;
+      .days-container,
+      .hours-container,
+      .minutes-container,
+      .seconds-container {
         position: relative;
-        padding: 0 5px;
-      }
+        display: inline;
+        float: left;
+        margin-left: 10px;
 
-      .countdown,
-      .number {
-        .large-text();
-        display: inline;
-        position: relative;
+        .unit {
+          .medium-text-uppercase();
+          display: inline;
+          position: relative;
+          padding: 0 5px;
+        }
+
+        .number {
+          .large-text();
+          display: inline;
+          position: relative;
+        }
       }
 
       .countdown {
+        .large-text();
+        position: relative;
         display: block;
         margin-top: 0;
       }
@@ -1210,6 +1288,7 @@ body {
 
     .map-container {
       width: 90%;
+      max-width: 1500px;
       .double-border(white);
       height: auto;
       margin: 0 auto;
@@ -1230,13 +1309,14 @@ body {
             .content-full-width();
             margin: 0 auto;
             padding: 15px 0;
+
             .item-name {
 
               margin: 0 auto;
               .body-font-bold();
               line-height: 19px;
               text-transform: uppercase;
-              padding: 15px 0;
+              padding: 15px;
 
               &.intro {
                 .delicious();
@@ -1871,6 +1951,14 @@ body {
 
   }
 
+  @media (min-width: 1500px) {
+    #insta-gallery-section {
+      .insta-gallery-container {
+        width: 90%;
+      }
+    }
+  }
+
   @media (max-width: 1115px) {
     #map-section {
       .map-container {
@@ -1893,9 +1981,603 @@ body {
     }
   }
 
+  @media (max-width: 960px) {
+
+    #welcome-section,
+    #rsvp-section,
+    #map-section,
+    #countdown-section,
+    #weather-section,
+    #insta-gallery-section,
+    #card-section,
+    #signature-section,
+    #directions-section,
+    #staying-section,
+    #what-to-do-section {
+
+      padding: 30px 0;
+
+    }
+
+
+    #header-section {
+
+      .header-link-container {
+        display: block;
+        position: relative;
+        width: 90%;
+        padding: 5px 0 0 0;
+        border-top: none;
+        border-bottom: none;
+        height: 34px;
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+         // float: none;
+          height: 34px;
+          width: 15%;
+          margin: 0 2%;
+          display: inline-block;
+          position: relative;
+
+          h3 {
+            margin: 0;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
+        }
+
+      }
+    }
+
+    #welcome-section {
+
+      padding: 90px 0 30px 0;
+
+      .intro {
+        padding: 0;
+
+        .intro-lead {
+
+          font-size: 84px;
+          line-height: 84px;
+          margin: 0 auto;
+        }
+
+        .us-img-container {
+          width: 250px;
+          height: 250px;
+          margin: 25px auto;
+        }
+
+        .intro-message {
+          width: 90%;
+          font-size: 27px;
+          line-height: 34px;
+          margin: 25px auto 32px auto;
+
+          &.btwn {
+            width: 90%;
+          }
+        }
+
+        .standout-text {
+          font-size: 63px;
+          line-height: 63px;
+        }
+      }
+    }
+
+     #countdown-section {
+      .countdown-container {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        padding: 0;
+
+        .countdown {
+          font-size: 84px;
+          line-height: 84px;
+        }
+
+        .days-container,
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    }
+
+    #rsvp-section {
+
+      .form-container {
+        width: 90%;
+
+        .rsvp-message {
+          h3.rsvp {
+            font-size: 84px;
+            line-height: 64px;
+          }
+        }
+
+        form#form-test {
+
+          .yes-no-container {
+            width: 100%;
+            .answer-btn-container {
+              width: 100%;
+              padding: 0;
+
+              &.right {
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .btn-container {
+            input.btn-submit {
+              margin: 0;
+            }
+          }
+
+          .accept-wrapper.yup {
+            .guest-section {
+              .guest-container {
+
+                p {
+                  width: 74%;
+                  margin: 0 auto;
+                }
+                .delete-guest {
+                  width: 90%;
+                  margin: 15px auto;
+                  .delete-guest-button {
+                    float: none;
+                    margin: 0 auto;
+                  }
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    #card-section {
+      height: 192px;
+
+      .card {
+        height: auto;
+        width: 2400px;
+      }
+    }
+
+    #weather-section {
+      .weather-container {
+        width: 90%;
+        padding-bottom: 0;
+
+        .naples-weather {
+          float: none;
+          width: 100%;
+          .message {
+            font-size: 27px;
+          }
+
+          #naples-temp.message.italic.temp {
+            font-size: 40px;
+            line-height: 40px;
+          }
+
+        }
+
+       .your-weather {
+         float: none;
+         width: 100%;
+         .double-border-top(white);
+         padding-top: 30px;
+         border-left: none;
+
+         #your-temp.message.italic.temp {
+           font-size: 40px;
+           line-height: 40px;
+         }
+
+       }
+      }
+    }
+
+    #staying-section,
+    #what-to-do-section,
+    #directions-section  {
+
+      .staying-container,
+      .what-to-do-container,
+      .directions-container {
+        width: 70%;
+        margin: 0 auto;
+
+        .title {
+          font-size: 56px;
+          line-height: 56px;
+
+
+        }
+
+        .activity-ideas {
+          text-align: center;
+        }
+
+        .message-item {
+          width: 100%;
+
+          .intro-message {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.btwn {
+              width: 100%;
+            }
+          }
+
+          .listings-container {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    #staying-section  {
+
+      padding: 50px 0;
+
+      .staying-container {
+
+        .title {
+          font-size: 56px;
+          line-height: 56px;
+
+        }
+      }
+
+    }
+
+
+    #insta-gallery-section {
+
+      .insta-gallery-container {
+        width: 90%;
+        .gallery-title {
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: 0;
+        }
+        #insta-gallery {
+          width: 90%;
+          margin: 0 auto;
+          .instas {
+            width: 43%;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+    }
+
+  }
+
   @media (max-width: 775px) {
+
+    #welcome-section,
+    #rsvp-section,
+    #map-section,
+    #countdown-section,
+    #weather-section,
+    #insta-gallery-section,
+    #card-section,
+    #signature-section,
+    #directions-section,
+    #staying-section,
+    #what-to-do-section {
+
+      padding: 30px 0;
+
+    }
+
+
+    #header-section {
+
+      .header-link-container {
+        display: block;
+        position: relative;
+        width: 90%;
+        padding: 5px 0 0 0;
+        border-top: none;
+        border-bottom: none;
+        height: 34px;
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+         // float: none;
+          height: 34px;
+          width: 15%;
+          margin: 0 2%;
+          display: inline-block;
+          position: relative;
+          font-size: 13.5px;
+
+          h3 {
+            margin: 0;
+            padding-top: 2px;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
+        }
+
+      }
+    }
+
+    #welcome-section {
+
+      padding: 90px 0 30px 0;
+
+      .intro {
+        .intro-lead {
+          font-size: 70px;
+        }
+      }
+
+    }
+
+    #insta-gallery-section {
+
+      .insta-gallery-container {
+        width: 90%;
+        .gallery-title {
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: 0;
+        }
+        #insta-gallery {
+          width: 90%;
+          margin: 0 auto;
+          .instas {
+            width: 43%;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+    }
+
+    #signature-section {
+      .signature-container {
+        width: 90%;
+      }
+    }
+
+  }
+
+  @media (max-width: 650px) {
+
+    #welcome-section,
+    #rsvp-section,
+    #map-section,
+    #countdown-section,
+    #weather-section,
+    #insta-gallery-section,
+    #card-section,
+    #signature-section,
+    #directions-section,
+    #staying-section,
+    #what-to-do-section {
+
+      padding: 30px 0;
+
+    }
+
+
+    #header-section {
+
+      #mobile-menu {
+        display: block;
+      }
+
+      .header-link-container {
+        width: 100%;
+        display: none;
+        padding: 15px 0 30px 0;
+        height: auto;
+        .double-border-bottom(white);
+        .double-border-top(white);
+
+        .info-link,
+        .rsvp-link,
+        .map-link,
+        .insta-gallery-link,
+        .welcome-link {
+
+          width: 100%;
+          margin: 0;
+          display: block;
+          position: relative;
+          font-size: 13.5px;
+
+          h3 {
+            margin: 0;
+            a {
+              width: 100%;
+              padding-top: 10px;
+            }
+          }
+        }
+
+        .insta-gallery-link {
+          h3 {
+            a {
+            }
+          }
+
+        }
+
+      }
+    }
+
+    #welcome-section {
+
+      padding: 90px 0 30px 0;
+
+      .intro {
+        padding: 0;
+
+        .intro-lead {
+
+          font-size: 84px;
+          line-height: 84px;
+          margin: 0 auto;
+        }
+
+        .us-img-container {
+          width: 250px;
+          height: 250px;
+          margin: 25px auto;
+        }
+
+        .intro-message {
+          width: 90%;
+          font-size: 27px;
+          line-height: 34px;
+          margin: 25px auto 32px auto;
+
+          &.btwn {
+            width: 90%;
+          }
+        }
+
+        .standout-text {
+          font-size: 63px;
+          line-height: 63px;
+        }
+      }
+    }
+
+    #countdown-section {
+      .countdown-container {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        padding: 0;
+
+        .countdown {
+          font-size: 84px;
+          line-height: 84px;
+        }
+
+        .days-container,
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    }
+
+    #rsvp-section {
+
+      .form-container {
+        width: 90%;
+
+        .rsvp-message {
+          h3.rsvp {
+            font-size: 84px;
+            line-height: 64px;
+          }
+        }
+
+        form#form-test {
+
+          .yes-no-container {
+            width: 100%;
+            .answer-btn-container {
+              width: 100%;
+              padding: 0;
+
+              &.right {
+                margin-left: 0;
+                margin-top: 10px;
+              }
+            }
+          }
+
+          .btn-container {
+            input.btn-submit {
+              margin: 0;
+            }
+          }
+
+          .accept-wrapper.yup {
+            .guest-section {
+              .guest-container {
+
+                p {
+                  width: 74%;
+                  margin: 0 auto;
+                }
+                .delete-guest {
+                  width: 90%;
+                  margin: 15px auto;
+                  .delete-guest-button {
+                    float: none;
+                    margin: 0 auto;
+                  }
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
     #map-section {
-      .map-container {
+    .map-container {
         #map-item-description {
           .item-description-container {
             width: 100%;
@@ -1913,6 +2595,120 @@ body {
 
       }
     }
+
+    #staying-section,
+    #what-to-do-section,
+    #directions-section  {
+
+      .staying-container,
+      .what-to-do-container,
+      .directions-container {
+
+        .title {
+          font-size: 56px;
+          line-height: 56px;
+
+
+        }
+
+        .activity-ideas {
+          text-align: center;
+        }
+
+        .message-item {
+          width: 100%;
+          margin-top: 42px;
+
+          .activity-ideas {
+            width: 100%;
+          }
+
+          .intro-message {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.btwn {
+              width: 100%;
+            }
+          }
+
+          .display-listings {
+            width: 80%;
+          }
+
+          .listings-container {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      .staying-container {
+        margin-top: 12px;
+        .title {
+          margin-bottom: 25px;
+        }
+      }
+
+    }
+
+    #what-to-do-section {
+      .what-to-do-container {
+        .message-item {
+          margin-top: 25px;
+          .title {
+            font-size: 48px;
+            line-height: 50px;
+            margin-bottom: 30px;
+          }
+
+          .intro-message {
+            &.btwn {
+              margin: 30px auto;
+            }
+          }
+        }
+      }
+    }
+
+    #insta-gallery-section {
+      padding-top: 50px;
+
+      .insta-gallery-container {
+        width: 90%;
+        .gallery-title {
+          font-size: 64px;
+          line-height: 64px;
+          margin-bottom: 0;
+        }
+
+        .gallery-message {
+          .gallery-instructions {
+            padding: 0;
+          }
+        }
+        #insta-gallery {
+          width: 90%;
+          margin: 0;
+          .instas {
+            width: 100%;
+            margin-left: 8px;
+            margin-right: 8px;
+          }
+
+        }
+      }
+    }
+
+    #signature-section {
+      padding: 20px 0;
+      .signature-container {
+        width: 90%;
+      }
+    }
+
   }
+
 
 }

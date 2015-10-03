@@ -55,18 +55,62 @@ body #header-section {
   height: 50px;
   border-bottom: 6px double white;
 }
+body #header-section #mobile-menu {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  padding: 15px 0;
+}
+body #header-section #mobile-menu h3 {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+}
+body #header-section #mobile-menu h3 a {
+  display: block;
+  color: #656478;
+  text-decoration: none;
+  position: block;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+body #header-section #mobile-menu h3 a:hover {
+  color: white;
+  cursor: pointer;
+}
 body #header-section .header-link-container {
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
   width: 900px;
   margin: 0 auto;
   padding-top: 15px;
+  background-color: #75d0bb;
+  height: auto;
+}
+body #header-section .header-link-container .info-link,
+body #header-section .header-link-container .rsvp-link,
+body #header-section .header-link-container .map-link,
+body #header-section .header-link-container .insta-gallery-link,
+body #header-section .header-link-container .welcome-link {
+  background-color: #75d0bb;
+  position: relative;
+  display: block;
 }
 body #header-section .header-link-container .info-link h3,
 body #header-section .header-link-container .rsvp-link h3,
 body #header-section .header-link-container .map-link h3,
 body #header-section .header-link-container .insta-gallery-link h3,
 body #header-section .header-link-container .welcome-link h3 {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
   margin: 0;
 }
 body #header-section .header-link-container .info-link h3 a,
@@ -74,6 +118,9 @@ body #header-section .header-link-container .rsvp-link h3 a,
 body #header-section .header-link-container .map-link h3 a,
 body #header-section .header-link-container .insta-gallery-link h3 a,
 body #header-section .header-link-container .welcome-link h3 a {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
   color: #656478;
   text-decoration: none;
   position: inline;
@@ -115,6 +162,7 @@ body #welcome-section {
 }
 body #welcome-section .intro {
   width: 90%;
+  max-width: 1500px;
   height: auto;
   background-color: transparent;
   margin: 0 auto;
@@ -185,7 +233,26 @@ body #countdown-section .countdown-container {
   text-align: center;
   height: 200px;
 }
-body #countdown-section .countdown-container .unit {
+body #countdown-section .countdown-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #countdown-section .countdown-container .days-container,
+body #countdown-section .countdown-container .hours-container,
+body #countdown-section .countdown-container .minutes-container,
+body #countdown-section .countdown-container .seconds-container {
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+body #countdown-section .countdown-container .days-container .unit,
+body #countdown-section .countdown-container .hours-container .unit,
+body #countdown-section .countdown-container .minutes-container .unit,
+body #countdown-section .countdown-container .seconds-container .unit {
   color: #656478;
   font-family: 'GillSans-Bold', sans-serif;
   font-weight: 700;
@@ -198,8 +265,10 @@ body #countdown-section .countdown-container .unit {
   position: relative;
   padding: 0 5px;
 }
-body #countdown-section .countdown-container .countdown,
-body #countdown-section .countdown-container .number {
+body #countdown-section .countdown-container .days-container .number,
+body #countdown-section .countdown-container .hours-container .number,
+body #countdown-section .countdown-container .minutes-container .number,
+body #countdown-section .countdown-container .seconds-container .number {
   color: white;
   font-family: 'delicious', cursive;
   font-weight: normal;
@@ -211,6 +280,14 @@ body #countdown-section .countdown-container .number {
   position: relative;
 }
 body #countdown-section .countdown-container .countdown {
+  color: white;
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+  position: relative;
   display: block;
   margin-top: 0;
 }
@@ -905,6 +982,7 @@ body #map-section {
 }
 body #map-section .map-container {
   width: 90%;
+  max-width: 1500px;
   border: 10px double white;
   height: auto;
   margin: 0 auto;
@@ -938,7 +1016,7 @@ body #map-section .map-container #map-item-description .item-description-contain
   font-weight: 700;
   line-height: 19px;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 15px;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
   font-family: 'delicious', cursive;
@@ -1598,6 +1676,11 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 16px;
   }
 }
+@media (min-width: 1500px) {
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+}
 @media (max-width: 1115px) {
   body #map-section .map-container #map-canvas {
     width: 73%;
@@ -1608,7 +1691,482 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 75%;
   }
 }
+@media (max-width: 960px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
+  body #header-section .header-link-container {
+    display: block;
+    position: relative;
+    width: 90%;
+    padding: 5px 0 0 0;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    height: 34px;
+    width: 15%;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro {
+    padding: 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body #welcome-section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+  }
+  body #welcome-section .intro .intro-message {
+    width: 90%;
+    font-size: 27px;
+    line-height: 34px;
+    margin: 25px auto 32px auto;
+  }
+  body #welcome-section .intro .intro-message.btwn {
+    width: 90%;
+  }
+  body #welcome-section .intro .standout-text {
+    font-size: 63px;
+    line-height: 63px;
+  }
+  body #countdown-section .countdown-container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0;
+  }
+  body #countdown-section .countdown-container .countdown {
+    font-size: 84px;
+    line-height: 84px;
+  }
+  body #countdown-section .countdown-container .days-container,
+  body #countdown-section .countdown-container .hours-container,
+  body #countdown-section .countdown-container .minutes-container,
+  body #countdown-section .countdown-container .seconds-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  body #rsvp-section .form-container {
+    width: 90%;
+  }
+  body #rsvp-section .form-container .rsvp-message h3.rsvp {
+    font-size: 84px;
+    line-height: 64px;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container {
+    width: 100%;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container {
+    width: 100%;
+    padding: 0;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container.right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
+    margin: 0;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
+    width: 74%;
+    margin: 0 auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
+    width: 90%;
+    margin: 15px auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest .delete-guest-button {
+    float: none;
+    margin: 0 auto;
+  }
+  body #card-section {
+    height: 192px;
+  }
+  body #card-section .card {
+    height: auto;
+    width: 2400px;
+  }
+  body #weather-section .weather-container {
+    width: 90%;
+    padding-bottom: 0;
+  }
+  body #weather-section .weather-container .naples-weather {
+    float: none;
+    width: 100%;
+  }
+  body #weather-section .weather-container .naples-weather .message {
+    font-size: 27px;
+  }
+  body #weather-section .weather-container .naples-weather #naples-temp.message.italic.temp {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  body #weather-section .weather-container .your-weather {
+    float: none;
+    width: 100%;
+    border-top: 6px double white;
+    padding-top: 30px;
+    border-left: none;
+  }
+  body #weather-section .weather-container .your-weather #your-temp.message.italic.temp {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  body #staying-section .staying-container,
+  body #what-to-do-section .staying-container,
+  body #directions-section .staying-container,
+  body #staying-section .what-to-do-container,
+  body #what-to-do-section .what-to-do-container,
+  body #directions-section .what-to-do-container,
+  body #staying-section .directions-container,
+  body #what-to-do-section .directions-container,
+  body #directions-section .directions-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title,
+  body #staying-section .what-to-do-container .title,
+  body #what-to-do-section .what-to-do-container .title,
+  body #directions-section .what-to-do-container .title,
+  body #staying-section .directions-container .title,
+  body #what-to-do-section .directions-container .title,
+  body #directions-section .directions-container .title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #staying-section .staying-container .activity-ideas,
+  body #what-to-do-section .staying-container .activity-ideas,
+  body #directions-section .staying-container .activity-ideas,
+  body #staying-section .what-to-do-container .activity-ideas,
+  body #what-to-do-section .what-to-do-container .activity-ideas,
+  body #directions-section .what-to-do-container .activity-ideas,
+  body #staying-section .directions-container .activity-ideas,
+  body #what-to-do-section .directions-container .activity-ideas,
+  body #directions-section .directions-container .activity-ideas {
+    text-align: center;
+  }
+  body #staying-section .staying-container .message-item,
+  body #what-to-do-section .staying-container .message-item,
+  body #directions-section .staying-container .message-item,
+  body #staying-section .what-to-do-container .message-item,
+  body #what-to-do-section .what-to-do-container .message-item,
+  body #directions-section .what-to-do-container .message-item,
+  body #staying-section .directions-container .message-item,
+  body #what-to-do-section .directions-container .message-item,
+  body #directions-section .directions-container .message-item {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .intro-message,
+  body #what-to-do-section .staying-container .message-item .intro-message,
+  body #directions-section .staying-container .message-item .intro-message,
+  body #staying-section .what-to-do-container .message-item .intro-message,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message,
+  body #directions-section .what-to-do-container .message-item .intro-message,
+  body #staying-section .directions-container .message-item .intro-message,
+  body #what-to-do-section .directions-container .message-item .intro-message,
+  body #directions-section .directions-container .message-item .intro-message {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body #staying-section .staying-container .message-item .intro-message.btwn,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+  body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
+  body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #staying-section .directions-container .message-item .intro-message.btwn,
+  body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+  body #directions-section .directions-container .message-item .intro-message.btwn {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .listings-container,
+  body #what-to-do-section .staying-container .message-item .listings-container,
+  body #directions-section .staying-container .message-item .listings-container,
+  body #staying-section .what-to-do-container .message-item .listings-container,
+  body #what-to-do-section .what-to-do-container .message-item .listings-container,
+  body #directions-section .what-to-do-container .message-item .listings-container,
+  body #staying-section .directions-container .message-item .listings-container,
+  body #what-to-do-section .directions-container .message-item .listings-container,
+  body #directions-section .directions-container .message-item .listings-container {
+    width: 100%;
+    text-align: center;
+  }
+  body #staying-section {
+    padding: 50px 0;
+  }
+  body #staying-section .staying-container .title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 43%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
 @media (max-width: 775px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
+  body #header-section .header-link-container {
+    display: block;
+    position: relative;
+    width: 90%;
+    padding: 5px 0 0 0;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    height: 34px;
+    width: 15%;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
+    font-size: 13.5px;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+    padding-top: 2px;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 70px;
+  }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 43%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  body #signature-section .signature-container {
+    width: 90%;
+  }
+}
+@media (max-width: 650px) {
+  body #welcome-section,
+  body #rsvp-section,
+  body #map-section,
+  body #countdown-section,
+  body #weather-section,
+  body #insta-gallery-section,
+  body #card-section,
+  body #signature-section,
+  body #directions-section,
+  body #staying-section,
+  body #what-to-do-section {
+    padding: 30px 0;
+  }
+  body #header-section #mobile-menu {
+    display: block;
+  }
+  body #header-section .header-link-container {
+    width: 100%;
+    display: none;
+    padding: 15px 0 30px 0;
+    height: auto;
+    border-bottom: 6px double white;
+    border-top: 6px double white;
+  }
+  body #header-section .header-link-container .info-link,
+  body #header-section .header-link-container .rsvp-link,
+  body #header-section .header-link-container .map-link,
+  body #header-section .header-link-container .insta-gallery-link,
+  body #header-section .header-link-container .welcome-link {
+    width: 100%;
+    margin: 0;
+    display: block;
+    position: relative;
+    font-size: 13.5px;
+  }
+  body #header-section .header-link-container .info-link h3,
+  body #header-section .header-link-container .rsvp-link h3,
+  body #header-section .header-link-container .map-link h3,
+  body #header-section .header-link-container .insta-gallery-link h3,
+  body #header-section .header-link-container .welcome-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .info-link h3 a,
+  body #header-section .header-link-container .rsvp-link h3 a,
+  body #header-section .header-link-container .map-link h3 a,
+  body #header-section .header-link-container .insta-gallery-link h3 a,
+  body #header-section .header-link-container .welcome-link h3 a {
+    width: 100%;
+    padding-top: 10px;
+  }
+  body #welcome-section {
+    padding: 90px 0 30px 0;
+  }
+  body #welcome-section .intro {
+    padding: 0;
+  }
+  body #welcome-section .intro .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body #welcome-section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+  }
+  body #welcome-section .intro .intro-message {
+    width: 90%;
+    font-size: 27px;
+    line-height: 34px;
+    margin: 25px auto 32px auto;
+  }
+  body #welcome-section .intro .intro-message.btwn {
+    width: 90%;
+  }
+  body #welcome-section .intro .standout-text {
+    font-size: 63px;
+    line-height: 63px;
+  }
+  body #countdown-section .countdown-container {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0;
+  }
+  body #countdown-section .countdown-container .countdown {
+    font-size: 84px;
+    line-height: 84px;
+  }
+  body #countdown-section .countdown-container .days-container,
+  body #countdown-section .countdown-container .hours-container,
+  body #countdown-section .countdown-container .minutes-container,
+  body #countdown-section .countdown-container .seconds-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  body #rsvp-section .form-container {
+    width: 90%;
+  }
+  body #rsvp-section .form-container .rsvp-message h3.rsvp {
+    font-size: 84px;
+    line-height: 64px;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container {
+    width: 100%;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container {
+    width: 100%;
+    padding: 0;
+  }
+  body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-container.right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
+    margin: 0;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
+    width: 74%;
+    margin: 0 auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
+    width: 90%;
+    margin: 15px auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest .delete-guest-button {
+    float: none;
+    margin: 0 auto;
+  }
   body #map-section .map-container #map-item-description .item-description-container {
     width: 100%;
   }
@@ -1619,5 +2177,148 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #map-section .map-container #map-canvas {
     width: 100%;
     border-top: 10px double white;
+  }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title,
+  body #staying-section .what-to-do-container .title,
+  body #what-to-do-section .what-to-do-container .title,
+  body #directions-section .what-to-do-container .title,
+  body #staying-section .directions-container .title,
+  body #what-to-do-section .directions-container .title,
+  body #directions-section .directions-container .title {
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #staying-section .staying-container .activity-ideas,
+  body #what-to-do-section .staying-container .activity-ideas,
+  body #directions-section .staying-container .activity-ideas,
+  body #staying-section .what-to-do-container .activity-ideas,
+  body #what-to-do-section .what-to-do-container .activity-ideas,
+  body #directions-section .what-to-do-container .activity-ideas,
+  body #staying-section .directions-container .activity-ideas,
+  body #what-to-do-section .directions-container .activity-ideas,
+  body #directions-section .directions-container .activity-ideas {
+    text-align: center;
+  }
+  body #staying-section .staying-container .message-item,
+  body #what-to-do-section .staying-container .message-item,
+  body #directions-section .staying-container .message-item,
+  body #staying-section .what-to-do-container .message-item,
+  body #what-to-do-section .what-to-do-container .message-item,
+  body #directions-section .what-to-do-container .message-item,
+  body #staying-section .directions-container .message-item,
+  body #what-to-do-section .directions-container .message-item,
+  body #directions-section .directions-container .message-item {
+    width: 100%;
+    margin-top: 42px;
+  }
+  body #staying-section .staying-container .message-item .activity-ideas,
+  body #what-to-do-section .staying-container .message-item .activity-ideas,
+  body #directions-section .staying-container .message-item .activity-ideas,
+  body #staying-section .what-to-do-container .message-item .activity-ideas,
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas,
+  body #directions-section .what-to-do-container .message-item .activity-ideas,
+  body #staying-section .directions-container .message-item .activity-ideas,
+  body #what-to-do-section .directions-container .message-item .activity-ideas,
+  body #directions-section .directions-container .message-item .activity-ideas {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .intro-message,
+  body #what-to-do-section .staying-container .message-item .intro-message,
+  body #directions-section .staying-container .message-item .intro-message,
+  body #staying-section .what-to-do-container .message-item .intro-message,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message,
+  body #directions-section .what-to-do-container .message-item .intro-message,
+  body #staying-section .directions-container .message-item .intro-message,
+  body #what-to-do-section .directions-container .message-item .intro-message,
+  body #directions-section .directions-container .message-item .intro-message {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body #staying-section .staying-container .message-item .intro-message.btwn,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+  body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #staying-section .what-to-do-container .message-item .intro-message.btwn,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
+  body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #staying-section .directions-container .message-item .intro-message.btwn,
+  body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+  body #directions-section .directions-container .message-item .intro-message.btwn {
+    width: 100%;
+  }
+  body #staying-section .staying-container .message-item .display-listings,
+  body #what-to-do-section .staying-container .message-item .display-listings,
+  body #directions-section .staying-container .message-item .display-listings,
+  body #staying-section .what-to-do-container .message-item .display-listings,
+  body #what-to-do-section .what-to-do-container .message-item .display-listings,
+  body #directions-section .what-to-do-container .message-item .display-listings,
+  body #staying-section .directions-container .message-item .display-listings,
+  body #what-to-do-section .directions-container .message-item .display-listings,
+  body #directions-section .directions-container .message-item .display-listings {
+    width: 80%;
+  }
+  body #staying-section .staying-container .message-item .listings-container,
+  body #what-to-do-section .staying-container .message-item .listings-container,
+  body #directions-section .staying-container .message-item .listings-container,
+  body #staying-section .what-to-do-container .message-item .listings-container,
+  body #what-to-do-section .what-to-do-container .message-item .listings-container,
+  body #directions-section .what-to-do-container .message-item .listings-container,
+  body #staying-section .directions-container .message-item .listings-container,
+  body #what-to-do-section .directions-container .message-item .listings-container,
+  body #directions-section .directions-container .message-item .listings-container {
+    width: 100%;
+    text-align: center;
+  }
+  body #staying-section .staying-container,
+  body #what-to-do-section .staying-container,
+  body #directions-section .staying-container {
+    margin-top: 12px;
+  }
+  body #staying-section .staying-container .title,
+  body #what-to-do-section .staying-container .title,
+  body #directions-section .staying-container .title {
+    margin-bottom: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item {
+    margin-top: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .title {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+    margin: 30px auto;
+  }
+  body #insta-gallery-section {
+    padding-top: 50px;
+  }
+  body #insta-gallery-section .insta-gallery-container {
+    width: 90%;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-title {
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
+    padding: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery {
+    width: 90%;
+    margin: 0;
+  }
+  body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
+    width: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  body #signature-section {
+    padding: 20px 0;
+  }
+  body #signature-section .signature-container {
+    width: 90%;
   }
 }

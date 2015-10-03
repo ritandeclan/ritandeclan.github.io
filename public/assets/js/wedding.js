@@ -408,50 +408,27 @@ $(document).ready(function(){
   // update the tag with id "countdown" every 1 second
   setInterval(function () {
 
-      // find the amount of "seconds" between now and target
-      var current_date = new Date().getTime();
-      var seconds_left = (target_date - current_date) / 1000;
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
 
-      // do some time calculations
-      days = parseInt(seconds_left / 86400);
-      seconds_left = seconds_left % 86400;
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
 
-      hours = parseInt(seconds_left / 3600);
-      seconds_left = seconds_left % 3600;
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
 
-      minutes = parseInt(seconds_left / 60);
-      seconds = parseInt(seconds_left % 60);
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
 
-      // format countdown string + set tag value
-      daysElement.innerHTML = days;
-      hoursElement.innerHTML = hours;
-      minutesElement.innerHTML = minutes;
-      secondsElement.innerHTML = seconds;
+    // format countdown string + set tag value
+    daysElement.innerHTML = days;
+    hoursElement.innerHTML = hours;
+    minutesElement.innerHTML = minutes;
+    secondsElement.innerHTML = seconds;
 
   }, 1000);
-
-  // The list of cards
-  var cardArray =
-  [
-   'public/assets/img/card-1.jpg',
-   'public/assets/img/card-2.jpg',
-   'public/assets/img/card-3.jpg',
-   'public/assets/img/card-4.jpg'
-   ];
-
-  // seconds
-  var cardContainer = document.getElementById("cards-container");
-
-// Create a for-loop that swaps the href in the container once every 5 seconds.
-// Also include an animation for the transition.
-
-// setInterval(function () {
-
-//   $.forEach(cardArray) {
-//     cardContainer.attr['href'] = cardArray[]
-//   }
-
-// }, 5000);
 
 // Make Instagram API call to pull photos with the hashtag #ritandeclan
 
@@ -585,41 +562,41 @@ $(document).ready(function(){
       "</div>"
     );
 
-  $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
+    $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
 
-    $(this).parent().remove();
+      $(this).parent().remove();
 
-  });
+    });
 
-  var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
+    var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
 
-  addGuestNumber(currentGuestContainer);
+    addGuestNumber(currentGuestContainer);
 
-  guestNumberClass = undefined;
+    guestNumberClass = undefined;
 
-    // Select dropdown styling fix:
+      // Select dropdown styling fix:
 
-  $("#meal-" + guestCounter).on("change", function(){
+    $("#meal-" + guestCounter).on("change", function(){
 
-    var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
+      var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
 
-    switch (value) {
-      case "":
-         $(this).css("padding-left", "18%");
-         break;
-      case 'vegetarian':
-         $(this).css("padding-left", "23.5%");
-         break;
-      case 'fish':
-        $(this).css("padding-left", "41.5%");
-      case 'beef':
-        $(this).css("padding-left", "40.5%");
-      default:
-        $(this).css("padding-left", "40.5%");
-        break;
-    }
+      switch (value) {
+        case "":
+           $(this).css("padding-left", "18%");
+           break;
+        case 'vegetarian':
+           $(this).css("padding-left", "23.5%");
+           break;
+        case 'fish':
+          $(this).css("padding-left", "41.5%");
+        case 'beef':
+          $(this).css("padding-left", "40.5%");
+        default:
+          $(this).css("padding-left", "40.5%");
+          break;
+      }
 
-  });
+    });
 
   });
 
@@ -781,16 +758,16 @@ $(document).ready(function(){
 
   });
 
-// Where to Stay hotel and Airbnb sections
+  // Where to Stay hotel and Airbnb sections
 
-var airbnbListings = $("#airbnb-listings");
-var hotelListings = $("#hotel-listings");
+  var airbnbListings = $("#airbnb-listings");
+  var hotelListings = $("#hotel-listings");
 
-var hotelsContainer = $("#hotel-container");
-var airbnbContainer = $("#airbnb-container");
+  var hotelsContainer = $("#hotel-container");
+  var airbnbContainer = $("#airbnb-container");
 
-var hotelList = locations[2].hotels;
-var airbnbList = locations[5].airbnb;
+  var hotelList = locations[2].hotels;
+  var airbnbList = locations[5].airbnb;
 
   $.each(hotelList, function(index, hotel){
 
@@ -846,5 +823,79 @@ var airbnbList = locations[5].airbnb;
 
     airbnbContainer.slideToggle();
   });
+
+  // Mobile Menu Open / Close
+
+  var mobileMenu = $("#mobile-menu");
+  var headerLinkContainer = $(".header-link-container");
+
+  var open = false;
+
+  removeWindowListeners = function() {
+
+    $(document).off("mouseup.document");
+
+  }
+
+  removeMenuListener = function() {
+
+    mobileMenu.off("click.toggle");
+
+  }
+
+  clickOutsideClose = function() {
+
+    $(document).on("mouseup.document", function (e) {
+
+      if ($(window).width() < 650 && open && !headerLinkContainer.is(e.target) // if the target of the click isn't the container...
+          && headerLinkContainer.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+
+        removeWindowListeners();
+        headerLinkContainer.slideToggle(function(){
+          mobileMenuClick();
+          open =false;
+        });
+
+      }
+    });
+
+  }
+
+  mobileMenuClick = function() {
+
+    mobileMenu.on("click.toggle", function(){
+
+      if (!open) {
+
+        headerLinkContainer.slideToggle(function(){
+          clickOutsideClose();
+          open = true;
+          removeMenuListener();
+        });
+
+      } else {
+
+        headerLinkContainer.slideToggle(function(){
+          open = false;
+        });
+
+      }
+
+    });
+
+  }
+
+  mobileMenuClick();
+
+    $(window).on('resize', function () {
+
+    if ($(window).width() > 650) {
+      headerLinkContainer.show();
+    }
+
+  });
+
+
 
 });
