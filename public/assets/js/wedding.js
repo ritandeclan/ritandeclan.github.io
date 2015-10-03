@@ -847,9 +847,7 @@ $(document).ready(function(){
 
     $(document).on("mouseup.document", function (e) {
 
-      if ($(window).width() < 650 && open && !headerLinkContainer.is(e.target) // if the target of the click isn't the container...
-          && headerLinkContainer.has(e.target).length === 0) // ... nor a descendant of the container
-      {
+      if ($(window).width() < 650 && open ) {
 
         removeWindowListeners();
         headerLinkContainer.slideToggle(function(){
