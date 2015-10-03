@@ -434,6 +434,8 @@ body #rsvp-section .form-container form#form-test .answer {
   width: 200px;
   height: 30px;
   margin: 10px;
+  outline: none;
+  border: none;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -2095,8 +2097,8 @@ body #signature-section .signature-container .message .heart-container .heart {
     padding: 0;
   }
   body #welcome-section .intro .intro-lead {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: 70px;
+    line-height: 70px;
     margin: 0 auto;
   }
   body #welcome-section .intro .us-img-container {
@@ -2106,8 +2108,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #welcome-section .intro .intro-message {
     width: 90%;
-    font-size: 27px;
-    line-height: 34px;
+    font-size: 22px;
+    line-height: 22px;
     margin: 25px auto 32px auto;
   }
   body #welcome-section .intro .intro-message.btwn {
@@ -2124,8 +2126,8 @@ body #signature-section .signature-container .message .heart-container .heart {
     padding: 0;
   }
   body #countdown-section .countdown-container .countdown {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: 70px;
+    line-height: 70px;
   }
   body #countdown-section .countdown-container .days-container,
   body #countdown-section .countdown-container .hours-container,
@@ -2133,6 +2135,11 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #countdown-section .countdown-container .seconds-container {
     margin: 0 auto;
     width: 100%;
+  }
+  body #card-section .card {
+    -webkit-animation: none;
+    -moz-animation: none;
+    left: -300px;
   }
   body #rsvp-section .form-container {
     width: 90%;
@@ -2167,6 +2174,9 @@ body #signature-section .signature-container .message .heart-container .heart {
     float: none;
     margin: 0 auto;
   }
+  body #map-section .map-container {
+    width: 84%;
+  }
   body #map-section .map-container #map-item-description .item-description-container {
     width: 100%;
   }
@@ -2177,6 +2187,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #map-section .map-container #map-canvas {
     width: 100%;
     border-top: 10px double white;
+    height: 300px;
   }
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
@@ -2236,6 +2247,8 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
+    line-height: 18px;
   }
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
@@ -2281,6 +2294,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #directions-section .staying-container .title {
     margin-bottom: 25px;
   }
+  body #directions-section .directions-container .title {
+    margin-bottom: 20px;
+  }
+  body #directions-section .directions-container .message-item {
+    margin: 20px 0;
+  }
+  body #directions-section .directions-container .message-item .intro-message.btwn a {
+    font-size: 18px;
+    line-height: 18px;
+    width: 90%;
+  }
   body #what-to-do-section .what-to-do-container .message-item {
     margin-top: 25px;
   }
@@ -2288,6 +2312,10 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 48px;
     line-height: 50px;
     margin-bottom: 30px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .title.honeymoon {
+    font-size: 40px;
+    line-height: 40px;
   }
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
     margin: 30px auto;
