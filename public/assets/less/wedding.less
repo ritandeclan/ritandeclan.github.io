@@ -691,6 +691,8 @@ body {
           height: 30px;
           // margin-bottom: 20px;
           margin: 10px;
+          outline: none;
+          border: none;
 
           .body-font-normal();
           font-weight: 400;
@@ -2467,8 +2469,8 @@ body {
 
         .intro-lead {
 
-          font-size: 84px;
-          line-height: 84px;
+          font-size: 70px;
+          line-height: 70px;
           margin: 0 auto;
         }
 
@@ -2480,8 +2482,8 @@ body {
 
         .intro-message {
           width: 90%;
-          font-size: 27px;
-          line-height: 34px;
+          font-size: 22px;
+          line-height: 22px;
           margin: 25px auto 32px auto;
 
           &.btwn {
@@ -2504,8 +2506,8 @@ body {
         padding: 0;
 
         .countdown {
-          font-size: 84px;
-          line-height: 84px;
+          font-size: 70px;
+          line-height: 70px;
         }
 
         .days-container,
@@ -2515,6 +2517,14 @@ body {
           margin: 0 auto;
           width: 100%;
         }
+      }
+    }
+
+    #card-section {
+      .card {
+        -webkit-animation: none;
+        -moz-animation: none;
+        left: -300px;
       }
     }
 
@@ -2578,6 +2588,8 @@ body {
 
     #map-section {
     .map-container {
+      width: 84%;
+
         #map-item-description {
           .item-description-container {
             width: 100%;
@@ -2591,6 +2603,7 @@ body {
         #map-canvas {
           width: 100%;
           border-top: 10px double white;
+          height: 300px;
         }
 
       }
@@ -2607,7 +2620,6 @@ body {
         .title {
           font-size: 56px;
           line-height: 56px;
-
 
         }
 
@@ -2627,6 +2639,9 @@ body {
             width: 100%;
             margin-left: auto;
             margin-right: auto;
+
+            font-size: 18px;
+            line-height: 18px;
 
             &.btwn {
               width: 100%;
@@ -2653,6 +2668,28 @@ body {
 
     }
 
+    #directions-section {
+    .directions-container {
+      .title {
+        margin-bottom: 20px;
+      }
+        .message-item {
+          margin: 20px 0;
+          .intro-message {
+            &.btwn {
+              a {
+
+                font-size: 18px;
+                line-height: 18px;
+                width: 90%;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
     #what-to-do-section {
       .what-to-do-container {
         .message-item {
@@ -2661,6 +2698,11 @@ body {
             font-size: 48px;
             line-height: 50px;
             margin-bottom: 30px;
+
+            &.honeymoon {
+              font-size: 40px;
+              line-height: 40px;
+            }
           }
 
           .intro-message {
