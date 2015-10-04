@@ -507,6 +507,7 @@ body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #m
   text-align: center;
   background-color: transparent;
   margin: 0;
+  -moz-appearance: none;
   border: none;
   width: 206px;
   padding-left: 19.5%;
@@ -1884,11 +1885,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     -o-border-radius: 0;
   }
   body #card-section {
-    height: 192px;
-  }
-  body #card-section .card {
-    height: auto;
-    width: 2400px;
+    padding: 0;
   }
   body #weather-section .weather-container {
     width: 90%;
@@ -2038,6 +2035,9 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section,
   body #what-to-do-section {
     padding: 30px 0;
+  }
+  body #card-section {
+    padding: 0;
   }
   body #header-section .header-link-container {
     display: block;
@@ -2229,14 +2229,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #card-section {
     position: relative;
     display: block;
+    height: 221px;
+    width: 100%;
+    padding-top: 10px;
   }
   body #card-section .card {
+    position: relative;
+    display: block;
     -webkit-animation: none;
     -moz-animation: none;
     left: 0;
-    width: 100%;
-    height: auto;
-    background-image: url("../img/card-4.jpg");
+    width: 350px;
+    height: 221px;
+    margin: 0 auto;
+    background-repeat: none;
+    background-image: url("../img/card-4-small.jpg");
+    border: 10px double white;
   }
   body #rsvp-section .form-container {
     width: 90%;

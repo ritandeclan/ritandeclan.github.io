@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+  if (isFirefox) {
+    $("#meal").css("padding-left", "0");
+  }
+
   var mapStyles =
     [
       {
@@ -116,25 +122,6 @@ $(document).ready(function(){
         ]
       }
     ];
-
-  // map.setOptions({styles: styles});
-
-// function initialize() {
-// var attractions = [
-//   [ [ 26.106907, -81.770609],[ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"]],
-//   [ [ 26.170107, -81.790581],[ "http://napleszoo.com/home.htm"], ["Naples Zoo"]],
-//   [ [ 26.31554, -81.8388], [ "http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html"], ["Barefoot Beach Preserve"]]
-// ];
-
-// var hotels = [
-//   [ [ 26.140098, -81.803361], [ "http://hotelescalante.com/"], ["The Hotel Escalante"]]
-// ];
-
-// var restaurants = [
-//   [ [ 26.142089, -81.795352 ], [ "http://bhabhapersianbistro.com/menu-items/"], ["Bha Bha Persion Bistro"] ],
-//   [ [ 26.170107, -81.790581 ], [ "http://www.viewmenu.com/grouper-and-chips-2/menu?ref=google"], ["Grouper and Chips"] ],
-//   [ [ 26.142053, -81.795451 ], [ "http://www.pazzoitaliancafe.com/" ], [ "Pazzo Italian Cafe" ] ]
-// ];
 
   locations = [
       {
@@ -576,9 +563,45 @@ $(document).ready(function(){
 
       // Select dropdown styling fix:
 
+
     $("#meal-" + guestCounter).on("change", function(){
 
       var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
+
+      if (!isFirefox) {
+
+        switch (value) {
+          case "":
+             $(this).css("padding-left", "18%");
+             break;
+          case 'vegetarian':
+             $(this).css("padding-left", "23.5%");
+             break;
+          case 'fish':
+            $(this).css("padding-left", "41.5%");
+          case 'beef':
+            $(this).css("padding-left", "40.5%");
+          default:
+            $(this).css("padding-left", "40.5%");
+            break;
+        }
+      } else if (isFirefox) {
+
+        $(this).css("padding-left", "0");
+
+      }
+
+    });
+
+  });
+
+// Select dropdown styling fix:
+
+  $("#meal").on("change", function(){
+
+    var value= $("#meal option:selected").val().toLowerCase();
+
+    if (!isFirefox) {
 
       switch (value) {
         case "":
@@ -592,34 +615,11 @@ $(document).ready(function(){
         case 'beef':
           $(this).css("padding-left", "40.5%");
         default:
-          $(this).css("padding-left", "40.5%");
+          $(this).css("padding-left", "40.5");
           break;
       }
-
-    });
-
-  });
-
-// Select dropdown styling fix:
-
-  $("#meal").on("change", function(){
-
-    var value= $("#meal option:selected").val().toLowerCase();
-
-    switch (value) {
-      case "":
-         $(this).css("padding-left", "18%");
-         break;
-      case 'vegetarian':
-         $(this).css("padding-left", "23.5%");
-         break;
-      case 'fish':
-        $(this).css("padding-left", "41.5%");
-      case 'beef':
-        $(this).css("padding-left", "40.5%");
-      default:
-        $(this).css("padding-left", "40.5");
-        break;
+    } else if (isFirefox) {
+      $(this).css("padding-left", "0");
     }
 
   });
