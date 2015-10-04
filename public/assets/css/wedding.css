@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 @font-face {
   font-family: 'GillSans-Light';
   src: url('../fonts/GillSans-Light.eot');
@@ -41,6 +42,7 @@
   font-style: normal;
 }
 body {
+  -webkit-font-smoothing: antialiased;
   background-color: #75d0bb;
   color: #656478;
   margin: 0;
@@ -61,7 +63,7 @@ body #header-section #mobile-menu {
   margin: 0 auto;
   width: 20%;
   text-align: center;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   padding: 15px 0;
 }
@@ -86,7 +88,7 @@ body #header-section #mobile-menu h3 a:hover {
   cursor: pointer;
 }
 body #header-section .header-link-container {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   width: 900px;
   margin: 0 auto;
@@ -175,7 +177,7 @@ body #welcome-section .intro .intro-lead {
   display: block;
   border: 10px double #e9243c;
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 175px;
@@ -185,7 +187,7 @@ body #welcome-section .intro .intro-lead {
 }
 body #welcome-section .intro .intro-message {
   color: #656478;
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
@@ -193,7 +195,7 @@ body #welcome-section .intro .intro-message {
   margin: 70px auto;
 }
 body #welcome-section .intro .intro-message.btwn {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -204,7 +206,7 @@ body #welcome-section .intro .intro-message.btwn {
 }
 body #welcome-section .intro .standout-text {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -260,7 +262,7 @@ body #countdown-section .countdown-container .hours-container .unit,
 body #countdown-section .countdown-container .minutes-container .unit,
 body #countdown-section .countdown-container .seconds-container .unit {
   color: #656478;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -276,7 +278,7 @@ body #countdown-section .countdown-container .hours-container .number,
 body #countdown-section .countdown-container .minutes-container .number,
 body #countdown-section .countdown-container .seconds-container .number {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -287,7 +289,7 @@ body #countdown-section .countdown-container .seconds-container .number {
 }
 body #countdown-section .countdown-container .countdown {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -313,6 +315,7 @@ body #card-section .card {
   width: 5421px;
   -webkit-animation: slideshow 45s linear infinite;
   -moz-animation: slideshow 45s linear infinite;
+  background-image: url("../img/cards-combined-sml.jpg");
 }
 @-webkit-keyframes slideshow {
   0% {
@@ -343,7 +346,7 @@ body #rsvp-section .form-container {
 }
 body #rsvp-section .form-container .rsvp-message {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -360,7 +363,7 @@ body #rsvp-section .form-container .rsvp-message h3.rsvp {
   line-height: 85px;
 }
 body #rsvp-section .form-container .form-intro-message {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   text-transform: uppercase;
@@ -386,7 +389,7 @@ body #rsvp-section .form-container #submit-success-message .submit-message,
 body #rsvp-section .form-container #submit-failure-message .submit-message,
 body #rsvp-section .form-container #submit-decline-message .submit-message,
 body #rsvp-section .form-container #required-fields .submit-message {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 35px;
@@ -396,7 +399,7 @@ body #rsvp-section .form-container #submit-success-message .submit-sub,
 body #rsvp-section .form-container #submit-failure-message .submit-sub,
 body #rsvp-section .form-container #submit-decline-message .submit-sub,
 body #rsvp-section .form-container #required-fields .submit-sub {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
@@ -430,7 +433,7 @@ body #rsvp-section .form-container #submit-decline-message {
   background-color: #f7b7c7;
 }
 body #rsvp-section .form-container form#form-test {
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -447,7 +450,7 @@ body #rsvp-section .form-container form#form-test .answer {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -o-border-radius: 0;
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -546,7 +549,7 @@ body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -577,7 +580,7 @@ body #rsvp-section .form-container form#form-test .yes-no-container .answer-btn-
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -630,7 +633,7 @@ body #rsvp-section .form-container form#form-test .btn-container input.btn-submi
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -668,7 +671,7 @@ body #rsvp-section .form-container form#form-test .guest-section .answer.add-gue
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -739,7 +742,7 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -758,7 +761,7 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   border: 10px double #f7b7c7;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .guest-number {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   letter-spacing: 1px;
   font-size: 75px;
   line-height: 75px;
@@ -812,7 +815,7 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -877,7 +880,7 @@ body #weather-section .weather-container .your-weather {
 }
 body #weather-section .weather-container .naples-weather .message,
 body #weather-section .weather-container .your-weather .message {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 30px;
@@ -888,7 +891,7 @@ body #weather-section .weather-container .your-weather .message {
 }
 body #weather-section .weather-container .naples-weather .message.italic,
 body #weather-section .weather-container .your-weather .message.italic {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: regular;
   margin: 0;
@@ -899,7 +902,7 @@ body #weather-section .weather-container .your-weather .message.italic {
 body #weather-section .weather-container .naples-weather .message.italic.temp,
 body #weather-section .weather-container .your-weather .message.italic.temp {
   color: white;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 90px;
   line-height: 90px;
@@ -1056,7 +1059,7 @@ body #map-section .map-container #map-item-description .item-description-contain
 }
 body #map-section .map-container #map-item-description .item-description-container .item-name {
   margin: 0 auto;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 19px;
   text-transform: uppercase;
@@ -1065,7 +1068,7 @@ body #map-section .map-container #map-item-description .item-description-contain
 body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
   text-transform: none;
   padding: 5px 0;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 50px;
   line-height: 50px;
@@ -1073,7 +1076,7 @@ body #map-section .map-container #map-item-description .item-description-contain
 body #map-section .map-container #map-item-description .item-description-container .item-description,
 body #map-section .map-container #map-item-description .item-description-container .item-details,
 body #map-section .map-container #map-item-description .item-description-container .item-description a {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
@@ -1094,7 +1097,7 @@ body #map-section .map-container #map-canvas {
 }
 body #map-section .map-container #map-canvas .marker-content .marker-info-header {
   color: #e9243c;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 25px;
@@ -1117,7 +1120,7 @@ body #map-section .map-container #map-legend #instructions {
   position: relative;
   display: block;
   border-bottom: 10px double white;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   padding: 15px;
 }
@@ -1155,7 +1158,7 @@ body #map-section .map-container #map-legend #location-list #restaurants .legend
   border-bottom: 10px double white;
   color: #656478;
   text-align: left;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -1177,7 +1180,7 @@ body #map-section .map-container #map-legend #location-list #airbnb .legend-item
 body #map-section .map-container #map-legend #location-list #bars .legend-item .item-name,
 body #map-section .map-container #map-legend #location-list #beaches .legend-item .item-name,
 body #map-section .map-container #map-legend #location-list #restaurants .legend-item .item-name {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-align: left;
   margin: 0;
@@ -1239,7 +1242,7 @@ body #directions-section .what-to-do-container .title,
 body #staying-section .what-to-do-container .title,
 body #what-to-do-section .what-to-do-container .title {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -1281,7 +1284,7 @@ body #directions-section .what-to-do-container .message-item .intro-message,
 body #staying-section .what-to-do-container .message-item .intro-message,
 body #what-to-do-section .what-to-do-container .message-item .intro-message {
   color: white;
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 25px;
   line-height: 40px;
@@ -1297,7 +1300,7 @@ body #what-to-do-section .staying-container .message-item .intro-message.btwn,
 body #directions-section .what-to-do-container .message-item .intro-message.btwn,
 body #staying-section .what-to-do-container .message-item .intro-message.btwn,
 body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -1317,7 +1320,7 @@ body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
 body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
 body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
 body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -1354,7 +1357,7 @@ body #what-to-do-section .what-to-do-container .message-item .display-listings {
   height: 25px;
   margin: 15px auto;
   padding: 4px 6px;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -1480,7 +1483,7 @@ body #staying-section .staying-container .message-item .listings-container .item
 body #staying-section .staying-container .message-item .listings-container .item .item-name {
   text-decoration: none;
   color: #656478;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
@@ -1539,7 +1542,7 @@ body #what-to-do-section .what-to-do-container .activity-ideas .item {
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name {
   text-decoration: none;
   color: #f7b7c7;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
@@ -1571,7 +1574,7 @@ body #insta-gallery-section .insta-gallery-container {
 }
 body #insta-gallery-section .insta-gallery-container .gallery-title {
   color: white;
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 90px;
@@ -1583,7 +1586,7 @@ body #insta-gallery-section .insta-gallery-container .gallery-message {
 }
 body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
   color: #656478;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 25px;
@@ -1638,7 +1641,7 @@ body #signature-section .signature-container .message {
 body #signature-section .signature-container .message .signature {
   display: inline;
   color: #656478;
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
   padding: 15px 0 0 0;
@@ -1934,7 +1937,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .directions-container .title,
   body #what-to-do-section .directions-container .title,
   body #directions-section .directions-container .title {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
@@ -2175,13 +2178,13 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #welcome-section .intro .intro-message.btwn {
     width: 90%;
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
   }
   body #welcome-section .intro .standout-text {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 50px;
     line-height: 50px;
@@ -2193,7 +2196,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     padding: 0;
   }
   body #countdown-section .countdown-container .countdown {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
@@ -2209,7 +2212,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #countdown-section .countdown-container .hours-container .number,
   body #countdown-section .countdown-container .minutes-container .number,
   body #countdown-section .countdown-container .seconds-container .number {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
@@ -2218,28 +2221,35 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #countdown-section .countdown-container .hours-container .unit,
   body #countdown-section .countdown-container .minutes-container .unit,
   body #countdown-section .countdown-container .seconds-container .unit {
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
   }
+  body #card-section {
+    position: relative;
+    display: block;
+  }
   body #card-section .card {
     -webkit-animation: none;
     -moz-animation: none;
-    left: -300px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-image: url("../img/card-4.jpg");
   }
   body #rsvp-section .form-container {
     width: 90%;
   }
   body #rsvp-section .form-container .rsvp-message h3.rsvp {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
     line-height: 42px;
   }
   body #rsvp-section .form-container .form-intro-message {
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -2287,7 +2297,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     padding: 10px;
   }
   body #map-section .map-container #map-item-description .item-description-container .item-description {
-    font-family: 'GillSans', sans-serif;
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
@@ -2357,7 +2367,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section .directions-container .message-item .activity-ideas .item .item-name,
   body #directions-section .directions-container .message-item .activity-ideas .item .item-name {
     width: 100%;
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -2374,7 +2384,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'GillSans', sans-serif;
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
@@ -2399,7 +2409,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .directions-container .message-item .intro-message.btwn a,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
   body #directions-section .directions-container .message-item .intro-message.btwn a {
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
@@ -2414,7 +2424,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section .directions-container .message-item .display-listings,
   body #directions-section .directions-container .message-item .display-listings {
     width: 80%;
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -2428,7 +2438,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .directions-container .message-item .display-listings h3,
   body #what-to-do-section .directions-container .message-item .display-listings h3,
   body #directions-section .directions-container .message-item .display-listings h3 {
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -2457,7 +2467,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #directions-section .directions-container .title {
     margin-bottom: 20px;
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
@@ -2466,13 +2476,13 @@ body #signature-section .signature-container .message .heart-container .heart {
     margin: 20px 0;
   }
   body #directions-section .directions-container .message-item .intro-message {
-    font-family: 'GillSans', sans-serif;
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
   }
   body #directions-section .directions-container .message-item .intro-message.btwn a {
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -2487,7 +2497,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     margin-bottom: 30px;
   }
   body #what-to-do-section .what-to-do-container .message-item .title.honeymoon {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 40px;
     line-height: 40px;
@@ -2504,7 +2514,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 90%;
   }
   body #insta-gallery-section .insta-gallery-container .gallery-title {
-    font-family: 'delicious', cursive;
+    font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 40px;
     line-height: 40px;
@@ -2512,7 +2522,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
     padding: 0;
-    font-family: 'GillSans-Bold', sans-serif;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;

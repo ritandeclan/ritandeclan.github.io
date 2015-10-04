@@ -2,6 +2,8 @@
 
 // Gill Sans
 
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
 @font-face {
   font-family: 'GillSans-Light';
   src: url('../fonts/GillSans-Light.eot');
@@ -108,39 +110,39 @@
 // font mixins
 
 .body-font-thin() {
-  font-family: 'GillSans-Light', sans-serif;
+  font-family: 'GillSans-Light', Helvetica, Arial, sans-serif;
   font-weight: 100;
 }
 
 .body-font-light() {
-  font-family: 'GillSans-Light', sans-serif;
+  font-family: 'GillSans-Light', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
 .body-font-normal() {
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 .body-font-normal-italic() {
-  font-family: 'GillSans-Italic', sans-serif;
+  font-family: 'GillSans-Italic', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .body-font-bold() {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
 .body-font-bold-italic() {
-  font-family: 'GillSans-BoldItalic', sans-serif;
+  font-family: 'GillSans-BoldItalic', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .delicious() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
 }
@@ -148,56 +150,56 @@
 // Mobile font mixins
 
 .mobile-body-font() {
-  font-family: 'GillSans', sans-serif;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
 }
 
 .mobile-gill-bold-small() {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
 }
 
 .mobile-gill-bold-medium() {
-  font-family: 'GillSans-Bold', sans-serif;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 35px;
 }
 
 .mobile-delicious-title() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 70px;
   line-height: 70px;
 }
 
 .mobile-delicious-large() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 56px;
   line-height: 56px;
 }
 
 .mobile-delicious-title-medium() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 50px;
   line-height: 50px;
 }
 
 .mobile-delicious-medium() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 40px;
   line-height: 40px;
 }
 
 .mobile-delicious-small() {
-  font-family: 'delicious', cursive;
+  font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -389,6 +391,9 @@
 }
 
 body {
+
+  // Prevents 'square pixel effect on fonts'
+  -webkit-font-smoothing: antialiased;
 
   background-color: @deco-blue;
   color: @deco-grey;
@@ -645,6 +650,7 @@ body {
       width: 5421px;
       -webkit-animation: slideshow 45s linear infinite;
       -moz-animation: slideshow 45s linear infinite;
+      background-image: url("../img/cards-combined-sml.jpg");
      }
 
     @-webkit-keyframes slideshow {
@@ -2604,10 +2610,17 @@ body {
     }
 
     #card-section {
+      position: relative;
+      display: block;
+
       .card {
         -webkit-animation: none;
         -moz-animation: none;
-        left: -300px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-image: url("../img/card-4.jpg");
+
       }
     }
 
