@@ -575,12 +575,12 @@ body {
 
     @-webkit-keyframes slideshow {
       0% { left: 0; }
-      100% { left: -200%; }
+      100% { left: -150%; }
     }
 
     @-moz-keyframes slideshow {
       0% { left: 0; }
-      100% { left: -200%; }
+      100% { left: -150%; }
     }
 
   }
@@ -2170,7 +2170,14 @@ body {
     }
 
     #card-section {
+      height: 251px;
       padding: 0;
+
+      .card {
+        width: 2400px;
+        height: 251px;
+        background-image: url("../img/cards-combined-tiny.jpg");
+      }
     }
 
     #weather-section {

@@ -308,7 +308,7 @@ body #card-section .card {
     left: 0;
   }
   100% {
-    left: -200%;
+    left: -150%;
   }
 }
 @-moz-keyframes slideshow {
@@ -316,7 +316,7 @@ body #card-section .card {
     left: 0;
   }
   100% {
-    left: -200%;
+    left: -150%;
   }
 }
 body #rsvp-section {
@@ -1871,7 +1871,13 @@ body #signature-section .signature-container .message .heart-container .heart {
     -o-border-radius: 0;
   }
   body #card-section {
+    height: 251px;
     padding: 0;
+  }
+  body #card-section .card {
+    width: 2400px;
+    height: 251px;
+    background-image: url("../img/cards-combined-tiny.jpg");
   }
   body #weather-section .weather-container {
     width: 90%;
