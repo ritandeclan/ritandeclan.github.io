@@ -849,11 +849,13 @@ $(document).ready(function(){
 
       if ($(window).width() < 650 && open ) {
 
-        removeWindowListeners();
-        headerLinkContainer.slideToggle(function(){
-          mobileMenuClick();
-          open =false;
-        });
+        headerLinkContainer.slideToggle(
+          function(){
+            mobileMenuClick();
+            open =false;
+            removeWindowListeners();
+          }
+        );
 
       }
     });
@@ -866,11 +868,13 @@ $(document).ready(function(){
 
       if (!open) {
 
-        headerLinkContainer.slideToggle(function(){
-          clickOutsideClose();
-          open = true;
-          removeMenuListener();
-        });
+        headerLinkContainer.slideToggle(
+          function(){
+            clickOutsideClose();
+            open = true;
+            removeMenuListener();
+          }
+        );
 
       } else {
 

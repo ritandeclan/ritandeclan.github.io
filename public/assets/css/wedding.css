@@ -215,6 +215,9 @@ body #welcome-section .intro .us-img-container {
   width: 500px;
   height: 500px;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
   margin: 50px auto;
   border: 10px double white;
 }
@@ -222,6 +225,9 @@ body #welcome-section .intro .us-img-container .us-img {
   height: auto;
   width: 100%;
   border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 body #countdown-section .countdown-container {
   width: 900px;
@@ -436,6 +442,11 @@ body #rsvp-section .form-container form#form-test .answer {
   margin: 10px;
   outline: none;
   border: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   font-family: 'GillSans', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -487,6 +498,9 @@ body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper.er
 body #rsvp-section .form-container form#form-test .meal-options .meal-wrapper #meal.answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   text-align: center;
   background-color: transparent;
   margin: 0;
@@ -607,6 +621,11 @@ body #rsvp-section .form-container form#form-test .btn-container {
   padding: 10px 0;
 }
 body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -640,6 +659,11 @@ body #rsvp-section .form-container form#form-test .guest-section {
   padding: 10px 0;
 }
 body #rsvp-section .form-container form#form-test .guest-section .answer.add-guest {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -673,6 +697,12 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer {
   display: inline-block;
   margin: 10px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  outline: none;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email {
   margin-top: -10px;
@@ -680,6 +710,10 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   border: 10px solid #f7b7c7;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.email:focus {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   outline: none;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .answer.error {
@@ -754,6 +788,9 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
 body #rsvp-section .form-container form#form-test .guest-section .guest-container .meal-options .meal-wrapper .answer.dropdown {
   -webkit-appearance: none;
   border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   text-align: center;
   background-color: transparent;
   margin: 0;
@@ -791,6 +828,11 @@ body #rsvp-section .form-container form#form-test .guest-section .guest-containe
   border: 10px double #75d0bb;
 }
 body #rsvp-section .form-container form#form-test .guest-section .guest-container.even .answer.email {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
   margin-top: -10px;
   margin-bottom: 10px;
   border: 10px solid #f7b7c7;
@@ -1021,13 +1063,12 @@ body #map-section .map-container #map-item-description .item-description-contain
   padding: 15px;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-name.intro {
+  text-transform: none;
+  padding: 5px 0;
   font-family: 'delicious', cursive;
   font-weight: normal;
-  letter-spacing: 1px;
-  text-transform: none;
   font-size: 50px;
   line-height: 50px;
-  padding: 5px 0;
 }
 body #map-section .map-container #map-item-description .item-description-container .item-description,
 body #map-section .map-container #map-item-description .item-description-container .item-details,
@@ -1116,7 +1157,6 @@ body #map-section .map-container #map-legend #location-list #restaurants .legend
   text-align: left;
   font-family: 'delicious', cursive;
   font-weight: normal;
-  letter-spacing: 1px;
   font-size: 30px;
   line-height: 30px;
 }
@@ -1228,7 +1268,7 @@ body #staying-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
 body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg {
   display: inline;
   position: relative;
-  padding-right: 15px;
+  padding-right: 5px;
   color: white;
 }
 body #directions-section .directions-container .message-item .intro-message,
@@ -1757,6 +1797,10 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 250px;
     height: 250px;
     margin: 25px auto;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
   }
   body #welcome-section .intro .intro-message {
     width: 90%;
@@ -1808,6 +1852,11 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
     margin: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
   }
   body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
     width: 74%;
@@ -1816,10 +1865,20 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
     width: 90%;
     margin: 15px auto;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
   }
   body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest .delete-guest-button {
     float: none;
     margin: 0 auto;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
   }
   body #card-section {
     height: 192px;
@@ -1875,6 +1934,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .directions-container .title,
   body #what-to-do-section .directions-container .title,
   body #directions-section .directions-container .title {
+    font-family: 'delicious', cursive;
+    font-weight: normal;
     font-size: 56px;
     line-height: 56px;
   }
@@ -2114,10 +2175,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #welcome-section .intro .intro-message.btwn {
     width: 90%;
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #welcome-section .intro .standout-text {
-    font-size: 63px;
-    line-height: 63px;
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
   }
   body #countdown-section .countdown-container {
     width: 90%;
@@ -2126,8 +2193,10 @@ body #signature-section .signature-container .message .heart-container .heart {
     padding: 0;
   }
   body #countdown-section .countdown-container .countdown {
-    font-size: 70px;
-    line-height: 70px;
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
   }
   body #countdown-section .countdown-container .days-container,
   body #countdown-section .countdown-container .hours-container,
@@ -2135,6 +2204,24 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #countdown-section .countdown-container .seconds-container {
     margin: 0 auto;
     width: 100%;
+  }
+  body #countdown-section .countdown-container .days-container .number,
+  body #countdown-section .countdown-container .hours-container .number,
+  body #countdown-section .countdown-container .minutes-container .number,
+  body #countdown-section .countdown-container .seconds-container .number {
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
+  }
+  body #countdown-section .countdown-container .days-container .unit,
+  body #countdown-section .countdown-container .hours-container .unit,
+  body #countdown-section .countdown-container .minutes-container .unit,
+  body #countdown-section .countdown-container .seconds-container .unit {
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #card-section .card {
     -webkit-animation: none;
@@ -2145,8 +2232,17 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 90%;
   }
   body #rsvp-section .form-container .rsvp-message h3.rsvp {
-    font-size: 84px;
-    line-height: 64px;
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
+    line-height: 42px;
+  }
+  body #rsvp-section .form-container .form-intro-message {
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #rsvp-section .form-container form#form-test .yes-no-container {
     width: 100%;
@@ -2161,10 +2257,19 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #rsvp-section .form-container form#form-test .btn-container input.btn-submit {
     margin: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
   }
   body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container p {
     width: 74%;
     margin: 0 auto;
+  }
+  body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .guest-number {
+    font-size: 56px;
+    line-height: 56px;
   }
   body #rsvp-section .form-container form#form-test .accept-wrapper.yup .guest-section .guest-container .delete-guest {
     width: 90%;
@@ -2178,7 +2283,14 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 84%;
   }
   body #map-section .map-container #map-item-description .item-description-container {
-    width: 100%;
+    width: 90%;
+    padding: 10px;
+  }
+  body #map-section .map-container #map-item-description .item-description-container .item-description {
+    font-family: 'GillSans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
   }
   body #map-section .map-container #map-legend {
     width: 100%;
@@ -2222,7 +2334,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section .directions-container .message-item,
   body #directions-section .directions-container .message-item {
     width: 100%;
-    margin-top: 42px;
+    margin-top: 25px;
   }
   body #staying-section .staying-container .message-item .activity-ideas,
   body #what-to-do-section .staying-container .message-item .activity-ideas,
@@ -2234,6 +2346,21 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section .directions-container .message-item .activity-ideas,
   body #directions-section .directions-container .message-item .activity-ideas {
     width: 100%;
+  }
+  body #staying-section .staying-container .message-item .activity-ideas .item .item-name,
+  body #what-to-do-section .staying-container .message-item .activity-ideas .item .item-name,
+  body #directions-section .staying-container .message-item .activity-ideas .item .item-name,
+  body #staying-section .what-to-do-container .message-item .activity-ideas .item .item-name,
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas .item .item-name,
+  body #directions-section .what-to-do-container .message-item .activity-ideas .item .item-name,
+  body #staying-section .directions-container .message-item .activity-ideas .item .item-name,
+  body #what-to-do-section .directions-container .message-item .activity-ideas .item .item-name,
+  body #directions-section .directions-container .message-item .activity-ideas .item .item-name {
+    width: 100%;
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #staying-section .staying-container .message-item .intro-message,
   body #what-to-do-section .staying-container .message-item .intro-message,
@@ -2247,8 +2374,10 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 18px;
-    line-height: 18px;
+    font-family: 'GillSans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
   }
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
@@ -2261,6 +2390,20 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #directions-section .directions-container .message-item .intro-message.btwn {
     width: 100%;
   }
+  body #staying-section .staying-container .message-item .intro-message.btwn a,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
+  body #directions-section .staying-container .message-item .intro-message.btwn a,
+  body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
+  body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a,
+  body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
+  body #staying-section .directions-container .message-item .intro-message.btwn a,
+  body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
+  body #directions-section .directions-container .message-item .intro-message.btwn a {
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+  }
   body #staying-section .staying-container .message-item .display-listings,
   body #what-to-do-section .staying-container .message-item .display-listings,
   body #directions-section .staying-container .message-item .display-listings,
@@ -2271,6 +2414,24 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section .directions-container .message-item .display-listings,
   body #directions-section .directions-container .message-item .display-listings {
     width: 80%;
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #staying-section .staying-container .message-item .display-listings h3,
+  body #what-to-do-section .staying-container .message-item .display-listings h3,
+  body #directions-section .staying-container .message-item .display-listings h3,
+  body #staying-section .what-to-do-container .message-item .display-listings h3,
+  body #what-to-do-section .what-to-do-container .message-item .display-listings h3,
+  body #directions-section .what-to-do-container .message-item .display-listings h3,
+  body #staying-section .directions-container .message-item .display-listings h3,
+  body #what-to-do-section .directions-container .message-item .display-listings h3,
+  body #directions-section .directions-container .message-item .display-listings h3 {
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
@@ -2296,13 +2457,25 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body #directions-section .directions-container .title {
     margin-bottom: 20px;
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 56px;
   }
   body #directions-section .directions-container .message-item {
     margin: 20px 0;
   }
+  body #directions-section .directions-container .message-item .intro-message {
+    font-family: 'GillSans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+  }
   body #directions-section .directions-container .message-item .intro-message.btwn a {
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 25px;
     width: 90%;
   }
   body #what-to-do-section .what-to-do-container .message-item {
@@ -2314,11 +2487,15 @@ body #signature-section .signature-container .message .heart-container .heart {
     margin-bottom: 30px;
   }
   body #what-to-do-section .what-to-do-container .message-item .title.honeymoon {
+    font-family: 'delicious', cursive;
+    font-weight: normal;
     font-size: 40px;
     line-height: 40px;
   }
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
     margin: 30px auto;
+    font-size: 22px;
+    line-height: 25px;
   }
   body #insta-gallery-section {
     padding-top: 50px;
@@ -2327,12 +2504,18 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 90%;
   }
   body #insta-gallery-section .insta-gallery-container .gallery-title {
-    font-size: 64px;
-    line-height: 64px;
+    font-family: 'delicious', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
     margin-bottom: 0;
   }
   body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions {
     padding: 0;
+    font-family: 'GillSans-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #insta-gallery-section .insta-gallery-container #insta-gallery {
     width: 90%;

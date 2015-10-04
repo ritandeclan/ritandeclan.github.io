@@ -145,6 +145,64 @@
   letter-spacing: 1px;
 }
 
+// Mobile font mixins
+
+.mobile-body-font() {
+  font-family: 'GillSans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.mobile-gill-bold-small() {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.mobile-gill-bold-medium() {
+  font-family: 'GillSans-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.mobile-delicious-title() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 70px;
+}
+
+.mobile-delicious-large() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 56px;
+}
+
+.mobile-delicious-title-medium() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.mobile-delicious-medium() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.mobile-delicious-small() {
+  font-family: 'delicious', cursive;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+}
+
 // width / height mixins
 
 .content-full-width() {
@@ -312,6 +370,22 @@
     clear:both;
     visibility:hidden;
   }
+}
+
+// Border-radius mixin
+
+.border-radius(@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -o-border-radius: @radius;
+}
+
+// Webkit off mixin
+
+.webkit-off() {
+  -webkit-appearance:none;
+  .border-radius(0);
 }
 
 body {
@@ -491,7 +565,7 @@ body {
 
         width: 500px;
         height: 500px;
-        border-radius: 50%;
+        .border-radius(50%);
         margin: 50px auto;
 
         .double-border(white);
@@ -500,7 +574,7 @@ body {
 
           height: auto;
           width: 100%;
-          border-radius: 50%;
+          .border-radius(50%);
 
         }
       }
@@ -693,6 +767,7 @@ body {
           margin: 10px;
           outline: none;
           border: none;
+          .webkit-off();
 
           .body-font-normal();
           font-weight: 400;
@@ -764,8 +839,7 @@ body {
             }
 
             #meal.answer.dropdown {
-              -webkit-appearance: none;
-              border-radius: 0;
+              .webkit-off();
               text-align: center;
               background-color: transparent;
               margin: 0;
@@ -898,6 +972,7 @@ body {
 
           // Btn submit
           input.btn-submit {
+            .webkit-off();
             .button();
             background-color: @deco-yellow;
             color: white;
@@ -929,7 +1004,7 @@ body {
           padding: 10px 0;
 
           .answer.add-guest {
-
+            .webkit-off();
             .button();
             display: inline-block;
             position: relative;
@@ -955,6 +1030,9 @@ body {
             .answer {
               display: inline-block;
               margin: 10px;
+              .webkit-off();
+              outline: none;
+
               //float: left;
 
               &.email {
@@ -963,7 +1041,7 @@ body {
                 .single-border(@deco-light-pink);
 
                 &:focus {
-
+                  .border-radius(0);
                   outline: none;
 
                   //&:invalid {
@@ -1047,8 +1125,7 @@ body {
                 }
 
                 .answer.dropdown {
-                  -webkit-appearance: none;
-                  border-radius: 0;
+                  .webkit-off();
                   text-align: center;
                   background-color: transparent;
                   margin: 0;
@@ -1090,6 +1167,7 @@ body {
 
               .answer {
                 &.email {
+                  .webkit-off();
                   margin-top: -10px;
                   margin-bottom: 10px;
                   .single-border(@deco-light-pink);
@@ -1321,11 +1399,9 @@ body {
               padding: 15px;
 
               &.intro {
-                .delicious();
                 text-transform: none;
-                font-size: 50px;
-                line-height: 50px;
                 padding: 5px 0;
+                .mobile-delicious-title-medium();
 
               }
 
@@ -1421,9 +1497,7 @@ body {
               border-bottom: 10px double white;
               color: @deco-grey;
               text-align: left;
-              .delicious();
-              font-size: 30px;
-              line-height: 30px;
+              .mobile-delicious-small();
             }
 
             .legend-item {
@@ -1511,7 +1585,7 @@ body {
         .fa.fa-plane.fa-lg {
           display: inline;
           position: relative;
-          padding-right: 15px;
+          padding-right: 5px;
           color: white;
         }
 
@@ -2063,6 +2137,7 @@ body {
           width: 250px;
           height: 250px;
           margin: 25px auto;
+          .border-radius(50%);
         }
 
         .intro-message {
@@ -2135,6 +2210,8 @@ body {
           .btn-container {
             input.btn-submit {
               margin: 0;
+              .webkit-off();
+
             }
           }
 
@@ -2149,9 +2226,11 @@ body {
                 .delete-guest {
                   width: 90%;
                   margin: 15px auto;
+                  .webkit-off();
                   .delete-guest-button {
                     float: none;
                     margin: 0 auto;
+                    .webkit-off();
                   }
 
                 }
@@ -2218,9 +2297,7 @@ body {
         margin: 0 auto;
 
         .title {
-          font-size: 56px;
-          line-height: 56px;
-
+          .mobile-delicious-large();
 
         }
 
@@ -2488,12 +2565,12 @@ body {
 
           &.btwn {
             width: 90%;
+            .mobile-gill-bold-small();
           }
         }
 
         .standout-text {
-          font-size: 63px;
-          line-height: 63px;
+          .mobile-delicious-title-medium();
         }
       }
     }
@@ -2506,8 +2583,7 @@ body {
         padding: 0;
 
         .countdown {
-          font-size: 70px;
-          line-height: 70px;
+          .mobile-delicious-large();
         }
 
         .days-container,
@@ -2516,6 +2592,13 @@ body {
         .seconds-container {
           margin: 0 auto;
           width: 100%;
+          .number {
+            .mobile-delicious-large();
+          }
+
+          .unit {
+            .mobile-gill-bold-small();
+          }
         }
       }
     }
@@ -2535,9 +2618,13 @@ body {
 
         .rsvp-message {
           h3.rsvp {
-            font-size: 84px;
-            line-height: 64px;
+            .mobile-delicious-large();
+            line-height: 42px;
           }
+        }
+
+        .form-intro-message {
+          .mobile-gill-bold-small();
         }
 
         form#form-test {
@@ -2558,6 +2645,8 @@ body {
           .btn-container {
             input.btn-submit {
               margin: 0;
+              .border-radius(0);
+              .webkit-off();
             }
           }
 
@@ -2569,6 +2658,12 @@ body {
                   width: 74%;
                   margin: 0 auto;
                 }
+
+                .guest-number {
+                  font-size: 56px;
+                  line-height: 56px;
+                }
+
                 .delete-guest {
                   width: 90%;
                   margin: 15px auto;
@@ -2592,13 +2687,19 @@ body {
 
         #map-item-description {
           .item-description-container {
-            width: 100%;
+            width: 90%;
+            padding: 10px;
+
+            .item-description {
+              .mobile-body-font();
+            }
           }
         }
 
         #map-legend {
           width: 100%;
           border-right: none;
+
         }
         #map-canvas {
           width: 100%;
@@ -2629,10 +2730,16 @@ body {
 
         .message-item {
           width: 100%;
-          margin-top: 42px;
+          margin-top: 25px;
 
           .activity-ideas {
             width: 100%;
+            .item {
+              .item-name {
+                width: 100%;
+                .mobile-gill-bold-small();
+              }
+            }
           }
 
           .intro-message {
@@ -2640,16 +2747,29 @@ body {
             margin-left: auto;
             margin-right: auto;
 
-            font-size: 18px;
-            line-height: 18px;
+            .mobile-body-font();
 
             &.btwn {
               width: 100%;
+
+
+              a {
+
+                .mobile-gill-bold-medium();
+
+              }
+
             }
           }
 
           .display-listings {
             width: 80%;
+            .mobile-gill-bold-small();
+
+            h3 {
+              .mobile-gill-bold-small();
+
+            }
           }
 
           .listings-container {
@@ -2663,7 +2783,10 @@ body {
         margin-top: 12px;
         .title {
           margin-bottom: 25px;
+
         }
+
+
       }
 
     }
@@ -2672,15 +2795,16 @@ body {
     .directions-container {
       .title {
         margin-bottom: 20px;
+        .mobile-delicious-large();
       }
         .message-item {
           margin: 20px 0;
           .intro-message {
+            .mobile-body-font();
             &.btwn {
               a {
 
-                font-size: 18px;
-                line-height: 18px;
+                .mobile-gill-bold-small();
                 width: 90%;
 
               }
@@ -2700,14 +2824,15 @@ body {
             margin-bottom: 30px;
 
             &.honeymoon {
-              font-size: 40px;
-              line-height: 40px;
+              .mobile-delicious-medium();
             }
           }
 
           .intro-message {
             &.btwn {
               margin: 30px auto;
+              font-size: 22px;
+              line-height: 25px;
             }
           }
         }
@@ -2720,14 +2845,14 @@ body {
       .insta-gallery-container {
         width: 90%;
         .gallery-title {
-          font-size: 64px;
-          line-height: 64px;
+          .mobile-delicious-medium();
           margin-bottom: 0;
         }
 
         .gallery-message {
           .gallery-instructions {
             padding: 0;
+            .mobile-gill-bold-small();
           }
         }
         #insta-gallery {
