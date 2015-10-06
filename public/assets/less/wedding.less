@@ -307,6 +307,7 @@
 
 .webkit-off() {
   -webkit-appearance:none;
+  -moz-appearance: none;
   .border-radius(0);
 }
 
@@ -1038,6 +1039,8 @@ body {
               width: 200px;
               margin: 0 auto 38px auto;
               background-color: white;
+              .webkit-off();
+              outline: none;
 
               .meal-wrapper {
 
@@ -1046,6 +1049,8 @@ body {
                 width: 100%;
 
                 background-color: white;
+                .webkit-off();
+                outline: none;
 
                 &.error {
                   .single-border(@deco-red);
@@ -1062,11 +1067,27 @@ body {
                   width: 206px;
                   padding-left: 19.5%;
 
+                  &.guest-meal {
+
+                    .webkit-off();
+
+                    &:active,
+                    &:hover,
+                    &:focus {
+                      border: none;
+                      outline: none;
+                      .webkit-off();
+
+                    }
+                  }
+
                   &:active,
                   &:hover,
                   &:focus {
                     border: none;
                     outline: none;
+                    .webkit-off();
+
                   }
 
                 }
@@ -1103,6 +1124,7 @@ body {
                   &:focus {
 
                     outline: none;
+                    .webkit-off();
 
                     &:invalid {
 

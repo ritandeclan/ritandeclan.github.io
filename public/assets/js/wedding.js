@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   if (isFirefox) {
     $("#meal").css("padding-left", "0");
+    $(".guest-meal").css("padding-left", "0");
   }
 
   var mapStyles =
