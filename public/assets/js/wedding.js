@@ -342,7 +342,7 @@ $(document).ready(function(){
 
       // Ajax call for your weather
       $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&units=imperial",
+        url: "http://api.openweathermap.org/data/2.5/weather?lat="+ position.coords.latitude + "&lon=" + position.coords.longitude+ "&APPID=f705245bb8d87b81bd0ddc233d19ec41&units=imperial",
         crossDomain: true,
         dataType: 'jsonp'
       }).success(function(data) {
@@ -369,7 +369,7 @@ $(document).ready(function(){
 
 // Ajax call for Naples temp, desc, and weather.
   $.ajax({
-    url: "http://api.openweathermap.org/data/2.5/weather?id=4165565&units=imperial",
+    url: "http://api.openweathermap.org/data/2.5/weather?id=4165565&APPID=f705245bb8d87b81bd0ddc233d19ec41&units=imperial",
     crossDomain: true,
     dataType: 'jsonp'
   }).success(function(data) {
