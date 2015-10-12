@@ -2214,6 +2214,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
+    margin-bottom: 15px;
   }
   body #countdown-section .countdown-container .days-container,
   body #countdown-section .countdown-container .hours-container,
