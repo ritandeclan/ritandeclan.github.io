@@ -205,6 +205,15 @@ body #alert-section .alert-container .message-item .intro-message {
   width: 900px;
   margin: 12px auto;
 }
+body #alert-section .alert-container .message-item .intro-message .phone {
+  color: #656478;
+  position: relative;
+  display: inline;
+  text-decoration: none;
+}
+body #alert-section .alert-container .message-item .intro-message .phone:hover {
+  color: #75d0bb;
+}
 body #alert-section .alert-container .message-item .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
