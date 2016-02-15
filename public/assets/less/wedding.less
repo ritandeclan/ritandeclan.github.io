@@ -436,8 +436,8 @@ body {
     background-color: @deco-yellow;
 
     .alert-container {
-      // .content-full-width();
-      width: 90%;
+      .content-full-width();
+      // width: 90%;
       max-width: 1500px;
       height: auto;
       background-color: transparent;
@@ -445,6 +445,14 @@ body {
       padding: 30px 0;
       color: white;
       text-align: center;
+
+      .standout-text {
+        color: white;
+        .delicious();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 32px auto;
+      }
 
       .intro-message {
         color: @deco-grey;
