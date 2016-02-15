@@ -148,6 +148,7 @@ body #what-to-do-section {
 }
 body #alert-section {
   background-color: #f18d11;
+  padding-bottom: 50px;
 }
 body #alert-section .alert-container {
   width: 900px;
@@ -155,7 +156,7 @@ body #alert-section .alert-container {
   height: auto;
   background-color: transparent;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 20px 0;
   color: white;
   text-align: center;
 }
@@ -166,15 +167,15 @@ body #alert-section .alert-container .standout-text {
   letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
-  margin: 32px auto;
+  margin: 0 auto 32px auto;
 }
 body #alert-section .alert-container .intro-message {
-  color: #656478;
+  color: white;
   font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
-  margin: 70px auto;
+  margin: 35px auto;
 }
 body #alert-section .alert-container .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
@@ -184,6 +185,7 @@ body #alert-section .alert-container .intro-message.btwn {
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
+  color: #656478;
 }
 body #alert-section .alert-container .message-item {
   margin: 20px auto 30px auto;

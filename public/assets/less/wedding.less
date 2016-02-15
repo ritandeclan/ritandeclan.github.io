@@ -434,6 +434,7 @@ body {
 
   #alert-section {
     background-color: @deco-yellow;
+    padding-bottom: 50px;
 
     .alert-container {
       .content-full-width();
@@ -442,7 +443,7 @@ body {
       height: auto;
       background-color: transparent;
       margin: 0 auto;
-      padding: 30px 0;
+      padding: 20px 0;
       color: white;
       text-align: center;
 
@@ -451,16 +452,17 @@ body {
         .delicious();
         font-size: 90px;
         line-height: 90px;
-        margin: 32px auto;
+        margin: 0 auto 32px auto;
       }
 
       .intro-message {
-        color: @deco-grey;
+        // color: @deco-grey;
+        color: white;
        .body-font-normal();
         font-size: 30px;
         line-height: 40px;
         // .content-full-width();
-        margin: 70px auto;
+        margin: 35px auto;
 
         &.btwn {
           .body-font-bold();
@@ -469,6 +471,7 @@ body {
           margin: 0 auto;
           padding: 0;
           text-transform: uppercase;
+          color: @deco-grey;
           // .content-full-width();
         }
 
