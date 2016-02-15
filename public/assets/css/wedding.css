@@ -126,6 +126,7 @@ body #header-section .header-link-container .welcome-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
+body #alert-section,
 body #welcome-section,
 body #rsvp-section,
 body #map-section,
@@ -144,6 +145,114 @@ body #what-to-do-section {
   position: relative;
   margin: 0 auto;
   padding: 100px 0;
+}
+body #alert-section {
+  background-color: #f18d11;
+}
+body #alert-section .alert-container {
+  width: 90%;
+  max-width: 1500px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+body #alert-section .alert-container .intro-message {
+  color: #656478;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 70px auto;
+}
+body #alert-section .alert-container .intro-message.btwn {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+}
+body #alert-section .alert-container .message-item {
+  margin: 20px auto 30px auto;
+}
+body #alert-section .alert-container .message-item .fa.fa-bed.fa-lg {
+  display: inline;
+  position: relative;
+  padding-right: 5px;
+  color: white;
+}
+body #alert-section .alert-container .message-item .intro-message {
+  color: white;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  width: 900px;
+  margin: 12px auto;
+}
+body #alert-section .alert-container .message-item .intro-message.btwn {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+}
+body #alert-section .alert-container .message-item .intro-message.btwn a {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: #656478;
+}
+body #alert-section .alert-container .message-item .intro-message.btwn a:hover {
+  color: #75d0bb;
+}
+body #alert-section .alert-container .message-item .display-listings {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 5px;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 10px auto;
+  width: 320px;
+  height: auto;
+  padding: 5px 0;
+}
+body #alert-section .alert-container .message-item .display-listings:hover {
+  cursor: pointer;
+}
+body #alert-section .alert-container .message-item .display-listings h3 {
+  margin: 0;
+}
+body #alert-section .alert-container .message-item .display-listings:hover,
+body #alert-section .alert-container .message-item .display-listings:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
 }
 body #welcome-section {
   background-color: #f7b7c7;
