@@ -1624,7 +1624,8 @@ body {
 
   #directions-section,
   #staying-section,
-  #what-to-do-section {
+  #what-to-do-section,
+  #registry-section {
 
     // width: 100%;
     // display: block;
@@ -1632,7 +1633,8 @@ body {
 
     .directions-container,
     .staying-container,
-    .what-to-do-container {
+    .what-to-do-container,
+    .alert-container {
       .content-full-width();
       height: auto;
       margin: 0 auto;
@@ -2454,6 +2456,10 @@ body {
 
         .title {
           .mobile-delicious-large();
+
+          &.registry {
+            margin-bottom: 25px;
+          }
 
         }
 
