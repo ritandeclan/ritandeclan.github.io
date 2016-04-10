@@ -592,7 +592,7 @@ body {
         .double-border(@deco-red);
         color: white;
        .delicious();
-        font-size: 175px;
+        font-size: 136px;
         line-height: 175px;
         padding: 20px 0;
         margin: 20px auto;
@@ -711,34 +711,11 @@ body {
       height: auto;
       background-color: transparent;
       margin: 0 auto;
-      padding: 0 0 30px 0;
+      padding: 0;
       color: white;
       text-align: center;
       height: 200px;
       .cf();
-
-      .days-container,
-      .hours-container,
-      .minutes-container,
-      .seconds-container {
-        position: relative;
-        display: inline;
-        float: left;
-        margin-left: 10px;
-
-        .unit {
-          .medium-text-uppercase();
-          display: inline;
-          position: relative;
-          padding: 0 5px;
-        }
-
-        .number {
-          .large-text();
-          display: inline;
-          position: relative;
-        }
-      }
 
       .countdown {
         .large-text();
@@ -746,6 +723,53 @@ body {
         display: block;
         margin-top: 0;
       }
+
+      #time-container {
+
+        position: relative;
+        display: block;
+        .cf();      
+        padding-bottom: 30px;
+
+        .days-container,
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+          position: relative;
+          display: inline;
+          float: left;
+          margin-left: 10px;
+
+          .unit {
+            .medium-text-uppercase();
+            display: inline;
+            position: relative;
+            padding: 0 5px;
+          }
+
+          .number {
+            .large-text();
+            display: inline;
+            position: relative;
+          }
+        }
+      }
+
+      #freakout-container {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+        .freakout {
+            .medium-text-uppercase();
+            display: inline;
+            position: relative;
+            padding: 0 5px;
+            text-align: center;
+        }
+      }
+
     }
   }
 
@@ -2409,13 +2433,24 @@ body {
           line-height: 84px;
         }
 
-        .days-container,
-        .hours-container,
-        .minutes-container,
-        .seconds-container {
+        #time-container {
+
+          padding-bottom: 0;
+
+          .days-container,
+          .hours-container,
+          .minutes-container,
+          .seconds-container {
+            margin: 0 auto;
+            width: 100%;
+          }
+        }
+
+        #freakout-container {
           margin: 0 auto;
           width: 100%;
         }
+
       }
     }
 
@@ -2869,18 +2904,26 @@ body {
           margin-bottom: 15px;
         }
 
-        .days-container,
-        .hours-container,
-        .minutes-container,
-        .seconds-container {
-          margin: 0 auto;
-          width: 100%;
-          .number {
-            .mobile-delicious-large();
-          }
+        #time-container {
+          .days-container,
+          .hours-container,
+          .minutes-container,
+          .seconds-container {
+            margin: 0 auto;
+            width: 100%;
+            .number {
+              .mobile-delicious-large();
+            }
 
-          .unit {
-            .mobile-gill-bold-small();
+            .unit {
+              .mobile-gill-bold-small();
+            }
+          }
+        }
+
+        #freakout-container {
+          .freakout {
+              .mobile-gill-bold-small();
           }
         }
       }

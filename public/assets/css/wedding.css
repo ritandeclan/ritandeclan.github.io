@@ -300,7 +300,7 @@ body #welcome-section .intro .intro-lead {
   font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
-  font-size: 175px;
+  font-size: 136px;
   line-height: 175px;
   padding: 20px 0;
   margin: 20px auto;
@@ -407,7 +407,7 @@ body #countdown-section .countdown-container {
   height: auto;
   background-color: transparent;
   margin: 0 auto;
-  padding: 0 0 30px 0;
+  padding: 0;
   color: white;
   text-align: center;
   height: 200px;
@@ -418,45 +418,6 @@ body #countdown-section .countdown-container:after {
   height: 0;
   clear: both;
   visibility: hidden;
-}
-body #countdown-section .countdown-container .days-container,
-body #countdown-section .countdown-container .hours-container,
-body #countdown-section .countdown-container .minutes-container,
-body #countdown-section .countdown-container .seconds-container {
-  position: relative;
-  display: inline;
-  float: left;
-  margin-left: 10px;
-}
-body #countdown-section .countdown-container .days-container .unit,
-body #countdown-section .countdown-container .hours-container .unit,
-body #countdown-section .countdown-container .minutes-container .unit,
-body #countdown-section .countdown-container .seconds-container .unit {
-  color: #656478;
-  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 25px;
-  margin: 0;
-  padding: 15px 0 0 0;
-  text-transform: uppercase;
-  display: inline;
-  position: relative;
-  padding: 0 5px;
-}
-body #countdown-section .countdown-container .days-container .number,
-body #countdown-section .countdown-container .hours-container .number,
-body #countdown-section .countdown-container .minutes-container .number,
-body #countdown-section .countdown-container .seconds-container .number {
-  color: white;
-  font-family: 'delicious', 'Lobster', cursive;
-  font-weight: normal;
-  letter-spacing: 1px;
-  font-size: 90px;
-  line-height: 90px;
-  margin: 30px auto;
-  display: inline;
-  position: relative;
 }
 body #countdown-section .countdown-container .countdown {
   color: white;
@@ -469,6 +430,77 @@ body #countdown-section .countdown-container .countdown {
   position: relative;
   display: block;
   margin-top: 0;
+}
+body #countdown-section .countdown-container #time-container {
+  position: relative;
+  display: block;
+  padding-bottom: 30px;
+}
+body #countdown-section .countdown-container #time-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+body #countdown-section .countdown-container #time-container .days-container,
+body #countdown-section .countdown-container #time-container .hours-container,
+body #countdown-section .countdown-container #time-container .minutes-container,
+body #countdown-section .countdown-container #time-container .seconds-container {
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+}
+body #countdown-section .countdown-container #time-container .days-container .unit,
+body #countdown-section .countdown-container #time-container .hours-container .unit,
+body #countdown-section .countdown-container #time-container .minutes-container .unit,
+body #countdown-section .countdown-container #time-container .seconds-container .unit {
+  color: #656478;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  display: inline;
+  position: relative;
+  padding: 0 5px;
+}
+body #countdown-section .countdown-container #time-container .days-container .number,
+body #countdown-section .countdown-container #time-container .hours-container .number,
+body #countdown-section .countdown-container #time-container .minutes-container .number,
+body #countdown-section .countdown-container #time-container .seconds-container .number {
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 30px auto;
+  display: inline;
+  position: relative;
+}
+body #countdown-section .countdown-container #freakout-container {
+  display: none;
+}
+body #countdown-section .countdown-container #freakout-container.show {
+  display: block;
+}
+body #countdown-section .countdown-container #freakout-container .freakout {
+  color: #656478;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  display: inline;
+  position: relative;
+  padding: 0 5px;
+  text-align: center;
 }
 body #card-section {
   background-color: #75d0bb;
@@ -2311,10 +2343,17 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 84px;
     line-height: 84px;
   }
-  body #countdown-section .countdown-container .days-container,
-  body #countdown-section .countdown-container .hours-container,
-  body #countdown-section .countdown-container .minutes-container,
-  body #countdown-section .countdown-container .seconds-container {
+  body #countdown-section .countdown-container #time-container {
+    padding-bottom: 0;
+  }
+  body #countdown-section .countdown-container #time-container .days-container,
+  body #countdown-section .countdown-container #time-container .hours-container,
+  body #countdown-section .countdown-container #time-container .minutes-container,
+  body #countdown-section .countdown-container #time-container .seconds-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+  body #countdown-section .countdown-container #freakout-container {
     margin: 0 auto;
     width: 100%;
   }
@@ -2815,26 +2854,32 @@ body #signature-section .signature-container .message .heart-container .heart {
     line-height: 56px;
     margin-bottom: 15px;
   }
-  body #countdown-section .countdown-container .days-container,
-  body #countdown-section .countdown-container .hours-container,
-  body #countdown-section .countdown-container .minutes-container,
-  body #countdown-section .countdown-container .seconds-container {
+  body #countdown-section .countdown-container #time-container .days-container,
+  body #countdown-section .countdown-container #time-container .hours-container,
+  body #countdown-section .countdown-container #time-container .minutes-container,
+  body #countdown-section .countdown-container #time-container .seconds-container {
     margin: 0 auto;
     width: 100%;
   }
-  body #countdown-section .countdown-container .days-container .number,
-  body #countdown-section .countdown-container .hours-container .number,
-  body #countdown-section .countdown-container .minutes-container .number,
-  body #countdown-section .countdown-container .seconds-container .number {
+  body #countdown-section .countdown-container #time-container .days-container .number,
+  body #countdown-section .countdown-container #time-container .hours-container .number,
+  body #countdown-section .countdown-container #time-container .minutes-container .number,
+  body #countdown-section .countdown-container #time-container .seconds-container .number {
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
   }
-  body #countdown-section .countdown-container .days-container .unit,
-  body #countdown-section .countdown-container .hours-container .unit,
-  body #countdown-section .countdown-container .minutes-container .unit,
-  body #countdown-section .countdown-container .seconds-container .unit {
+  body #countdown-section .countdown-container #time-container .days-container .unit,
+  body #countdown-section .countdown-container #time-container .hours-container .unit,
+  body #countdown-section .countdown-container #time-container .minutes-container .unit,
+  body #countdown-section .countdown-container #time-container .seconds-container .unit {
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #countdown-section .countdown-container #freakout-container .freakout {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;

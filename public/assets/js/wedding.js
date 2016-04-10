@@ -382,7 +382,7 @@ $(document).ready(function(){
     });
 
     // set the date we're counting down to
-  var target_date = new Date("April 30, 2016").getTime();
+  var target_date = new Date("April 30, 2016");
 
   // variables for time units
   var days, hours, minutes, seconds;
@@ -396,30 +396,42 @@ $(document).ready(function(){
   // seconds
   var secondsElement = document.getElementById("seconds");
 
-  // update the tag with id "countdown" every 1 second
-  setInterval(function () {
-
     // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
+  var current_date = new Date();
 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
+  if (current_date < target_date) {
 
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
 
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
+      var target_date_time = target_date.getTime();
 
-    // format countdown string + set tag value
-    daysElement.innerHTML = days;
-    hoursElement.innerHTML = hours;
-    minutesElement.innerHTML = minutes;
-    secondsElement.innerHTML = seconds;
+      // find the amount of "seconds" between now and target
+      var current_time = new Date().getTime();
 
-  }, 1000);
+      var seconds_left = (target_date_time - current_time) / 1000;
+
+      // do some time calculations
+      days = parseInt(seconds_left / 86400);
+      seconds_left = seconds_left % 86400;
+
+      hours = parseInt(seconds_left / 3600);
+      seconds_left = seconds_left % 3600;
+
+      minutes = parseInt(seconds_left / 60);
+      seconds = parseInt(seconds_left % 60);
+
+      // format countdown string + set tag value
+      daysElement.innerHTML = days;
+      hoursElement.innerHTML = hours;
+      minutesElement.innerHTML = minutes;
+      secondsElement.innerHTML = seconds;
+
+    }, 1000);
+
+  } else if (current_date >= target_date) {
+    $("#freakout-container").addClass("show");
+  }
 
 // Make Instagram API call to pull photos with the hashtag #ritandeclan
 
