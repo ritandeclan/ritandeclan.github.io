@@ -86,7 +86,8 @@ body #header-section .header-link-container .info-link,
 body #header-section .header-link-container .rsvp-link,
 body #header-section .header-link-container .map-link,
 body #header-section .header-link-container .insta-gallery-link,
-body #header-section .header-link-container .welcome-link {
+body #header-section .header-link-container .welcome-link,
+body #header-section .header-link-container .registry-link {
   background-color: #75d0bb;
   position: relative;
   display: block;
@@ -95,7 +96,8 @@ body #header-section .header-link-container .info-link h3,
 body #header-section .header-link-container .rsvp-link h3,
 body #header-section .header-link-container .map-link h3,
 body #header-section .header-link-container .insta-gallery-link h3,
-body #header-section .header-link-container .welcome-link h3 {
+body #header-section .header-link-container .welcome-link h3,
+body #header-section .header-link-container .registry-link h3 {
   position: relative;
   display: block;
   background-color: #75d0bb;
@@ -105,7 +107,8 @@ body #header-section .header-link-container .info-link h3 a,
 body #header-section .header-link-container .rsvp-link h3 a,
 body #header-section .header-link-container .map-link h3 a,
 body #header-section .header-link-container .insta-gallery-link h3 a,
-body #header-section .header-link-container .welcome-link h3 a {
+body #header-section .header-link-container .welcome-link h3 a,
+body #header-section .header-link-container .registry-link h3 a {
   position: relative;
   display: block;
   background-color: #75d0bb;
@@ -113,7 +116,7 @@ body #header-section .header-link-container .welcome-link h3 a {
   text-decoration: none;
   position: inline;
   float: left;
-  width: 20%;
+  width: 16.6%;
   height: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -122,7 +125,8 @@ body #header-section .header-link-container .info-link h3 a:hover,
 body #header-section .header-link-container .rsvp-link h3 a:hover,
 body #header-section .header-link-container .map-link h3 a:hover,
 body #header-section .header-link-container .insta-gallery-link h3 a:hover,
-body #header-section .header-link-container .welcome-link h3 a:hover {
+body #header-section .header-link-container .welcome-link h3 a:hover,
+body #header-section .header-link-container .registry-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
@@ -137,7 +141,8 @@ body #card-section,
 body #signature-section,
 body #directions-section,
 body #staying-section,
-body #what-to-do-section {
+body #what-to-do-section,
+body #registry-section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -1337,12 +1342,19 @@ body #map-section .map-container #map-legend #location-list #beaches .legend-ite
 body #directions-section .directions-container,
 body #staying-section .directions-container,
 body #what-to-do-section .directions-container,
+body #registry-section .directions-container,
 body #directions-section .staying-container,
 body #staying-section .staying-container,
 body #what-to-do-section .staying-container,
+body #registry-section .staying-container,
 body #directions-section .what-to-do-container,
 body #staying-section .what-to-do-container,
-body #what-to-do-section .what-to-do-container {
+body #what-to-do-section .what-to-do-container,
+body #registry-section .what-to-do-container,
+body #directions-section .alert-container,
+body #staying-section .alert-container,
+body #what-to-do-section .alert-container,
+body #registry-section .alert-container {
   width: 900px;
   height: auto;
   margin: 0 auto;
@@ -1351,12 +1363,19 @@ body #what-to-do-section .what-to-do-container {
 body #directions-section .directions-container .title,
 body #staying-section .directions-container .title,
 body #what-to-do-section .directions-container .title,
+body #registry-section .directions-container .title,
 body #directions-section .staying-container .title,
 body #staying-section .staying-container .title,
 body #what-to-do-section .staying-container .title,
+body #registry-section .staying-container .title,
 body #directions-section .what-to-do-container .title,
 body #staying-section .what-to-do-container .title,
-body #what-to-do-section .what-to-do-container .title {
+body #what-to-do-section .what-to-do-container .title,
+body #registry-section .what-to-do-container .title,
+body #directions-section .alert-container .title,
+body #staying-section .alert-container .title,
+body #what-to-do-section .alert-container .title,
+body #registry-section .alert-container .title {
   color: white;
   font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
@@ -1368,23 +1387,37 @@ body #what-to-do-section .what-to-do-container .title {
 body #directions-section .directions-container .message-item,
 body #staying-section .directions-container .message-item,
 body #what-to-do-section .directions-container .message-item,
+body #registry-section .directions-container .message-item,
 body #directions-section .staying-container .message-item,
 body #staying-section .staying-container .message-item,
 body #what-to-do-section .staying-container .message-item,
+body #registry-section .staying-container .message-item,
 body #directions-section .what-to-do-container .message-item,
 body #staying-section .what-to-do-container .message-item,
-body #what-to-do-section .what-to-do-container .message-item {
+body #what-to-do-section .what-to-do-container .message-item,
+body #registry-section .what-to-do-container .message-item,
+body #directions-section .alert-container .message-item,
+body #staying-section .alert-container .message-item,
+body #what-to-do-section .alert-container .message-item,
+body #registry-section .alert-container .message-item {
   margin: 20px auto 30px auto;
 }
 body #directions-section .directions-container .message-item .fa.fa-plane.fa-lg,
 body #staying-section .directions-container .message-item .fa.fa-plane.fa-lg,
 body #what-to-do-section .directions-container .message-item .fa.fa-plane.fa-lg,
+body #registry-section .directions-container .message-item .fa.fa-plane.fa-lg,
 body #directions-section .staying-container .message-item .fa.fa-plane.fa-lg,
 body #staying-section .staying-container .message-item .fa.fa-plane.fa-lg,
 body #what-to-do-section .staying-container .message-item .fa.fa-plane.fa-lg,
+body #registry-section .staying-container .message-item .fa.fa-plane.fa-lg,
 body #directions-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
 body #staying-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
-body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg {
+body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #registry-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .alert-container .message-item .fa.fa-plane.fa-lg,
+body #staying-section .alert-container .message-item .fa.fa-plane.fa-lg,
+body #what-to-do-section .alert-container .message-item .fa.fa-plane.fa-lg,
+body #registry-section .alert-container .message-item .fa.fa-plane.fa-lg {
   display: inline;
   position: relative;
   padding-right: 5px;
@@ -1393,12 +1426,19 @@ body #what-to-do-section .what-to-do-container .message-item .fa.fa-plane.fa-lg 
 body #directions-section .directions-container .message-item .intro-message,
 body #staying-section .directions-container .message-item .intro-message,
 body #what-to-do-section .directions-container .message-item .intro-message,
+body #registry-section .directions-container .message-item .intro-message,
 body #directions-section .staying-container .message-item .intro-message,
 body #staying-section .staying-container .message-item .intro-message,
 body #what-to-do-section .staying-container .message-item .intro-message,
+body #registry-section .staying-container .message-item .intro-message,
 body #directions-section .what-to-do-container .message-item .intro-message,
 body #staying-section .what-to-do-container .message-item .intro-message,
-body #what-to-do-section .what-to-do-container .message-item .intro-message {
+body #what-to-do-section .what-to-do-container .message-item .intro-message,
+body #registry-section .what-to-do-container .message-item .intro-message,
+body #directions-section .alert-container .message-item .intro-message,
+body #staying-section .alert-container .message-item .intro-message,
+body #what-to-do-section .alert-container .message-item .intro-message,
+body #registry-section .alert-container .message-item .intro-message {
   color: white;
   font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -1410,12 +1450,19 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message {
 body #directions-section .directions-container .message-item .intro-message.btwn,
 body #staying-section .directions-container .message-item .intro-message.btwn,
 body #what-to-do-section .directions-container .message-item .intro-message.btwn,
+body #registry-section .directions-container .message-item .intro-message.btwn,
 body #directions-section .staying-container .message-item .intro-message.btwn,
 body #staying-section .staying-container .message-item .intro-message.btwn,
 body #what-to-do-section .staying-container .message-item .intro-message.btwn,
+body #registry-section .staying-container .message-item .intro-message.btwn,
 body #directions-section .what-to-do-container .message-item .intro-message.btwn,
 body #staying-section .what-to-do-container .message-item .intro-message.btwn,
-body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn,
+body #directions-section .alert-container .message-item .intro-message.btwn,
+body #staying-section .alert-container .message-item .intro-message.btwn,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn,
+body #registry-section .alert-container .message-item .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -1430,12 +1477,19 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn
 body #directions-section .directions-container .message-item .intro-message.btwn a,
 body #staying-section .directions-container .message-item .intro-message.btwn a,
 body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
+body #registry-section .directions-container .message-item .intro-message.btwn a,
 body #directions-section .staying-container .message-item .intro-message.btwn a,
 body #staying-section .staying-container .message-item .intro-message.btwn a,
 body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
+body #registry-section .staying-container .message-item .intro-message.btwn a,
 body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
 body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
-body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a {
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn a,
+body #directions-section .alert-container .message-item .intro-message.btwn a,
+body #staying-section .alert-container .message-item .intro-message.btwn a,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn a,
+body #registry-section .alert-container .message-item .intro-message.btwn a {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -1452,23 +1506,37 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn
 body #directions-section .directions-container .message-item .intro-message.btwn a:hover,
 body #staying-section .directions-container .message-item .intro-message.btwn a:hover,
 body #what-to-do-section .directions-container .message-item .intro-message.btwn a:hover,
+body #registry-section .directions-container .message-item .intro-message.btwn a:hover,
 body #directions-section .staying-container .message-item .intro-message.btwn a:hover,
 body #staying-section .staying-container .message-item .intro-message.btwn a:hover,
 body #what-to-do-section .staying-container .message-item .intro-message.btwn a:hover,
+body #registry-section .staying-container .message-item .intro-message.btwn a:hover,
 body #directions-section .what-to-do-container .message-item .intro-message.btwn a:hover,
 body #staying-section .what-to-do-container .message-item .intro-message.btwn a:hover,
-body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a:hover {
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a:hover,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn a:hover,
+body #directions-section .alert-container .message-item .intro-message.btwn a:hover,
+body #staying-section .alert-container .message-item .intro-message.btwn a:hover,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn a:hover,
+body #registry-section .alert-container .message-item .intro-message.btwn a:hover {
   color: #75d0bb;
 }
 body #directions-section .directions-container .message-item .display-listings,
 body #staying-section .directions-container .message-item .display-listings,
 body #what-to-do-section .directions-container .message-item .display-listings,
+body #registry-section .directions-container .message-item .display-listings,
 body #directions-section .staying-container .message-item .display-listings,
 body #staying-section .staying-container .message-item .display-listings,
 body #what-to-do-section .staying-container .message-item .display-listings,
+body #registry-section .staying-container .message-item .display-listings,
 body #directions-section .what-to-do-container .message-item .display-listings,
 body #staying-section .what-to-do-container .message-item .display-listings,
-body #what-to-do-section .what-to-do-container .message-item .display-listings {
+body #what-to-do-section .what-to-do-container .message-item .display-listings,
+body #registry-section .what-to-do-container .message-item .display-listings,
+body #directions-section .alert-container .message-item .display-listings,
+body #staying-section .alert-container .message-item .display-listings,
+body #what-to-do-section .alert-container .message-item .display-listings,
+body #registry-section .alert-container .message-item .display-listings {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -1490,43 +1558,71 @@ body #what-to-do-section .what-to-do-container .message-item .display-listings {
 body #directions-section .directions-container .message-item .display-listings:hover,
 body #staying-section .directions-container .message-item .display-listings:hover,
 body #what-to-do-section .directions-container .message-item .display-listings:hover,
+body #registry-section .directions-container .message-item .display-listings:hover,
 body #directions-section .staying-container .message-item .display-listings:hover,
 body #staying-section .staying-container .message-item .display-listings:hover,
 body #what-to-do-section .staying-container .message-item .display-listings:hover,
+body #registry-section .staying-container .message-item .display-listings:hover,
 body #directions-section .what-to-do-container .message-item .display-listings:hover,
 body #staying-section .what-to-do-container .message-item .display-listings:hover,
-body #what-to-do-section .what-to-do-container .message-item .display-listings:hover {
+body #what-to-do-section .what-to-do-container .message-item .display-listings:hover,
+body #registry-section .what-to-do-container .message-item .display-listings:hover,
+body #directions-section .alert-container .message-item .display-listings:hover,
+body #staying-section .alert-container .message-item .display-listings:hover,
+body #what-to-do-section .alert-container .message-item .display-listings:hover,
+body #registry-section .alert-container .message-item .display-listings:hover {
   cursor: pointer;
 }
 body #directions-section .directions-container .message-item .display-listings h3,
 body #staying-section .directions-container .message-item .display-listings h3,
 body #what-to-do-section .directions-container .message-item .display-listings h3,
+body #registry-section .directions-container .message-item .display-listings h3,
 body #directions-section .staying-container .message-item .display-listings h3,
 body #staying-section .staying-container .message-item .display-listings h3,
 body #what-to-do-section .staying-container .message-item .display-listings h3,
+body #registry-section .staying-container .message-item .display-listings h3,
 body #directions-section .what-to-do-container .message-item .display-listings h3,
 body #staying-section .what-to-do-container .message-item .display-listings h3,
-body #what-to-do-section .what-to-do-container .message-item .display-listings h3 {
+body #what-to-do-section .what-to-do-container .message-item .display-listings h3,
+body #registry-section .what-to-do-container .message-item .display-listings h3,
+body #directions-section .alert-container .message-item .display-listings h3,
+body #staying-section .alert-container .message-item .display-listings h3,
+body #what-to-do-section .alert-container .message-item .display-listings h3,
+body #registry-section .alert-container .message-item .display-listings h3 {
   margin: 0;
 }
 body #directions-section .directions-container .message-item .display-listings:hover,
 body #staying-section .directions-container .message-item .display-listings:hover,
 body #what-to-do-section .directions-container .message-item .display-listings:hover,
+body #registry-section .directions-container .message-item .display-listings:hover,
 body #directions-section .staying-container .message-item .display-listings:hover,
 body #staying-section .staying-container .message-item .display-listings:hover,
 body #what-to-do-section .staying-container .message-item .display-listings:hover,
+body #registry-section .staying-container .message-item .display-listings:hover,
 body #directions-section .what-to-do-container .message-item .display-listings:hover,
 body #staying-section .what-to-do-container .message-item .display-listings:hover,
 body #what-to-do-section .what-to-do-container .message-item .display-listings:hover,
+body #registry-section .what-to-do-container .message-item .display-listings:hover,
+body #directions-section .alert-container .message-item .display-listings:hover,
+body #staying-section .alert-container .message-item .display-listings:hover,
+body #what-to-do-section .alert-container .message-item .display-listings:hover,
+body #registry-section .alert-container .message-item .display-listings:hover,
 body #directions-section .directions-container .message-item .display-listings:active,
 body #staying-section .directions-container .message-item .display-listings:active,
 body #what-to-do-section .directions-container .message-item .display-listings:active,
+body #registry-section .directions-container .message-item .display-listings:active,
 body #directions-section .staying-container .message-item .display-listings:active,
 body #staying-section .staying-container .message-item .display-listings:active,
 body #what-to-do-section .staying-container .message-item .display-listings:active,
+body #registry-section .staying-container .message-item .display-listings:active,
 body #directions-section .what-to-do-container .message-item .display-listings:active,
 body #staying-section .what-to-do-container .message-item .display-listings:active,
-body #what-to-do-section .what-to-do-container .message-item .display-listings:active {
+body #what-to-do-section .what-to-do-container .message-item .display-listings:active,
+body #registry-section .what-to-do-container .message-item .display-listings:active,
+body #directions-section .alert-container .message-item .display-listings:active,
+body #staying-section .alert-container .message-item .display-listings:active,
+body #what-to-do-section .alert-container .message-item .display-listings:active,
+body #registry-section .alert-container .message-item .display-listings:active {
   color: #75d0bb;
   background-color: white;
   border: 10px double #75d0bb;
@@ -1681,6 +1777,54 @@ body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.tripadvisor:hover,
 body #what-to-do-section .what-to-do-container .activity-ideas .item .item-name.airbnb:hover {
   color: #f7b7c7;
+}
+body #registry-section {
+  background-color: #656478;
+  padding-bottom: 50px;
+}
+body #registry-section .alert-container {
+  width: 900px;
+  max-width: 1500px;
+  height: auto;
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+body #registry-section .alert-container .title {
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0 auto 40px auto;
+}
+body #registry-section .alert-container .intro-message {
+  color: white;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 35px auto;
+}
+body #registry-section .alert-container .intro-message a {
+  color: #75d0bb;
+  text-decoration: none;
+}
+body #registry-section .alert-container .intro-message a:hover {
+  color: #f18d11;
+}
+body #registry-section .alert-container .intro-message.btwn {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
 }
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
@@ -1885,7 +2029,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #signature-section,
   body #directions-section,
   body #staying-section,
-  body #what-to-do-section {
+  body #what-to-do-section,
+  body #registry-section {
     padding: 30px 0;
   }
   body #alert-section {
@@ -1904,9 +2049,10 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link,
   body #header-section .header-link-container .map-link,
   body #header-section .header-link-container .insta-gallery-link,
-  body #header-section .header-link-container .welcome-link {
+  body #header-section .header-link-container .welcome-link,
+  body #header-section .header-link-container .registry-link {
     height: 34px;
-    width: 15%;
+    width: 11.6%;
     margin: 0 2%;
     display: inline-block;
     position: relative;
@@ -1915,14 +2061,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link h3,
   body #header-section .header-link-container .map-link h3,
   body #header-section .header-link-container .insta-gallery-link h3,
-  body #header-section .header-link-container .welcome-link h3 {
+  body #header-section .header-link-container .welcome-link h3,
+  body #header-section .header-link-container .registry-link h3 {
     margin: 0;
   }
   body #header-section .header-link-container .info-link h3 a,
   body #header-section .header-link-container .rsvp-link h3 a,
   body #header-section .header-link-container .map-link h3 a,
   body #header-section .header-link-container .insta-gallery-link h3 a,
-  body #header-section .header-link-container .welcome-link h3 a {
+  body #header-section .header-link-container .welcome-link h3 a,
+  body #header-section .header-link-container .registry-link h3 a {
     width: 100%;
     padding-top: 10px;
   }
@@ -2063,18 +2211,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container,
   body #what-to-do-section .alert-container,
   body #directions-section .alert-container,
+  body #registry-section .alert-container,
   body #alert-section .staying-container,
   body #staying-section .staying-container,
   body #what-to-do-section .staying-container,
   body #directions-section .staying-container,
+  body #registry-section .staying-container,
   body #alert-section .what-to-do-container,
   body #staying-section .what-to-do-container,
   body #what-to-do-section .what-to-do-container,
   body #directions-section .what-to-do-container,
+  body #registry-section .what-to-do-container,
   body #alert-section .directions-container,
   body #staying-section .directions-container,
   body #what-to-do-section .directions-container,
-  body #directions-section .directions-container {
+  body #directions-section .directions-container,
+  body #registry-section .directions-container {
     width: 70%;
     margin: 0 auto;
   }
@@ -2082,75 +2234,113 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .title,
   body #what-to-do-section .alert-container .title,
   body #directions-section .alert-container .title,
+  body #registry-section .alert-container .title,
   body #alert-section .staying-container .title,
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
   body #directions-section .staying-container .title,
+  body #registry-section .staying-container .title,
   body #alert-section .what-to-do-container .title,
   body #staying-section .what-to-do-container .title,
   body #what-to-do-section .what-to-do-container .title,
   body #directions-section .what-to-do-container .title,
+  body #registry-section .what-to-do-container .title,
   body #alert-section .directions-container .title,
   body #staying-section .directions-container .title,
   body #what-to-do-section .directions-container .title,
-  body #directions-section .directions-container .title {
+  body #directions-section .directions-container .title,
+  body #registry-section .directions-container .title {
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
   }
+  body #alert-section .alert-container .title.registry,
+  body #staying-section .alert-container .title.registry,
+  body #what-to-do-section .alert-container .title.registry,
+  body #directions-section .alert-container .title.registry,
+  body #registry-section .alert-container .title.registry,
+  body #alert-section .staying-container .title.registry,
+  body #staying-section .staying-container .title.registry,
+  body #what-to-do-section .staying-container .title.registry,
+  body #directions-section .staying-container .title.registry,
+  body #registry-section .staying-container .title.registry,
+  body #alert-section .what-to-do-container .title.registry,
+  body #staying-section .what-to-do-container .title.registry,
+  body #what-to-do-section .what-to-do-container .title.registry,
+  body #directions-section .what-to-do-container .title.registry,
+  body #registry-section .what-to-do-container .title.registry,
+  body #alert-section .directions-container .title.registry,
+  body #staying-section .directions-container .title.registry,
+  body #what-to-do-section .directions-container .title.registry,
+  body #directions-section .directions-container .title.registry,
+  body #registry-section .directions-container .title.registry {
+    margin-bottom: 25px;
+  }
   body #alert-section .alert-container .activity-ideas,
   body #staying-section .alert-container .activity-ideas,
   body #what-to-do-section .alert-container .activity-ideas,
   body #directions-section .alert-container .activity-ideas,
+  body #registry-section .alert-container .activity-ideas,
   body #alert-section .staying-container .activity-ideas,
   body #staying-section .staying-container .activity-ideas,
   body #what-to-do-section .staying-container .activity-ideas,
   body #directions-section .staying-container .activity-ideas,
+  body #registry-section .staying-container .activity-ideas,
   body #alert-section .what-to-do-container .activity-ideas,
   body #staying-section .what-to-do-container .activity-ideas,
   body #what-to-do-section .what-to-do-container .activity-ideas,
   body #directions-section .what-to-do-container .activity-ideas,
+  body #registry-section .what-to-do-container .activity-ideas,
   body #alert-section .directions-container .activity-ideas,
   body #staying-section .directions-container .activity-ideas,
   body #what-to-do-section .directions-container .activity-ideas,
-  body #directions-section .directions-container .activity-ideas {
+  body #directions-section .directions-container .activity-ideas,
+  body #registry-section .directions-container .activity-ideas {
     text-align: center;
   }
   body #alert-section .alert-container .message-item,
   body #staying-section .alert-container .message-item,
   body #what-to-do-section .alert-container .message-item,
   body #directions-section .alert-container .message-item,
+  body #registry-section .alert-container .message-item,
   body #alert-section .staying-container .message-item,
   body #staying-section .staying-container .message-item,
   body #what-to-do-section .staying-container .message-item,
   body #directions-section .staying-container .message-item,
+  body #registry-section .staying-container .message-item,
   body #alert-section .what-to-do-container .message-item,
   body #staying-section .what-to-do-container .message-item,
   body #what-to-do-section .what-to-do-container .message-item,
   body #directions-section .what-to-do-container .message-item,
+  body #registry-section .what-to-do-container .message-item,
   body #alert-section .directions-container .message-item,
   body #staying-section .directions-container .message-item,
   body #what-to-do-section .directions-container .message-item,
-  body #directions-section .directions-container .message-item {
+  body #directions-section .directions-container .message-item,
+  body #registry-section .directions-container .message-item {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .intro-message,
   body #staying-section .alert-container .message-item .intro-message,
   body #what-to-do-section .alert-container .message-item .intro-message,
   body #directions-section .alert-container .message-item .intro-message,
+  body #registry-section .alert-container .message-item .intro-message,
   body #alert-section .staying-container .message-item .intro-message,
   body #staying-section .staying-container .message-item .intro-message,
   body #what-to-do-section .staying-container .message-item .intro-message,
   body #directions-section .staying-container .message-item .intro-message,
+  body #registry-section .staying-container .message-item .intro-message,
   body #alert-section .what-to-do-container .message-item .intro-message,
   body #staying-section .what-to-do-container .message-item .intro-message,
   body #what-to-do-section .what-to-do-container .message-item .intro-message,
   body #directions-section .what-to-do-container .message-item .intro-message,
+  body #registry-section .what-to-do-container .message-item .intro-message,
   body #alert-section .directions-container .message-item .intro-message,
   body #staying-section .directions-container .message-item .intro-message,
   body #what-to-do-section .directions-container .message-item .intro-message,
-  body #directions-section .directions-container .message-item .intro-message {
+  body #directions-section .directions-container .message-item .intro-message,
+  body #registry-section .directions-container .message-item .intro-message {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -2159,36 +2349,44 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .intro-message.btwn,
   body #what-to-do-section .alert-container .message-item .intro-message.btwn,
   body #directions-section .alert-container .message-item .intro-message.btwn,
+  body #registry-section .alert-container .message-item .intro-message.btwn,
   body #alert-section .staying-container .message-item .intro-message.btwn,
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
   body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #registry-section .staying-container .message-item .intro-message.btwn,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #registry-section .what-to-do-container .message-item .intro-message.btwn,
   body #alert-section .directions-container .message-item .intro-message.btwn,
   body #staying-section .directions-container .message-item .intro-message.btwn,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn,
-  body #directions-section .directions-container .message-item .intro-message.btwn {
+  body #directions-section .directions-container .message-item .intro-message.btwn,
+  body #registry-section .directions-container .message-item .intro-message.btwn {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .listings-container,
   body #staying-section .alert-container .message-item .listings-container,
   body #what-to-do-section .alert-container .message-item .listings-container,
   body #directions-section .alert-container .message-item .listings-container,
+  body #registry-section .alert-container .message-item .listings-container,
   body #alert-section .staying-container .message-item .listings-container,
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
   body #directions-section .staying-container .message-item .listings-container,
+  body #registry-section .staying-container .message-item .listings-container,
   body #alert-section .what-to-do-container .message-item .listings-container,
   body #staying-section .what-to-do-container .message-item .listings-container,
   body #what-to-do-section .what-to-do-container .message-item .listings-container,
   body #directions-section .what-to-do-container .message-item .listings-container,
+  body #registry-section .what-to-do-container .message-item .listings-container,
   body #alert-section .directions-container .message-item .listings-container,
   body #staying-section .directions-container .message-item .listings-container,
   body #what-to-do-section .directions-container .message-item .listings-container,
-  body #directions-section .directions-container .message-item .listings-container {
+  body #directions-section .directions-container .message-item .listings-container,
+  body #registry-section .directions-container .message-item .listings-container {
     width: 100%;
     text-align: center;
   }
@@ -2238,7 +2436,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #signature-section,
   body #directions-section,
   body #staying-section,
-  body #what-to-do-section {
+  body #what-to-do-section,
+  body #registry-section {
     padding: 30px 0;
   }
   body #alert-section {
@@ -2260,9 +2459,10 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link,
   body #header-section .header-link-container .map-link,
   body #header-section .header-link-container .insta-gallery-link,
-  body #header-section .header-link-container .welcome-link {
+  body #header-section .header-link-container .welcome-link,
+  body #header-section .header-link-container .registry-link {
     height: 34px;
-    width: 15%;
+    width: 11.6%;
     margin: 0 2%;
     display: inline-block;
     position: relative;
@@ -2272,7 +2472,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link h3,
   body #header-section .header-link-container .map-link h3,
   body #header-section .header-link-container .insta-gallery-link h3,
-  body #header-section .header-link-container .welcome-link h3 {
+  body #header-section .header-link-container .welcome-link h3,
+  body #header-section .header-link-container .registry-link h3 {
     margin: 0;
     padding-top: 2px;
   }
@@ -2280,7 +2481,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link h3 a,
   body #header-section .header-link-container .map-link h3 a,
   body #header-section .header-link-container .insta-gallery-link h3 a,
-  body #header-section .header-link-container .welcome-link h3 a {
+  body #header-section .header-link-container .welcome-link h3 a,
+  body #header-section .header-link-container .registry-link h3 a {
     width: 100%;
     padding-top: 10px;
   }
@@ -2323,7 +2525,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #signature-section,
   body #directions-section,
   body #staying-section,
-  body #what-to-do-section {
+  body #what-to-do-section,
+  body #registry-section {
     padding: 30px 0;
   }
   body #alert-section {
@@ -2344,7 +2547,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link,
   body #header-section .header-link-container .map-link,
   body #header-section .header-link-container .insta-gallery-link,
-  body #header-section .header-link-container .welcome-link {
+  body #header-section .header-link-container .welcome-link,
+  body #header-section .header-link-container .registry-link {
     width: 100%;
     margin: 0;
     display: block;
@@ -2355,14 +2559,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .rsvp-link h3,
   body #header-section .header-link-container .map-link h3,
   body #header-section .header-link-container .insta-gallery-link h3,
-  body #header-section .header-link-container .welcome-link h3 {
+  body #header-section .header-link-container .welcome-link h3,
+  body #header-section .header-link-container .registry-link h3 {
     margin: 0;
   }
   body #header-section .header-link-container .info-link h3 a,
   body #header-section .header-link-container .rsvp-link h3 a,
   body #header-section .header-link-container .map-link h3 a,
   body #header-section .header-link-container .insta-gallery-link h3 a,
-  body #header-section .header-link-container .welcome-link h3 a {
+  body #header-section .header-link-container .welcome-link h3 a,
+  body #header-section .header-link-container .registry-link h3 a {
     width: 100%;
     padding-top: 10px;
   }
@@ -2537,18 +2743,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .title,
   body #what-to-do-section .alert-container .title,
   body #directions-section .alert-container .title,
+  body #registry-section .alert-container .title,
   body #alert-section .staying-container .title,
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
   body #directions-section .staying-container .title,
+  body #registry-section .staying-container .title,
   body #alert-section .what-to-do-container .title,
   body #staying-section .what-to-do-container .title,
   body #what-to-do-section .what-to-do-container .title,
   body #directions-section .what-to-do-container .title,
+  body #registry-section .what-to-do-container .title,
   body #alert-section .directions-container .title,
   body #staying-section .directions-container .title,
   body #what-to-do-section .directions-container .title,
-  body #directions-section .directions-container .title {
+  body #directions-section .directions-container .title,
+  body #registry-section .directions-container .title {
     font-size: 56px;
     line-height: 56px;
   }
@@ -2556,36 +2766,44 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .activity-ideas,
   body #what-to-do-section .alert-container .activity-ideas,
   body #directions-section .alert-container .activity-ideas,
+  body #registry-section .alert-container .activity-ideas,
   body #alert-section .staying-container .activity-ideas,
   body #staying-section .staying-container .activity-ideas,
   body #what-to-do-section .staying-container .activity-ideas,
   body #directions-section .staying-container .activity-ideas,
+  body #registry-section .staying-container .activity-ideas,
   body #alert-section .what-to-do-container .activity-ideas,
   body #staying-section .what-to-do-container .activity-ideas,
   body #what-to-do-section .what-to-do-container .activity-ideas,
   body #directions-section .what-to-do-container .activity-ideas,
+  body #registry-section .what-to-do-container .activity-ideas,
   body #alert-section .directions-container .activity-ideas,
   body #staying-section .directions-container .activity-ideas,
   body #what-to-do-section .directions-container .activity-ideas,
-  body #directions-section .directions-container .activity-ideas {
+  body #directions-section .directions-container .activity-ideas,
+  body #registry-section .directions-container .activity-ideas {
     text-align: center;
   }
   body #alert-section .alert-container .message-item,
   body #staying-section .alert-container .message-item,
   body #what-to-do-section .alert-container .message-item,
   body #directions-section .alert-container .message-item,
+  body #registry-section .alert-container .message-item,
   body #alert-section .staying-container .message-item,
   body #staying-section .staying-container .message-item,
   body #what-to-do-section .staying-container .message-item,
   body #directions-section .staying-container .message-item,
+  body #registry-section .staying-container .message-item,
   body #alert-section .what-to-do-container .message-item,
   body #staying-section .what-to-do-container .message-item,
   body #what-to-do-section .what-to-do-container .message-item,
   body #directions-section .what-to-do-container .message-item,
+  body #registry-section .what-to-do-container .message-item,
   body #alert-section .directions-container .message-item,
   body #staying-section .directions-container .message-item,
   body #what-to-do-section .directions-container .message-item,
-  body #directions-section .directions-container .message-item {
+  body #directions-section .directions-container .message-item,
+  body #registry-section .directions-container .message-item {
     width: 100%;
     margin-top: 25px;
   }
@@ -2593,36 +2811,44 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .activity-ideas,
   body #what-to-do-section .alert-container .message-item .activity-ideas,
   body #directions-section .alert-container .message-item .activity-ideas,
+  body #registry-section .alert-container .message-item .activity-ideas,
   body #alert-section .staying-container .message-item .activity-ideas,
   body #staying-section .staying-container .message-item .activity-ideas,
   body #what-to-do-section .staying-container .message-item .activity-ideas,
   body #directions-section .staying-container .message-item .activity-ideas,
+  body #registry-section .staying-container .message-item .activity-ideas,
   body #alert-section .what-to-do-container .message-item .activity-ideas,
   body #staying-section .what-to-do-container .message-item .activity-ideas,
   body #what-to-do-section .what-to-do-container .message-item .activity-ideas,
   body #directions-section .what-to-do-container .message-item .activity-ideas,
+  body #registry-section .what-to-do-container .message-item .activity-ideas,
   body #alert-section .directions-container .message-item .activity-ideas,
   body #staying-section .directions-container .message-item .activity-ideas,
   body #what-to-do-section .directions-container .message-item .activity-ideas,
-  body #directions-section .directions-container .message-item .activity-ideas {
+  body #directions-section .directions-container .message-item .activity-ideas,
+  body #registry-section .directions-container .message-item .activity-ideas {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .activity-ideas .item .item-name,
   body #staying-section .alert-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .alert-container .message-item .activity-ideas .item .item-name,
   body #directions-section .alert-container .message-item .activity-ideas .item .item-name,
+  body #registry-section .alert-container .message-item .activity-ideas .item .item-name,
   body #alert-section .staying-container .message-item .activity-ideas .item .item-name,
   body #staying-section .staying-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .staying-container .message-item .activity-ideas .item .item-name,
   body #directions-section .staying-container .message-item .activity-ideas .item .item-name,
+  body #registry-section .staying-container .message-item .activity-ideas .item .item-name,
   body #alert-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #staying-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #directions-section .what-to-do-container .message-item .activity-ideas .item .item-name,
+  body #registry-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #alert-section .directions-container .message-item .activity-ideas .item .item-name,
   body #staying-section .directions-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .directions-container .message-item .activity-ideas .item .item-name,
-  body #directions-section .directions-container .message-item .activity-ideas .item .item-name {
+  body #directions-section .directions-container .message-item .activity-ideas .item .item-name,
+  body #registry-section .directions-container .message-item .activity-ideas .item .item-name {
     width: 100%;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -2633,18 +2859,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .intro-message,
   body #what-to-do-section .alert-container .message-item .intro-message,
   body #directions-section .alert-container .message-item .intro-message,
+  body #registry-section .alert-container .message-item .intro-message,
   body #alert-section .staying-container .message-item .intro-message,
   body #staying-section .staying-container .message-item .intro-message,
   body #what-to-do-section .staying-container .message-item .intro-message,
   body #directions-section .staying-container .message-item .intro-message,
+  body #registry-section .staying-container .message-item .intro-message,
   body #alert-section .what-to-do-container .message-item .intro-message,
   body #staying-section .what-to-do-container .message-item .intro-message,
   body #what-to-do-section .what-to-do-container .message-item .intro-message,
   body #directions-section .what-to-do-container .message-item .intro-message,
+  body #registry-section .what-to-do-container .message-item .intro-message,
   body #alert-section .directions-container .message-item .intro-message,
   body #staying-section .directions-container .message-item .intro-message,
   body #what-to-do-section .directions-container .message-item .intro-message,
-  body #directions-section .directions-container .message-item .intro-message {
+  body #directions-section .directions-container .message-item .intro-message,
+  body #registry-section .directions-container .message-item .intro-message {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -2657,36 +2887,44 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .intro-message.btwn,
   body #what-to-do-section .alert-container .message-item .intro-message.btwn,
   body #directions-section .alert-container .message-item .intro-message.btwn,
+  body #registry-section .alert-container .message-item .intro-message.btwn,
   body #alert-section .staying-container .message-item .intro-message.btwn,
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
   body #directions-section .staying-container .message-item .intro-message.btwn,
+  body #registry-section .staying-container .message-item .intro-message.btwn,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn,
+  body #registry-section .what-to-do-container .message-item .intro-message.btwn,
   body #alert-section .directions-container .message-item .intro-message.btwn,
   body #staying-section .directions-container .message-item .intro-message.btwn,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn,
-  body #directions-section .directions-container .message-item .intro-message.btwn {
+  body #directions-section .directions-container .message-item .intro-message.btwn,
+  body #registry-section .directions-container .message-item .intro-message.btwn {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .intro-message.btwn a,
   body #staying-section .alert-container .message-item .intro-message.btwn a,
   body #what-to-do-section .alert-container .message-item .intro-message.btwn a,
   body #directions-section .alert-container .message-item .intro-message.btwn a,
+  body #registry-section .alert-container .message-item .intro-message.btwn a,
   body #alert-section .staying-container .message-item .intro-message.btwn a,
   body #staying-section .staying-container .message-item .intro-message.btwn a,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
   body #directions-section .staying-container .message-item .intro-message.btwn a,
+  body #registry-section .staying-container .message-item .intro-message.btwn a,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn a,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
+  body #registry-section .what-to-do-container .message-item .intro-message.btwn a,
   body #alert-section .directions-container .message-item .intro-message.btwn a,
   body #staying-section .directions-container .message-item .intro-message.btwn a,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
-  body #directions-section .directions-container .message-item .intro-message.btwn a {
+  body #directions-section .directions-container .message-item .intro-message.btwn a,
+  body #registry-section .directions-container .message-item .intro-message.btwn a {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -2696,18 +2934,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .display-listings,
   body #what-to-do-section .alert-container .message-item .display-listings,
   body #directions-section .alert-container .message-item .display-listings,
+  body #registry-section .alert-container .message-item .display-listings,
   body #alert-section .staying-container .message-item .display-listings,
   body #staying-section .staying-container .message-item .display-listings,
   body #what-to-do-section .staying-container .message-item .display-listings,
   body #directions-section .staying-container .message-item .display-listings,
+  body #registry-section .staying-container .message-item .display-listings,
   body #alert-section .what-to-do-container .message-item .display-listings,
   body #staying-section .what-to-do-container .message-item .display-listings,
   body #what-to-do-section .what-to-do-container .message-item .display-listings,
   body #directions-section .what-to-do-container .message-item .display-listings,
+  body #registry-section .what-to-do-container .message-item .display-listings,
   body #alert-section .directions-container .message-item .display-listings,
   body #staying-section .directions-container .message-item .display-listings,
   body #what-to-do-section .directions-container .message-item .display-listings,
-  body #directions-section .directions-container .message-item .display-listings {
+  body #directions-section .directions-container .message-item .display-listings,
+  body #registry-section .directions-container .message-item .display-listings {
     width: 80%;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -2718,18 +2960,22 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .display-listings h3,
   body #what-to-do-section .alert-container .message-item .display-listings h3,
   body #directions-section .alert-container .message-item .display-listings h3,
+  body #registry-section .alert-container .message-item .display-listings h3,
   body #alert-section .staying-container .message-item .display-listings h3,
   body #staying-section .staying-container .message-item .display-listings h3,
   body #what-to-do-section .staying-container .message-item .display-listings h3,
   body #directions-section .staying-container .message-item .display-listings h3,
+  body #registry-section .staying-container .message-item .display-listings h3,
   body #alert-section .what-to-do-container .message-item .display-listings h3,
   body #staying-section .what-to-do-container .message-item .display-listings h3,
   body #what-to-do-section .what-to-do-container .message-item .display-listings h3,
   body #directions-section .what-to-do-container .message-item .display-listings h3,
+  body #registry-section .what-to-do-container .message-item .display-listings h3,
   body #alert-section .directions-container .message-item .display-listings h3,
   body #staying-section .directions-container .message-item .display-listings h3,
   body #what-to-do-section .directions-container .message-item .display-listings h3,
-  body #directions-section .directions-container .message-item .display-listings h3 {
+  body #directions-section .directions-container .message-item .display-listings h3,
+  body #registry-section .directions-container .message-item .display-listings h3 {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -2739,31 +2985,37 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #staying-section .alert-container .message-item .listings-container,
   body #what-to-do-section .alert-container .message-item .listings-container,
   body #directions-section .alert-container .message-item .listings-container,
+  body #registry-section .alert-container .message-item .listings-container,
   body #alert-section .staying-container .message-item .listings-container,
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
   body #directions-section .staying-container .message-item .listings-container,
+  body #registry-section .staying-container .message-item .listings-container,
   body #alert-section .what-to-do-container .message-item .listings-container,
   body #staying-section .what-to-do-container .message-item .listings-container,
   body #what-to-do-section .what-to-do-container .message-item .listings-container,
   body #directions-section .what-to-do-container .message-item .listings-container,
+  body #registry-section .what-to-do-container .message-item .listings-container,
   body #alert-section .directions-container .message-item .listings-container,
   body #staying-section .directions-container .message-item .listings-container,
   body #what-to-do-section .directions-container .message-item .listings-container,
-  body #directions-section .directions-container .message-item .listings-container {
+  body #directions-section .directions-container .message-item .listings-container,
+  body #registry-section .directions-container .message-item .listings-container {
     width: 100%;
     text-align: center;
   }
   body #alert-section .staying-container,
   body #staying-section .staying-container,
   body #what-to-do-section .staying-container,
-  body #directions-section .staying-container {
+  body #directions-section .staying-container,
+  body #registry-section .staying-container {
     margin-top: 12px;
   }
   body #alert-section .staying-container .title,
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
-  body #directions-section .staying-container .title {
+  body #directions-section .staying-container .title,
+  body #registry-section .staying-container .title {
     margin-bottom: 25px;
   }
   body #alert-section .alert-container .title {
