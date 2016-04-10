@@ -394,7 +394,7 @@ body {
             text-decoration: none;
             position: inline;
             float: left;
-            width: 16.6%;
+            width: 20%;
             height: 25px;
             text-align: center;
             text-transform: uppercase;
@@ -418,10 +418,13 @@ body {
   #insta-gallery-section,
   #card-section,
   #signature-section,
+  #menu-section,
+  #parking-section,
+  #before-party-section,
   #directions-section,
   #staying-section,
   #what-to-do-section,
-  #registry-section {
+  #registry-section, {
 
     .double-border-bottom(white);
 
@@ -592,7 +595,7 @@ body {
         .double-border(@deco-red);
         color: white;
        .delicious();
-        font-size: 175px;
+        font-size: 136px;
         line-height: 175px;
         padding: 20px 0;
         margin: 20px auto;
@@ -644,6 +647,61 @@ body {
         }
       }
 
+      .shout-container {
+        position: relative;
+        display: block;
+        width: @button-full-width * 2 + 60;
+        height: auto;
+        margin: 20px auto;
+
+        //.cf();
+
+        .btn-shout-container {
+          position: relative;
+          display: inline;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-shout {
+            .button();
+            color: white;
+            background-color: @deco-blue;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-blue;
+              background-color: white;
+              .double-border(@deco-blue);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
     }
   }
 
@@ -656,34 +714,11 @@ body {
       height: auto;
       background-color: transparent;
       margin: 0 auto;
-      padding: 0 0 30px 0;
+      padding: 0;
       color: white;
       text-align: center;
       height: 200px;
       .cf();
-
-      .days-container,
-      .hours-container,
-      .minutes-container,
-      .seconds-container {
-        position: relative;
-        display: inline;
-        float: left;
-        margin-left: 10px;
-
-        .unit {
-          .medium-text-uppercase();
-          display: inline;
-          position: relative;
-          padding: 0 5px;
-        }
-
-        .number {
-          .large-text();
-          display: inline;
-          position: relative;
-        }
-      }
 
       .countdown {
         .large-text();
@@ -691,6 +726,57 @@ body {
         display: block;
         margin-top: 0;
       }
+
+      #time-container {
+
+        position: relative;
+        display: block;
+        .cf();      
+        padding-bottom: 30px;
+
+        &.hide {
+          display: none;
+        }
+
+        .days-container,
+        .hours-container,
+        .minutes-container,
+        .seconds-container {
+          position: relative;
+          display: inline;
+          float: left;
+          margin-left: 10px;
+
+          .unit {
+            .medium-text-uppercase();
+            display: inline;
+            position: relative;
+            padding: 0 5px;
+          }
+
+          .number {
+            .large-text();
+            display: inline;
+            position: relative;
+          }
+        }
+      }
+
+      #freakout-container {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+        .freakout {
+            .medium-text-uppercase();
+            display: inline;
+            position: relative;
+            padding: 0 5px;
+            text-align: center;
+        }
+      }
+
     }
   }
 
@@ -1545,6 +1631,7 @@ body {
           overflow-y: scroll;
 
           #venue,
+          #parking,
           #attractions,
           #hotels,
           #airbnb,
@@ -1563,6 +1650,7 @@ body {
               padding: 10px 0 0 15px;
               margin: 10px 0;
               border-bottom: 10px double white;
+              border-top: 10px double white;
               color: @deco-grey;
               text-align: left;
               .mobile-delicious-small();
@@ -1594,17 +1682,7 @@ body {
           #venue {
             .legend-section-name {
               margin-top: 0;
-            }
-          }
-
-          #attractions,
-          #airbnb,
-          #bars,
-          #hotels,
-          #beaches,
-          #restaurants {
-            .legend-section-name {
-              border-top: 10px double white;
+              border-top: 0;
             }
           }
 
@@ -1625,12 +1703,18 @@ body {
   #directions-section,
   #staying-section,
   #what-to-do-section,
-  #registry-section {
+  #registry-section,
+  #menu-section,
+  #parking-section,
+  #before-party-section {
 
     // width: 100%;
     // display: block;
     // position: relative;
 
+    .menu-container,
+    .parking-container,
+    .before-party-container,
     .directions-container,
     .staying-container,
     .what-to-do-container,
@@ -1652,11 +1736,20 @@ body {
 
         margin: 20px auto 30px auto;
 
-        .fa.fa-plane.fa-lg {
+        .fa.fa-plane.fa-lg,
+        .fa.fa-bed.fa-lg,
+        .fa.fa-cutlery.fa-lg,
+        .fa.fa-car.fa-lg,
+        .fa.fa-beer.fa-lg { 
           display: inline;
           position: relative;
           padding-right: 5px;
           color: white;
+        } 
+
+        .fa.fa-bed.fa-lg,
+        .fa.fa-cutlery.fa-lg { 
+          color: @deco-grey;
         }
 
         .intro-message {
@@ -1691,12 +1784,56 @@ body {
               text-decoration: none;
               color: @deco-grey;
 
-              &:hover {
+              &:hover,
+              &:active  {
                 color: @deco-blue;
               }
 
             }
+
+            &.sub-head {
+
+              font-size: 18px;
+              line-height: 30px;
+              color: @deco-grey;
+              position: relative;
+              display: block;
+              margin: 12px auto;
+
+              &.or {
+
+                color: white;
+            
+             }
+
+            }
+
+
+            &.title {
+              display: inline;
+              color: @deco-grey;
+              a {
+                font-size: 25px;
+                line-height: 25px;
+                color: @deco-grey;
+              }
+
+            }
+
           }
+
+          .phone {
+            color: @deco-grey;
+            text-decoration: none;  
+
+            &:hover,
+            &:active {
+              color: white;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+
         }
 
         .display-listings {
@@ -1728,21 +1865,20 @@ body {
     }
   }
 
+  #menu-section {
+    background-color: @deco-yellow;
+  }
+
   #directions-section {
     background-color: @deco-light-pink;
   }
 
+  #parking-section,
   #staying-section {
-    background-color: @deco-yellow;
-
+    .parking-container,
     .staying-container {
 
       .message-item {
-        margin: 50px auto 0 auto;
-
-        &.first {
-          margin-top: 20px;
-        }
 
         &.last {
 
@@ -1776,6 +1912,45 @@ body {
 
           }
 
+        }
+      }
+
+    }
+  }
+
+  #parking-section {
+    .parking-container {
+
+      .message-item {
+        .intro-message {
+      
+          &.btwn {
+
+            a {
+
+              &:hover,
+              &:active {
+                color: @deco-light-pink;
+              }
+            
+            }
+          } 
+        }
+      }
+    }
+  }
+
+  #staying-section {
+   
+    background-color: @deco-yellow;
+
+    .staying-container {
+
+      .message-item {
+        margin: 50px auto 0 auto;
+
+        &.first {
+          margin-top: 20px;
         }
 
         .intro-message {
@@ -2215,6 +2390,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -2323,13 +2501,24 @@ body {
           line-height: 84px;
         }
 
-        .days-container,
-        .hours-container,
-        .minutes-container,
-        .seconds-container {
+        #time-container {
+
+          padding-bottom: 0;
+
+          .days-container,
+          .hours-container,
+          .minutes-container,
+          .seconds-container {
+            margin: 0 auto;
+            width: 100%;
+          }
+        }
+
+        #freakout-container {
           margin: 0 auto;
           width: 100%;
         }
+
       }
     }
 
@@ -2444,10 +2633,16 @@ body {
     #alert-section,
     #staying-section,
     #what-to-do-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #registry-section  {
 
       .alert-container,
+      .menu-container,
+      .parking-container,
+      .before-party-container,
       .staying-container,
       .what-to-do-container,
       .directions-container {
@@ -2554,6 +2749,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -2670,6 +2868,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -2783,18 +2984,26 @@ body {
           margin-bottom: 15px;
         }
 
-        .days-container,
-        .hours-container,
-        .minutes-container,
-        .seconds-container {
-          margin: 0 auto;
-          width: 100%;
-          .number {
-            .mobile-delicious-large();
-          }
+        #time-container {
+          .days-container,
+          .hours-container,
+          .minutes-container,
+          .seconds-container {
+            margin: 0 auto;
+            width: 100%;
+            .number {
+              .mobile-delicious-large();
+            }
 
-          .unit {
-            .mobile-gill-bold-small();
+            .unit {
+              .mobile-gill-bold-small();
+            }
+          }
+        }
+
+        #freakout-container {
+          .freakout {
+              .mobile-gill-bold-small();
           }
         }
       }
@@ -2924,12 +3133,18 @@ body {
     #alert-section,
     #staying-section,
     #what-to-do-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #registry-section  {
 
       .alert-container,
       .staying-container,
       .what-to-do-container,
+      .menu-container,
+      .parking-container,
+      .before-party-container,
       .directions-container {
 
         .title {

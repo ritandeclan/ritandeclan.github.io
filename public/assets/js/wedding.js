@@ -130,6 +130,12 @@ $(document).ready(function(){
         ]
       },
       {
+        "parking": [
+          [[26.142467, -81.796823], ["http://www.fifthavenuesouth.com/parking-transist/"], ["Parking garage on 4th Ave S"], ["Public Parking Garage 8th Street South and 4th Avenue."]],
+          [[26.140825, -81.794634], ["http://www.fifthavenuesouth.com/parking-transist/"], ["Parking garage btwn 5th and 6th Ave S"], ["Public Parking Garage 8th Street South and 6th Avenue."]]
+        ]
+      },
+      {
         "attractions": [
           [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
           [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
@@ -382,7 +388,7 @@ $(document).ready(function(){
     });
 
     // set the date we're counting down to
-  var target_date = new Date("April 30, 2016").getTime();
+  var target_date = new Date("April 30, 2016");
 
   // variables for time units
   var days, hours, minutes, seconds;
@@ -396,30 +402,43 @@ $(document).ready(function(){
   // seconds
   var secondsElement = document.getElementById("seconds");
 
-  // update the tag with id "countdown" every 1 second
-  setInterval(function () {
-
     // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
+  var current_date = new Date();
 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
+  if (current_date < target_date) {
 
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
 
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
+      var target_date_time = target_date.getTime();
 
-    // format countdown string + set tag value
-    daysElement.innerHTML = days;
-    hoursElement.innerHTML = hours;
-    minutesElement.innerHTML = minutes;
-    secondsElement.innerHTML = seconds;
+      // find the amount of "seconds" between now and target
+      var current_time = new Date().getTime();
 
-  }, 1000);
+      var seconds_left = (target_date_time - current_time) / 1000;
+
+      // do some time calculations
+      days = parseInt(seconds_left / 86400);
+      seconds_left = seconds_left % 86400;
+
+      hours = parseInt(seconds_left / 3600);
+      seconds_left = seconds_left % 3600;
+
+      minutes = parseInt(seconds_left / 60);
+      seconds = parseInt(seconds_left % 60);
+
+      // format countdown string + set tag value
+      daysElement.innerHTML = days;
+      hoursElement.innerHTML = hours;
+      minutesElement.innerHTML = minutes;
+      secondsElement.innerHTML = seconds;
+
+    }, 1000);
+
+  } else if (current_date >= target_date) {
+    $("#time-container").addClass("hide");
+    $("#freakout-container").addClass("show");
+  }
 
 // Make Instagram API call to pull photos with the hashtag #ritandeclan
 
@@ -446,321 +465,321 @@ $(document).ready(function(){
 
   // Form accept / decline functions
 
-  var acceptButton = $("#btn-yes");
-  var declineButton = $("#btn-no");
-  var acceptWrapper = $(".accept-wrapper");
-  var yes = $("#yes");
-  var no = $("#no");
+  // var acceptButton = $("#btn-yes");
+  // var declineButton = $("#btn-no");
+  // var acceptWrapper = $(".accept-wrapper");
+  // var yes = $("#yes");
+  // var no = $("#no");
 
-  accept = function() {
-    acceptWrapper.addClass("yup");
-    acceptButton.addClass("selected");
-    acceptButton.removeClass("unselected");
-    acceptButton.find(".btn-msg").html("Awesome!")
-    declineButton.find(".btn-msg").html("Sadly, no")
-    declineButton.removeClass("selected");
-    declineButton.addClass("unselected");
-    $("#yes").prop("checked", true);
-  }
+  // accept = function() {
+  //   acceptWrapper.addClass("yup");
+  //   acceptButton.addClass("selected");
+  //   acceptButton.removeClass("unselected");
+  //   acceptButton.find(".btn-msg").html("Awesome!")
+  //   declineButton.find(".btn-msg").html("Sadly, no")
+  //   declineButton.removeClass("selected");
+  //   declineButton.addClass("unselected");
+  //   $("#yes").prop("checked", true);
+  // }
 
-  decline = function() {
-    $(".guest-container").remove();
-    acceptWrapper.removeClass("yup");
-    declineButton.addClass("selected");
-    declineButton.removeClass("unselected");
-    acceptButton.removeClass("selected");
-    acceptButton.addClass("unselected");
-    declineButton.find(".btn-msg").html("Bummer!")
-    acceptButton.find(".btn-msg").html("Absolutely")
-    $("#no").prop("checked", true);
-  }
+  // decline = function() {
+  //   $(".guest-container").remove();
+  //   acceptWrapper.removeClass("yup");
+  //   declineButton.addClass("selected");
+  //   declineButton.removeClass("unselected");
+  //   acceptButton.removeClass("selected");
+  //   acceptButton.addClass("unselected");
+  //   declineButton.find(".btn-msg").html("Bummer!")
+  //   acceptButton.find(".btn-msg").html("Absolutely")
+  //   $("#no").prop("checked", true);
+  // }
 
-  attendanceReset = function() {
-    $(".guest-container").remove();
-    acceptWrapper.removeClass("yup");
-    declineButton.removeClass("selected");
-    declineButton.removeClass("unselected");
-    acceptButton.removeClass("selected");
-    acceptButton.removeClass("unselected");
-    declineButton.find(".btn-msg").html("Sadly, no");
-    acceptButton.find(".btn-msg").html("Absolutely");
-    $("#no").prop("checked", false);
-    $("#yes").prop("checked", false);
-  }
+  // attendanceReset = function() {
+  //   $(".guest-container").remove();
+  //   acceptWrapper.removeClass("yup");
+  //   declineButton.removeClass("selected");
+  //   declineButton.removeClass("unselected");
+  //   acceptButton.removeClass("selected");
+  //   acceptButton.removeClass("unselected");
+  //   declineButton.find(".btn-msg").html("Sadly, no");
+  //   acceptButton.find(".btn-msg").html("Absolutely");
+  //   $("#no").prop("checked", false);
+  //   $("#yes").prop("checked", false);
+  // }
 
-  acceptButton.on("click", function() {
-    accept();
-  });
+  // acceptButton.on("click", function() {
+  //   accept();
+  // });
 
-  declineButton.on("click", function(){
-    decline();
-  })
+  // declineButton.on("click", function(){
+  //   decline();
+  // })
 
   // Form conditional work
 
-  var addGuestButton = $(".add-guest");
+  // var addGuestButton = $(".add-guest");
 
-  var guestCounter = 0;
+  // var guestCounter = 0;
 
-  function isOdd(num) { return num % 2 === 1;}
+  // function isOdd(num) { return num % 2 === 1;}
 
-  addGuestNumber = function(currentGuestContainer) {
-    var guestNumber = parseInt($(currentGuestContainer).index());
+  // addGuestNumber = function(currentGuestContainer) {
+  //   var guestNumber = parseInt($(currentGuestContainer).index());
 
-    if ( !isOdd(guestNumber) ) {
-      $(currentGuestContainer).addClass("even");
-    }
+  //   if ( !isOdd(guestNumber) ) {
+  //     $(currentGuestContainer).addClass("even");
+  //   }
 
-    $(currentGuestContainer).find(".guest-number").html("Guest # " + guestNumber);
-  }
+  //   $(currentGuestContainer).find(".guest-number").html("Guest # " + guestNumber);
+  // }
 
-  addGuestButton.on('click', function(){
+  // addGuestButton.on('click', function(){
 
-    guestCounter += 1;
+  //   guestCounter += 1;
 
-    var guestSection = $(".guest-section");
+  //   var guestSection = $(".guest-section");
 
-    guestSection.append(
-      "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
-        "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
-        "<p class='guest-number'>" +
-        "</p>" +
-        "<p>" +
-          "Guest's name, please" +
-        "</p>" +
-        "<input class='answer name' type='text' name='guest-" + guestCounter + "-name'>" +
-        "<p>" +
-          "Guest's email, please" +
-        "</p>" +
-        "<input class='answer user-email' type='email' name='guest-" +guestCounter+ "-email'>" +
-        "<p>" +
-          "Guest's choice of meal" +
-        "</p>" +
-        "<div class='meal-options'>" +
-          "<div class='meal-wrapper'>" +
-            "<select class='answer dropdown guest-meal' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
-              "<option value='' selected>Choose meal</option>" +
-              "<option value='Fish'>Fish</option>" +
-              "<option value='Beef'>Beef</option>" +
-              "<option value='Vegetarian'>Vegetarian</option>" +
-            "</select>" +
-          "</div>" +
-        "</div>" +
-        "<p>" +
-          "A song this guest would dance to" +
-        "</p>" +
-        "<input class='answer' type='text' name='guest-" + guestCounter + "-song'>" +
-      "</div>"
-    );
+  //   guestSection.append(
+  //     "<div class='guest-container' data-guest-number='" + guestCounter + "'>" +
+  //       "<div class='delete-guest' data-guest-number='" + guestCounter + "' ><div class='delete-guest-button'>REMOVE GUEST</div></div>" +
+  //       "<p class='guest-number'>" +
+  //       "</p>" +
+  //       "<p>" +
+  //         "Guest's name, please" +
+  //       "</p>" +
+  //       "<input class='answer name' type='text' name='guest-" + guestCounter + "-name'>" +
+  //       "<p>" +
+  //         "Guest's email, please" +
+  //       "</p>" +
+  //       "<input class='answer user-email' type='email' name='guest-" +guestCounter+ "-email'>" +
+  //       "<p>" +
+  //         "Guest's choice of meal" +
+  //       "</p>" +
+  //       "<div class='meal-options'>" +
+  //         "<div class='meal-wrapper'>" +
+  //           "<select class='answer dropdown guest-meal' id='meal-" + guestCounter + "' name='guest-" + guestCounter + "-meal'>" +
+  //             "<option value='' selected>Choose meal</option>" +
+  //             "<option value='Fish'>Fish</option>" +
+  //             "<option value='Beef'>Beef</option>" +
+  //             "<option value='Vegetarian'>Vegetarian</option>" +
+  //           "</select>" +
+  //         "</div>" +
+  //       "</div>" +
+  //       "<p>" +
+  //         "A song this guest would dance to" +
+  //       "</p>" +
+  //       "<input class='answer' type='text' name='guest-" + guestCounter + "-song'>" +
+  //     "</div>"
+  //   );
 
-    $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
+  //   $(".delete-guest[data-guest-number='"+ guestCounter +"']").on("click", function(){
 
-      $(this).parent().remove();
+  //     $(this).parent().remove();
 
-    });
+  //   });
 
-    var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
+  //   var currentGuestContainer = ".guest-container[data-guest-number='"+ guestCounter +"']";
 
-    addGuestNumber(currentGuestContainer);
+  //   addGuestNumber(currentGuestContainer);
 
-    guestNumberClass = undefined;
+  //   guestNumberClass = undefined;
 
       // Select dropdown styling fix:
 
 
-    $("#meal-" + guestCounter).on("change", function(){
+  //   $("#meal-" + guestCounter).on("change", function(){
 
-      var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
+  //     var value= $("#meal-"+ guestCounter + " option:selected").val().toLowerCase();
 
-      if (!isFirefox) {
+  //     if (!isFirefox) {
 
-        switch (value) {
-          case "":
-             $(this).css("padding-left", "18%");
-             break;
-          case 'vegetarian':
-             $(this).css("padding-left", "23.5%");
-             break;
-          case 'fish':
-            $(this).css("padding-left", "41.5%");
-          case 'beef':
-            $(this).css("padding-left", "40.5%");
-          default:
-            $(this).css("padding-left", "40.5%");
-            break;
-        }
-      } else if (isFirefox) {
+  //       switch (value) {
+  //         case "":
+  //            $(this).css("padding-left", "18%");
+  //            break;
+  //         case 'vegetarian':
+  //            $(this).css("padding-left", "23.5%");
+  //            break;
+  //         case 'fish':
+  //           $(this).css("padding-left", "41.5%");
+  //         case 'beef':
+  //           $(this).css("padding-left", "40.5%");
+  //         default:
+  //           $(this).css("padding-left", "40.5%");
+  //           break;
+  //       }
+  //     } else if (isFirefox) {
 
-        $(this).css("padding-left", "0");
+  //       $(this).css("padding-left", "0");
 
-      }
+  //     }
 
-    });
+  //   });
 
-  });
+  // });
 
 // Select dropdown styling fix:
 
-  $("#meal").on("change", function(){
+  // $("#meal").on("change", function(){
 
-    var value= $("#meal option:selected").val().toLowerCase();
+  //   var value= $("#meal option:selected").val().toLowerCase();
 
-    if (!isFirefox) {
+  //   if (!isFirefox) {
 
-      switch (value) {
-        case "":
-           $(this).css("padding-left", "18%");
-           break;
-        case 'vegetarian':
-           $(this).css("padding-left", "23.5%");
-           break;
-        case 'fish':
-          $(this).css("padding-left", "41.5%");
-        case 'beef':
-          $(this).css("padding-left", "40.5%");
-        default:
-          $(this).css("padding-left", "40.5");
-          break;
-      }
-    } else if (isFirefox) {
-      $(this).css("padding-left", "0");
-    }
+  //     switch (value) {
+  //       case "":
+  //          $(this).css("padding-left", "18%");
+  //          break;
+  //       case 'vegetarian':
+  //          $(this).css("padding-left", "23.5%");
+  //          break;
+  //       case 'fish':
+  //         $(this).css("padding-left", "41.5%");
+  //       case 'beef':
+  //         $(this).css("padding-left", "40.5%");
+  //       default:
+  //         $(this).css("padding-left", "40.5");
+  //         break;
+  //     }
+  //   } else if (isFirefox) {
+  //     $(this).css("padding-left", "0");
+  //   }
 
-  });
+  // });
 
-  submitForm = function(attendanceStatus) {
+  // submitForm = function(attendanceStatus) {
 
-      var formMessage = $("#form-test").serializeArray();
+  //     var formMessage = $("#form-test").serializeArray();
 
-      $.ajax({
-        url: "//formspree.io/declanandrita@gmail.com",
-        method: "POST",
-        data: {message: formMessage},
-        dataType: "json"
-      }).done(function (data, status, jqXHR) {
+  //     $.ajax({
+  //       url: "//formspree.io/declanandrita@gmail.com",
+  //       method: "POST",
+  //       data: {message: formMessage},
+  //       dataType: "json"
+  //     }).done(function (data, status, jqXHR) {
 
-          document.getElementById("form-test").reset();
+  //         document.getElementById("form-test").reset();
 
-          attendanceReset();
+  //         attendanceReset();
 
-          if (attendanceStatus == "yes") {
-            $("#submit-success-message").fadeIn(3000, 'swing', function(){
-              $("#submit-success-message").fadeOut(5000);
-            });
-          } else if (attendanceStatus == "no"){
-            $("#submit-decline-message").fadeIn(3000, 'swing', function(){
-              $("#submit-decline-message").fadeOut(5000);
-            });
-          }
+  //         if (attendanceStatus == "yes") {
+  //           $("#submit-success-message").fadeIn(3000, 'swing', function(){
+  //             $("#submit-success-message").fadeOut(5000);
+  //           });
+  //         } else if (attendanceStatus == "no"){
+  //           $("#submit-decline-message").fadeIn(3000, 'swing', function(){
+  //             $("#submit-decline-message").fadeOut(5000);
+  //           });
+  //         }
 
-        }).fail(function (jqXHR,status,err) {
+  //       }).fail(function (jqXHR,status,err) {
 
-          attendanceReset();
+  //         attendanceReset();
 
-          $("#submit-failure-message").fadeIn(3000, 'swing', function(){
-            $("#submit-failure-message").fadeOut(7000);
-          });
+  //         $("#submit-failure-message").fadeIn(3000, 'swing', function(){
+  //           $("#submit-failure-message").fadeOut(7000);
+  //         });
 
-        });
+  //       });
 
-  }
+  // }
 
     //  Formspree
 
-  $("#form-test .btn-submit").on("click", function(e) {
+  // $("#form-test .btn-submit").on("click", function(e) {
 
-    e.preventDefault();
+  //   e.preventDefault();
 
-    $.each($(".meal-wrapper"), function(index, mealWrapper){
-      $(mealWrapper).removeClass("error");
-    });
+  //   $.each($(".meal-wrapper"), function(index, mealWrapper){
+  //     $(mealWrapper).removeClass("error");
+  //   });
 
-    var requiredFields = $(".name, .email");
-    var attendanceField = $("input[name=answer-radio]");
+  //   var requiredFields = $(".name, .email");
+  //   var attendanceField = $("input[name=answer-radio]");
 
-    var attendanceWrapper = $(".answer-btn-container");
-    var yesRequiredFields = $("#meal, .guest-meal");
+  //   var attendanceWrapper = $(".answer-btn-container");
+  //   var yesRequiredFields = $("#meal, .guest-meal");
 
-    attendanceValue = $("input[name='answer-radio']:checked").val();
+  //   attendanceValue = $("input[name='answer-radio']:checked").val();
 
-    requiredFields.removeClass("error");
-    attendanceWrapper.removeClass("error");
+  //   requiredFields.removeClass("error");
+  //   attendanceWrapper.removeClass("error");
 
-    userInput = true;
+  //   userInput = true;
 
-    $.each(requiredFields, function(index, input){
+  //   $.each(requiredFields, function(index, input){
 
-      if (input.value == "") {
-        userInput = false;
+  //     if (input.value == "") {
+  //       userInput = false;
 
-        input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+  //       input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
 
-      }
+  //     }
 
-    });
+  //   });
 
     // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
-    if (attendanceField.is(":checked") == false) {
-      userInput = false;
-      $.each(attendanceWrapper, function(index, field){
-        $(field).addClass("error");
-      })
-    }
+  //   if (attendanceField.is(":checked") == false) {
+  //     userInput = false;
+  //     $.each(attendanceWrapper, function(index, field){
+  //       $(field).addClass("error");
+  //     })
+  //   }
 
-    if (userInput) {
+  //   if (userInput) {
 
-      if (attendanceValue == "no") {
+  //     if (attendanceValue == "no") {
 
-        submitForm("no");
+  //       submitForm("no");
 
-      } else if (attendanceValue == "yes") {
+  //     } else if (attendanceValue == "yes") {
 
-        yesRequiredFields.removeClass("error");
+  //       yesRequiredFields.removeClass("error");
 
-        var yesInput = true;
+  //       var yesInput = true;
 
-        $.each(yesRequiredFields, function(index, input){
+  //       $.each(yesRequiredFields, function(index, input){
 
-          if (input.value == "") {
-            yesInput = false;
-            input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
-          }
+  //         if (input.value == "") {
+  //           yesInput = false;
+  //           input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+  //         }
 
-        });
+  //       });
 
-        if (yesInput) {
+  //       if (yesInput) {
 
-          submitForm("yes");
+  //         submitForm("yes");
 
-        } else {
+  //       } else {
 
-          $("#required-fields").fadeIn(3000, 'swing', function(){
-            $('#required-fields').fadeOut(5000);
-          });
+  //         $("#required-fields").fadeIn(3000, 'swing', function(){
+  //           $('#required-fields').fadeOut(5000);
+  //         });
 
-        }
+  //       }
 
-      }
+  //     }
 
-    } else {
+  //   } else {
 
-      yesRequiredFields.removeClass("error");
+  //     yesRequiredFields.removeClass("error");
 
-      $.each(yesRequiredFields, function(index, input){
+  //     $.each(yesRequiredFields, function(index, input){
 
-        if (input.value == "") {
-          input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
-        }
+  //       if (input.value == "") {
+  //         input.id == "meal" || $(input).hasClass("guest-meal") ? $(".meal-wrapper").addClass("error") : $(input).addClass("error");
+  //       }
 
-      });
+  //     });
 
-      $("#required-fields").fadeIn(3000, 'swing', function(){
-        $('#required-fields').fadeOut(5000);
-      });
+  //     $("#required-fields").fadeIn(3000, 'swing', function(){
+  //       $('#required-fields').fadeOut(5000);
+  //     });
 
-    }
+  //   }
 
-  });
+  // });
 
   // Where to Stay hotel and Airbnb sections
 
@@ -770,8 +789,8 @@ $(document).ready(function(){
   var hotelsContainer = $("#hotel-container");
   var airbnbContainer = $("#airbnb-container");
 
-  var hotelList = locations[2].hotels;
-  var airbnbList = locations[5].airbnb;
+  var hotelList = locations[3].hotels;
+  var airbnbList = locations[6].airbnb;
 
   $.each(hotelList, function(index, hotel){
 
