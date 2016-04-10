@@ -430,6 +430,7 @@ $(document).ready(function(){
     }, 1000);
 
   } else if (current_date >= target_date) {
+    $("#time-container").addClass("hide");
     $("#freakout-container").addClass("show");
   }
 

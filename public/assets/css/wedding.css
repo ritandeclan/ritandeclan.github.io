@@ -443,6 +443,9 @@ body #countdown-section .countdown-container #time-container:after {
   clear: both;
   visibility: hidden;
 }
+body #countdown-section .countdown-container #time-container.hide {
+  display: none;
+}
 body #countdown-section .countdown-container #time-container .days-container,
 body #countdown-section .countdown-container #time-container .hours-container,
 body #countdown-section .countdown-container #time-container .minutes-container,
