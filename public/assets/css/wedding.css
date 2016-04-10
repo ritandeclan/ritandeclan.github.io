@@ -351,6 +351,57 @@ body #welcome-section .intro .us-img-container .us-img {
   -webkit-border-radius: 50%;
   -o-border-radius: 50%;
 }
+body #welcome-section .intro .shout-container {
+  position: relative;
+  display: block;
+  width: 470px;
+  height: auto;
+  margin: 20px auto;
+}
+body #welcome-section .intro .shout-container .btn-shout-container {
+  position: relative;
+  display: inline;
+  width: auto;
+  float: none;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+}
+body #welcome-section .intro .shout-container .btn-shout-container.error {
+  padding: 0;
+  border: 10px solid #e9243c;
+}
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover {
+  cursor: pointer;
+}
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout.unselected {
+  opacity: 0.5;
+}
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout .btn-msg {
+  margin: 0;
+  padding: 0;
+}
 body #countdown-section .countdown-container {
   width: 950px;
   height: auto;
@@ -1417,11 +1468,45 @@ body #registry-section .what-to-do-container .message-item .fa.fa-plane.fa-lg,
 body #directions-section .alert-container .message-item .fa.fa-plane.fa-lg,
 body #staying-section .alert-container .message-item .fa.fa-plane.fa-lg,
 body #what-to-do-section .alert-container .message-item .fa.fa-plane.fa-lg,
-body #registry-section .alert-container .message-item .fa.fa-plane.fa-lg {
+body #registry-section .alert-container .message-item .fa.fa-plane.fa-lg,
+body #directions-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .alert-container .message-item .fa.fa-bed.fa-lg {
   display: inline;
   position: relative;
   padding-right: 5px;
   color: white;
+}
+body #directions-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .directions-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .staying-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .what-to-do-container .message-item .fa.fa-bed.fa-lg,
+body #directions-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #staying-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #what-to-do-section .alert-container .message-item .fa.fa-bed.fa-lg,
+body #registry-section .alert-container .message-item .fa.fa-bed.fa-lg {
+  color: #656478;
 }
 body #directions-section .directions-container .message-item .intro-message,
 body #staying-section .directions-container .message-item .intro-message,
@@ -1518,8 +1603,117 @@ body #registry-section .what-to-do-container .message-item .intro-message.btwn a
 body #directions-section .alert-container .message-item .intro-message.btwn a:hover,
 body #staying-section .alert-container .message-item .intro-message.btwn a:hover,
 body #what-to-do-section .alert-container .message-item .intro-message.btwn a:hover,
-body #registry-section .alert-container .message-item .intro-message.btwn a:hover {
+body #registry-section .alert-container .message-item .intro-message.btwn a:hover,
+body #directions-section .directions-container .message-item .intro-message.btwn a:active,
+body #staying-section .directions-container .message-item .intro-message.btwn a:active,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn a:active,
+body #registry-section .directions-container .message-item .intro-message.btwn a:active,
+body #directions-section .staying-container .message-item .intro-message.btwn a:active,
+body #staying-section .staying-container .message-item .intro-message.btwn a:active,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn a:active,
+body #registry-section .staying-container .message-item .intro-message.btwn a:active,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn a:active,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn a:active,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a:active,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn a:active,
+body #directions-section .alert-container .message-item .intro-message.btwn a:active,
+body #staying-section .alert-container .message-item .intro-message.btwn a:active,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn a:active,
+body #registry-section .alert-container .message-item .intro-message.btwn a:active {
   color: #75d0bb;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn.title,
+body #staying-section .directions-container .message-item .intro-message.btwn.title,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn.title,
+body #registry-section .directions-container .message-item .intro-message.btwn.title,
+body #directions-section .staying-container .message-item .intro-message.btwn.title,
+body #staying-section .staying-container .message-item .intro-message.btwn.title,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn.title,
+body #registry-section .staying-container .message-item .intro-message.btwn.title,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn.title,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn.title,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn.title,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn.title,
+body #directions-section .alert-container .message-item .intro-message.btwn.title,
+body #staying-section .alert-container .message-item .intro-message.btwn.title,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn.title,
+body #registry-section .alert-container .message-item .intro-message.btwn.title {
+  display: inline;
+}
+body #directions-section .directions-container .message-item .intro-message.btwn.title a,
+body #staying-section .directions-container .message-item .intro-message.btwn.title a,
+body #what-to-do-section .directions-container .message-item .intro-message.btwn.title a,
+body #registry-section .directions-container .message-item .intro-message.btwn.title a,
+body #directions-section .staying-container .message-item .intro-message.btwn.title a,
+body #staying-section .staying-container .message-item .intro-message.btwn.title a,
+body #what-to-do-section .staying-container .message-item .intro-message.btwn.title a,
+body #registry-section .staying-container .message-item .intro-message.btwn.title a,
+body #directions-section .what-to-do-container .message-item .intro-message.btwn.title a,
+body #staying-section .what-to-do-container .message-item .intro-message.btwn.title a,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn.title a,
+body #registry-section .what-to-do-container .message-item .intro-message.btwn.title a,
+body #directions-section .alert-container .message-item .intro-message.btwn.title a,
+body #staying-section .alert-container .message-item .intro-message.btwn.title a,
+body #what-to-do-section .alert-container .message-item .intro-message.btwn.title a,
+body #registry-section .alert-container .message-item .intro-message.btwn.title a {
+  font-size: 25px;
+  line-height: 25px;
+  color: #656478;
+}
+body #directions-section .directions-container .message-item .intro-message .phone,
+body #staying-section .directions-container .message-item .intro-message .phone,
+body #what-to-do-section .directions-container .message-item .intro-message .phone,
+body #registry-section .directions-container .message-item .intro-message .phone,
+body #directions-section .staying-container .message-item .intro-message .phone,
+body #staying-section .staying-container .message-item .intro-message .phone,
+body #what-to-do-section .staying-container .message-item .intro-message .phone,
+body #registry-section .staying-container .message-item .intro-message .phone,
+body #directions-section .what-to-do-container .message-item .intro-message .phone,
+body #staying-section .what-to-do-container .message-item .intro-message .phone,
+body #what-to-do-section .what-to-do-container .message-item .intro-message .phone,
+body #registry-section .what-to-do-container .message-item .intro-message .phone,
+body #directions-section .alert-container .message-item .intro-message .phone,
+body #staying-section .alert-container .message-item .intro-message .phone,
+body #what-to-do-section .alert-container .message-item .intro-message .phone,
+body #registry-section .alert-container .message-item .intro-message .phone {
+  color: #656478;
+  text-decoration: none;
+}
+body #directions-section .directions-container .message-item .intro-message .phone:hover,
+body #staying-section .directions-container .message-item .intro-message .phone:hover,
+body #what-to-do-section .directions-container .message-item .intro-message .phone:hover,
+body #registry-section .directions-container .message-item .intro-message .phone:hover,
+body #directions-section .staying-container .message-item .intro-message .phone:hover,
+body #staying-section .staying-container .message-item .intro-message .phone:hover,
+body #what-to-do-section .staying-container .message-item .intro-message .phone:hover,
+body #registry-section .staying-container .message-item .intro-message .phone:hover,
+body #directions-section .what-to-do-container .message-item .intro-message .phone:hover,
+body #staying-section .what-to-do-container .message-item .intro-message .phone:hover,
+body #what-to-do-section .what-to-do-container .message-item .intro-message .phone:hover,
+body #registry-section .what-to-do-container .message-item .intro-message .phone:hover,
+body #directions-section .alert-container .message-item .intro-message .phone:hover,
+body #staying-section .alert-container .message-item .intro-message .phone:hover,
+body #what-to-do-section .alert-container .message-item .intro-message .phone:hover,
+body #registry-section .alert-container .message-item .intro-message .phone:hover,
+body #directions-section .directions-container .message-item .intro-message .phone:active,
+body #staying-section .directions-container .message-item .intro-message .phone:active,
+body #what-to-do-section .directions-container .message-item .intro-message .phone:active,
+body #registry-section .directions-container .message-item .intro-message .phone:active,
+body #directions-section .staying-container .message-item .intro-message .phone:active,
+body #staying-section .staying-container .message-item .intro-message .phone:active,
+body #what-to-do-section .staying-container .message-item .intro-message .phone:active,
+body #registry-section .staying-container .message-item .intro-message .phone:active,
+body #directions-section .what-to-do-container .message-item .intro-message .phone:active,
+body #staying-section .what-to-do-container .message-item .intro-message .phone:active,
+body #what-to-do-section .what-to-do-container .message-item .intro-message .phone:active,
+body #registry-section .what-to-do-container .message-item .intro-message .phone:active,
+body #directions-section .alert-container .message-item .intro-message .phone:active,
+body #staying-section .alert-container .message-item .intro-message .phone:active,
+body #what-to-do-section .alert-container .message-item .intro-message .phone:active,
+body #registry-section .alert-container .message-item .intro-message .phone:active {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 body #directions-section .directions-container .message-item .display-listings,
 body #staying-section .directions-container .message-item .display-listings,

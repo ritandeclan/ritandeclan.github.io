@@ -644,6 +644,61 @@ body {
         }
       }
 
+      .shout-container {
+        position: relative;
+        display: block;
+        width: @button-full-width * 2 + 60;
+        height: auto;
+        margin: 20px auto;
+
+        //.cf();
+
+        .btn-shout-container {
+          position: relative;
+          display: inline;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-shout {
+            .button();
+            color: white;
+            background-color: @deco-blue;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-blue;
+              background-color: white;
+              .double-border(@deco-blue);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
     }
   }
 
@@ -1652,11 +1707,16 @@ body {
 
         margin: 20px auto 30px auto;
 
-        .fa.fa-plane.fa-lg {
+        .fa.fa-plane.fa-lg,
+        .fa.fa-bed.fa-lg { 
           display: inline;
           position: relative;
           padding-right: 5px;
           color: white;
+        } 
+
+        .fa.fa-bed.fa-lg { 
+          color: @deco-grey;
         }
 
         .intro-message {
@@ -1691,12 +1751,38 @@ body {
               text-decoration: none;
               color: @deco-grey;
 
-              &:hover {
+              &:hover,
+              &:active  {
                 color: @deco-blue;
               }
 
             }
+
+            &.title {
+              display: inline;
+
+              a {
+                font-size: 25px;
+                line-height: 25px;
+                color: @deco-grey;
+              }
+
+            }
+
           }
+
+          .phone {
+            color: @deco-grey;
+            text-decoration: none;  
+
+            &:hover,
+            &:active {
+              color: white;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          }
+
         }
 
         .display-listings {
