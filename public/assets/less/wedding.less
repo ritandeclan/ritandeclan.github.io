@@ -1873,17 +1873,12 @@ body {
     background-color: @deco-light-pink;
   }
 
+  #parking-section,
   #staying-section {
-    background-color: @deco-yellow;
-
+    .parking-container,
     .staying-container {
 
       .message-item {
-        margin: 50px auto 0 auto;
-
-        &.first {
-          margin-top: 20px;
-        }
 
         &.last {
 
@@ -1917,6 +1912,45 @@ body {
 
           }
 
+        }
+      }
+
+    }
+  }
+
+  #parking-section {
+    .parking-container {
+
+      .message-item {
+        .intro-message {
+      
+          &.btwn {
+
+            a {
+
+              &:hover,
+              &:active {
+                color: @deco-light-pink;
+              }
+            
+            }
+          } 
+        }
+      }
+    }
+  }
+
+  #staying-section {
+   
+    background-color: @deco-yellow;
+
+    .staying-container {
+
+      .message-item {
+        margin: 50px auto 0 auto;
+
+        &.first {
+          margin-top: 20px;
         }
 
         .intro-message {

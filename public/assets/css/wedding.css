@@ -2862,6 +2862,50 @@ body #menu-section {
 body #directions-section {
   background-color: #f7b7c7;
 }
+body #parking-section .parking-container .message-item.last .display-listings,
+body #staying-section .parking-container .message-item.last .display-listings,
+body #parking-section .staying-container .message-item.last .display-listings,
+body #staying-section .staying-container .message-item.last .display-listings {
+  margin-top: 25px;
+  background-color: #656478;
+  text-decoration: none;
+  color: white;
+  width: 173px;
+}
+body #parking-section .parking-container .message-item.last .display-listings h3 a,
+body #staying-section .parking-container .message-item.last .display-listings h3 a,
+body #parking-section .staying-container .message-item.last .display-listings h3 a,
+body #staying-section .staying-container .message-item.last .display-listings h3 a {
+  text-decoration: none;
+  color: white;
+}
+body #parking-section .parking-container .message-item.last .display-listings:hover,
+body #staying-section .parking-container .message-item.last .display-listings:hover,
+body #parking-section .staying-container .message-item.last .display-listings:hover,
+body #staying-section .staying-container .message-item.last .display-listings:hover,
+body #parking-section .parking-container .message-item.last .display-listings:active,
+body #staying-section .parking-container .message-item.last .display-listings:active,
+body #parking-section .staying-container .message-item.last .display-listings:active,
+body #staying-section .staying-container .message-item.last .display-listings:active {
+  color: #656478;
+  background-color: white;
+  border: 10px double #656478;
+}
+body #parking-section .parking-container .message-item.last .display-listings:hover h3 a,
+body #staying-section .parking-container .message-item.last .display-listings:hover h3 a,
+body #parking-section .staying-container .message-item.last .display-listings:hover h3 a,
+body #staying-section .staying-container .message-item.last .display-listings:hover h3 a,
+body #parking-section .parking-container .message-item.last .display-listings:active h3 a,
+body #staying-section .parking-container .message-item.last .display-listings:active h3 a,
+body #parking-section .staying-container .message-item.last .display-listings:active h3 a,
+body #staying-section .staying-container .message-item.last .display-listings:active h3 a {
+  text-decoration: none;
+  color: #656478;
+}
+body #parking-section .parking-container .message-item .intro-message.btwn a:hover,
+body #parking-section .parking-container .message-item .intro-message.btwn a:active {
+  color: #f7b7c7;
+}
 body #staying-section {
   background-color: #f18d11;
 }
@@ -2870,28 +2914,6 @@ body #staying-section .staying-container .message-item {
 }
 body #staying-section .staying-container .message-item.first {
   margin-top: 20px;
-}
-body #staying-section .staying-container .message-item.last .display-listings {
-  margin-top: 25px;
-  background-color: #656478;
-  text-decoration: none;
-  color: white;
-  width: 173px;
-}
-body #staying-section .staying-container .message-item.last .display-listings h3 a {
-  text-decoration: none;
-  color: white;
-}
-body #staying-section .staying-container .message-item.last .display-listings:hover,
-body #staying-section .staying-container .message-item.last .display-listings:active {
-  color: #656478;
-  background-color: white;
-  border: 10px double #656478;
-}
-body #staying-section .staying-container .message-item.last .display-listings:hover h3 a,
-body #staying-section .staying-container .message-item.last .display-listings:active h3 a {
-  text-decoration: none;
-  color: #656478;
 }
 body #staying-section .staying-container .message-item .intro-message {
   color: white;
