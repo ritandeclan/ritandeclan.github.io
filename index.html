@@ -63,11 +63,6 @@
           <a href="#alert-section">Welcome</a>
         </h3>
       </div>
-      <div class="rsvp-link">
-        <h3>
-          <a href="#rsvp-section">RSVP</a>
-        </h3>
-      </div>
       <div class="map-link">
         <h3>
           <a href="#map-section">Map</a>
@@ -137,6 +132,42 @@
     </div>
   </section>
 
+   <section id="countdown-section">
+    <div class="countdown-container">
+      <p class="countdown">
+        Countdown
+      </p>
+      <div class="days-container">
+          <p id="days" class="number">
+          </p>
+          <p class="unit">
+            days&#44;
+          </p>
+      </div>
+      <div class="hours-container">
+          <p id="hours" class="number">
+          </p>
+          <p class="unit">
+            hours&#44;
+          </p>
+      </div>
+      <div class="minutes-container">
+          <p id="minutes" class="number">
+          </p>
+          <p class="unit">
+            minutes&#44;
+          </p>
+      </div>
+      <div class="seconds-container">
+          <p id="seconds" class="number">
+          </p>
+          <p class="unit">
+            seconds
+          </p>
+      </div>
+    </div>
+  </section>
+
   <section id="welcome-section">
     <div class="intro">
       <h3 class="intro-lead">
@@ -176,143 +207,6 @@
       <p class="standout-text">
          Your coolest <br/>(in all senses)<br/> beach <br/> wedding attire
       </p>
-    </div>
-  </section>
-
-  <section id="countdown-section">
-    <div class="countdown-container">
-      <p class="countdown">
-        Countdown
-      </p>
-      <div class="days-container">
-          <p id="days" class="number">
-          </p>
-          <p class="unit">
-            days&#44;
-          </p>
-      </div>
-      <div class="hours-container">
-          <p id="hours" class="number">
-          </p>
-          <p class="unit">
-            hours&#44;
-          </p>
-      </div>
-      <div class="minutes-container">
-          <p id="minutes" class="number">
-          </p>
-          <p class="unit">
-            minutes&#44;
-          </p>
-      </div>
-      <div class="seconds-container">
-          <p id="seconds" class="number">
-          </p>
-          <p class="unit">
-            seconds
-          </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="rsvp-section">
-    <div class="form-container">
-
-      <div class="rsvp-message">
-        <h3 class="rsvp">Please <br/> Reply</h3>
-      </div>
-
-      <p class="form-intro-message">
-        by February 29<sup class="superscript">th</sup>, 2016
-      </p>
-
-      <!-- <form class="form" method="POST"> -->
-      <form id="form-test">
-<!--         <input type="hidden" name="_next" value="/#rsvp-section" /> -->
-        <p>
-          Your name, please
-        </p>
-        <input class="answer name" type="text" name="name" required>
-        <p>
-          Your Email, please
-        </p>
-        <input class="answer email" type="email" name="_replyto" required>
-        <p>
-          Are you able to attend?
-        </p>
-        <div class="yes-no-container">
-          <div class="answer-btn-container">
-            <div id="btn-yes"><h3 class="btn-msg">Absolutely</h3></div>
-          </div>
-          <div class="answer-btn-container right">
-            <div id="btn-no"><h3 class="btn-msg">Sadly, no</h3></div>
-          </div>
-          <div id="answer-radio">
-            <input class="answer-radio" type="radio" name="answer-radio" value="yes" id="yes" required></input>
-            <input class="answer-radio" type="radio" name="answer-radio" value="no"  id="no" required></input>
-          </div>
-        </div>
-        <div class="accept-wrapper">
-          <p>
-            Your choice of meal
-          </p>
-          <div class="meal-options">
-            <div class="meal-wrapper">
-              <select class="answer dropdown" id="meal" name="select" required>
-                <option value="" selected>Choose meal</option>
-                <option value="Fish">Fish</option>
-                <option value="Beef">Beef</option>
-                <option value="Vegetarian">Vegetarian</option>
-              </select>
-            </div>
-          </div>
-          <p>
-            A song you would dance to
-          </p>
-          <input class="answer" type="text" name="song">
-          <div class="guest-section">
-            <div class="answer add-guest">Add a guest</div>
-          </div>
-        </div>
-        <div class="btn-container">
-          <input class="btn-submit" type="submit" value="Send">
-        </div>
-      </form>
-      <div id="submit-success-message">
-        <h3 class="submit-message">Thanks!</h3>
-        <h3 class="submit-sub">Can't wait to see you on the beach!</h3>
-        <i class="fa fa-thumbs-up fa-3x"></i>
-      </div>
-      <div id="submit-decline-message">
-        <h3 class="submit-message">We'll miss you!</h3>
-        <h3 class="submit-sub">But we'll send you a postcard from the beach!</h3>
-        <i class="fa fa-thumbs-up fa-3x"></i>
-      </div>
-      <div id="submit-failure-message">
-        <h3 class="submit-message">Whoops!</h3>
-        <h3 class="submit-sub">
-          Looks like something went wrong.
-          <br>
-          Please try again, or reach out to:
-          <br>
-          <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
-        </h3>
-        <i class="fa fa-meh-o fa-3x"></i>
-      </div>
-      <div id="required-fields">
-        <h3 class="submit-message">We need more info, please!</h3>
-        <h3 class="submit-sub">
-          Please fill in the fields highlighted above
-          <br>
-          then, try submitting the form again.
-          <br>
-          If you're still having problems, email:
-          <br>
-          <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
-        </h3>
-        <i class="fa fa-hand-o-up fa-3x"></i>
-
-      </div>
     </div>
   </section>
 
