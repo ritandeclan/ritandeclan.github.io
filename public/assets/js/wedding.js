@@ -130,6 +130,12 @@ $(document).ready(function(){
         ]
       },
       {
+        "parking": [
+          [[26.142467, -81.796823], ["http://www.fifthavenuesouth.com/parking-transist/"], ["Parking garage on 4th Ave S"], ["Public Parking Garage 8th Street South and 4th Avenue."]],
+          [[26.140825, -81.794634], ["http://www.fifthavenuesouth.com/parking-transist/"], ["Parking garage btwn 5th and 6th Ave S"], ["Public Parking Garage 8th Street South and 6th Avenue."]]
+        ]
+      },
+      {
         "attractions": [
           [ [ 26.106907, -81.770609], [ "https://www.naplesgarden.org/"], ["Naples Botanical Garden"], ["Paradise: A place of bliss. A region of supreme delight. A state of happiness. <br> Naples Botanical Garden is creating a world class paradise. <br> <a href='https://www.naplesgarden.org/blooming_now.shtml' target='_blank'>See whats blooming now!<a>"]],
           [ [ 26.170107, -81.790581], [ "http://napleszoo.com/home.htm"], ["Naples Zoo"], ["In this tropical setting, you can take delight at seeing many of your favorite animals like lions, giraffes, monkeys, pythons, and bears. <br> In addition, you'll also discover feature exhibits and an array of more rarely seen creatures like the fosas of Madagascar or an Asian deer that barks and eats meat."]],
@@ -783,8 +789,8 @@ $(document).ready(function(){
   var hotelsContainer = $("#hotel-container");
   var airbnbContainer = $("#airbnb-container");
 
-  var hotelList = locations[2].hotels;
-  var airbnbList = locations[5].airbnb;
+  var hotelList = locations[3].hotels;
+  var airbnbList = locations[6].airbnb;
 
   $.each(hotelList, function(index, hotel){
 

@@ -418,10 +418,13 @@ body {
   #insta-gallery-section,
   #card-section,
   #signature-section,
+  #menu-section,
+  #parking-section,
+  #before-party-section,
   #directions-section,
   #staying-section,
   #what-to-do-section,
-  #registry-section {
+  #registry-section, {
 
     .double-border-bottom(white);
 
@@ -1628,6 +1631,7 @@ body {
           overflow-y: scroll;
 
           #venue,
+          #parking,
           #attractions,
           #hotels,
           #airbnb,
@@ -1646,6 +1650,7 @@ body {
               padding: 10px 0 0 15px;
               margin: 10px 0;
               border-bottom: 10px double white;
+              border-top: 10px double white;
               color: @deco-grey;
               text-align: left;
               .mobile-delicious-small();
@@ -1677,17 +1682,7 @@ body {
           #venue {
             .legend-section-name {
               margin-top: 0;
-            }
-          }
-
-          #attractions,
-          #airbnb,
-          #bars,
-          #hotels,
-          #beaches,
-          #restaurants {
-            .legend-section-name {
-              border-top: 10px double white;
+              border-top: 0;
             }
           }
 
@@ -1708,12 +1703,18 @@ body {
   #directions-section,
   #staying-section,
   #what-to-do-section,
-  #registry-section {
+  #registry-section,
+  #menu-section,
+  #parking-section,
+  #before-party-section {
 
     // width: 100%;
     // display: block;
     // position: relative;
 
+    .menu-container,
+    .parking-container,
+    .before-party-container,
     .directions-container,
     .staying-container,
     .what-to-do-container,
@@ -1736,14 +1737,18 @@ body {
         margin: 20px auto 30px auto;
 
         .fa.fa-plane.fa-lg,
-        .fa.fa-bed.fa-lg { 
+        .fa.fa-bed.fa-lg,
+        .fa.fa-cutlery.fa-lg,
+        .fa.fa-car.fa-lg,
+        .fa.fa-beer.fa-lg { 
           display: inline;
           position: relative;
           padding-right: 5px;
           color: white;
         } 
 
-        .fa.fa-bed.fa-lg { 
+        .fa.fa-bed.fa-lg,
+        .fa.fa-cutlery.fa-lg { 
           color: @deco-grey;
         }
 
@@ -1786,9 +1791,27 @@ body {
 
             }
 
+            &.sub-head {
+
+              font-size: 18px;
+              line-height: 30px;
+              color: @deco-grey;
+              position: relative;
+              display: block;
+              margin: 12px auto;
+
+              &.or {
+
+                color: white;
+            
+             }
+
+            }
+
+
             &.title {
               display: inline;
-
+              color: @deco-grey;
               a {
                 font-size: 25px;
                 line-height: 25px;
@@ -1840,6 +1863,10 @@ body {
       }
 
     }
+  }
+
+  #menu-section {
+    background-color: @deco-yellow;
   }
 
   #directions-section {
@@ -2329,6 +2356,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -2569,10 +2599,16 @@ body {
     #alert-section,
     #staying-section,
     #what-to-do-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #registry-section  {
 
       .alert-container,
+      .menu-container,
+      .parking-container,
+      .before-party-container,
       .staying-container,
       .what-to-do-container,
       .directions-container {
@@ -2679,6 +2715,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -2795,6 +2834,9 @@ body {
     #insta-gallery-section,
     #card-section,
     #signature-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #staying-section,
     #what-to-do-section,
@@ -3057,12 +3099,18 @@ body {
     #alert-section,
     #staying-section,
     #what-to-do-section,
+    #menu-section,
+    #parking-section,
+    #before-party-section,
     #directions-section,
     #registry-section  {
 
       .alert-container,
       .staying-container,
       .what-to-do-container,
+      .menu-container,
+      .parking-container,
+      .before-party-container,
       .directions-container {
 
         .title {
