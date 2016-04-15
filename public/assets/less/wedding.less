@@ -623,7 +623,40 @@ body {
 
       .standout-text {
         color: white;
-        .delicious();
+                .item {
+          margin: 15px 0;
+          .item-name {
+            text-decoration: none;
+            color: @deco-light-pink;
+            .body-font-bold();
+            font-size: 18px;
+            line-height: 25px;
+            margin: 10px auto;
+            padding: 0;
+            text-transform: uppercase;
+            .content-full-width();
+            position: relative;
+            display: inline;
+
+            &:hover {
+              color: @deco-blue;
+            }
+
+            &.tripadvisor,
+            &.airbnb {
+              color: white;
+              font-size: 18px;
+              line-height: 25px;
+
+              &:hover {
+                color: @deco-light-pink;
+              }
+
+            }
+
+          }
+        }
+
         font-size: 90px;
         line-height: 90px;
         margin: 32px auto;
@@ -2056,47 +2089,195 @@ body {
             }
 
           }
+
+          &.btwn.wedding-week {
+            .delicious();
+            text-transform: none;
+            font-size: 50px;
+            margin: 50px 0;
+          }
+
         }
 
-      }
+        .activity-ideas {   
+          width: 430px;
+          margin: 25px auto 40px auto;
+          text-align: left;
 
-      .activity-ideas {
-        width: 350px;
-        margin: 25px auto 40px auto;
-        text-align: left;
 
-        .item {
-          margin: 15px 0;
-          .item-name {
-            text-decoration: none;
-            color: @deco-light-pink;
-            .body-font-bold();
-            font-size: 18px;
-            line-height: 25px;
-            margin: 10px auto;
-            padding: 0;
-            text-transform: uppercase;
-            .content-full-width();
-            position: relative;
-            display: inline;
+          #wedding-events-rsvp {
 
-            &:hover {
-              color: @deco-blue;
-            }
+            .item {
+              margin: 25px 0;
+              position: relative;
+              display: block;
 
-            &.tripadvisor,
-            &.airbnb {
-              color: white;
-              font-size: 18px;
-              line-height: 25px;
-
-              &:hover {
+              .cf();
+              
+              .day,
+              .item-name {
+                text-decoration: none;
                 color: @deco-light-pink;
+                .body-font-bold();
+                font-size: 18px;
+                line-height: 25px;
+                margin: 10px auto;
+                padding: 0;
+                text-transform: uppercase;
+                .content-full-width();
+                position: relative;
+                display: inline;
+
+                &.tripadvisor,
+                &.airbnb {
+                  color: white;
+                  font-size: 18px;
+                  line-height: 25px;
+
+                  &:hover {
+                    color: @deco-light-pink;
+                  }
+
+                }
+
+              }
+
+              .day {
+                color: white;
+                font-weight: 100;
+                text-transform: none;
+                font-size: 25px;
+                line-height: 30px;
+              }
+
+              .event-item {
+                  margin: 15px 0 0 0;
+
+                .event-time,
+                .event-details {
+                  color: @deco-blue;
+                  .delicious();
+                  display: inline;
+                  width: auto;
+                  font-size: 22px;
+                  // float: left;
+                  margin-right: 5px;
+                }
+
+                .item-name {
+                  display: inline;
+                  width: auto;
+
+                  // float: left;
+                }
+
+                .event-details {
+                  position: relative;
+                  display: block;
+                  text-align: center;
+                  color: white;
+                  .body-font-normal();
+                  font-size: 18x;
+                  line-height: 30px;
+                  font-weight: 400;
+                  margin-top: 10px;
+                }
+
               }
 
             }
 
+            .shout-container {
+              position: relative;
+              display: block;
+              width: @button-full-width * 2 + 60;
+              height: auto;
+              margin: 20px auto;
+
+                  //.cf();
+
+              .btn-shout-container {
+                position: relative;
+                display: inline;
+                width: auto;
+                float: none;
+                height: auto;
+                padding: 10px;
+                margin: 0 auto;
+
+                &.error {
+                  padding: 0;
+                  border: 10px solid @deco-red;
+                }
+
+                #btn-shout {
+                  .button();
+                  color: white;
+                  background-color: @deco-blue;
+                  .double-border(white);
+                  padding-top: 7px;
+                  margin: 0 auto;
+
+                  &:hover,
+                  &:active {
+                    color: @deco-blue;
+                    background-color: white;
+                    .double-border(@deco-blue);
+                  }
+
+                  &.selected {
+
+                  }
+
+                  &.unselected {
+                    opacity: 0.5;
+                  }
+
+                  .btn-msg {
+                    margin: 0;
+                    padding: 0;
+                  }
+
+                }
+              }
+            }
+
           }
+
+          .item {
+            margin: 15px 0;
+            .item-name {
+              text-decoration: none;
+              color: @deco-light-pink;
+              .body-font-bold();
+              font-size: 18px;
+              line-height: 25px;
+              margin: 10px auto;
+              padding: 0;
+              text-transform: uppercase;
+              .content-full-width();
+              position: relative;
+              display: inline;
+
+              &:hover {
+                color: @deco-blue;
+              }
+
+              &.tripadvisor,
+              &.airbnb {
+                color: white;
+                font-size: 18px;
+                line-height: 25px;
+
+                &:hover {
+                  color: @deco-light-pink;
+                }
+
+              }
+
+            }
+          }
+
         }
 
       }
