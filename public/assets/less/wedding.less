@@ -411,6 +411,7 @@ body {
 
   #alert-section,
   #welcome-section,
+  .welcome-section,  
   #rsvp-section,
   #map-section,
   #countdown-section,
@@ -574,6 +575,7 @@ body {
 
   }
 
+  .welcome-section,
   #welcome-section {
 
     background-color: @deco-light-pink;
@@ -623,40 +625,7 @@ body {
 
       .standout-text {
         color: white;
-                .item {
-          margin: 15px 0;
-          .item-name {
-            text-decoration: none;
-            color: @deco-light-pink;
-            .body-font-bold();
-            font-size: 18px;
-            line-height: 25px;
-            margin: 10px auto;
-            padding: 0;
-            text-transform: uppercase;
-            .content-full-width();
-            position: relative;
-            display: inline;
-
-            &:hover {
-              color: @deco-blue;
-            }
-
-            &.tripadvisor,
-            &.airbnb {
-              color: white;
-              font-size: 18px;
-              line-height: 25px;
-
-              &:hover {
-                color: @deco-light-pink;
-              }
-
-            }
-
-          }
-        }
-
+        .delicious();
         font-size: 90px;
         line-height: 90px;
         margin: 32px auto;
@@ -683,7 +652,7 @@ body {
       .shout-container {
         position: relative;
         display: block;
-        width: @button-full-width * 2 + 60;
+        // width: @button-full-width * 2 + 60;
         height: auto;
         margin: 20px auto;
 
@@ -703,7 +672,8 @@ body {
             border: 10px solid @deco-red;
           }
 
-          #btn-shout {
+          #btn-shout,
+          #btn-yeah {
             .button();
             color: white;
             background-color: @deco-blue;
@@ -1763,6 +1733,15 @@ body {
         font-size: 90px;
         line-height: 90px;
         margin: 0 auto 40px auto;
+
+        &.honeymoon {
+          margin-top: 40px;
+
+          &.btwn {
+            font-size: 60px;
+            line-height: 60px;    
+          }
+        }
       }
 
       .message-item {
@@ -2090,7 +2069,8 @@ body {
 
           }
 
-          &.btwn.wedding-week {
+          &.btwn.wedding-week,
+          &.btwn {
             .delicious();
             text-transform: none;
             font-size: 50px;
@@ -2102,7 +2082,7 @@ body {
         .activity-ideas {   
           width: 430px;
           margin: 25px auto 40px auto;
-          text-align: left;
+          text-align: center;
 
 
           #wedding-events-rsvp {
@@ -2111,6 +2091,7 @@ body {
               margin: 25px 0;
               position: relative;
               display: block;
+              text-align: center;
 
               .cf();
               
@@ -2167,7 +2148,7 @@ body {
                 .item-name {
                   display: inline;
                   width: auto;
-
+                  text-align: center;
                   // float: left;
                 }
 
@@ -2187,10 +2168,74 @@ body {
 
             }
 
+            .input-container {
+              position: relative;
+              display: block;
+              // width: @button-width;
+
+              margin: 0 auto;
+              text-align: center;
+              padding: 10px 0;
+
+                .answer {
+                  width: 200px;
+                  height: 30px;
+                  // margin-bottom: 20px;
+                  margin: 10px;
+                  outline: none;
+                  border: none;
+                  .webkit-off();
+
+                  .body-font-normal();
+                  font-weight: 400;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  color: @deco-blue;
+
+                  &:focus,
+                  &:active {
+                    outline: none;
+                  }
+
+                  &:invalid {
+                    &::after,
+                    &:after {
+                    }
+                  }
+
+                  &.email {
+                    margin: 0;
+                    .single-border(@deco-grey);
+
+
+                    &:focus {
+
+                      outline: none;
+
+                      &:invalid {
+
+                        .single-border(@deco-red);
+
+                      }
+
+                      &:valid {
+                        .single-border(@deco-blue);
+                      }
+                    }
+                  }
+
+                  &.error {
+                    .single-border(@deco-red);
+                    margin: 0;
+                  }
+
+                }
+            }
+
             .shout-container {
               position: relative;
               display: block;
-              width: @button-full-width * 2 + 60;
+              // width: @button-full-width * 2 + 60;
               height: auto;
               margin: 20px auto;
 
@@ -2198,7 +2243,7 @@ body {
 
               .btn-shout-container {
                 position: relative;
-                display: inline;
+                display: block;
                 width: auto;
                 float: none;
                 height: auto;
@@ -2210,7 +2255,8 @@ body {
                   border: 10px solid @deco-red;
                 }
 
-                #btn-shout {
+                #btn-shout,
+                #btn-yeah {
                   .button();
                   color: white;
                   background-color: @deco-blue;
@@ -2564,6 +2610,7 @@ body {
 
     #alert-section,
     #welcome-section,
+    .welcome-section,  
     #rsvp-section,
     #map-section,
     #countdown-section,
@@ -2606,7 +2653,7 @@ body {
         .registry-link {
          // float: none;
           height: 34px;
-          width: 11.6%;
+          width: 15%;
           margin: 0 2%;
           display: inline-block;
           position: relative;
@@ -2631,7 +2678,8 @@ body {
       }
     }
 
-    #welcome-section {
+     .welcome-section,
+     #welcome-section {
 
       padding: 90px 0 30px 0;
 
@@ -2922,6 +2970,7 @@ body {
   @media (max-width: 775px) {
 
     #alert-section,
+    .welcome-section,
     #welcome-section,
     #rsvp-section,
     #map-section,
@@ -2940,6 +2989,21 @@ body {
 
       padding: 30px 0;
 
+    }
+
+    #what-to-do-section {
+      .what-to-do-container {
+        .message-item {
+          .title {
+            .honeymoon {
+              .btwn {
+                font-size: 45px;
+                line-height: 45px;
+              }
+            }
+          }
+        }
+      }
     }
 
     #alert-section {
@@ -2969,7 +3033,7 @@ body {
         .registry-link {
          // float: none;
           height: 34px;
-          width: 11.6%;
+          width: 15%;
           margin: 0 2%;
           display: inline-block;
           position: relative;
@@ -2996,6 +3060,7 @@ body {
       }
     }
 
+    .welcome-section,
     #welcome-section {
 
       padding: 90px 0 30px 0;
@@ -3041,6 +3106,7 @@ body {
   @media (max-width: 650px) {
 
     #alert-section,
+    .welcome-section,
     #welcome-section,
     #rsvp-section,
     #map-section,
@@ -3112,7 +3178,8 @@ body {
 
       }
     }
-
+    
+    .welcome-section,
     #welcome-section {
 
       padding: 90px 0 30px 0;
@@ -3439,26 +3506,31 @@ body {
       }
     }
 
-    #directions-section {
-    .directions-container {
-      .title {
-        margin-bottom: 20px;
-        .mobile-delicious-large();
-      }
-        .message-item {
-          margin: 20px 0;
-          .intro-message {
-            .mobile-body-font();
-            &.btwn {
-              a {
+    #directions-section,
+    #parking-section {
 
-                .mobile-gill-bold-small();
-                width: 90%;
+      .directions-container,
+      .parking-container {
 
+        .title {
+          margin-bottom: 20px;
+          .mobile-delicious-large();
+        }
+          .message-item {
+            margin: 20px 0;
+
+            .intro-message {
+              .mobile-body-font();
+              &.btwn {
+                a {
+
+                  .mobile-gill-bold-small();
+                  width: 90%;
+
+                }
               }
             }
           }
-        }
       }
     }
 
@@ -3473,14 +3545,21 @@ body {
 
             &.honeymoon {
               .mobile-delicious-medium();
+
+              &.btwn {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+              }
+
             }
           }
 
           .intro-message {
             &.btwn {
               margin: 30px auto;
-              font-size: 22px;
-              line-height: 25px;
+              font-size: 20px;
+              line-height: 20px;
             }
           }
         }

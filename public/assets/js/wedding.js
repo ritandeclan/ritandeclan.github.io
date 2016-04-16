@@ -463,6 +463,62 @@ $(document).ready(function(){
 
     });
 
+  nameEmailReset = function() { 
+    console.log("form reset happens here");
+  }
+
+    // attendanceReset = function() {
+  //   $(".guest-container").remove();
+  //   acceptWrapper.removeClass("yup");
+  //   declineButton.removeClass("selected");
+  //   declineButton.removeClass("unselected");
+  //   acceptButton.removeClass("selected");
+  //   acceptButton.removeClass("unselected");
+  //   declineButton.find(".btn-msg").html("Sadly, no");
+  //   acceptButton.find(".btn-msg").html("Absolutely");
+  //   $("#no").prop("checked", false);
+  //   $("#yes").prop("checked", false);
+  // }
+
+  submitEventsForm = function() {
+
+      var formMessage = $("#wedding-events-rsvp").serializeArray();
+
+      debugger;
+
+      // $.ajax({
+      //   url: "//formspree.io/declanandrita@gmail.com",
+      //   method: "POST",
+      //   data: {message: formMessage},
+      //   dataType: "json"
+      // }).done(function (data, status, jqXHR) {
+
+      //     document.getElementById("form-test").reset();
+
+      //     nameEmailReset();
+
+
+      //   }).fail(function (jqXHR,status,err) {
+
+      //     nameEmailReset();
+
+      //     $("#submit-failure-message").fadeIn(3000, 'swing', function(){
+      //       $("#submit-failure-message").fadeOut(7000);
+      //     });
+
+      //   });
+
+  }
+
+  // Events Form
+
+  $("#btn-yeah").on("click", function(){
+    console.log("yeah");
+
+    submitEventsForm();
+
+  })
+
   // Form accept / decline functions
 
   // var acceptButton = $("#btn-yes");

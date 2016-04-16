@@ -132,6 +132,7 @@ body #header-section .header-link-container .registry-link h3 a:hover {
 }
 body #alert-section,
 body #welcome-section,
+body .welcome-section,
 body #rsvp-section,
 body #map-section,
 body #countdown-section,
@@ -282,9 +283,11 @@ body #alert-section .alert-container .message-item .display-listings:active {
   background-color: white;
   border: 10px double #75d0bb;
 }
+body .welcome-section,
 body #welcome-section {
   background-color: #f7b7c7;
 }
+body .welcome-section .intro,
 body #welcome-section .intro {
   width: 90%;
   max-width: 1500px;
@@ -295,6 +298,7 @@ body #welcome-section .intro {
   color: white;
   text-align: center;
 }
+body .welcome-section .intro .intro-lead,
 body #welcome-section .intro .intro-lead {
   position: relative;
   display: block;
@@ -308,6 +312,7 @@ body #welcome-section .intro .intro-lead {
   padding: 20px 0;
   margin: 20px auto;
 }
+body .welcome-section .intro .intro-message,
 body #welcome-section .intro .intro-message {
   color: #656478;
   font-family: 'GillSans', Helvetica, Arial, sans-serif;
@@ -317,6 +322,7 @@ body #welcome-section .intro .intro-message {
   width: 900px;
   margin: 70px auto;
 }
+body .welcome-section .intro .intro-message.btwn,
 body #welcome-section .intro .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -327,42 +333,17 @@ body #welcome-section .intro .intro-message.btwn {
   text-transform: uppercase;
   width: 900px;
 }
+body .welcome-section .intro .standout-text,
 body #welcome-section .intro .standout-text {
   color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
   font-size: 90px;
   line-height: 90px;
   margin: 32px auto;
 }
-body #welcome-section .intro .standout-text .item {
-  margin: 15px 0;
-}
-body #welcome-section .intro .standout-text .item .item-name {
-  text-decoration: none;
-  color: #f7b7c7;
-  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  margin: 10px auto;
-  padding: 0;
-  text-transform: uppercase;
-  width: 900px;
-  position: relative;
-  display: inline;
-}
-body #welcome-section .intro .standout-text .item .item-name:hover {
-  color: #75d0bb;
-}
-body #welcome-section .intro .standout-text .item .item-name.tripadvisor,
-body #welcome-section .intro .standout-text .item .item-name.airbnb {
-  color: white;
-  font-size: 18px;
-  line-height: 25px;
-}
-body #welcome-section .intro .standout-text .item .item-name.tripadvisor:hover,
-body #welcome-section .intro .standout-text .item .item-name.airbnb:hover {
-  color: #f7b7c7;
-}
+body .welcome-section .intro .us-img-container,
 body #welcome-section .intro .us-img-container {
   width: 500px;
   height: 500px;
@@ -373,6 +354,7 @@ body #welcome-section .intro .us-img-container {
   margin: 50px auto;
   border: 10px double white;
 }
+body .welcome-section .intro .us-img-container .us-img,
 body #welcome-section .intro .us-img-container .us-img {
   height: auto;
   width: 100%;
@@ -381,13 +363,14 @@ body #welcome-section .intro .us-img-container .us-img {
   -webkit-border-radius: 50%;
   -o-border-radius: 50%;
 }
+body .welcome-section .intro .shout-container,
 body #welcome-section .intro .shout-container {
   position: relative;
   display: block;
-  width: 470px;
   height: auto;
   margin: 20px auto;
 }
+body .welcome-section .intro .shout-container .btn-shout-container,
 body #welcome-section .intro .shout-container .btn-shout-container {
   position: relative;
   display: inline;
@@ -397,11 +380,15 @@ body #welcome-section .intro .shout-container .btn-shout-container {
   padding: 10px;
   margin: 0 auto;
 }
+body .welcome-section .intro .shout-container .btn-shout-container.error,
 body #welcome-section .intro .shout-container .btn-shout-container.error {
   padding: 0;
   border: 10px solid #e9243c;
 }
-body #welcome-section .intro .shout-container .btn-shout-container #btn-shout {
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -416,19 +403,34 @@ body #welcome-section .intro .shout-container .btn-shout-container #btn-shout {
   padding-top: 7px;
   margin: 0 auto;
 }
-body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover {
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover {
   cursor: pointer;
 }
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
 body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
-body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:active {
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:active,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout:active,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:active,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah:active {
   color: #75d0bb;
   background-color: white;
   border: 10px double #75d0bb;
 }
-body #welcome-section .intro .shout-container .btn-shout-container #btn-shout.unselected {
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout.unselected,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout.unselected,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah.unselected,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah.unselected {
   opacity: 0.5;
 }
-body #welcome-section .intro .shout-container .btn-shout-container #btn-shout .btn-msg {
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout .btn-msg,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-shout .btn-msg,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah .btn-msg,
+body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah .btn-msg {
   margin: 0;
   padding: 0;
 }
@@ -1565,6 +1567,109 @@ body #before-party-section .alert-container .title {
   font-size: 90px;
   line-height: 90px;
   margin: 0 auto 40px auto;
+}
+body #directions-section .menu-container .title.honeymoon,
+body #staying-section .menu-container .title.honeymoon,
+body #what-to-do-section .menu-container .title.honeymoon,
+body #registry-section .menu-container .title.honeymoon,
+body #menu-section .menu-container .title.honeymoon,
+body #parking-section .menu-container .title.honeymoon,
+body #before-party-section .menu-container .title.honeymoon,
+body #directions-section .parking-container .title.honeymoon,
+body #staying-section .parking-container .title.honeymoon,
+body #what-to-do-section .parking-container .title.honeymoon,
+body #registry-section .parking-container .title.honeymoon,
+body #menu-section .parking-container .title.honeymoon,
+body #parking-section .parking-container .title.honeymoon,
+body #before-party-section .parking-container .title.honeymoon,
+body #directions-section .before-party-container .title.honeymoon,
+body #staying-section .before-party-container .title.honeymoon,
+body #what-to-do-section .before-party-container .title.honeymoon,
+body #registry-section .before-party-container .title.honeymoon,
+body #menu-section .before-party-container .title.honeymoon,
+body #parking-section .before-party-container .title.honeymoon,
+body #before-party-section .before-party-container .title.honeymoon,
+body #directions-section .directions-container .title.honeymoon,
+body #staying-section .directions-container .title.honeymoon,
+body #what-to-do-section .directions-container .title.honeymoon,
+body #registry-section .directions-container .title.honeymoon,
+body #menu-section .directions-container .title.honeymoon,
+body #parking-section .directions-container .title.honeymoon,
+body #before-party-section .directions-container .title.honeymoon,
+body #directions-section .staying-container .title.honeymoon,
+body #staying-section .staying-container .title.honeymoon,
+body #what-to-do-section .staying-container .title.honeymoon,
+body #registry-section .staying-container .title.honeymoon,
+body #menu-section .staying-container .title.honeymoon,
+body #parking-section .staying-container .title.honeymoon,
+body #before-party-section .staying-container .title.honeymoon,
+body #directions-section .what-to-do-container .title.honeymoon,
+body #staying-section .what-to-do-container .title.honeymoon,
+body #what-to-do-section .what-to-do-container .title.honeymoon,
+body #registry-section .what-to-do-container .title.honeymoon,
+body #menu-section .what-to-do-container .title.honeymoon,
+body #parking-section .what-to-do-container .title.honeymoon,
+body #before-party-section .what-to-do-container .title.honeymoon,
+body #directions-section .alert-container .title.honeymoon,
+body #staying-section .alert-container .title.honeymoon,
+body #what-to-do-section .alert-container .title.honeymoon,
+body #registry-section .alert-container .title.honeymoon,
+body #menu-section .alert-container .title.honeymoon,
+body #parking-section .alert-container .title.honeymoon,
+body #before-party-section .alert-container .title.honeymoon {
+  margin-top: 40px;
+}
+body #directions-section .menu-container .title.honeymoon.btwn,
+body #staying-section .menu-container .title.honeymoon.btwn,
+body #what-to-do-section .menu-container .title.honeymoon.btwn,
+body #registry-section .menu-container .title.honeymoon.btwn,
+body #menu-section .menu-container .title.honeymoon.btwn,
+body #parking-section .menu-container .title.honeymoon.btwn,
+body #before-party-section .menu-container .title.honeymoon.btwn,
+body #directions-section .parking-container .title.honeymoon.btwn,
+body #staying-section .parking-container .title.honeymoon.btwn,
+body #what-to-do-section .parking-container .title.honeymoon.btwn,
+body #registry-section .parking-container .title.honeymoon.btwn,
+body #menu-section .parking-container .title.honeymoon.btwn,
+body #parking-section .parking-container .title.honeymoon.btwn,
+body #before-party-section .parking-container .title.honeymoon.btwn,
+body #directions-section .before-party-container .title.honeymoon.btwn,
+body #staying-section .before-party-container .title.honeymoon.btwn,
+body #what-to-do-section .before-party-container .title.honeymoon.btwn,
+body #registry-section .before-party-container .title.honeymoon.btwn,
+body #menu-section .before-party-container .title.honeymoon.btwn,
+body #parking-section .before-party-container .title.honeymoon.btwn,
+body #before-party-section .before-party-container .title.honeymoon.btwn,
+body #directions-section .directions-container .title.honeymoon.btwn,
+body #staying-section .directions-container .title.honeymoon.btwn,
+body #what-to-do-section .directions-container .title.honeymoon.btwn,
+body #registry-section .directions-container .title.honeymoon.btwn,
+body #menu-section .directions-container .title.honeymoon.btwn,
+body #parking-section .directions-container .title.honeymoon.btwn,
+body #before-party-section .directions-container .title.honeymoon.btwn,
+body #directions-section .staying-container .title.honeymoon.btwn,
+body #staying-section .staying-container .title.honeymoon.btwn,
+body #what-to-do-section .staying-container .title.honeymoon.btwn,
+body #registry-section .staying-container .title.honeymoon.btwn,
+body #menu-section .staying-container .title.honeymoon.btwn,
+body #parking-section .staying-container .title.honeymoon.btwn,
+body #before-party-section .staying-container .title.honeymoon.btwn,
+body #directions-section .what-to-do-container .title.honeymoon.btwn,
+body #staying-section .what-to-do-container .title.honeymoon.btwn,
+body #what-to-do-section .what-to-do-container .title.honeymoon.btwn,
+body #registry-section .what-to-do-container .title.honeymoon.btwn,
+body #menu-section .what-to-do-container .title.honeymoon.btwn,
+body #parking-section .what-to-do-container .title.honeymoon.btwn,
+body #before-party-section .what-to-do-container .title.honeymoon.btwn,
+body #directions-section .alert-container .title.honeymoon.btwn,
+body #staying-section .alert-container .title.honeymoon.btwn,
+body #what-to-do-section .alert-container .title.honeymoon.btwn,
+body #registry-section .alert-container .title.honeymoon.btwn,
+body #menu-section .alert-container .title.honeymoon.btwn,
+body #parking-section .alert-container .title.honeymoon.btwn,
+body #before-party-section .alert-container .title.honeymoon.btwn {
+  font-size: 60px;
+  line-height: 60px;
 }
 body #directions-section .menu-container .message-item,
 body #staying-section .menu-container .message-item,
@@ -3024,7 +3129,8 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message a {
 body #what-to-do-section .what-to-do-container .message-item .intro-message a:hover {
   color: #f18d11;
 }
-body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn.wedding-week {
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn.wedding-week,
+body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
   font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
@@ -3035,12 +3141,13 @@ body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas {
   width: 430px;
   margin: 25px auto 40px auto;
-  text-align: left;
+  text-align: center;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item {
   margin: 25px 0;
   position: relative;
   display: block;
+  text-align: center;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item:after {
   content: ".";
@@ -3102,6 +3209,7 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .item-name {
   display: inline;
   width: auto;
+  text-align: center;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-details {
   position: relative;
@@ -3114,16 +3222,60 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   font-weight: 400;
   margin-top: 10px;
 }
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer {
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #75d0bb;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer:focus,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer:active {
+  outline: none;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer.email {
+  margin: 0;
+  border: 10px solid #656478;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer.email:focus {
+  outline: none;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer.email:focus:invalid {
+  border: 10px solid #e9243c;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer.email:focus:valid {
+  border: 10px solid #75d0bb;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container .answer.error {
+  border: 10px solid #e9243c;
+  margin: 0;
+}
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container {
   position: relative;
   display: block;
-  width: 470px;
   height: auto;
   margin: 20px auto;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container {
   position: relative;
-  display: inline;
+  display: block;
   width: auto;
   float: none;
   height: auto;
@@ -3134,7 +3286,8 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   padding: 0;
   border: 10px solid #e9243c;
 }
-body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout {
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah {
   width: 173px;
   height: 25px;
   margin: 15px auto;
@@ -3149,19 +3302,24 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   padding-top: 7px;
   margin: 0 auto;
 }
-body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout:hover {
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout:hover,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah:hover {
   cursor: pointer;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout:hover,
-body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout:active {
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah:hover,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout:active,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah:active {
   color: #75d0bb;
   background-color: white;
   border: 10px double #75d0bb;
 }
-body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout.unselected {
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout.unselected,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah.unselected {
   opacity: 0.5;
 }
-body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout .btn-msg {
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-shout .btn-msg,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .shout-container .btn-shout-container #btn-yeah .btn-msg {
   margin: 0;
   padding: 0;
 }
@@ -3437,6 +3595,7 @@ body #signature-section .signature-container .message .heart-container .heart {
 @media (max-width: 960px) {
   body #alert-section,
   body #welcome-section,
+  body .welcome-section,
   body #rsvp-section,
   body #map-section,
   body #countdown-section,
@@ -3472,7 +3631,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .welcome-link,
   body #header-section .header-link-container .registry-link {
     height: 34px;
-    width: 11.6%;
+    width: 15%;
     margin: 0 2%;
     display: inline-block;
     position: relative;
@@ -3494,17 +3653,21 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     padding-top: 10px;
   }
+  body .welcome-section,
   body #welcome-section {
     padding: 90px 0 30px 0;
   }
+  body .welcome-section .intro,
   body #welcome-section .intro {
     padding: 0;
   }
+  body .welcome-section .intro .intro-lead,
   body #welcome-section .intro .intro-lead {
     font-size: 84px;
     line-height: 84px;
     margin: 0 auto;
   }
+  body .welcome-section .intro .us-img-container,
   body #welcome-section .intro .us-img-container {
     width: 250px;
     height: 250px;
@@ -3514,15 +3677,18 @@ body #signature-section .signature-container .message .heart-container .heart {
     -webkit-border-radius: 50%;
     -o-border-radius: 50%;
   }
+  body .welcome-section .intro .intro-message,
   body #welcome-section .intro .intro-message {
     width: 90%;
     font-size: 27px;
     line-height: 34px;
     margin: 25px auto 32px auto;
   }
+  body .welcome-section .intro .intro-message.btwn,
   body #welcome-section .intro .intro-message.btwn {
     width: 90%;
   }
+  body .welcome-section .intro .standout-text,
   body #welcome-section .intro .standout-text {
     font-size: 63px;
     line-height: 63px;
@@ -4141,6 +4307,7 @@ body #signature-section .signature-container .message .heart-container .heart {
 }
 @media (max-width: 775px) {
   body #alert-section,
+  body .welcome-section,
   body #welcome-section,
   body #rsvp-section,
   body #map-section,
@@ -4157,6 +4324,10 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #what-to-do-section,
   body #registry-section {
     padding: 30px 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .title .honeymoon .btwn {
+    font-size: 45px;
+    line-height: 45px;
   }
   body #alert-section {
     padding-top: 80px;
@@ -4180,7 +4351,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #header-section .header-link-container .welcome-link,
   body #header-section .header-link-container .registry-link {
     height: 34px;
-    width: 11.6%;
+    width: 15%;
     margin: 0 2%;
     display: inline-block;
     position: relative;
@@ -4204,9 +4375,11 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     padding-top: 10px;
   }
+  body .welcome-section,
   body #welcome-section {
     padding: 90px 0 30px 0;
   }
+  body .welcome-section .intro .intro-lead,
   body #welcome-section .intro .intro-lead {
     font-size: 70px;
   }
@@ -4233,6 +4406,7 @@ body #signature-section .signature-container .message .heart-container .heart {
 }
 @media (max-width: 650px) {
   body #alert-section,
+  body .welcome-section,
   body #welcome-section,
   body #rsvp-section,
   body #map-section,
@@ -4293,28 +4467,34 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     padding-top: 10px;
   }
+  body .welcome-section,
   body #welcome-section {
     padding: 90px 0 30px 0;
   }
+  body .welcome-section .intro,
   body #welcome-section .intro {
     padding: 0;
   }
+  body .welcome-section .intro .intro-lead,
   body #welcome-section .intro .intro-lead {
     font-size: 70px;
     line-height: 70px;
     margin: 0 auto;
   }
+  body .welcome-section .intro .us-img-container,
   body #welcome-section .intro .us-img-container {
     width: 250px;
     height: 250px;
     margin: 25px auto;
   }
+  body .welcome-section .intro .intro-message,
   body #welcome-section .intro .intro-message {
     width: 90%;
     font-size: 22px;
     line-height: 22px;
     margin: 25px auto 32px auto;
   }
+  body .welcome-section .intro .intro-message.btwn,
   body #welcome-section .intro .intro-message.btwn {
     width: 90%;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
@@ -4322,6 +4502,7 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 18px;
     line-height: 25px;
   }
+  body .welcome-section .intro .standout-text,
   body #welcome-section .intro .standout-text {
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
@@ -5197,23 +5378,35 @@ body #signature-section .signature-container .message .heart-container .heart {
     line-height: 25px;
     width: 90%;
   }
-  body #directions-section .directions-container .title {
+  body #directions-section .directions-container .title,
+  body #parking-section .directions-container .title,
+  body #directions-section .parking-container .title,
+  body #parking-section .parking-container .title {
     margin-bottom: 20px;
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
     line-height: 56px;
   }
-  body #directions-section .directions-container .message-item {
+  body #directions-section .directions-container .message-item,
+  body #parking-section .directions-container .message-item,
+  body #directions-section .parking-container .message-item,
+  body #parking-section .parking-container .message-item {
     margin: 20px 0;
   }
-  body #directions-section .directions-container .message-item .intro-message {
+  body #directions-section .directions-container .message-item .intro-message,
+  body #parking-section .directions-container .message-item .intro-message,
+  body #directions-section .parking-container .message-item .intro-message,
+  body #parking-section .parking-container .message-item .intro-message {
     font-family: 'GillSans', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
   }
-  body #directions-section .directions-container .message-item .intro-message.btwn a {
+  body #directions-section .directions-container .message-item .intro-message.btwn a,
+  body #parking-section .directions-container .message-item .intro-message.btwn a,
+  body #directions-section .parking-container .message-item .intro-message.btwn a,
+  body #parking-section .parking-container .message-item .intro-message.btwn a {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -5234,10 +5427,15 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 40px;
     line-height: 40px;
   }
+  body #what-to-do-section .what-to-do-container .message-item .title.honeymoon.btwn {
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 30px;
+  }
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
     margin: 30px auto;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 20px;
   }
   body #insta-gallery-section {
     padding-top: 50px;
