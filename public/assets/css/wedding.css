@@ -3639,6 +3639,9 @@ body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-i
   color: white;
   padding-bottom: 15px;
 }
+body #insta-gallery-section .insta-gallery-container .gallery-message#insta-end {
+  display: none;
+}
 body #insta-gallery-section .insta-gallery-container #insta-gallery {
   width: 100%;
   height: auto;
@@ -3657,6 +3660,68 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
 body #insta-gallery-section .insta-gallery-container #insta-gallery .instas video {
   margin: 5px;
   border: 10px solid white;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container {
+  position: relative;
+  display: block;
+  height: auto;
+  margin: 20px auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container {
+  position: relative;
+  display: block;
+  width: auto;
+  float: none;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container.error {
+  padding: 0;
+  border: 10px solid #e9243c;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:hover {
+  cursor: pointer;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:active,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:active,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout.unselected,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah.unselected,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas.unselected {
+  opacity: 0.5;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout .btn-msg,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah .btn-msg,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas .btn-msg {
+  margin: 0;
+  padding: 0;
 }
 body #signature-section {
   padding: 0;

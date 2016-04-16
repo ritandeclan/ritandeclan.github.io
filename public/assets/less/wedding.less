@@ -2090,7 +2090,7 @@ body {
           #submit-decline-message,
           #choose-events,
           #required-fields {
-          
+
             position: fixed;
             bottom: 0;
             left: 0;
@@ -2495,6 +2495,10 @@ body {
             padding-bottom: 15px;
           }
         }
+
+        &#insta-end {
+          display: none;
+        }
       }
 
       #insta-gallery {
@@ -2520,6 +2524,61 @@ body {
         }
 
       }
+
+      .shout-container {
+        position: relative;
+        display: block;
+        height: auto;
+        margin: 20px auto;
+
+        .btn-shout-container {
+          position: relative;
+          display: block;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-shout,
+          #btn-yeah,
+          #more-instas {
+            .button();
+            color: white;
+            background-color: @deco-blue;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-blue;
+              background-color: white;
+              .double-border(@deco-blue);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
     }
   }
 
