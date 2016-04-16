@@ -505,6 +505,8 @@ $(document).ready(function(){
     $("#yes").prop("checked", false);
   }
 
+  // Events Form
+
   submitEventsForm = function() {
 
       var formMessage = $("#wedding-events-rsvp").serializeArray();
@@ -516,8 +518,6 @@ $(document).ready(function(){
         dataType: "json"
       }).done(function (data, status, jqXHR) {
 
-        console.log("it worked!");
-
           document.getElementById("wedding-events-rsvp").reset();
 
           nameEmailReset();
@@ -528,12 +528,6 @@ $(document).ready(function(){
         
         }).fail(function (jqXHR,status,err) {
 
-          console.log("it failed!");
-
-          // document.getElementById("wedding-events-rsvp").reset();
-
-          // nameEmailReset();
-
           $("#submit-failure-message").fadeIn(3000, 'swing', function(){
             $("#submit-failure-message").fadeOut(7000);
           });
@@ -541,15 +535,6 @@ $(document).ready(function(){
         });
 
   }
-
-  // Events Form
-
-  // $("#btn-yeah").on("click", function(){
-  //   console.log("yeah");
-
-  //   submitEventsForm();
-
-  // })
 
   $("#btn-yeah").on("click", function(e) {
 
@@ -567,8 +552,6 @@ $(document).ready(function(){
 
     $.each(requiredFields, function(index, input){
 
-      console.log("input value", input.value);
-
       if (input.value == "") {
         userInput = false;
 
@@ -583,9 +566,6 @@ $(document).ready(function(){
       // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
       if (eventFields.is(":checked") == false) {
         eventsChosen = false;
-        // $.each(attendanceWrapper, function(index, field){
-        //   $(field).addClass("error");
-        // })
       }
 
     });
