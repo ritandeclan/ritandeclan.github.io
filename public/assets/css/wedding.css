@@ -3352,6 +3352,9 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   clear: both;
   visibility: hidden;
 }
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item.last {
+  margin-bottom: 0;
+}
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day,
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .item-name {
   text-decoration: none;
@@ -5593,6 +5596,28 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #registry-section .staying-container .title {
     margin-bottom: 25px;
   }
+  body #alert-section .staying-container .message-item .intro-message.btwn.title,
+  body #staying-section .staying-container .message-item .intro-message.btwn.title,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn.title,
+  body #menu-section .staying-container .message-item .intro-message.btwn.title,
+  body #parking-section .staying-container .message-item .intro-message.btwn.title,
+  body #before-party-section .staying-container .message-item .intro-message.btwn.title,
+  body #directions-section .staying-container .message-item .intro-message.btwn.title,
+  body #registry-section .staying-container .message-item .intro-message.btwn.title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #alert-section .staying-container .message-item .intro-message.btwn.title a,
+  body #staying-section .staying-container .message-item .intro-message.btwn.title a,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn.title a,
+  body #menu-section .staying-container .message-item .intro-message.btwn.title a,
+  body #parking-section .staying-container .message-item .intro-message.btwn.title a,
+  body #before-party-section .staying-container .message-item .intro-message.btwn.title a,
+  body #directions-section .staying-container .message-item .intro-message.btwn.title a,
+  body #registry-section .staying-container .message-item .intro-message.btwn.title a {
+    font-size: 18px;
+    line-height: 25px;
+  }
   body #alert-section .alert-container .title {
     margin-bottom: 20px;
     font-family: 'delicious', 'Lobster', cursive;
@@ -5632,16 +5657,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #alert-section .alert-container .message-item .intro-message.btwn {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    width: 90%;
     font-size: 18px;
     line-height: 25px;
-    width: 90%;
   }
   body #alert-section .alert-container .message-item .intro-message.btwn a {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    width: 90%;
     font-size: 18px;
     line-height: 25px;
-    width: 90%;
   }
   body #directions-section .directions-container .title,
   body #parking-section .directions-container .title,
@@ -5693,13 +5718,45 @@ body #signature-section .signature-container .message .heart-container .heart {
     line-height: 40px;
   }
   body #what-to-do-section .what-to-do-container .message-item .title.honeymoon.btwn {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 30px;
     line-height: 30px;
   }
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
     margin: 30px auto;
     font-size: 20px;
+    line-height: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item {
+    margin: 25px 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day,
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .item-name {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item {
+    margin: 15px 0 0 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item.error {
+    border: 10px solid #e9243c;
+    margin: 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-time {
+    font-size: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .item-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-details {
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 20px;
   }
   body #insta-gallery-section {
@@ -5730,6 +5787,29 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
+  }
+  body #registry-section .alert-container .message-item {
+    margin: 20px 0;
+  }
+  body #registry-section .alert-container .message-item .intro-message {
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  body #registry-section .alert-container .message-item .intro-message.btwn {
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    width: 90%;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #registry-section .alert-container .message-item .intro-message.btwn a {
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    width: 90%;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #signature-section {
     padding: 20px 0;

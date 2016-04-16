@@ -2160,6 +2160,10 @@ body {
               text-align: center;
 
               .cf();
+
+              &.last {
+                margin-bottom: 0;
+              }
               
               .day,
               .item-name {
@@ -3589,9 +3593,26 @@ body {
 
       .staying-container {
         margin-top: 12px;
+
         .title {
           margin-bottom: 25px;
 
+        }
+
+        .message-item {
+          .intro-message {
+            &.btwn {
+              &.title {
+                font-size: 18px;
+                line-height: 25px;
+
+                a {
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+              }
+            }
+          }
         }
 
 
@@ -3625,10 +3646,15 @@ body {
             &.btwn {
                 .mobile-gill-bold-small();
                 width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
               a {
 
                 .mobile-gill-bold-small();
                 width: 90%;
+                font-size: 18px;
+                line-height: 25px;
 
               }
             }
@@ -3678,7 +3704,7 @@ body {
               .mobile-delicious-medium();
 
               &.btwn {
-                margin-top: 20px;
+                margin-top: 30px;
                 font-size: 30px;
                 line-height: 30px;
               }
@@ -3693,6 +3719,55 @@ body {
               line-height: 20px;
             }
           }
+
+          .activity-ideas {
+            #wedding-events-rsvp {
+
+              .item {
+                margin: 25px 0;
+                
+                .day,
+                .item-name {
+
+                  font-size: 18px;
+                  line-height: 25px;
+
+                }
+
+                .day {
+                  font-size: 19px;
+                  line-height: 26px;
+                }
+
+                .event-item {
+                  
+                  margin: 15px 0 0 0; 
+
+                  &.error {
+                    .single-border(@deco-red);
+                    margin: 0;
+                  }
+
+                  .event-time {
+                    font-size: 20px;
+                  }
+
+                  .item-name {
+                    font-size: 16px;
+                    line-height: 20px;
+                  }
+
+                  .event-details {
+                    .body-font-normal();
+                    font-size: 18px;
+                    line-height: 20px;
+                  }
+
+                }
+              } 
+            } 
+          }
+
         }
       }
     }
@@ -3722,6 +3797,32 @@ body {
             margin-right: 8px;
           }
 
+        }
+      }
+    }
+
+    #registry-section {
+      .alert-container {
+        .message-item {
+          margin: 20px 0;
+          .intro-message {
+            .mobile-body-font();
+            &.btwn {
+                .mobile-gill-bold-small();
+                width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
+              a {
+
+                .mobile-gill-bold-small();
+                width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
+              }
+            }
+          }
         }
       }
     }
