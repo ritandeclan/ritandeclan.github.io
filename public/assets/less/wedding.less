@@ -2079,10 +2079,76 @@ body {
 
         }
 
-        .activity-ideas {   
+        .activity-ideas {
+
           width: 430px;
           margin: 25px auto 40px auto;
           text-align: center;
+
+          #submit-success-message,
+          #submit-failure-message,
+          #submit-decline-message,
+          #choose-events,
+          #required-fields {
+          
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: none;
+            width: 100%;
+            margin: 50px auto 0 auto;
+            height: auto;
+            z-index: 100;
+
+            .submit-success-message-container,
+            .submit-failure-message-container,
+            .submit-decline-message-container,
+            .choose-events-container,
+            .required-fields-container {
+
+              position: relative;
+              display: block;
+              .double-border(white);
+
+              .submit-message {
+                .delicious();
+                font-size: 35px;
+                line-height: 35px;
+              }
+
+              .submit-sub {
+                .body-font-bold();
+                line-height: 28px;
+                text-transform: uppercase;
+                .email-us {
+                  color: @deco-blue;
+                }
+              }
+
+              .fa {
+                margin: 15px auto 30px auto;
+              }
+
+              &.display {
+                display: block;
+              }
+            }
+
+          }
+
+          #submit-success-message {
+            background-color: @deco-blue;
+          }
+
+          #submit-failure-message,
+          #required-fields {
+            background-color: @deco-red;
+          }
+
+          #submit-decline-message,
+          #choose-events {
+            background-color: @deco-light-pink;
+          }
 
 
           #wedding-events-rsvp {
@@ -2132,7 +2198,13 @@ body {
               }
 
               .event-item {
-                  margin: 15px 0 0 0;
+                
+                margin: 15px 0 0 0; 
+
+                &.error {
+                  .single-border(@deco-red);
+                  margin: 0;
+                }
 
                 .event-time,
                 .event-details {

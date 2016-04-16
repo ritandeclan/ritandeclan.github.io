@@ -3143,6 +3143,202 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas {
   margin: 25px auto 40px auto;
   text-align: center;
 }
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  margin: 50px auto 0 auto;
+  height: auto;
+  z-index: 100;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container {
+  position: relative;
+  display: block;
+  border: 10px double white;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container .submit-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container .submit-message {
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 35px;
+  line-height: 35px;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container .submit-sub,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container .submit-sub {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container .submit-sub .email-us,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container .submit-sub .email-us {
+  color: #75d0bb;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container .fa,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container .fa {
+  margin: 15px auto 30px auto;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-success-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-success-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-success-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-success-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-success-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-failure-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-failure-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-failure-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-failure-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-failure-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .submit-decline-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .submit-decline-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .submit-decline-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .submit-decline-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .submit-decline-message-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .choose-events-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .choose-events-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .choose-events-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .choose-events-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .choose-events-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message .required-fields-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message .required-fields-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message .required-fields-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events .required-fields-container.display,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields .required-fields-container.display {
+  display: block;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-success-message {
+  background-color: #75d0bb;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-failure-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #required-fields {
+  background-color: #e9243c;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #submit-decline-message,
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #choose-events {
+  background-color: #f7b7c7;
+}
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item {
   margin: 25px 0;
   position: relative;
@@ -3194,6 +3390,10 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item {
   margin: 15px 0 0 0;
+}
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item.error {
+  border: 10px solid #e9243c;
+  margin: 0;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-time,
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-details {

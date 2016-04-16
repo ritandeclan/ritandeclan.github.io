@@ -464,60 +464,122 @@ $(document).ready(function(){
     });
 
   nameEmailReset = function() { 
+    userInput = true;
     console.log("form reset happens here");
-  }
 
-    // attendanceReset = function() {
-  //   $(".guest-container").remove();
-  //   acceptWrapper.removeClass("yup");
-  //   declineButton.removeClass("selected");
-  //   declineButton.removeClass("unselected");
-  //   acceptButton.removeClass("selected");
-  //   acceptButton.removeClass("unselected");
-  //   declineButton.find(".btn-msg").html("Sadly, no");
-  //   acceptButton.find(".btn-msg").html("Absolutely");
-  //   $("#no").prop("checked", false);
-  //   $("#yes").prop("checked", false);
-  // }
+    $(".name, .email, .phone").val("");
+
+    $(".event-checkbox").prop("checked", false);
+    $("#yes").prop("checked", false);
+  }
 
   submitEventsForm = function() {
 
       var formMessage = $("#wedding-events-rsvp").serializeArray();
 
-      debugger;
+      $.ajax({
+        url: "//formspree.io/declanandrita@gmail.com",
+        method: "POST",
+        data: {message: formMessage},
+        dataType: "json"
+      }).done(function (data, status, jqXHR) {
 
-      // $.ajax({
-      //   url: "//formspree.io/declanandrita@gmail.com",
-      //   method: "POST",
-      //   data: {message: formMessage},
-      //   dataType: "json"
-      // }).done(function (data, status, jqXHR) {
+        console.log("it worked!");
 
-      //     document.getElementById("form-test").reset();
+          document.getElementById("wedding-events-rsvp").reset();
 
-      //     nameEmailReset();
+          nameEmailReset();
 
+          $("#submit-success-message").fadeIn(3000, 'swing', function(){
+            $("#submit-success-message").fadeOut(5000);
+          });
+        
+        }).fail(function (jqXHR,status,err) {
 
-      //   }).fail(function (jqXHR,status,err) {
+          console.log("it failed!");
 
-      //     nameEmailReset();
+          // document.getElementById("wedding-events-rsvp").reset();
 
-      //     $("#submit-failure-message").fadeIn(3000, 'swing', function(){
-      //       $("#submit-failure-message").fadeOut(7000);
-      //     });
+          // nameEmailReset();
 
-      //   });
+          $("#submit-failure-message").fadeIn(3000, 'swing', function(){
+            $("#submit-failure-message").fadeOut(7000);
+          });
+
+        });
 
   }
 
   // Events Form
 
-  $("#btn-yeah").on("click", function(){
-    console.log("yeah");
+  // $("#btn-yeah").on("click", function(){
+  //   console.log("yeah");
 
-    submitEventsForm();
+  //   submitEventsForm();
 
-  })
+  // })
+
+  $("#btn-yeah").on("click", function(e) {
+
+    e.preventDefault();
+
+    var requiredFields = $(".name, .email, .phone");
+    var eventFields = $(".event-checkbox");
+    var attendanceWrapper = $(".event-item");
+
+    requiredFields.removeClass("error");
+    // attendanceWrapper.removeClass("error");
+
+    userInput = true;
+    eventsChosen = true;
+
+    $.each(requiredFields, function(index, input){
+
+      console.log("input value", input.value);
+
+      if (input.value == "") {
+        userInput = false;
+
+        $(input).addClass("error");
+
+      }
+
+    });
+
+    $.each(eventFields, function(index, input){
+
+      // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
+      if (eventFields.is(":checked") == false) {
+        eventsChosen = false;
+        // $.each(attendanceWrapper, function(index, field){
+        //   $(field).addClass("error");
+        // })
+      }
+
+    });
+
+    if (userInput) {
+
+      if (eventsChosen) {
+
+        submitEventsForm();
+
+      } else {
+
+        $("#choose-events").fadeIn(3000, 'swing', function(){
+          $('#choose-events').fadeOut(5000);
+        });
+
+      }
+
+    } else {
+
+      $("#required-fields").fadeIn(3000, 'swing', function(){
+        $('#required-fields').fadeOut(5000);
+      });
+    }
+
+  });
 
   // Form accept / decline functions
 

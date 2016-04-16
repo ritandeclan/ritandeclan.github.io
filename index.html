@@ -574,7 +574,7 @@
               <div class="event-item">
                 <p class="event-time">6:30 p.m.</p>
                 <p class='item-name'>Pizza on the pier</p>
-                <input type="checkbox" name="4.25-pizza" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.25-pizza" value="yes-please">
               </div>
             </div>
             <div class='item'>
@@ -584,17 +584,17 @@
               <div class="event-item">
                 <p class="event-time">8:45 a.m.</p>
                 <p class='item-name'>Power yoga</p>
-                <input type="checkbox" name="4.26-yoga" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.26-yoga" value="yes-please">
               </div>
               <div class="event-item">
                 <p class="event-time">Afternoon</p>
                 <p class='item-name'>Shelling at Sanibel Beach</p>
-                <input type="checkbox" name="4.26-shelling" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.26-shelling" value="yes-please">
               </div>
               <div class="event-item">
                 <p class="event-time">Afternoon</p>
                 <p class='item-name'>Lunch at Island Cow</p>
-                <input type="checkbox" name="4.26-island-cow" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.26-island-cow" value="yes-please">
               </div>
             </div>
             <div class='item'>
@@ -604,7 +604,7 @@
               <div class="event-item">
                 <p class="event-time">Afternoon</p>
                 <p class='item-name'>Everglades National Park</p>
-                <input type="checkbox" name="4.27-everglades" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.27-everglades" value="yes-please">
               </div>
             </div>
             <div class='item'>
@@ -614,7 +614,7 @@
               <div class="event-item">
                 <p class="event-time">6:00 p.m.</p>
                 <p class='item-name'>South African Braii (BBQ)</p>
-                <input type="checkbox" name="4.28-braii" value="yes-please">
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
                 <p class="event-details">
                   Royal Palm Cottage
                   <br>
@@ -625,13 +625,13 @@
               </div>
             </div>
             <div class="input-container">
-              <input class="answer" type="text" placeholder="Your name" name="your-name"></input>
+              <input class="answer name" type="text" placeholder="Your name" name="your-name"></input>
             </div>
             <div class="input-container">
               <input class="answer email" type="email" placeholder="Your email" name="your-email"></input>
             </div>
             <div class="input-container">
-              <input class="answer phone" type="tel" placeholder="Your phone number" name="your-email"></input>
+              <input class="answer phone" type="tel" placeholder="Your phone number" name="your-phone"></input>
             </div>
             <div class="shout-container">
               <div class="btn-shout-container">
@@ -641,6 +641,63 @@
               </div>
             </div> 
           </form>
+          <div id="submit-success-message">
+            <div class="submit-success-message-container">
+              <h3 class="submit-message">Thanks!</h3>
+              <h3 class="submit-sub">Can't wait to see you on the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-decline-message">
+            <div class="submit-decline-message-container">
+              <h3 class="submit-message">We'll miss you!</h3>
+              <h3 class="submit-sub">But we'll send you a postcard from the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-failure-message">
+            <div class="submit-failure-message-container">
+              <h3 class="submit-message">Whoops!</h3>
+              <h3 class="submit-sub">
+                Looks like something went wrong.
+                <br>
+                Please try again, or reach out to:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-meh-o fa-3x"></i>
+            </div>
+          </div>
+          <div id="required-fields">
+            <div class="required-fields-container"> 
+              <h3 class="submit-message">We need more info, please!</h3>
+              <h3 class="submit-sub">
+                Please fill in the fields highlighted above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="choose-events">
+            <div class="choose-events-container">
+              <h3 class="submit-message">You didn't pick any events!</h3>
+              <h3 class="submit-sub">
+                Please choose one or more of the events above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
         </div>
         <p class="title honeymoon btwn">
           Other Activites
