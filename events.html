@@ -158,7 +158,7 @@
     </div>
   </section>
 
-  <section id="welcome-section">
+  <section class="welcome-section">
     <div class="intro">
       <p class="intro-message btwn">
         Where
@@ -176,7 +176,7 @@
         When
       </p>
       <p class="standout-text">
-        April 30th, 2016
+        April 30th, 2016 at 5 o'clock
       </p>
       <p class="intro-message btwn">
         What to wear
@@ -558,10 +558,149 @@
           We'll be in Naples Sunday, April 24th through Monday, May 2rd, and would love to hang out with you! Didn't think we'd ditch you alone in Florida, did you?!
         </p>
         <p class="intro-message">
-          As the big day approaches, we'll post a list of activites here, and send out an email.
+          See below for a list of events. Interested in participating? 
+          <br>
+          Please check those you'd like to attend, fill in your name and email address, and hit send. We'll reach out!
         </p>
-        <p class="intro-message btwn">
-          Tentative Activity Ideas
+        <p class="title honeymoon btwn">
+          Wedding Week Events
+        </p>
+        <div class="activity-ideas">
+          <form id="wedding-events-rsvp">
+            <div class='item'>
+              <h3 class="day">
+                Monday, April 25th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:30 p.m.</p>
+                <p class='item-name'>Pizza on the pier</p>
+                <input class="event-checkbox" type="checkbox" name="4.25-pizza" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Tuesday, April 26th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">8:45 a.m.</p>
+                <p class='item-name'>Power yoga</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-yoga" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Shelling at Sanibel Beach</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-shelling" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Lunch at Island Cow</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-island-cow" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Wednesday, April 27th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Everglades National Park</p>
+                <input class="event-checkbox" type="checkbox" name="4.27-everglades" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Thursday, April 28th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:00 p.m.</p>
+                <p class='item-name'>South African Braii (BBQ)</p>
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
+                <p class="event-details">
+                  Royal Palm Cottage
+                  <br>
+                  660 8th Ave S
+                  <br>
+                  Naples, FL 34102
+                </p>
+              </div>
+            </div>
+            <div class="input-container">
+              <input class="answer name" type="text" placeholder="Your name" name="your-name"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer email" type="email" placeholder="Your email" name="your-email"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer phone" type="tel" placeholder="Your phone number" name="your-phone"></input>
+            </div>
+            <div class="shout-container">
+              <div class="btn-shout-container">
+                <div id="btn-yeah">
+                  <h3 class="btn-msg">Count me in!</h3>
+                </div>
+              </div>
+            </div> 
+          </form>
+          <div id="submit-success-message">
+            <div class="submit-success-message-container">
+              <h3 class="submit-message">Thanks!</h3>
+              <h3 class="submit-sub">Can't wait to see you on the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-decline-message">
+            <div class="submit-decline-message-container">
+              <h3 class="submit-message">We'll miss you!</h3>
+              <h3 class="submit-sub">But we'll send you a postcard from the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-failure-message">
+            <div class="submit-failure-message-container">
+              <h3 class="submit-message">Whoops!</h3>
+              <h3 class="submit-sub">
+                Looks like something went wrong.
+                <br>
+                Please try again, or reach out to:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-meh-o fa-3x"></i>
+            </div>
+          </div>
+          <div id="required-fields">
+            <div class="required-fields-container"> 
+              <h3 class="submit-message">We need more info, please!</h3>
+              <h3 class="submit-sub">
+                Please fill in the fields highlighted above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="choose-events">
+            <div class="choose-events-container">
+              <h3 class="submit-message">You didn't pick any events!</h3>
+              <h3 class="submit-sub">
+                Please choose one or more of the events above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+        </div>
+        <p class="title honeymoon btwn">
+          Other Activites
         </p>
         <div class="activity-ideas">
           <div class='item'>

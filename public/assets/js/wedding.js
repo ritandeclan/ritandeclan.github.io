@@ -463,6 +463,124 @@ $(document).ready(function(){
 
     });
 
+  nameEmailReset = function() { 
+    userInput = true;
+    console.log("form reset happens here");
+
+    $(".name, .email, .phone").val("");
+
+    $(".event-checkbox").prop("checked", false);
+    $("#yes").prop("checked", false);
+  }
+
+  submitEventsForm = function() {
+
+      var formMessage = $("#wedding-events-rsvp").serializeArray();
+
+      $.ajax({
+        url: "//formspree.io/declanandrita@gmail.com",
+        method: "POST",
+        data: {message: formMessage},
+        dataType: "json"
+      }).done(function (data, status, jqXHR) {
+
+        console.log("it worked!");
+
+          document.getElementById("wedding-events-rsvp").reset();
+
+          nameEmailReset();
+
+          $("#submit-success-message").fadeIn(3000, 'swing', function(){
+            $("#submit-success-message").fadeOut(5000);
+          });
+        
+        }).fail(function (jqXHR,status,err) {
+
+          console.log("it failed!");
+
+          // document.getElementById("wedding-events-rsvp").reset();
+
+          // nameEmailReset();
+
+          $("#submit-failure-message").fadeIn(3000, 'swing', function(){
+            $("#submit-failure-message").fadeOut(7000);
+          });
+
+        });
+
+  }
+
+  // Events Form
+
+  // $("#btn-yeah").on("click", function(){
+  //   console.log("yeah");
+
+  //   submitEventsForm();
+
+  // })
+
+  $("#btn-yeah").on("click", function(e) {
+
+    e.preventDefault();
+
+    var requiredFields = $(".name, .email, .phone");
+    var eventFields = $(".event-checkbox");
+    var attendanceWrapper = $(".event-item");
+
+    requiredFields.removeClass("error");
+    // attendanceWrapper.removeClass("error");
+
+    userInput = true;
+    eventsChosen = true;
+
+    $.each(requiredFields, function(index, input){
+
+      console.log("input value", input.value);
+
+      if (input.value == "") {
+        userInput = false;
+
+        $(input).addClass("error");
+
+      }
+
+    });
+
+    $.each(eventFields, function(index, input){
+
+      // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
+      if (eventFields.is(":checked") == false) {
+        eventsChosen = false;
+        // $.each(attendanceWrapper, function(index, field){
+        //   $(field).addClass("error");
+        // })
+      }
+
+    });
+
+    if (userInput) {
+
+      if (eventsChosen) {
+
+        submitEventsForm();
+
+      } else {
+
+        $("#choose-events").fadeIn(3000, 'swing', function(){
+          $('#choose-events').fadeOut(5000);
+        });
+
+      }
+
+    } else {
+
+      $("#required-fields").fadeIn(3000, 'swing', function(){
+        $('#required-fields').fadeOut(5000);
+      });
+    }
+
+  });
+
   // Form accept / decline functions
 
   // var acceptButton = $("#btn-yes");
