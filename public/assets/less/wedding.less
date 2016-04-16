@@ -2090,7 +2090,7 @@ body {
           #submit-decline-message,
           #choose-events,
           #required-fields {
-          
+
             position: fixed;
             bottom: 0;
             left: 0;
@@ -2160,6 +2160,10 @@ body {
               text-align: center;
 
               .cf();
+
+              &.last {
+                margin-bottom: 20px;
+              }
               
               .day,
               .item-name {
@@ -2234,6 +2238,9 @@ body {
                   line-height: 30px;
                   font-weight: 400;
                   margin-top: 10px;
+                  margin-bottom: 0;
+
+
                 }
 
               }
@@ -2495,6 +2502,10 @@ body {
             padding-bottom: 15px;
           }
         }
+
+        &#insta-end {
+          display: none;
+        }
       }
 
       #insta-gallery {
@@ -2520,6 +2531,61 @@ body {
         }
 
       }
+
+      .shout-container {
+        position: relative;
+        display: block;
+        height: auto;
+        margin: 20px auto;
+
+        .btn-shout-container {
+          position: relative;
+          display: block;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-shout,
+          #btn-yeah,
+          #more-instas {
+            .button();
+            color: white;
+            background-color: @deco-blue;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-blue;
+              background-color: white;
+              .double-border(@deco-blue);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
     }
   }
 
@@ -3530,9 +3596,26 @@ body {
 
       .staying-container {
         margin-top: 12px;
+
         .title {
           margin-bottom: 25px;
 
+        }
+
+        .message-item {
+          .intro-message {
+            &.btwn {
+              &.title {
+                font-size: 18px;
+                line-height: 25px;
+
+                a {
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+              }
+            }
+          }
         }
 
 
@@ -3566,10 +3649,15 @@ body {
             &.btwn {
                 .mobile-gill-bold-small();
                 width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
               a {
 
                 .mobile-gill-bold-small();
                 width: 90%;
+                font-size: 18px;
+                line-height: 25px;
 
               }
             }
@@ -3619,7 +3707,7 @@ body {
               .mobile-delicious-medium();
 
               &.btwn {
-                margin-top: 20px;
+                margin-top: 30px;
                 font-size: 30px;
                 line-height: 30px;
               }
@@ -3634,6 +3722,55 @@ body {
               line-height: 20px;
             }
           }
+
+          .activity-ideas {
+            #wedding-events-rsvp {
+
+              .item {
+                margin: 25px 0;
+                
+                .day,
+                .item-name {
+
+                  font-size: 18px;
+                  line-height: 25px;
+
+                }
+
+                .day {
+                  font-size: 19px;
+                  line-height: 26px;
+                }
+
+                .event-item {
+                  
+                  margin: 15px 0 0 0; 
+
+                  &.error {
+                    .single-border(@deco-red);
+                    margin: 0;
+                  }
+
+                  .event-time {
+                    font-size: 20px;
+                  }
+
+                  .item-name {
+                    font-size: 16px;
+                    line-height: 20px;
+                  }
+
+                  .event-details {
+                    .body-font-normal();
+                    font-size: 18px;
+                    line-height: 20px;
+                  }
+
+                }
+              } 
+            } 
+          }
+
         }
       }
     }
@@ -3663,6 +3800,32 @@ body {
             margin-right: 8px;
           }
 
+        }
+      }
+    }
+
+    #registry-section {
+      .alert-container {
+        .message-item {
+          margin: 20px 0;
+          .intro-message {
+            .mobile-body-font();
+            &.btwn {
+                .mobile-gill-bold-small();
+                width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
+              a {
+
+                .mobile-gill-bold-small();
+                width: 90%;
+                font-size: 18px;
+                line-height: 25px;
+
+              }
+            }
+          }
         }
       }
     }

@@ -3352,6 +3352,9 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   clear: both;
   visibility: hidden;
 }
+body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item.last {
+  margin-bottom: 20px;
+}
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day,
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .item-name {
   text-decoration: none;
@@ -3421,6 +3424,7 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   line-height: 30px;
   font-weight: 400;
   margin-top: 10px;
+  margin-bottom: 0;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container {
   position: relative;
@@ -3639,6 +3643,9 @@ body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-i
   color: white;
   padding-bottom: 15px;
 }
+body #insta-gallery-section .insta-gallery-container .gallery-message#insta-end {
+  display: none;
+}
 body #insta-gallery-section .insta-gallery-container #insta-gallery {
   width: 100%;
   height: auto;
@@ -3657,6 +3664,68 @@ body #insta-gallery-section .insta-gallery-container #insta-gallery .instas {
 body #insta-gallery-section .insta-gallery-container #insta-gallery .instas video {
   margin: 5px;
   border: 10px solid white;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container {
+  position: relative;
+  display: block;
+  height: auto;
+  margin: 20px auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container {
+  position: relative;
+  display: block;
+  width: auto;
+  float: none;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container.error {
+  padding: 0;
+  border: 10px solid #e9243c;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:hover {
+  cursor: pointer;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:hover,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout:active,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah:active,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout.unselected,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah.unselected,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas.unselected {
+  opacity: 0.5;
+}
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-shout .btn-msg,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #btn-yeah .btn-msg,
+body #insta-gallery-section .insta-gallery-container .shout-container .btn-shout-container #more-instas .btn-msg {
+  margin: 0;
+  padding: 0;
 }
 body #signature-section {
   padding: 0;
@@ -5528,6 +5597,28 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #registry-section .staying-container .title {
     margin-bottom: 25px;
   }
+  body #alert-section .staying-container .message-item .intro-message.btwn.title,
+  body #staying-section .staying-container .message-item .intro-message.btwn.title,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn.title,
+  body #menu-section .staying-container .message-item .intro-message.btwn.title,
+  body #parking-section .staying-container .message-item .intro-message.btwn.title,
+  body #before-party-section .staying-container .message-item .intro-message.btwn.title,
+  body #directions-section .staying-container .message-item .intro-message.btwn.title,
+  body #registry-section .staying-container .message-item .intro-message.btwn.title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #alert-section .staying-container .message-item .intro-message.btwn.title a,
+  body #staying-section .staying-container .message-item .intro-message.btwn.title a,
+  body #what-to-do-section .staying-container .message-item .intro-message.btwn.title a,
+  body #menu-section .staying-container .message-item .intro-message.btwn.title a,
+  body #parking-section .staying-container .message-item .intro-message.btwn.title a,
+  body #before-party-section .staying-container .message-item .intro-message.btwn.title a,
+  body #directions-section .staying-container .message-item .intro-message.btwn.title a,
+  body #registry-section .staying-container .message-item .intro-message.btwn.title a {
+    font-size: 18px;
+    line-height: 25px;
+  }
   body #alert-section .alert-container .title {
     margin-bottom: 20px;
     font-family: 'delicious', 'Lobster', cursive;
@@ -5567,16 +5658,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #alert-section .alert-container .message-item .intro-message.btwn {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    width: 90%;
     font-size: 18px;
     line-height: 25px;
-    width: 90%;
   }
   body #alert-section .alert-container .message-item .intro-message.btwn a {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    width: 90%;
     font-size: 18px;
     line-height: 25px;
-    width: 90%;
   }
   body #directions-section .directions-container .title,
   body #parking-section .directions-container .title,
@@ -5628,13 +5719,45 @@ body #signature-section .signature-container .message .heart-container .heart {
     line-height: 40px;
   }
   body #what-to-do-section .what-to-do-container .message-item .title.honeymoon.btwn {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 30px;
     line-height: 30px;
   }
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn {
     margin: 30px auto;
     font-size: 20px;
+    line-height: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item {
+    margin: 25px 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day,
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .item-name {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item {
+    margin: 15px 0 0 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item.error {
+    border: 10px solid #e9243c;
+    margin: 0;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-time {
+    font-size: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .item-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .event-item .event-details {
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 20px;
   }
   body #insta-gallery-section {
@@ -5665,6 +5788,29 @@ body #signature-section .signature-container .message .heart-container .heart {
     width: 100%;
     margin-left: 8px;
     margin-right: 8px;
+  }
+  body #registry-section .alert-container .message-item {
+    margin: 20px 0;
+  }
+  body #registry-section .alert-container .message-item .intro-message {
+    font-family: 'GillSans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+  }
+  body #registry-section .alert-container .message-item .intro-message.btwn {
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    width: 90%;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #registry-section .alert-container .message-item .intro-message.btwn a {
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    width: 90%;
+    font-size: 18px;
+    line-height: 25px;
   }
   body #signature-section {
     padding: 20px 0;

@@ -443,25 +443,57 @@ $(document).ready(function(){
 // Make Instagram API call to pull photos with the hashtag #ritandeclan
 
 // Ajax call for Naples temp, desc, and weather.
-  $.ajax({
-    url: "https://api.instagram.com/v1/tags/ritandeclan/media/recent?client_id=8953bce455c5461f910bf9050de3891f",
-    type: 'GET',
-    crossDomain: true,
-    dataType: 'jsonp'
-  }).success(function(data) {
 
-      var instas = data['data'];
+  var noMoreInstas = function() {
+    $("#more-instas").hide();
+    $("#insta-end").show();
+  }
 
-      for (var i = 0; i < instas.length; i++) {
-        if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
-          $("#insta-gallery").append("<video class='instas' src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
-        } else {
-          $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
-        }
+  var getInstasUrl = "https://api.instagram.com/v1/tags/ritandeclan/media/recent?client_id=8953bce455c5461f910bf9050de3891f";
 
-      }
+  var getInstas = function() {
 
-    });
+      $.ajax({
+        url: getInstasUrl,
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'jsonp'
+      }).success(function(data) {
+
+          nextUrl = data['pagination']['next_url'];
+
+          if (nextUrl !== undefined) {
+            getInstasUrl = nextUrl;
+          } else {
+            getInstasUrl = null;
+            noMoreInstas();
+          }
+
+          instas = data['data'];
+
+          for (var i = 0; i < instas.length; i++) {
+            if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
+              $("#insta-gallery").append("<video class='instas' src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
+            } else {
+              $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
+            }
+
+          }
+
+        });
+
+  }
+
+  getInstas();
+
+  $("#more-instas").on("click", function(){
+
+    if (getInstasUrl !== null && getInstasUrl !== undefined) {
+      getInstas();
+    } 
+
+  });
+
 
   nameEmailReset = function() { 
     userInput = true;
@@ -472,6 +504,8 @@ $(document).ready(function(){
     $(".event-checkbox").prop("checked", false);
     $("#yes").prop("checked", false);
   }
+
+  // Events Form
 
   submitEventsForm = function() {
 
@@ -484,8 +518,6 @@ $(document).ready(function(){
         dataType: "json"
       }).done(function (data, status, jqXHR) {
 
-        console.log("it worked!");
-
           document.getElementById("wedding-events-rsvp").reset();
 
           nameEmailReset();
@@ -496,12 +528,6 @@ $(document).ready(function(){
         
         }).fail(function (jqXHR,status,err) {
 
-          console.log("it failed!");
-
-          // document.getElementById("wedding-events-rsvp").reset();
-
-          // nameEmailReset();
-
           $("#submit-failure-message").fadeIn(3000, 'swing', function(){
             $("#submit-failure-message").fadeOut(7000);
           });
@@ -509,15 +535,6 @@ $(document).ready(function(){
         });
 
   }
-
-  // Events Form
-
-  // $("#btn-yeah").on("click", function(){
-  //   console.log("yeah");
-
-  //   submitEventsForm();
-
-  // })
 
   $("#btn-yeah").on("click", function(e) {
 
@@ -535,8 +552,6 @@ $(document).ready(function(){
 
     $.each(requiredFields, function(index, input){
 
-      console.log("input value", input.value);
-
       if (input.value == "") {
         userInput = false;
 
@@ -551,9 +566,6 @@ $(document).ready(function(){
       // Check if the attendance field has any input at all. If not, set user input to false, and add error styling
       if (eventFields.is(":checked") == false) {
         eventsChosen = false;
-        // $.each(attendanceWrapper, function(index, field){
-        //   $(field).addClass("error");
-        // })
       }
 
     });
