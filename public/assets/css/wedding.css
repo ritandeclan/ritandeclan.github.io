@@ -3353,7 +3353,7 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   visibility: hidden;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item.last {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .day,
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .item .item-name {
@@ -3424,6 +3424,7 @@ body #what-to-do-section .what-to-do-container .message-item .activity-ideas #we
   line-height: 30px;
   font-weight: 400;
   margin-top: 10px;
+  margin-bottom: 0;
 }
 body #what-to-do-section .what-to-do-container .message-item .activity-ideas #wedding-events-rsvp .input-container {
   position: relative;
