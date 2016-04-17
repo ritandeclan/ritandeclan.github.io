@@ -15,7 +15,7 @@
 
 <!-- font awesome cdn -->
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="public/assets/css/wedding.css">
 
@@ -98,7 +98,7 @@
     </div>
   </section> -->
 
-  <section id="welcome-section">
+  <section id="welcome-section" class="section">
     <div class="intro">
       <h3 class="intro-lead">
         We're getting married!
@@ -115,8 +115,8 @@
     </div> 
   </section>
 
-   <section id="countdown-section">
-    <div class="countdown-container">
+   <section id="countdown-section" class="section">
+    <div class="countdown-container container">
       <p class="countdown">
         Countdown
       </p>
@@ -158,7 +158,7 @@
     </div>
   </section>
 
-  <section id="welcome-section">
+  <section class="welcome-section section">
     <div class="intro">
       <p class="intro-message btwn">
         Where
@@ -176,7 +176,7 @@
         When
       </p>
       <p class="standout-text">
-        April 30th, 2016
+        April 30th, 2016 at 5 o'clock
       </p>
       <p class="intro-message btwn">
         What to wear
@@ -201,11 +201,11 @@
     </div>
   </section>
 
-  <section id="card-section">
+  <section id="card-section" class="section">
     <div class="card"></div>
   </section>
 
-  <section id="weather-section">
+  <section id="weather-section" class="section">
     <div class="weather-container">
       <div class="naples-weather">
         <i class="fa fa-sun-o fa-5x fa-spin custom"></i>
@@ -235,7 +235,7 @@
     </div>
   </section>
 
-  <section id="map-section">
+  <section id="map-section" class="section">
     <div class="map-container">
 
       <div id="map-item-description">
@@ -298,7 +298,7 @@
 
   </section>
 
-  <section id="menu-section">
+  <section id="menu-section" class="section">
     <div class="menu-container">
       <h3 class="title">
         Menu
@@ -360,8 +360,8 @@
     </div>
   </section>
 
-  <section id="parking-section">
-    <div class="parking-container">
+  <section id="parking-section" class="section">
+    <div class="parking-container" class="container">
       <h3 class="title">
         Parking Details
       </h3>
@@ -432,8 +432,8 @@
     </div>
   </section> -->
 
-  <section id="directions-section">
-    <div class="directions-container">
+  <section id="directions-section" class="section">
+    <div class="directions-container" class="container">
       <h3 class="title">
         Getting There
       </h3>
@@ -458,8 +458,8 @@
     </div>
   </section>
 
-  <section id="staying-section">
-    <div class="staying-container">
+  <section id="staying-section" class="section">
+    <div class="staying-container" class="container">
       <h3 class="title">
         Where to Stay
       </h3>
@@ -548,8 +548,8 @@
     </div>
   </section>
 
-  <section id="what-to-do-section">
-    <div class="what-to-do-container">
+  <section id="what-to-do-section" class="section">
+    <div class="what-to-do-container" class="container">
       <div class="message-item">
         <h3 class="title honeymoon">
           Honeymoon Schmoneymoon
@@ -557,11 +557,167 @@
         <p class="intro-message">
           We'll be in Naples Sunday, April 24th through Monday, May 2rd, and would love to hang out with you! Didn't think we'd ditch you alone in Florida, did you?!
         </p>
-        <p class="intro-message">
-          As the big day approaches, we'll post a list of activites here, and send out an email.
+        <p class="title honeymoon btwn">
+          Wedding Week Events
         </p>
-        <p class="intro-message btwn">
-          Tentative Activity Ideas
+        <p class="intro-message">
+          Wanna hang out? 
+          <br>
+          Check items, fill in your details, and hit the button. 
+          <br>
+          We'll reach out with more info!
+        </p>
+        <div class="activity-ideas">
+          <form id="wedding-events-rsvp">
+            <div class='item'>
+              <h3 class="day">
+                Monday, April 25th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:30 p.m.</p>
+                <p class='item-name'>Pizza on the pier</p>
+                <input class="event-checkbox" type="checkbox" name="4.25-pizza" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Tuesday, April 26th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">8:45 a.m.</p>
+                <p class='item-name'>Power yoga</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-yoga" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Shelling at Sanibel Beach</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-shelling" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Lunch at Island Cow</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-island-cow" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Wednesday, April 27th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Everglades National Park</p>
+                <input class="event-checkbox" type="checkbox" name="4.27-everglades" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Thursday, April 28th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:00 p.m.</p>
+                <p class='item-name'>South African Braii (BBQ)</p>
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
+                <p class="event-details">
+                  Royal Palm Cottage
+                  <br>
+                  660 8th Ave S
+                  <br>
+                  Naples, FL 34102
+                </p>
+              </div>
+            </div>
+            <div class='item last'>
+              <h3 class="day">
+                Friday, April 29th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">5:00 p.m.</p>
+                <p class='item-name'>Meet &amp; Greet at <br> Sunset Beach Bar</p>
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
+                <p class="event-details">
+                  851 Gulf Shore Blvd N
+                  <br>
+                  Naples, FL 34102
+                </p>
+              </div>
+            </div>
+            <div class="input-container">
+              <input class="answer name" type="text" placeholder="Your name" name="your-name"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer email" type="email" placeholder="Your email" name="your-email"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer phone" type="tel" placeholder="Your phone number" name="your-phone"></input>
+            </div>
+            <div class="shout-container">
+              <div class="btn-shout-container">
+                <div id="btn-yeah">
+                  <h3 class="btn-msg">Count me in</h3>
+                </div>
+              </div>
+            </div> 
+          </form>
+          <div id="submit-success-message">
+            <div class="submit-success-message-container">
+              <h3 class="submit-message">Woo hoo!</h3>
+              <h3 class="submit-sub">Can't wait to wrestle an alligator with you!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-decline-message">
+            <div class="submit-decline-message-container">
+              <h3 class="submit-message">We'll miss you!</h3>
+              <h3 class="submit-sub">But we'll send you a postcard from the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-failure-message">
+            <div class="submit-failure-message-container">
+              <h3 class="submit-message">Whoops!</h3>
+              <h3 class="submit-sub">
+                Looks like something went wrong.
+                <br>
+                Please try again, or reach out to:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-meh-o fa-3x"></i>
+            </div>
+          </div>
+          <div id="required-fields">
+            <div class="required-fields-container"> 
+              <h3 class="submit-message">We need more info, please!</h3>
+              <h3 class="submit-sub">
+                Please fill in the fields highlighted above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="choose-events">
+            <div class="choose-events-container">
+              <h3 class="submit-message">You didn't pick any events!</h3>
+              <h3 class="submit-sub">
+                Please choose one or more of the events above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+        </div>
+        <p class="title honeymoon btwn">
+          Other Activites
         </p>
         <div class="activity-ideas">
           <div class='item'>
@@ -590,9 +746,130 @@
     </div>
   </section>
 
+  <section id="scavenger-hunt-section" class="section">
+    <div class="scavenger-hunt-container container">
+      <h3 class="title">
+        Scavenger Hunt
+      </h3>
+      <div class="message-item">
+        <p class="intro-message">
+         Post proof you've witnessed the following to Instagram with
+         <br>
+         #ritandeclan and a tag describing the subject.
+         <br>
+         The person with the most posts by 10 o'clock on April 30th
+         <br>
+         wins a bottle of South African bubbles.
+         <br>
+         <span class="rule"> One Rule: </span> No laws or bones must be broken playing this game
+        </p>
+      </div>
+      <div id="scavenger-list">
+        <div class="list">
+          <p class="list-item yellow">
+            Taqueria San Julian (home of the best tacos)
+          </p>
+          <p class="list-item white">
+            Rita Drinking a Margarita
+          </p>
+          <p class="list-item red">
+            A Bridesmaid
+          </p>
+          <p class="list-item yellow">
+            An Orange
+          </p>
+          <p class="list-item blue">
+            An Alligator
+          </p>
+          <p class="list-item white">
+            Scallop Seashell
+          </p>
+          <p class="list-item">
+            Art on Third Street S
+          </p>
+          <p class="list-item red">
+            A flamingo
+          </p>
+          <p class="list-item yellow">
+            Bad Ass Coffee
+          </p>
+          <p class="list-item">
+            A Turtle
+          </p>
+          <p class="list-item white">
+            Crab Pinchers
+          </p>
+          <p class="list-item">
+            An Historic Palm Cottage
+          </p>
+          <p class="list-item red">
+            A Sand Castle
+          </p>
+          <p class="list-item white">
+            A Picture with a South African
+          </p>
+          <p class="list-item blue">
+            Tin City
+          </p>
+          <p class="list-item">
+            Chickee Bar Tiki Bar at the Cove Point Inn
+          </p>
+          <p class="list-item red">
+            A Coconut
+          </p>
+          <p class="list-item blue">
+            A Mangrove Tree
+          </p>
+          <p class="list-item yellow">
+            Crayton Grove
+          </p>
+          <p class="list-item white">
+            The Naples Pier at Sunset
+          </p>
+          <p class="list-item">
+            A Pelican
+          </p>
+          <p class="list-item red">
+            Rita's Italian Ice Concession Stand at Lowdermilk Park
+          </p>
+          <p class="list-item">
+            The Hotel Escalante Fountain
+          </p>
+          <p class="list-item white">
+            A Monkey
+          </p>
+          <p class="list-item yellow">
+            The Clam Pass Beach Boardwalk
+          </p>
+          <p class="list-item">
+            5th Avenue South
+          </p>
+          <p class="list-item blue">
+            Monkey Bread
+          </p>
+          <p class="list-item yellow">
+            A Sundowner at Rhode's End
+          </p>
+          <p class="list-item red">
+            A Picture with the Newly-Married Bride and Groom
+          </p>
+          <p class="list-item">
+            A Fish
+          </p>
+        </div>
+      </div>
+      <div class="shout-container">
+        <div class="btn-shout-container">
+          <div id="btn-show-list">
+            <h3 class="btn-msg">Show list</h3>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
 
-   <section id="insta-gallery-section">
-    <div class="insta-gallery-container">
+   <section id="insta-gallery-section" class="section">
+    <div class="insta-gallery-container" class="container">
 
       <p class='gallery-title'>
         Insta-Gallery
@@ -605,11 +882,27 @@
       </div>
       <div id="insta-gallery">
       </div>
+
+      <div class="shout-container">
+        <div class="btn-shout-container">
+          <div id="more-instas">
+            <h3 class="btn-msg">Load More</h3>
+          </div>
+        </div>
+      </div>  
+
+      <div id="insta-end" class='gallery-message'>
+        <p class='gallery-instructions'>
+          That's all the instas for now...
+          <br>
+          Upload more!
+        </p>
+        <i class="fa fa-hand-peace-o fa-lg"></i>
     </div>
   </section>
 
-  <section id="registry-section">
-    <div class="alert-container">
+  <section id="registry-section" class="section">
+    <div class="alert-container" class="container">
       <h3 class="title registry">
         Registry
       </h3>
@@ -626,8 +919,8 @@
     </div>
   </section>
 
-  <section id="signature-section">
-    <div class="signature-container">
+  <section id="signature-section" class="section">
+    <div class="signature-container" class="container">
       <div class="message">
         <p class="signature">Made with</p>
         <p class="heart-container"><i class="fa fa-heart fa-3x heart"></i></p>

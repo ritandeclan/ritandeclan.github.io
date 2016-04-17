@@ -409,23 +409,25 @@ body {
     }
   }
 
-  #alert-section,
-  #welcome-section,
-  .welcome-section,  
-  #rsvp-section,
-  #map-section,
-  #countdown-section,
-  #weather-section,
-  #insta-gallery-section,
-  #card-section,
-  #signature-section,
-  #menu-section,
-  #parking-section,
-  #before-party-section,
-  #directions-section,
-  #staying-section,
-  #what-to-do-section,
-  #registry-section, {
+ // #alert-section,
+ // #welcome-section,
+ // .welcome-section,  
+ // #rsvp-section,
+ // #map-section,
+ // #countdown-section,
+ // #weather-section,
+ // #insta-gallery-section,
+ // #card-section,
+ // #signature-section,
+ // #menu-section,
+ // #parking-section,
+ // #before-party-section,
+ // #directions-section,
+ // #staying-section,
+ // #what-to-do-section,
+ // #registry-section, {
+
+  .section {
 
     .double-border-bottom(white);
 
@@ -1709,7 +1711,8 @@ body {
   #registry-section,
   #menu-section,
   #parking-section,
-  #before-party-section {
+  #before-party-section,
+  #scavenger-hunt-section {
 
     // width: 100%;
     // display: block;
@@ -1721,7 +1724,8 @@ body {
     .directions-container,
     .staying-container,
     .what-to-do-container,
-    .alert-container {
+    .alert-container,
+    .scavenger-hunt-container {
       .content-full-width();
       height: auto;
       margin: 0 auto;
@@ -2468,6 +2472,169 @@ body {
 
   }
 
+  #scavenger-hunt-section {
+
+    background-color: @deco-light-pink;
+
+    .scavenger-hunt-container {
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+
+      .title {
+        color: white;
+        .delicious();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 0 auto 40px auto;
+      }
+
+      #scavenger-list {
+        position: relative;
+        display: none;
+
+        .list {
+          position: relative;
+          display: block;
+          .double-border(@deco-grey);
+          padding: 25px;
+          // .cf();
+
+          .list-item {
+            position: relative;
+            display: inline-block;
+            float: none;
+            margin: 15px;
+            white-space: nowrap;
+            word-wrap: normal; 
+
+            .body-font-bold();
+            color: @deco-grey;
+
+            &.blue {
+              color: @deco-blue;
+              font-size: 35px;
+              line-height: 45px;
+            }
+
+            &.red {
+              color: @deco-red;
+              .body-font-thin();
+              font-size: 32px;
+              line-height: 42px;
+              font-weight: 100;
+            }
+            &.yellow {
+              color: @deco-yellow;
+              .body-font-normal();
+              font-size: 28px;
+              line-height: 35px;
+            }
+            &.white {
+            .delicious();
+            color: white;
+              //color: @deco-blue;
+              font-size: 40px;
+              line-height: 50px;
+            }
+          }
+        }
+      }
+
+      .message-item {
+        .intro-message {
+          // color: @deco-grey;
+          color: white;
+         .body-font-normal();
+          font-size: 25px;
+          line-height: 40px;
+          // .content-full-width();
+          margin: 35px auto;
+
+          .rule {
+            .delicious();
+            color: @deco-red;
+            margin-right: 5px;
+          }
+
+          a {
+            color: @deco-blue;
+            text-decoration: none;
+            &:hover {
+              color: @deco-yellow;
+            }
+          }
+
+          &.btwn {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            color: white;
+            // .content-full-width();
+          }
+
+        } 
+      }
+
+      .shout-container {
+        position: relative;
+        display: block;
+        height: auto;
+        margin: 20px auto;
+
+        .btn-shout-container {
+          position: relative;
+          display: block;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-show-list {
+            .button();
+            color: white;
+            background-color: @deco-light-pink;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-light-pink;
+              background-color: white;
+              .double-border(@deco-light-pink);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
   #insta-gallery-section {
     .insta-gallery-container {
 
@@ -2746,23 +2913,25 @@ body {
 
   @media (max-width: 960px) {
 
-    #alert-section,
-    #welcome-section,
-    .welcome-section,  
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  #welcome-section,
+  //  .welcome-section,  
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 
@@ -3004,7 +3173,8 @@ body {
     #parking-section,
     #before-party-section,
     #directions-section,
-    #registry-section  {
+    #registry-section,
+    #scavenger-hunt-section  {
 
       .alert-container,
       .menu-container,
@@ -3012,7 +3182,8 @@ body {
       .before-party-container,
       .staying-container,
       .what-to-do-container,
-      .directions-container {
+      .directions-container,
+      .scavenger-hunt-container {
         width: 70%;
         margin: 0 auto;
 
@@ -3080,6 +3251,64 @@ body {
 
     }
 
+    #scavenger-hunt-section {
+
+      background-color: @deco-light-pink;
+
+      .scavenger-hunt-container {
+
+        #scavenger-list {
+
+          .list {
+            position: relative;
+            display: block;
+            .double-border(@deco-grey);
+            padding: 20px;
+            // .cf();
+
+            .list-item {
+              position: relative;
+              display: inline-block;
+              float: none;
+              margin: 10px;
+              white-space: normal;
+              word-wrap: normal; 
+
+              .body-font-bold();
+              color: @deco-grey;
+
+              &.blue {
+                color: @deco-blue;
+                font-size: 24px;
+                line-height: 34px;
+              }
+
+              &.red {
+                color: @deco-red;
+                .body-font-thin();
+                font-size: 26px;
+                line-height: 36px;
+                font-weight: 100;
+              }
+              &.yellow {
+                color: @deco-yellow;
+                .body-font-normal();
+                font-size: 18px;
+                line-height: 25px;
+              }
+              &.white {
+              .delicious();
+              color: white;
+                //color: @deco-blue;
+                font-size: 28px;
+                line-height: 38px;
+              }
+            }
+          }
+        }
+      }
+    } 
+
 
     #insta-gallery-section {
 
@@ -3107,23 +3336,25 @@ body {
 
   @media (max-width: 775px) {
 
-    #alert-section,
-    .welcome-section,
-    #welcome-section,
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  .welcome-section,
+  //  #welcome-section,
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 
@@ -3243,23 +3474,25 @@ body {
 
   @media (max-width: 650px) {
 
-    #alert-section,
-    .welcome-section,
-    #welcome-section,
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  .welcome-section,
+  //  #welcome-section,
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 
@@ -3523,7 +3756,8 @@ body {
     #parking-section,
     #before-party-section,
     #directions-section,
-    #registry-section  {
+    #registry-section,
+    #scavenger-hunt-section  {
 
       .alert-container,
       .staying-container,
@@ -3531,7 +3765,8 @@ body {
       .menu-container,
       .parking-container,
       .before-party-container,
-      .directions-container {
+      .directions-container,
+      .scavenger-hunt-container {
 
         .title {
           font-size: 56px;

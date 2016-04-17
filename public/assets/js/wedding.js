@@ -911,6 +911,24 @@ $(document).ready(function(){
 
   // });
 
+  // Scavenger Hunt 
+
+  var listOpen = false;
+
+  var scavengerList = $("#scavenger-list");
+
+  $("#btn-show-list").on("click", function(){
+    if (listOpen == false) {
+      scavengerList.slideToggle();
+      $(this).html("Hide List");
+      listOpen = true;
+    } else {
+      scavengerList.slideToggle();
+      $(this).html("Show List");
+      listOpen = false;
+    }
+  })
+
   // Where to Stay hotel and Airbnb sections
 
   var airbnbListings = $("#airbnb-listings");
