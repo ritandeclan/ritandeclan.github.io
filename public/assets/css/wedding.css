@@ -3634,7 +3634,7 @@ body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .li
 body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item.blue {
   color: #75d0bb;
 }
-body #scavenger-hunt-section .scavenger-hunt-container .intro-message {
+body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message {
   color: white;
   font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -3642,14 +3642,21 @@ body #scavenger-hunt-section .scavenger-hunt-container .intro-message {
   line-height: 40px;
   margin: 35px auto;
 }
-body #scavenger-hunt-section .scavenger-hunt-container .intro-message a {
+body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message .rule {
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #e9243c;
+  margin-right: 5px;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message a {
   color: #75d0bb;
   text-decoration: none;
 }
-body #scavenger-hunt-section .scavenger-hunt-container .intro-message a:hover {
+body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message a:hover {
   color: #f18d11;
 }
-body #scavenger-hunt-section .scavenger-hunt-container .intro-message.btwn {
+body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -4165,6 +4172,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container,
   body #directions-section .alert-container,
   body #registry-section .alert-container,
+  body #scavenger-hunt-section .alert-container,
   body #alert-section .menu-container,
   body #staying-section .menu-container,
   body #what-to-do-section .menu-container,
@@ -4173,6 +4181,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container,
   body #directions-section .menu-container,
   body #registry-section .menu-container,
+  body #scavenger-hunt-section .menu-container,
   body #alert-section .parking-container,
   body #staying-section .parking-container,
   body #what-to-do-section .parking-container,
@@ -4181,6 +4190,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container,
   body #directions-section .parking-container,
   body #registry-section .parking-container,
+  body #scavenger-hunt-section .parking-container,
   body #alert-section .before-party-container,
   body #staying-section .before-party-container,
   body #what-to-do-section .before-party-container,
@@ -4189,6 +4199,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container,
   body #directions-section .before-party-container,
   body #registry-section .before-party-container,
+  body #scavenger-hunt-section .before-party-container,
   body #alert-section .staying-container,
   body #staying-section .staying-container,
   body #what-to-do-section .staying-container,
@@ -4197,6 +4208,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container,
   body #directions-section .staying-container,
   body #registry-section .staying-container,
+  body #scavenger-hunt-section .staying-container,
   body #alert-section .what-to-do-container,
   body #staying-section .what-to-do-container,
   body #what-to-do-section .what-to-do-container,
@@ -4205,14 +4217,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container,
   body #directions-section .what-to-do-container,
   body #registry-section .what-to-do-container,
-  body #alert-section .directions-container,
-  body #staying-section .directions-container,
-  body #what-to-do-section .directions-container,
-  body #menu-section .directions-container,
-  body #parking-section .directions-container,
-  body #before-party-section .directions-container,
-  body #directions-section .directions-container,
-  body #registry-section .directions-container {
+  body #scavenger-hunt-section .what-to-do-container,
+  body #alert-section .directions-container .scavenger-hunt-container,
+  body #staying-section .directions-container .scavenger-hunt-container,
+  body #what-to-do-section .directions-container .scavenger-hunt-container,
+  body #menu-section .directions-container .scavenger-hunt-container,
+  body #parking-section .directions-container .scavenger-hunt-container,
+  body #before-party-section .directions-container .scavenger-hunt-container,
+  body #directions-section .directions-container .scavenger-hunt-container,
+  body #registry-section .directions-container .scavenger-hunt-container,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container {
     width: 70%;
     margin: 0 auto;
   }
@@ -4224,6 +4238,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .title,
   body #directions-section .alert-container .title,
   body #registry-section .alert-container .title,
+  body #scavenger-hunt-section .alert-container .title,
   body #alert-section .menu-container .title,
   body #staying-section .menu-container .title,
   body #what-to-do-section .menu-container .title,
@@ -4232,6 +4247,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .title,
   body #directions-section .menu-container .title,
   body #registry-section .menu-container .title,
+  body #scavenger-hunt-section .menu-container .title,
   body #alert-section .parking-container .title,
   body #staying-section .parking-container .title,
   body #what-to-do-section .parking-container .title,
@@ -4240,6 +4256,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .title,
   body #directions-section .parking-container .title,
   body #registry-section .parking-container .title,
+  body #scavenger-hunt-section .parking-container .title,
   body #alert-section .before-party-container .title,
   body #staying-section .before-party-container .title,
   body #what-to-do-section .before-party-container .title,
@@ -4248,6 +4265,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .title,
   body #directions-section .before-party-container .title,
   body #registry-section .before-party-container .title,
+  body #scavenger-hunt-section .before-party-container .title,
   body #alert-section .staying-container .title,
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
@@ -4256,6 +4274,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .title,
   body #directions-section .staying-container .title,
   body #registry-section .staying-container .title,
+  body #scavenger-hunt-section .staying-container .title,
   body #alert-section .what-to-do-container .title,
   body #staying-section .what-to-do-container .title,
   body #what-to-do-section .what-to-do-container .title,
@@ -4264,14 +4283,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .title,
   body #directions-section .what-to-do-container .title,
   body #registry-section .what-to-do-container .title,
-  body #alert-section .directions-container .title,
-  body #staying-section .directions-container .title,
-  body #what-to-do-section .directions-container .title,
-  body #menu-section .directions-container .title,
-  body #parking-section .directions-container .title,
-  body #before-party-section .directions-container .title,
-  body #directions-section .directions-container .title,
-  body #registry-section .directions-container .title {
+  body #scavenger-hunt-section .what-to-do-container .title,
+  body #alert-section .directions-container .scavenger-hunt-container .title,
+  body #staying-section .directions-container .scavenger-hunt-container .title,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .title,
+  body #menu-section .directions-container .scavenger-hunt-container .title,
+  body #parking-section .directions-container .scavenger-hunt-container .title,
+  body #before-party-section .directions-container .scavenger-hunt-container .title,
+  body #directions-section .directions-container .scavenger-hunt-container .title,
+  body #registry-section .directions-container .scavenger-hunt-container .title,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .title {
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 56px;
@@ -4285,6 +4306,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .title.registry,
   body #directions-section .alert-container .title.registry,
   body #registry-section .alert-container .title.registry,
+  body #scavenger-hunt-section .alert-container .title.registry,
   body #alert-section .menu-container .title.registry,
   body #staying-section .menu-container .title.registry,
   body #what-to-do-section .menu-container .title.registry,
@@ -4293,6 +4315,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .title.registry,
   body #directions-section .menu-container .title.registry,
   body #registry-section .menu-container .title.registry,
+  body #scavenger-hunt-section .menu-container .title.registry,
   body #alert-section .parking-container .title.registry,
   body #staying-section .parking-container .title.registry,
   body #what-to-do-section .parking-container .title.registry,
@@ -4301,6 +4324,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .title.registry,
   body #directions-section .parking-container .title.registry,
   body #registry-section .parking-container .title.registry,
+  body #scavenger-hunt-section .parking-container .title.registry,
   body #alert-section .before-party-container .title.registry,
   body #staying-section .before-party-container .title.registry,
   body #what-to-do-section .before-party-container .title.registry,
@@ -4309,6 +4333,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .title.registry,
   body #directions-section .before-party-container .title.registry,
   body #registry-section .before-party-container .title.registry,
+  body #scavenger-hunt-section .before-party-container .title.registry,
   body #alert-section .staying-container .title.registry,
   body #staying-section .staying-container .title.registry,
   body #what-to-do-section .staying-container .title.registry,
@@ -4317,6 +4342,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .title.registry,
   body #directions-section .staying-container .title.registry,
   body #registry-section .staying-container .title.registry,
+  body #scavenger-hunt-section .staying-container .title.registry,
   body #alert-section .what-to-do-container .title.registry,
   body #staying-section .what-to-do-container .title.registry,
   body #what-to-do-section .what-to-do-container .title.registry,
@@ -4325,14 +4351,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .title.registry,
   body #directions-section .what-to-do-container .title.registry,
   body #registry-section .what-to-do-container .title.registry,
-  body #alert-section .directions-container .title.registry,
-  body #staying-section .directions-container .title.registry,
-  body #what-to-do-section .directions-container .title.registry,
-  body #menu-section .directions-container .title.registry,
-  body #parking-section .directions-container .title.registry,
-  body #before-party-section .directions-container .title.registry,
-  body #directions-section .directions-container .title.registry,
-  body #registry-section .directions-container .title.registry {
+  body #scavenger-hunt-section .what-to-do-container .title.registry,
+  body #alert-section .directions-container .scavenger-hunt-container .title.registry,
+  body #staying-section .directions-container .scavenger-hunt-container .title.registry,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .title.registry,
+  body #menu-section .directions-container .scavenger-hunt-container .title.registry,
+  body #parking-section .directions-container .scavenger-hunt-container .title.registry,
+  body #before-party-section .directions-container .scavenger-hunt-container .title.registry,
+  body #directions-section .directions-container .scavenger-hunt-container .title.registry,
+  body #registry-section .directions-container .scavenger-hunt-container .title.registry,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .title.registry {
     margin-bottom: 25px;
   }
   body #alert-section .alert-container .activity-ideas,
@@ -4343,6 +4371,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .activity-ideas,
   body #directions-section .alert-container .activity-ideas,
   body #registry-section .alert-container .activity-ideas,
+  body #scavenger-hunt-section .alert-container .activity-ideas,
   body #alert-section .menu-container .activity-ideas,
   body #staying-section .menu-container .activity-ideas,
   body #what-to-do-section .menu-container .activity-ideas,
@@ -4351,6 +4380,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .activity-ideas,
   body #directions-section .menu-container .activity-ideas,
   body #registry-section .menu-container .activity-ideas,
+  body #scavenger-hunt-section .menu-container .activity-ideas,
   body #alert-section .parking-container .activity-ideas,
   body #staying-section .parking-container .activity-ideas,
   body #what-to-do-section .parking-container .activity-ideas,
@@ -4359,6 +4389,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .activity-ideas,
   body #directions-section .parking-container .activity-ideas,
   body #registry-section .parking-container .activity-ideas,
+  body #scavenger-hunt-section .parking-container .activity-ideas,
   body #alert-section .before-party-container .activity-ideas,
   body #staying-section .before-party-container .activity-ideas,
   body #what-to-do-section .before-party-container .activity-ideas,
@@ -4367,6 +4398,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .activity-ideas,
   body #directions-section .before-party-container .activity-ideas,
   body #registry-section .before-party-container .activity-ideas,
+  body #scavenger-hunt-section .before-party-container .activity-ideas,
   body #alert-section .staying-container .activity-ideas,
   body #staying-section .staying-container .activity-ideas,
   body #what-to-do-section .staying-container .activity-ideas,
@@ -4375,6 +4407,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .activity-ideas,
   body #directions-section .staying-container .activity-ideas,
   body #registry-section .staying-container .activity-ideas,
+  body #scavenger-hunt-section .staying-container .activity-ideas,
   body #alert-section .what-to-do-container .activity-ideas,
   body #staying-section .what-to-do-container .activity-ideas,
   body #what-to-do-section .what-to-do-container .activity-ideas,
@@ -4383,14 +4416,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .activity-ideas,
   body #directions-section .what-to-do-container .activity-ideas,
   body #registry-section .what-to-do-container .activity-ideas,
-  body #alert-section .directions-container .activity-ideas,
-  body #staying-section .directions-container .activity-ideas,
-  body #what-to-do-section .directions-container .activity-ideas,
-  body #menu-section .directions-container .activity-ideas,
-  body #parking-section .directions-container .activity-ideas,
-  body #before-party-section .directions-container .activity-ideas,
-  body #directions-section .directions-container .activity-ideas,
-  body #registry-section .directions-container .activity-ideas {
+  body #scavenger-hunt-section .what-to-do-container .activity-ideas,
+  body #alert-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #staying-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #menu-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #parking-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #before-party-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #directions-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #registry-section .directions-container .scavenger-hunt-container .activity-ideas,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .activity-ideas {
     text-align: center;
   }
   body #alert-section .alert-container .message-item,
@@ -4401,6 +4436,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item,
   body #directions-section .alert-container .message-item,
   body #registry-section .alert-container .message-item,
+  body #scavenger-hunt-section .alert-container .message-item,
   body #alert-section .menu-container .message-item,
   body #staying-section .menu-container .message-item,
   body #what-to-do-section .menu-container .message-item,
@@ -4409,6 +4445,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item,
   body #directions-section .menu-container .message-item,
   body #registry-section .menu-container .message-item,
+  body #scavenger-hunt-section .menu-container .message-item,
   body #alert-section .parking-container .message-item,
   body #staying-section .parking-container .message-item,
   body #what-to-do-section .parking-container .message-item,
@@ -4417,6 +4454,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item,
   body #directions-section .parking-container .message-item,
   body #registry-section .parking-container .message-item,
+  body #scavenger-hunt-section .parking-container .message-item,
   body #alert-section .before-party-container .message-item,
   body #staying-section .before-party-container .message-item,
   body #what-to-do-section .before-party-container .message-item,
@@ -4425,6 +4463,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item,
   body #directions-section .before-party-container .message-item,
   body #registry-section .before-party-container .message-item,
+  body #scavenger-hunt-section .before-party-container .message-item,
   body #alert-section .staying-container .message-item,
   body #staying-section .staying-container .message-item,
   body #what-to-do-section .staying-container .message-item,
@@ -4433,6 +4472,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item,
   body #directions-section .staying-container .message-item,
   body #registry-section .staying-container .message-item,
+  body #scavenger-hunt-section .staying-container .message-item,
   body #alert-section .what-to-do-container .message-item,
   body #staying-section .what-to-do-container .message-item,
   body #what-to-do-section .what-to-do-container .message-item,
@@ -4441,14 +4481,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item,
   body #directions-section .what-to-do-container .message-item,
   body #registry-section .what-to-do-container .message-item,
-  body #alert-section .directions-container .message-item,
-  body #staying-section .directions-container .message-item,
-  body #what-to-do-section .directions-container .message-item,
-  body #menu-section .directions-container .message-item,
-  body #parking-section .directions-container .message-item,
-  body #before-party-section .directions-container .message-item,
-  body #directions-section .directions-container .message-item,
-  body #registry-section .directions-container .message-item {
+  body #scavenger-hunt-section .what-to-do-container .message-item,
+  body #alert-section .directions-container .scavenger-hunt-container .message-item,
+  body #staying-section .directions-container .scavenger-hunt-container .message-item,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .message-item,
+  body #menu-section .directions-container .scavenger-hunt-container .message-item,
+  body #parking-section .directions-container .scavenger-hunt-container .message-item,
+  body #before-party-section .directions-container .scavenger-hunt-container .message-item,
+  body #directions-section .directions-container .scavenger-hunt-container .message-item,
+  body #registry-section .directions-container .scavenger-hunt-container .message-item,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .message-item {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .intro-message,
@@ -4459,6 +4501,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .intro-message,
   body #directions-section .alert-container .message-item .intro-message,
   body #registry-section .alert-container .message-item .intro-message,
+  body #scavenger-hunt-section .alert-container .message-item .intro-message,
   body #alert-section .menu-container .message-item .intro-message,
   body #staying-section .menu-container .message-item .intro-message,
   body #what-to-do-section .menu-container .message-item .intro-message,
@@ -4467,6 +4510,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .intro-message,
   body #directions-section .menu-container .message-item .intro-message,
   body #registry-section .menu-container .message-item .intro-message,
+  body #scavenger-hunt-section .menu-container .message-item .intro-message,
   body #alert-section .parking-container .message-item .intro-message,
   body #staying-section .parking-container .message-item .intro-message,
   body #what-to-do-section .parking-container .message-item .intro-message,
@@ -4475,6 +4519,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .intro-message,
   body #directions-section .parking-container .message-item .intro-message,
   body #registry-section .parking-container .message-item .intro-message,
+  body #scavenger-hunt-section .parking-container .message-item .intro-message,
   body #alert-section .before-party-container .message-item .intro-message,
   body #staying-section .before-party-container .message-item .intro-message,
   body #what-to-do-section .before-party-container .message-item .intro-message,
@@ -4483,6 +4528,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .intro-message,
   body #directions-section .before-party-container .message-item .intro-message,
   body #registry-section .before-party-container .message-item .intro-message,
+  body #scavenger-hunt-section .before-party-container .message-item .intro-message,
   body #alert-section .staying-container .message-item .intro-message,
   body #staying-section .staying-container .message-item .intro-message,
   body #what-to-do-section .staying-container .message-item .intro-message,
@@ -4491,6 +4537,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .intro-message,
   body #directions-section .staying-container .message-item .intro-message,
   body #registry-section .staying-container .message-item .intro-message,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message,
   body #alert-section .what-to-do-container .message-item .intro-message,
   body #staying-section .what-to-do-container .message-item .intro-message,
   body #what-to-do-section .what-to-do-container .message-item .intro-message,
@@ -4499,14 +4546,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .intro-message,
   body #directions-section .what-to-do-container .message-item .intro-message,
   body #registry-section .what-to-do-container .message-item .intro-message,
-  body #alert-section .directions-container .message-item .intro-message,
-  body #staying-section .directions-container .message-item .intro-message,
-  body #what-to-do-section .directions-container .message-item .intro-message,
-  body #menu-section .directions-container .message-item .intro-message,
-  body #parking-section .directions-container .message-item .intro-message,
-  body #before-party-section .directions-container .message-item .intro-message,
-  body #directions-section .directions-container .message-item .intro-message,
-  body #registry-section .directions-container .message-item .intro-message {
+  body #scavenger-hunt-section .what-to-do-container .message-item .intro-message,
+  body #alert-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #staying-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #menu-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #parking-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #before-party-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #directions-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #registry-section .directions-container .scavenger-hunt-container .message-item .intro-message,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .message-item .intro-message {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -4519,6 +4568,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .intro-message.btwn,
   body #directions-section .alert-container .message-item .intro-message.btwn,
   body #registry-section .alert-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .alert-container .message-item .intro-message.btwn,
   body #alert-section .menu-container .message-item .intro-message.btwn,
   body #staying-section .menu-container .message-item .intro-message.btwn,
   body #what-to-do-section .menu-container .message-item .intro-message.btwn,
@@ -4527,6 +4577,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .intro-message.btwn,
   body #directions-section .menu-container .message-item .intro-message.btwn,
   body #registry-section .menu-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .menu-container .message-item .intro-message.btwn,
   body #alert-section .parking-container .message-item .intro-message.btwn,
   body #staying-section .parking-container .message-item .intro-message.btwn,
   body #what-to-do-section .parking-container .message-item .intro-message.btwn,
@@ -4535,6 +4586,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .intro-message.btwn,
   body #directions-section .parking-container .message-item .intro-message.btwn,
   body #registry-section .parking-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .parking-container .message-item .intro-message.btwn,
   body #alert-section .before-party-container .message-item .intro-message.btwn,
   body #staying-section .before-party-container .message-item .intro-message.btwn,
   body #what-to-do-section .before-party-container .message-item .intro-message.btwn,
@@ -4543,6 +4595,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .intro-message.btwn,
   body #directions-section .before-party-container .message-item .intro-message.btwn,
   body #registry-section .before-party-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .before-party-container .message-item .intro-message.btwn,
   body #alert-section .staying-container .message-item .intro-message.btwn,
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
@@ -4551,6 +4604,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .intro-message.btwn,
   body #directions-section .staying-container .message-item .intro-message.btwn,
   body #registry-section .staying-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message.btwn,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
@@ -4559,14 +4613,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .intro-message.btwn,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn,
   body #registry-section .what-to-do-container .message-item .intro-message.btwn,
-  body #alert-section .directions-container .message-item .intro-message.btwn,
-  body #staying-section .directions-container .message-item .intro-message.btwn,
-  body #what-to-do-section .directions-container .message-item .intro-message.btwn,
-  body #menu-section .directions-container .message-item .intro-message.btwn,
-  body #parking-section .directions-container .message-item .intro-message.btwn,
-  body #before-party-section .directions-container .message-item .intro-message.btwn,
-  body #directions-section .directions-container .message-item .intro-message.btwn,
-  body #registry-section .directions-container .message-item .intro-message.btwn {
+  body #scavenger-hunt-section .what-to-do-container .message-item .intro-message.btwn,
+  body #alert-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #staying-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #menu-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #parking-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #before-party-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #directions-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #registry-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .message-item .intro-message.btwn {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .listings-container,
@@ -4577,6 +4633,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .listings-container,
   body #directions-section .alert-container .message-item .listings-container,
   body #registry-section .alert-container .message-item .listings-container,
+  body #scavenger-hunt-section .alert-container .message-item .listings-container,
   body #alert-section .menu-container .message-item .listings-container,
   body #staying-section .menu-container .message-item .listings-container,
   body #what-to-do-section .menu-container .message-item .listings-container,
@@ -4585,6 +4642,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .listings-container,
   body #directions-section .menu-container .message-item .listings-container,
   body #registry-section .menu-container .message-item .listings-container,
+  body #scavenger-hunt-section .menu-container .message-item .listings-container,
   body #alert-section .parking-container .message-item .listings-container,
   body #staying-section .parking-container .message-item .listings-container,
   body #what-to-do-section .parking-container .message-item .listings-container,
@@ -4593,6 +4651,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .listings-container,
   body #directions-section .parking-container .message-item .listings-container,
   body #registry-section .parking-container .message-item .listings-container,
+  body #scavenger-hunt-section .parking-container .message-item .listings-container,
   body #alert-section .before-party-container .message-item .listings-container,
   body #staying-section .before-party-container .message-item .listings-container,
   body #what-to-do-section .before-party-container .message-item .listings-container,
@@ -4601,6 +4660,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .listings-container,
   body #directions-section .before-party-container .message-item .listings-container,
   body #registry-section .before-party-container .message-item .listings-container,
+  body #scavenger-hunt-section .before-party-container .message-item .listings-container,
   body #alert-section .staying-container .message-item .listings-container,
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
@@ -4609,6 +4669,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .listings-container,
   body #directions-section .staying-container .message-item .listings-container,
   body #registry-section .staying-container .message-item .listings-container,
+  body #scavenger-hunt-section .staying-container .message-item .listings-container,
   body #alert-section .what-to-do-container .message-item .listings-container,
   body #staying-section .what-to-do-container .message-item .listings-container,
   body #what-to-do-section .what-to-do-container .message-item .listings-container,
@@ -4617,14 +4678,16 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .listings-container,
   body #directions-section .what-to-do-container .message-item .listings-container,
   body #registry-section .what-to-do-container .message-item .listings-container,
-  body #alert-section .directions-container .message-item .listings-container,
-  body #staying-section .directions-container .message-item .listings-container,
-  body #what-to-do-section .directions-container .message-item .listings-container,
-  body #menu-section .directions-container .message-item .listings-container,
-  body #parking-section .directions-container .message-item .listings-container,
-  body #before-party-section .directions-container .message-item .listings-container,
-  body #directions-section .directions-container .message-item .listings-container,
-  body #registry-section .directions-container .message-item .listings-container {
+  body #scavenger-hunt-section .what-to-do-container .message-item .listings-container,
+  body #alert-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #staying-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #what-to-do-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #menu-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #parking-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #before-party-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #directions-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #registry-section .directions-container .scavenger-hunt-container .message-item .listings-container,
+  body #scavenger-hunt-section .directions-container .scavenger-hunt-container .message-item .listings-container {
     width: 100%;
     text-align: center;
   }
@@ -4980,6 +5043,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .title,
   body #directions-section .alert-container .title,
   body #registry-section .alert-container .title,
+  body #scavenger-hunt-section .alert-container .title,
   body #alert-section .staying-container .title,
   body #staying-section .staying-container .title,
   body #what-to-do-section .staying-container .title,
@@ -4988,6 +5052,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .title,
   body #directions-section .staying-container .title,
   body #registry-section .staying-container .title,
+  body #scavenger-hunt-section .staying-container .title,
   body #alert-section .what-to-do-container .title,
   body #staying-section .what-to-do-container .title,
   body #what-to-do-section .what-to-do-container .title,
@@ -4996,6 +5061,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .title,
   body #directions-section .what-to-do-container .title,
   body #registry-section .what-to-do-container .title,
+  body #scavenger-hunt-section .what-to-do-container .title,
   body #alert-section .menu-container .title,
   body #staying-section .menu-container .title,
   body #what-to-do-section .menu-container .title,
@@ -5004,6 +5070,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .title,
   body #directions-section .menu-container .title,
   body #registry-section .menu-container .title,
+  body #scavenger-hunt-section .menu-container .title,
   body #alert-section .parking-container .title,
   body #staying-section .parking-container .title,
   body #what-to-do-section .parking-container .title,
@@ -5012,6 +5079,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .title,
   body #directions-section .parking-container .title,
   body #registry-section .parking-container .title,
+  body #scavenger-hunt-section .parking-container .title,
   body #alert-section .before-party-container .title,
   body #staying-section .before-party-container .title,
   body #what-to-do-section .before-party-container .title,
@@ -5020,6 +5088,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .title,
   body #directions-section .before-party-container .title,
   body #registry-section .before-party-container .title,
+  body #scavenger-hunt-section .before-party-container .title,
   body #alert-section .directions-container .title,
   body #staying-section .directions-container .title,
   body #what-to-do-section .directions-container .title,
@@ -5027,7 +5096,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .title,
   body #before-party-section .directions-container .title,
   body #directions-section .directions-container .title,
-  body #registry-section .directions-container .title {
+  body #registry-section .directions-container .title,
+  body #scavenger-hunt-section .directions-container .title,
+  body #alert-section .scavenger-hunt-container .title,
+  body #staying-section .scavenger-hunt-container .title,
+  body #what-to-do-section .scavenger-hunt-container .title,
+  body #menu-section .scavenger-hunt-container .title,
+  body #parking-section .scavenger-hunt-container .title,
+  body #before-party-section .scavenger-hunt-container .title,
+  body #directions-section .scavenger-hunt-container .title,
+  body #registry-section .scavenger-hunt-container .title,
+  body #scavenger-hunt-section .scavenger-hunt-container .title {
     font-size: 56px;
     line-height: 56px;
   }
@@ -5039,6 +5118,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .activity-ideas,
   body #directions-section .alert-container .activity-ideas,
   body #registry-section .alert-container .activity-ideas,
+  body #scavenger-hunt-section .alert-container .activity-ideas,
   body #alert-section .staying-container .activity-ideas,
   body #staying-section .staying-container .activity-ideas,
   body #what-to-do-section .staying-container .activity-ideas,
@@ -5047,6 +5127,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .activity-ideas,
   body #directions-section .staying-container .activity-ideas,
   body #registry-section .staying-container .activity-ideas,
+  body #scavenger-hunt-section .staying-container .activity-ideas,
   body #alert-section .what-to-do-container .activity-ideas,
   body #staying-section .what-to-do-container .activity-ideas,
   body #what-to-do-section .what-to-do-container .activity-ideas,
@@ -5055,6 +5136,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .activity-ideas,
   body #directions-section .what-to-do-container .activity-ideas,
   body #registry-section .what-to-do-container .activity-ideas,
+  body #scavenger-hunt-section .what-to-do-container .activity-ideas,
   body #alert-section .menu-container .activity-ideas,
   body #staying-section .menu-container .activity-ideas,
   body #what-to-do-section .menu-container .activity-ideas,
@@ -5063,6 +5145,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .activity-ideas,
   body #directions-section .menu-container .activity-ideas,
   body #registry-section .menu-container .activity-ideas,
+  body #scavenger-hunt-section .menu-container .activity-ideas,
   body #alert-section .parking-container .activity-ideas,
   body #staying-section .parking-container .activity-ideas,
   body #what-to-do-section .parking-container .activity-ideas,
@@ -5071,6 +5154,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .activity-ideas,
   body #directions-section .parking-container .activity-ideas,
   body #registry-section .parking-container .activity-ideas,
+  body #scavenger-hunt-section .parking-container .activity-ideas,
   body #alert-section .before-party-container .activity-ideas,
   body #staying-section .before-party-container .activity-ideas,
   body #what-to-do-section .before-party-container .activity-ideas,
@@ -5079,6 +5163,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .activity-ideas,
   body #directions-section .before-party-container .activity-ideas,
   body #registry-section .before-party-container .activity-ideas,
+  body #scavenger-hunt-section .before-party-container .activity-ideas,
   body #alert-section .directions-container .activity-ideas,
   body #staying-section .directions-container .activity-ideas,
   body #what-to-do-section .directions-container .activity-ideas,
@@ -5086,7 +5171,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .activity-ideas,
   body #before-party-section .directions-container .activity-ideas,
   body #directions-section .directions-container .activity-ideas,
-  body #registry-section .directions-container .activity-ideas {
+  body #registry-section .directions-container .activity-ideas,
+  body #scavenger-hunt-section .directions-container .activity-ideas,
+  body #alert-section .scavenger-hunt-container .activity-ideas,
+  body #staying-section .scavenger-hunt-container .activity-ideas,
+  body #what-to-do-section .scavenger-hunt-container .activity-ideas,
+  body #menu-section .scavenger-hunt-container .activity-ideas,
+  body #parking-section .scavenger-hunt-container .activity-ideas,
+  body #before-party-section .scavenger-hunt-container .activity-ideas,
+  body #directions-section .scavenger-hunt-container .activity-ideas,
+  body #registry-section .scavenger-hunt-container .activity-ideas,
+  body #scavenger-hunt-section .scavenger-hunt-container .activity-ideas {
     text-align: center;
   }
   body #alert-section .alert-container .message-item,
@@ -5097,6 +5192,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item,
   body #directions-section .alert-container .message-item,
   body #registry-section .alert-container .message-item,
+  body #scavenger-hunt-section .alert-container .message-item,
   body #alert-section .staying-container .message-item,
   body #staying-section .staying-container .message-item,
   body #what-to-do-section .staying-container .message-item,
@@ -5105,6 +5201,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item,
   body #directions-section .staying-container .message-item,
   body #registry-section .staying-container .message-item,
+  body #scavenger-hunt-section .staying-container .message-item,
   body #alert-section .what-to-do-container .message-item,
   body #staying-section .what-to-do-container .message-item,
   body #what-to-do-section .what-to-do-container .message-item,
@@ -5113,6 +5210,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item,
   body #directions-section .what-to-do-container .message-item,
   body #registry-section .what-to-do-container .message-item,
+  body #scavenger-hunt-section .what-to-do-container .message-item,
   body #alert-section .menu-container .message-item,
   body #staying-section .menu-container .message-item,
   body #what-to-do-section .menu-container .message-item,
@@ -5121,6 +5219,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item,
   body #directions-section .menu-container .message-item,
   body #registry-section .menu-container .message-item,
+  body #scavenger-hunt-section .menu-container .message-item,
   body #alert-section .parking-container .message-item,
   body #staying-section .parking-container .message-item,
   body #what-to-do-section .parking-container .message-item,
@@ -5129,6 +5228,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item,
   body #directions-section .parking-container .message-item,
   body #registry-section .parking-container .message-item,
+  body #scavenger-hunt-section .parking-container .message-item,
   body #alert-section .before-party-container .message-item,
   body #staying-section .before-party-container .message-item,
   body #what-to-do-section .before-party-container .message-item,
@@ -5137,6 +5237,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item,
   body #directions-section .before-party-container .message-item,
   body #registry-section .before-party-container .message-item,
+  body #scavenger-hunt-section .before-party-container .message-item,
   body #alert-section .directions-container .message-item,
   body #staying-section .directions-container .message-item,
   body #what-to-do-section .directions-container .message-item,
@@ -5144,7 +5245,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item,
   body #before-party-section .directions-container .message-item,
   body #directions-section .directions-container .message-item,
-  body #registry-section .directions-container .message-item {
+  body #registry-section .directions-container .message-item,
+  body #scavenger-hunt-section .directions-container .message-item,
+  body #alert-section .scavenger-hunt-container .message-item,
+  body #staying-section .scavenger-hunt-container .message-item,
+  body #what-to-do-section .scavenger-hunt-container .message-item,
+  body #menu-section .scavenger-hunt-container .message-item,
+  body #parking-section .scavenger-hunt-container .message-item,
+  body #before-party-section .scavenger-hunt-container .message-item,
+  body #directions-section .scavenger-hunt-container .message-item,
+  body #registry-section .scavenger-hunt-container .message-item,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item {
     width: 100%;
     margin-top: 25px;
   }
@@ -5156,6 +5267,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .activity-ideas,
   body #directions-section .alert-container .message-item .activity-ideas,
   body #registry-section .alert-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .alert-container .message-item .activity-ideas,
   body #alert-section .staying-container .message-item .activity-ideas,
   body #staying-section .staying-container .message-item .activity-ideas,
   body #what-to-do-section .staying-container .message-item .activity-ideas,
@@ -5164,6 +5276,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .activity-ideas,
   body #directions-section .staying-container .message-item .activity-ideas,
   body #registry-section .staying-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .staying-container .message-item .activity-ideas,
   body #alert-section .what-to-do-container .message-item .activity-ideas,
   body #staying-section .what-to-do-container .message-item .activity-ideas,
   body #what-to-do-section .what-to-do-container .message-item .activity-ideas,
@@ -5172,6 +5285,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .activity-ideas,
   body #directions-section .what-to-do-container .message-item .activity-ideas,
   body #registry-section .what-to-do-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .what-to-do-container .message-item .activity-ideas,
   body #alert-section .menu-container .message-item .activity-ideas,
   body #staying-section .menu-container .message-item .activity-ideas,
   body #what-to-do-section .menu-container .message-item .activity-ideas,
@@ -5180,6 +5294,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .activity-ideas,
   body #directions-section .menu-container .message-item .activity-ideas,
   body #registry-section .menu-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .menu-container .message-item .activity-ideas,
   body #alert-section .parking-container .message-item .activity-ideas,
   body #staying-section .parking-container .message-item .activity-ideas,
   body #what-to-do-section .parking-container .message-item .activity-ideas,
@@ -5188,6 +5303,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .activity-ideas,
   body #directions-section .parking-container .message-item .activity-ideas,
   body #registry-section .parking-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .parking-container .message-item .activity-ideas,
   body #alert-section .before-party-container .message-item .activity-ideas,
   body #staying-section .before-party-container .message-item .activity-ideas,
   body #what-to-do-section .before-party-container .message-item .activity-ideas,
@@ -5196,6 +5312,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .activity-ideas,
   body #directions-section .before-party-container .message-item .activity-ideas,
   body #registry-section .before-party-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .before-party-container .message-item .activity-ideas,
   body #alert-section .directions-container .message-item .activity-ideas,
   body #staying-section .directions-container .message-item .activity-ideas,
   body #what-to-do-section .directions-container .message-item .activity-ideas,
@@ -5203,7 +5320,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .activity-ideas,
   body #before-party-section .directions-container .message-item .activity-ideas,
   body #directions-section .directions-container .message-item .activity-ideas,
-  body #registry-section .directions-container .message-item .activity-ideas {
+  body #registry-section .directions-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .directions-container .message-item .activity-ideas,
+  body #alert-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #staying-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #what-to-do-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #menu-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #parking-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #before-party-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #directions-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #registry-section .scavenger-hunt-container .message-item .activity-ideas,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .activity-ideas {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .activity-ideas .item .item-name,
@@ -5214,6 +5341,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .activity-ideas .item .item-name,
   body #directions-section .alert-container .message-item .activity-ideas .item .item-name,
   body #registry-section .alert-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .alert-container .message-item .activity-ideas .item .item-name,
   body #alert-section .staying-container .message-item .activity-ideas .item .item-name,
   body #staying-section .staying-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .staying-container .message-item .activity-ideas .item .item-name,
@@ -5222,6 +5350,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .activity-ideas .item .item-name,
   body #directions-section .staying-container .message-item .activity-ideas .item .item-name,
   body #registry-section .staying-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .staying-container .message-item .activity-ideas .item .item-name,
   body #alert-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #staying-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .what-to-do-container .message-item .activity-ideas .item .item-name,
@@ -5230,6 +5359,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #directions-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #registry-section .what-to-do-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .what-to-do-container .message-item .activity-ideas .item .item-name,
   body #alert-section .menu-container .message-item .activity-ideas .item .item-name,
   body #staying-section .menu-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .menu-container .message-item .activity-ideas .item .item-name,
@@ -5238,6 +5368,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .activity-ideas .item .item-name,
   body #directions-section .menu-container .message-item .activity-ideas .item .item-name,
   body #registry-section .menu-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .menu-container .message-item .activity-ideas .item .item-name,
   body #alert-section .parking-container .message-item .activity-ideas .item .item-name,
   body #staying-section .parking-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .parking-container .message-item .activity-ideas .item .item-name,
@@ -5246,6 +5377,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .activity-ideas .item .item-name,
   body #directions-section .parking-container .message-item .activity-ideas .item .item-name,
   body #registry-section .parking-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .parking-container .message-item .activity-ideas .item .item-name,
   body #alert-section .before-party-container .message-item .activity-ideas .item .item-name,
   body #staying-section .before-party-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .before-party-container .message-item .activity-ideas .item .item-name,
@@ -5254,6 +5386,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .activity-ideas .item .item-name,
   body #directions-section .before-party-container .message-item .activity-ideas .item .item-name,
   body #registry-section .before-party-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .before-party-container .message-item .activity-ideas .item .item-name,
   body #alert-section .directions-container .message-item .activity-ideas .item .item-name,
   body #staying-section .directions-container .message-item .activity-ideas .item .item-name,
   body #what-to-do-section .directions-container .message-item .activity-ideas .item .item-name,
@@ -5261,7 +5394,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .activity-ideas .item .item-name,
   body #before-party-section .directions-container .message-item .activity-ideas .item .item-name,
   body #directions-section .directions-container .message-item .activity-ideas .item .item-name,
-  body #registry-section .directions-container .message-item .activity-ideas .item .item-name {
+  body #registry-section .directions-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .directions-container .message-item .activity-ideas .item .item-name,
+  body #alert-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #staying-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #what-to-do-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #menu-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #parking-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #before-party-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #directions-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #registry-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .activity-ideas .item .item-name {
     width: 100%;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -5276,6 +5419,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .intro-message,
   body #directions-section .alert-container .message-item .intro-message,
   body #registry-section .alert-container .message-item .intro-message,
+  body #scavenger-hunt-section .alert-container .message-item .intro-message,
   body #alert-section .staying-container .message-item .intro-message,
   body #staying-section .staying-container .message-item .intro-message,
   body #what-to-do-section .staying-container .message-item .intro-message,
@@ -5284,6 +5428,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .intro-message,
   body #directions-section .staying-container .message-item .intro-message,
   body #registry-section .staying-container .message-item .intro-message,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message,
   body #alert-section .what-to-do-container .message-item .intro-message,
   body #staying-section .what-to-do-container .message-item .intro-message,
   body #what-to-do-section .what-to-do-container .message-item .intro-message,
@@ -5292,6 +5437,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .intro-message,
   body #directions-section .what-to-do-container .message-item .intro-message,
   body #registry-section .what-to-do-container .message-item .intro-message,
+  body #scavenger-hunt-section .what-to-do-container .message-item .intro-message,
   body #alert-section .menu-container .message-item .intro-message,
   body #staying-section .menu-container .message-item .intro-message,
   body #what-to-do-section .menu-container .message-item .intro-message,
@@ -5300,6 +5446,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .intro-message,
   body #directions-section .menu-container .message-item .intro-message,
   body #registry-section .menu-container .message-item .intro-message,
+  body #scavenger-hunt-section .menu-container .message-item .intro-message,
   body #alert-section .parking-container .message-item .intro-message,
   body #staying-section .parking-container .message-item .intro-message,
   body #what-to-do-section .parking-container .message-item .intro-message,
@@ -5308,6 +5455,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .intro-message,
   body #directions-section .parking-container .message-item .intro-message,
   body #registry-section .parking-container .message-item .intro-message,
+  body #scavenger-hunt-section .parking-container .message-item .intro-message,
   body #alert-section .before-party-container .message-item .intro-message,
   body #staying-section .before-party-container .message-item .intro-message,
   body #what-to-do-section .before-party-container .message-item .intro-message,
@@ -5316,6 +5464,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .intro-message,
   body #directions-section .before-party-container .message-item .intro-message,
   body #registry-section .before-party-container .message-item .intro-message,
+  body #scavenger-hunt-section .before-party-container .message-item .intro-message,
   body #alert-section .directions-container .message-item .intro-message,
   body #staying-section .directions-container .message-item .intro-message,
   body #what-to-do-section .directions-container .message-item .intro-message,
@@ -5323,7 +5472,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .intro-message,
   body #before-party-section .directions-container .message-item .intro-message,
   body #directions-section .directions-container .message-item .intro-message,
-  body #registry-section .directions-container .message-item .intro-message {
+  body #registry-section .directions-container .message-item .intro-message,
+  body #scavenger-hunt-section .directions-container .message-item .intro-message,
+  body #alert-section .scavenger-hunt-container .message-item .intro-message,
+  body #staying-section .scavenger-hunt-container .message-item .intro-message,
+  body #what-to-do-section .scavenger-hunt-container .message-item .intro-message,
+  body #menu-section .scavenger-hunt-container .message-item .intro-message,
+  body #parking-section .scavenger-hunt-container .message-item .intro-message,
+  body #before-party-section .scavenger-hunt-container .message-item .intro-message,
+  body #directions-section .scavenger-hunt-container .message-item .intro-message,
+  body #registry-section .scavenger-hunt-container .message-item .intro-message,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -5340,6 +5499,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .intro-message.btwn,
   body #directions-section .alert-container .message-item .intro-message.btwn,
   body #registry-section .alert-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .alert-container .message-item .intro-message.btwn,
   body #alert-section .staying-container .message-item .intro-message.btwn,
   body #staying-section .staying-container .message-item .intro-message.btwn,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn,
@@ -5348,6 +5508,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .intro-message.btwn,
   body #directions-section .staying-container .message-item .intro-message.btwn,
   body #registry-section .staying-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message.btwn,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn,
@@ -5356,6 +5517,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .intro-message.btwn,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn,
   body #registry-section .what-to-do-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .what-to-do-container .message-item .intro-message.btwn,
   body #alert-section .menu-container .message-item .intro-message.btwn,
   body #staying-section .menu-container .message-item .intro-message.btwn,
   body #what-to-do-section .menu-container .message-item .intro-message.btwn,
@@ -5364,6 +5526,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .intro-message.btwn,
   body #directions-section .menu-container .message-item .intro-message.btwn,
   body #registry-section .menu-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .menu-container .message-item .intro-message.btwn,
   body #alert-section .parking-container .message-item .intro-message.btwn,
   body #staying-section .parking-container .message-item .intro-message.btwn,
   body #what-to-do-section .parking-container .message-item .intro-message.btwn,
@@ -5372,6 +5535,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .intro-message.btwn,
   body #directions-section .parking-container .message-item .intro-message.btwn,
   body #registry-section .parking-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .parking-container .message-item .intro-message.btwn,
   body #alert-section .before-party-container .message-item .intro-message.btwn,
   body #staying-section .before-party-container .message-item .intro-message.btwn,
   body #what-to-do-section .before-party-container .message-item .intro-message.btwn,
@@ -5380,6 +5544,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .intro-message.btwn,
   body #directions-section .before-party-container .message-item .intro-message.btwn,
   body #registry-section .before-party-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .before-party-container .message-item .intro-message.btwn,
   body #alert-section .directions-container .message-item .intro-message.btwn,
   body #staying-section .directions-container .message-item .intro-message.btwn,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn,
@@ -5387,7 +5552,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .intro-message.btwn,
   body #before-party-section .directions-container .message-item .intro-message.btwn,
   body #directions-section .directions-container .message-item .intro-message.btwn,
-  body #registry-section .directions-container .message-item .intro-message.btwn {
+  body #registry-section .directions-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .directions-container .message-item .intro-message.btwn,
+  body #alert-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #staying-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #what-to-do-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #menu-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #parking-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #before-party-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #directions-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #registry-section .scavenger-hunt-container .message-item .intro-message.btwn,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message.btwn {
     width: 100%;
   }
   body #alert-section .alert-container .message-item .intro-message.btwn a,
@@ -5398,6 +5573,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .intro-message.btwn a,
   body #directions-section .alert-container .message-item .intro-message.btwn a,
   body #registry-section .alert-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .alert-container .message-item .intro-message.btwn a,
   body #alert-section .staying-container .message-item .intro-message.btwn a,
   body #staying-section .staying-container .message-item .intro-message.btwn a,
   body #what-to-do-section .staying-container .message-item .intro-message.btwn a,
@@ -5406,6 +5582,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .intro-message.btwn a,
   body #directions-section .staying-container .message-item .intro-message.btwn a,
   body #registry-section .staying-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message.btwn a,
   body #alert-section .what-to-do-container .message-item .intro-message.btwn a,
   body #staying-section .what-to-do-container .message-item .intro-message.btwn a,
   body #what-to-do-section .what-to-do-container .message-item .intro-message.btwn a,
@@ -5414,6 +5591,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .intro-message.btwn a,
   body #directions-section .what-to-do-container .message-item .intro-message.btwn a,
   body #registry-section .what-to-do-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .what-to-do-container .message-item .intro-message.btwn a,
   body #alert-section .menu-container .message-item .intro-message.btwn a,
   body #staying-section .menu-container .message-item .intro-message.btwn a,
   body #what-to-do-section .menu-container .message-item .intro-message.btwn a,
@@ -5422,6 +5600,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .intro-message.btwn a,
   body #directions-section .menu-container .message-item .intro-message.btwn a,
   body #registry-section .menu-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .menu-container .message-item .intro-message.btwn a,
   body #alert-section .parking-container .message-item .intro-message.btwn a,
   body #staying-section .parking-container .message-item .intro-message.btwn a,
   body #what-to-do-section .parking-container .message-item .intro-message.btwn a,
@@ -5430,6 +5609,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .intro-message.btwn a,
   body #directions-section .parking-container .message-item .intro-message.btwn a,
   body #registry-section .parking-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .parking-container .message-item .intro-message.btwn a,
   body #alert-section .before-party-container .message-item .intro-message.btwn a,
   body #staying-section .before-party-container .message-item .intro-message.btwn a,
   body #what-to-do-section .before-party-container .message-item .intro-message.btwn a,
@@ -5438,6 +5618,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .intro-message.btwn a,
   body #directions-section .before-party-container .message-item .intro-message.btwn a,
   body #registry-section .before-party-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .before-party-container .message-item .intro-message.btwn a,
   body #alert-section .directions-container .message-item .intro-message.btwn a,
   body #staying-section .directions-container .message-item .intro-message.btwn a,
   body #what-to-do-section .directions-container .message-item .intro-message.btwn a,
@@ -5445,7 +5626,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .intro-message.btwn a,
   body #before-party-section .directions-container .message-item .intro-message.btwn a,
   body #directions-section .directions-container .message-item .intro-message.btwn a,
-  body #registry-section .directions-container .message-item .intro-message.btwn a {
+  body #registry-section .directions-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .directions-container .message-item .intro-message.btwn a,
+  body #alert-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #staying-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #what-to-do-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #menu-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #parking-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #before-party-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #directions-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #registry-section .scavenger-hunt-container .message-item .intro-message.btwn a,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .intro-message.btwn a {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 30px;
@@ -5459,6 +5650,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .display-listings,
   body #directions-section .alert-container .message-item .display-listings,
   body #registry-section .alert-container .message-item .display-listings,
+  body #scavenger-hunt-section .alert-container .message-item .display-listings,
   body #alert-section .staying-container .message-item .display-listings,
   body #staying-section .staying-container .message-item .display-listings,
   body #what-to-do-section .staying-container .message-item .display-listings,
@@ -5467,6 +5659,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .display-listings,
   body #directions-section .staying-container .message-item .display-listings,
   body #registry-section .staying-container .message-item .display-listings,
+  body #scavenger-hunt-section .staying-container .message-item .display-listings,
   body #alert-section .what-to-do-container .message-item .display-listings,
   body #staying-section .what-to-do-container .message-item .display-listings,
   body #what-to-do-section .what-to-do-container .message-item .display-listings,
@@ -5475,6 +5668,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .display-listings,
   body #directions-section .what-to-do-container .message-item .display-listings,
   body #registry-section .what-to-do-container .message-item .display-listings,
+  body #scavenger-hunt-section .what-to-do-container .message-item .display-listings,
   body #alert-section .menu-container .message-item .display-listings,
   body #staying-section .menu-container .message-item .display-listings,
   body #what-to-do-section .menu-container .message-item .display-listings,
@@ -5483,6 +5677,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .display-listings,
   body #directions-section .menu-container .message-item .display-listings,
   body #registry-section .menu-container .message-item .display-listings,
+  body #scavenger-hunt-section .menu-container .message-item .display-listings,
   body #alert-section .parking-container .message-item .display-listings,
   body #staying-section .parking-container .message-item .display-listings,
   body #what-to-do-section .parking-container .message-item .display-listings,
@@ -5491,6 +5686,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .display-listings,
   body #directions-section .parking-container .message-item .display-listings,
   body #registry-section .parking-container .message-item .display-listings,
+  body #scavenger-hunt-section .parking-container .message-item .display-listings,
   body #alert-section .before-party-container .message-item .display-listings,
   body #staying-section .before-party-container .message-item .display-listings,
   body #what-to-do-section .before-party-container .message-item .display-listings,
@@ -5499,6 +5695,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .display-listings,
   body #directions-section .before-party-container .message-item .display-listings,
   body #registry-section .before-party-container .message-item .display-listings,
+  body #scavenger-hunt-section .before-party-container .message-item .display-listings,
   body #alert-section .directions-container .message-item .display-listings,
   body #staying-section .directions-container .message-item .display-listings,
   body #what-to-do-section .directions-container .message-item .display-listings,
@@ -5506,7 +5703,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .display-listings,
   body #before-party-section .directions-container .message-item .display-listings,
   body #directions-section .directions-container .message-item .display-listings,
-  body #registry-section .directions-container .message-item .display-listings {
+  body #registry-section .directions-container .message-item .display-listings,
+  body #scavenger-hunt-section .directions-container .message-item .display-listings,
+  body #alert-section .scavenger-hunt-container .message-item .display-listings,
+  body #staying-section .scavenger-hunt-container .message-item .display-listings,
+  body #what-to-do-section .scavenger-hunt-container .message-item .display-listings,
+  body #menu-section .scavenger-hunt-container .message-item .display-listings,
+  body #parking-section .scavenger-hunt-container .message-item .display-listings,
+  body #before-party-section .scavenger-hunt-container .message-item .display-listings,
+  body #directions-section .scavenger-hunt-container .message-item .display-listings,
+  body #registry-section .scavenger-hunt-container .message-item .display-listings,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .display-listings {
     width: 80%;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -5521,6 +5728,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .display-listings h3,
   body #directions-section .alert-container .message-item .display-listings h3,
   body #registry-section .alert-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .alert-container .message-item .display-listings h3,
   body #alert-section .staying-container .message-item .display-listings h3,
   body #staying-section .staying-container .message-item .display-listings h3,
   body #what-to-do-section .staying-container .message-item .display-listings h3,
@@ -5529,6 +5737,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .display-listings h3,
   body #directions-section .staying-container .message-item .display-listings h3,
   body #registry-section .staying-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .staying-container .message-item .display-listings h3,
   body #alert-section .what-to-do-container .message-item .display-listings h3,
   body #staying-section .what-to-do-container .message-item .display-listings h3,
   body #what-to-do-section .what-to-do-container .message-item .display-listings h3,
@@ -5537,6 +5746,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .display-listings h3,
   body #directions-section .what-to-do-container .message-item .display-listings h3,
   body #registry-section .what-to-do-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .what-to-do-container .message-item .display-listings h3,
   body #alert-section .menu-container .message-item .display-listings h3,
   body #staying-section .menu-container .message-item .display-listings h3,
   body #what-to-do-section .menu-container .message-item .display-listings h3,
@@ -5545,6 +5755,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .display-listings h3,
   body #directions-section .menu-container .message-item .display-listings h3,
   body #registry-section .menu-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .menu-container .message-item .display-listings h3,
   body #alert-section .parking-container .message-item .display-listings h3,
   body #staying-section .parking-container .message-item .display-listings h3,
   body #what-to-do-section .parking-container .message-item .display-listings h3,
@@ -5553,6 +5764,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .display-listings h3,
   body #directions-section .parking-container .message-item .display-listings h3,
   body #registry-section .parking-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .parking-container .message-item .display-listings h3,
   body #alert-section .before-party-container .message-item .display-listings h3,
   body #staying-section .before-party-container .message-item .display-listings h3,
   body #what-to-do-section .before-party-container .message-item .display-listings h3,
@@ -5561,6 +5773,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .display-listings h3,
   body #directions-section .before-party-container .message-item .display-listings h3,
   body #registry-section .before-party-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .before-party-container .message-item .display-listings h3,
   body #alert-section .directions-container .message-item .display-listings h3,
   body #staying-section .directions-container .message-item .display-listings h3,
   body #what-to-do-section .directions-container .message-item .display-listings h3,
@@ -5568,7 +5781,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .display-listings h3,
   body #before-party-section .directions-container .message-item .display-listings h3,
   body #directions-section .directions-container .message-item .display-listings h3,
-  body #registry-section .directions-container .message-item .display-listings h3 {
+  body #registry-section .directions-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .directions-container .message-item .display-listings h3,
+  body #alert-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #staying-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #what-to-do-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #menu-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #parking-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #before-party-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #directions-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #registry-section .scavenger-hunt-container .message-item .display-listings h3,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .display-listings h3 {
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -5582,6 +5805,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .alert-container .message-item .listings-container,
   body #directions-section .alert-container .message-item .listings-container,
   body #registry-section .alert-container .message-item .listings-container,
+  body #scavenger-hunt-section .alert-container .message-item .listings-container,
   body #alert-section .staying-container .message-item .listings-container,
   body #staying-section .staying-container .message-item .listings-container,
   body #what-to-do-section .staying-container .message-item .listings-container,
@@ -5590,6 +5814,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .staying-container .message-item .listings-container,
   body #directions-section .staying-container .message-item .listings-container,
   body #registry-section .staying-container .message-item .listings-container,
+  body #scavenger-hunt-section .staying-container .message-item .listings-container,
   body #alert-section .what-to-do-container .message-item .listings-container,
   body #staying-section .what-to-do-container .message-item .listings-container,
   body #what-to-do-section .what-to-do-container .message-item .listings-container,
@@ -5598,6 +5823,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .what-to-do-container .message-item .listings-container,
   body #directions-section .what-to-do-container .message-item .listings-container,
   body #registry-section .what-to-do-container .message-item .listings-container,
+  body #scavenger-hunt-section .what-to-do-container .message-item .listings-container,
   body #alert-section .menu-container .message-item .listings-container,
   body #staying-section .menu-container .message-item .listings-container,
   body #what-to-do-section .menu-container .message-item .listings-container,
@@ -5606,6 +5832,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .menu-container .message-item .listings-container,
   body #directions-section .menu-container .message-item .listings-container,
   body #registry-section .menu-container .message-item .listings-container,
+  body #scavenger-hunt-section .menu-container .message-item .listings-container,
   body #alert-section .parking-container .message-item .listings-container,
   body #staying-section .parking-container .message-item .listings-container,
   body #what-to-do-section .parking-container .message-item .listings-container,
@@ -5614,6 +5841,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .parking-container .message-item .listings-container,
   body #directions-section .parking-container .message-item .listings-container,
   body #registry-section .parking-container .message-item .listings-container,
+  body #scavenger-hunt-section .parking-container .message-item .listings-container,
   body #alert-section .before-party-container .message-item .listings-container,
   body #staying-section .before-party-container .message-item .listings-container,
   body #what-to-do-section .before-party-container .message-item .listings-container,
@@ -5622,6 +5850,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #before-party-section .before-party-container .message-item .listings-container,
   body #directions-section .before-party-container .message-item .listings-container,
   body #registry-section .before-party-container .message-item .listings-container,
+  body #scavenger-hunt-section .before-party-container .message-item .listings-container,
   body #alert-section .directions-container .message-item .listings-container,
   body #staying-section .directions-container .message-item .listings-container,
   body #what-to-do-section .directions-container .message-item .listings-container,
@@ -5629,7 +5858,17 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .directions-container .message-item .listings-container,
   body #before-party-section .directions-container .message-item .listings-container,
   body #directions-section .directions-container .message-item .listings-container,
-  body #registry-section .directions-container .message-item .listings-container {
+  body #registry-section .directions-container .message-item .listings-container,
+  body #scavenger-hunt-section .directions-container .message-item .listings-container,
+  body #alert-section .scavenger-hunt-container .message-item .listings-container,
+  body #staying-section .scavenger-hunt-container .message-item .listings-container,
+  body #what-to-do-section .scavenger-hunt-container .message-item .listings-container,
+  body #menu-section .scavenger-hunt-container .message-item .listings-container,
+  body #parking-section .scavenger-hunt-container .message-item .listings-container,
+  body #before-party-section .scavenger-hunt-container .message-item .listings-container,
+  body #directions-section .scavenger-hunt-container .message-item .listings-container,
+  body #registry-section .scavenger-hunt-container .message-item .listings-container,
+  body #scavenger-hunt-section .scavenger-hunt-container .message-item .listings-container {
     width: 100%;
     text-align: center;
   }
@@ -5640,7 +5879,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .staying-container,
   body #before-party-section .staying-container,
   body #directions-section .staying-container,
-  body #registry-section .staying-container {
+  body #registry-section .staying-container,
+  body #scavenger-hunt-section .staying-container {
     margin-top: 12px;
   }
   body #alert-section .staying-container .title,
@@ -5650,7 +5890,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .staying-container .title,
   body #before-party-section .staying-container .title,
   body #directions-section .staying-container .title,
-  body #registry-section .staying-container .title {
+  body #registry-section .staying-container .title,
+  body #scavenger-hunt-section .staying-container .title {
     margin-bottom: 25px;
   }
   body #alert-section .staying-container .message-item .intro-message.btwn.title,
@@ -5660,7 +5901,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .staying-container .message-item .intro-message.btwn.title,
   body #before-party-section .staying-container .message-item .intro-message.btwn.title,
   body #directions-section .staying-container .message-item .intro-message.btwn.title,
-  body #registry-section .staying-container .message-item .intro-message.btwn.title {
+  body #registry-section .staying-container .message-item .intro-message.btwn.title,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message.btwn.title {
     font-size: 18px;
     line-height: 25px;
   }
@@ -5671,7 +5913,8 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #parking-section .staying-container .message-item .intro-message.btwn.title a,
   body #before-party-section .staying-container .message-item .intro-message.btwn.title a,
   body #directions-section .staying-container .message-item .intro-message.btwn.title a,
-  body #registry-section .staying-container .message-item .intro-message.btwn.title a {
+  body #registry-section .staying-container .message-item .intro-message.btwn.title a,
+  body #scavenger-hunt-section .staying-container .message-item .intro-message.btwn.title a {
     font-size: 18px;
     line-height: 25px;
   }

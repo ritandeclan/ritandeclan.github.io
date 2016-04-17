@@ -2520,35 +2520,43 @@ body {
         }
       }
 
-      .intro-message {
-        // color: @deco-grey;
-        color: white;
-       .body-font-normal();
-        font-size: 30px;
-        line-height: 40px;
-        // .content-full-width();
-        margin: 35px auto;
-
-        a {
-          color: @deco-blue;
-          text-decoration: none;
-          &:hover {
-            color: @deco-yellow;
-          }
-        }
-
-        &.btwn {
-          .body-font-bold();
-          font-size: 25px;
-          line-height: 25px;
-          margin: 0 auto;
-          padding: 0;
-          text-transform: uppercase;
+      .message-item {
+        .intro-message {
+          // color: @deco-grey;
           color: white;
+         .body-font-normal();
+          font-size: 30px;
+          line-height: 40px;
           // .content-full-width();
-        }
+          margin: 35px auto;
 
-      } 
+          .rule {
+            .delicious();
+            color: @deco-red;
+            margin-right: 5px;
+          }
+
+          a {
+            color: @deco-blue;
+            text-decoration: none;
+            &:hover {
+              color: @deco-yellow;
+            }
+          }
+
+          &.btwn {
+            .body-font-bold();
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 auto;
+            padding: 0;
+            text-transform: uppercase;
+            color: white;
+            // .content-full-width();
+          }
+
+        } 
+      }
 
       .shout-container {
         position: relative;
@@ -3143,7 +3151,8 @@ body {
     #parking-section,
     #before-party-section,
     #directions-section,
-    #registry-section  {
+    #registry-section,
+    #scavenger-hunt-section  {
 
       .alert-container,
       .menu-container,
@@ -3151,7 +3160,8 @@ body {
       .before-party-container,
       .staying-container,
       .what-to-do-container,
-      .directions-container {
+      .directions-container
+      .scavenger-hunt-container {
         width: 70%;
         margin: 0 auto;
 
@@ -3666,7 +3676,8 @@ body {
     #parking-section,
     #before-party-section,
     #directions-section,
-    #registry-section  {
+    #registry-section,
+    #scavenger-hunt-section  {
 
       .alert-container,
       .staying-container,
@@ -3674,7 +3685,8 @@ body {
       .menu-container,
       .parking-container,
       .before-party-container,
-      .directions-container {
+      .directions-container,
+      .scavenger-hunt-container {
 
         .title {
           font-size: 56px;

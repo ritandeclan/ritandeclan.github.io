@@ -920,8 +920,12 @@ $(document).ready(function(){
   $("#btn-show-list").on("click", function(){
     if (listOpen == false) {
       scavengerList.slideToggle();
+      $(this).html("Hide List");
+      listOpen = true;
     } else {
       scavengerList.slideToggle();
+      $(this).html("Show List");
+      listOpen = false;
     }
   })
 
