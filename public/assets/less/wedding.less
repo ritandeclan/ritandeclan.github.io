@@ -1711,7 +1711,8 @@ body {
   #registry-section,
   #menu-section,
   #parking-section,
-  #before-party-section {
+  #before-party-section,
+  #scavenger-hunt-section {
 
     // width: 100%;
     // display: block;
@@ -1723,7 +1724,8 @@ body {
     .directions-container,
     .staying-container,
     .what-to-do-container,
-    .alert-container {
+    .alert-container,
+    .scavenger-hunt-container {
       .content-full-width();
       height: auto;
       margin: 0 auto;
@@ -2495,26 +2497,46 @@ body {
         .list {
           position: relative;
           display: block;
+          .double-border(@deco-grey);
+          padding: 25px;
+          // .cf();
 
           .list-item {
             position: relative;
-            display: block;
+            display: inline-block;
+            float: none;
+            margin: 15px;
+            white-space: nowrap;
+            word-wrap: normal; 
 
             .body-font-bold();
             color: @deco-grey;
 
-            &.yellow {
-              color: @deco-yellow;
+            &.blue {
+              color: @deco-blue;
+              font-size: 35px;
+              line-height: 45px;
             }
 
             &.red {
               color: @deco-red;
+              .body-font-thin();
+              font-size: 32px;
+              line-height: 42px;
+              font-weight: 100;
+            }
+            &.yellow {
+              color: @deco-yellow;
+              .body-font-normal();
+              font-size: 28px;
+              line-height: 35px;
             }
             &.white {
-              color: white;
-            }
-            &.blue {
-              color: @deco-blue;
+            .delicious();
+            color: white;
+              //color: @deco-blue;
+              font-size: 40px;
+              line-height: 50px;
             }
           }
         }
@@ -2525,7 +2547,7 @@ body {
           // color: @deco-grey;
           color: white;
          .body-font-normal();
-          font-size: 30px;
+          font-size: 25px;
           line-height: 40px;
           // .content-full-width();
           margin: 35px auto;
@@ -3160,7 +3182,7 @@ body {
       .before-party-container,
       .staying-container,
       .what-to-do-container,
-      .directions-container
+      .directions-container,
       .scavenger-hunt-container {
         width: 70%;
         margin: 0 auto;
@@ -3228,6 +3250,64 @@ body {
       }
 
     }
+
+    #scavenger-hunt-section {
+
+      background-color: @deco-light-pink;
+
+      .scavenger-hunt-container {
+
+        #scavenger-list {
+
+          .list {
+            position: relative;
+            display: block;
+            .double-border(@deco-grey);
+            padding: 20px;
+            // .cf();
+
+            .list-item {
+              position: relative;
+              display: inline-block;
+              float: none;
+              margin: 10px;
+              white-space: normal;
+              word-wrap: normal; 
+
+              .body-font-bold();
+              color: @deco-grey;
+
+              &.blue {
+                color: @deco-blue;
+                font-size: 24px;
+                line-height: 34px;
+              }
+
+              &.red {
+                color: @deco-red;
+                .body-font-thin();
+                font-size: 26px;
+                line-height: 36px;
+                font-weight: 100;
+              }
+              &.yellow {
+                color: @deco-yellow;
+                .body-font-normal();
+                font-size: 18px;
+                line-height: 25px;
+              }
+              &.white {
+              .delicious();
+              color: white;
+                //color: @deco-blue;
+                font-size: 28px;
+                line-height: 38px;
+              }
+            }
+          }
+        }
+      }
+    } 
 
 
     #insta-gallery-section {
