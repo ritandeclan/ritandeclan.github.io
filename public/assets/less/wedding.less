@@ -409,23 +409,25 @@ body {
     }
   }
 
-  #alert-section,
-  #welcome-section,
-  .welcome-section,  
-  #rsvp-section,
-  #map-section,
-  #countdown-section,
-  #weather-section,
-  #insta-gallery-section,
-  #card-section,
-  #signature-section,
-  #menu-section,
-  #parking-section,
-  #before-party-section,
-  #directions-section,
-  #staying-section,
-  #what-to-do-section,
-  #registry-section, {
+ // #alert-section,
+ // #welcome-section,
+ // .welcome-section,  
+ // #rsvp-section,
+ // #map-section,
+ // #countdown-section,
+ // #weather-section,
+ // #insta-gallery-section,
+ // #card-section,
+ // #signature-section,
+ // #menu-section,
+ // #parking-section,
+ // #before-party-section,
+ // #directions-section,
+ // #staying-section,
+ // #what-to-do-section,
+ // #registry-section, {
+
+  .section {
 
     .double-border-bottom(white);
 
@@ -2468,6 +2470,141 @@ body {
 
   }
 
+  #scavenger-hunt-section {
+
+    background-color: @deco-light-pink;
+
+    .scavenger-hunt-container {
+      .content-full-width();
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
+
+      .title {
+        color: white;
+        .delicious();
+        font-size: 90px;
+        line-height: 90px;
+        margin: 0 auto 40px auto;
+      }
+
+      #scavenger-list {
+        position: relative;
+        display: none;
+
+        .list {
+          position: relative;
+          display: block;
+
+          .list-item {
+            position: relative;
+            display: block;
+
+            .body-font-bold();
+            color: @deco-grey;
+
+            &.yellow {
+              color: @deco-yellow;
+            }
+
+            &.red {
+              color: @deco-red;
+            }
+            &.white {
+              color: white;
+            }
+            &.blue {
+              color: @deco-blue;
+            }
+          }
+        }
+      }
+
+      .intro-message {
+        // color: @deco-grey;
+        color: white;
+       .body-font-normal();
+        font-size: 30px;
+        line-height: 40px;
+        // .content-full-width();
+        margin: 35px auto;
+
+        a {
+          color: @deco-blue;
+          text-decoration: none;
+          &:hover {
+            color: @deco-yellow;
+          }
+        }
+
+        &.btwn {
+          .body-font-bold();
+          font-size: 25px;
+          line-height: 25px;
+          margin: 0 auto;
+          padding: 0;
+          text-transform: uppercase;
+          color: white;
+          // .content-full-width();
+        }
+
+      } 
+
+      .shout-container {
+        position: relative;
+        display: block;
+        height: auto;
+        margin: 20px auto;
+
+        .btn-shout-container {
+          position: relative;
+          display: block;
+          width: auto;
+          float: none;
+          height: auto;
+          padding: 10px;
+          margin: 0 auto;
+
+          &.error {
+            padding: 0;
+            border: 10px solid @deco-red;
+          }
+
+          #btn-show-list {
+            .button();
+            color: white;
+            background-color: @deco-light-pink;
+            .double-border(white);
+            padding-top: 7px;
+            margin: 0 auto;
+
+            &:hover,
+            &:active {
+              color: @deco-light-pink;
+              background-color: white;
+              .double-border(@deco-light-pink);
+            }
+
+            &.selected {
+
+            }
+
+            &.unselected {
+              opacity: 0.5;
+            }
+
+            .btn-msg {
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
   #insta-gallery-section {
     .insta-gallery-container {
 
@@ -2746,23 +2883,25 @@ body {
 
   @media (max-width: 960px) {
 
-    #alert-section,
-    #welcome-section,
-    .welcome-section,  
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  #welcome-section,
+  //  .welcome-section,  
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 
@@ -3107,23 +3246,25 @@ body {
 
   @media (max-width: 775px) {
 
-    #alert-section,
-    .welcome-section,
-    #welcome-section,
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  .welcome-section,
+  //  #welcome-section,
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 
@@ -3243,23 +3384,25 @@ body {
 
   @media (max-width: 650px) {
 
-    #alert-section,
-    .welcome-section,
-    #welcome-section,
-    #rsvp-section,
-    #map-section,
-    #countdown-section,
-    #weather-section,
-    #insta-gallery-section,
-    #card-section,
-    #signature-section,
-    #menu-section,
-    #parking-section,
-    #before-party-section,
-    #directions-section,
-    #staying-section,
-    #what-to-do-section,
-    #registry-section {
+  //  #alert-section,
+  //  .welcome-section,
+  //  #welcome-section,
+  //  #rsvp-section,
+  //  #map-section,
+  //  #countdown-section,
+  //  #weather-section,
+  //  #insta-gallery-section,
+  //  #card-section,
+  //  #signature-section,
+  //  #menu-section,
+  //  #parking-section,
+  //  #before-party-section,
+  //  #directions-section,
+  //  #staying-section,
+  //  #what-to-do-section,
+  //  #registry-section {
+
+    .section {
 
       padding: 30px 0;
 

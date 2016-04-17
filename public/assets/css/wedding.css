@@ -130,23 +130,7 @@ body #header-section .header-link-container .registry-link h3 a:hover {
   color: white;
   cursor: pointer;
 }
-body #alert-section,
-body #welcome-section,
-body .welcome-section,
-body #rsvp-section,
-body #map-section,
-body #countdown-section,
-body #weather-section,
-body #insta-gallery-section,
-body #card-section,
-body #signature-section,
-body #menu-section,
-body #parking-section,
-body #before-party-section,
-body #directions-section,
-body #staying-section,
-body #what-to-do-section,
-body #registry-section {
+body .section {
   border-bottom: 6px double white;
   width: 100%;
   height: auto;
@@ -3605,6 +3589,126 @@ body #registry-section .alert-container .intro-message.btwn {
   text-transform: uppercase;
   color: white;
 }
+body #scavenger-hunt-section {
+  background-color: #f7b7c7;
+}
+body #scavenger-hunt-section .scavenger-hunt-container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .title {
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 0 auto 40px auto;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list {
+  position: relative;
+  display: none;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list {
+  position: relative;
+  display: block;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item {
+  position: relative;
+  display: block;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #656478;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item.yellow {
+  color: #f18d11;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item.red {
+  color: #e9243c;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item.white {
+  color: white;
+}
+body #scavenger-hunt-section .scavenger-hunt-container #scavenger-list .list .list-item.blue {
+  color: #75d0bb;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .intro-message {
+  color: white;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 35px auto;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .intro-message a {
+  color: #75d0bb;
+  text-decoration: none;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .intro-message a:hover {
+  color: #f18d11;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .intro-message.btwn {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container {
+  position: relative;
+  display: block;
+  height: auto;
+  margin: 20px auto;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container {
+  position: relative;
+  display: block;
+  width: auto;
+  float: none;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container.error {
+  padding: 0;
+  border: 10px solid #e9243c;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #f7b7c7;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list:hover {
+  cursor: pointer;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list:hover,
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list:active {
+  color: #f7b7c7;
+  background-color: white;
+  border: 10px double #f7b7c7;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list.unselected {
+  opacity: 0.5;
+}
+body #scavenger-hunt-section .scavenger-hunt-container .shout-container .btn-shout-container #btn-show-list .btn-msg {
+  margin: 0;
+  padding: 0;
+}
 body #insta-gallery-section .insta-gallery-container {
   width: 900px;
   height: auto;
@@ -3862,23 +3966,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
 }
 @media (max-width: 960px) {
-  body #alert-section,
-  body #welcome-section,
-  body .welcome-section,
-  body #rsvp-section,
-  body #map-section,
-  body #countdown-section,
-  body #weather-section,
-  body #insta-gallery-section,
-  body #card-section,
-  body #signature-section,
-  body #menu-section,
-  body #parking-section,
-  body #before-party-section,
-  body #directions-section,
-  body #staying-section,
-  body #what-to-do-section,
-  body #registry-section {
+  body .section {
     padding: 30px 0;
   }
   body #alert-section {
@@ -4575,23 +4663,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
 }
 @media (max-width: 775px) {
-  body #alert-section,
-  body .welcome-section,
-  body #welcome-section,
-  body #rsvp-section,
-  body #map-section,
-  body #countdown-section,
-  body #weather-section,
-  body #insta-gallery-section,
-  body #card-section,
-  body #signature-section,
-  body #menu-section,
-  body #parking-section,
-  body #before-party-section,
-  body #directions-section,
-  body #staying-section,
-  body #what-to-do-section,
-  body #registry-section {
+  body .section {
     padding: 30px 0;
   }
   body #what-to-do-section .what-to-do-container .message-item .title .honeymoon .btwn {
@@ -4674,23 +4746,7 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
 }
 @media (max-width: 650px) {
-  body #alert-section,
-  body .welcome-section,
-  body #welcome-section,
-  body #rsvp-section,
-  body #map-section,
-  body #countdown-section,
-  body #weather-section,
-  body #insta-gallery-section,
-  body #card-section,
-  body #signature-section,
-  body #menu-section,
-  body #parking-section,
-  body #before-party-section,
-  body #directions-section,
-  body #staying-section,
-  body #what-to-do-section,
-  body #registry-section {
+  body .section {
     padding: 30px 0;
   }
   body #alert-section {
