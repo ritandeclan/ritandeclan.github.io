@@ -2635,7 +2635,9 @@ body {
     }
   }
 
-  #insta-gallery-section {
+  #insta-gallery-section,
+  #slideshow-section {
+    .slideshow-container,
     .insta-gallery-container {
 
       .content-full-width();
@@ -2649,6 +2651,7 @@ body {
         font-size: 90px;
         line-height: 90px;
         margin: 0 0 24px auto;
+
       }
 
       .gallery-message {
@@ -2754,7 +2757,44 @@ body {
       }
 
     }
+
+    .slideshow-wrapper {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+
+
+      #slideshow {
+        position: relative;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        //display: flex;
+        //flex-direction: column;
+        ////min-height: 100vh;
+        //max-height: 300px;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          //width: 100%;
+          //height: auto;
+          //border: none;
+          //flex-grow: 1;
+          //min-height: 100vh;
+
+        }
+
+      }
+    }
+
   }
+
 
   #signature-section {
 
@@ -2862,8 +2902,10 @@ body {
   }
 
   @media (min-width: 1500px) {
-    #insta-gallery-section {
-      .insta-gallery-container {
+    #insta-gallery-section,
+    #slideshow-section {
+      .insta-gallery-container,
+      .slideshow-container {
         width: 90%;
       }
     }
@@ -3310,9 +3352,11 @@ body {
     } 
 
 
-    #insta-gallery-section {
+    #insta-gallery-section,
+    #slideshow-container {
 
-      .insta-gallery-container {
+      .insta-gallery-container,
+      .slideshow-container {
         width: 90%;
         .gallery-title {
           font-size: 64px;
@@ -3329,6 +3373,8 @@ body {
           }
 
         }
+
+
       }
     }
 
@@ -3442,9 +3488,11 @@ body {
 
     }
 
-    #insta-gallery-section {
+    #insta-gallery-section,
+    #slideshow-section {
 
-      .insta-gallery-container {
+      .insta-gallery-container,
+      .slideshow-container {
         width: 90%;
         .gallery-title {
           font-size: 64px;
@@ -3462,6 +3510,7 @@ body {
 
         }
       }
+
     }
 
     #signature-section {
@@ -4011,10 +4060,12 @@ body {
       }
     }
 
-    #insta-gallery-section {
+    #insta-gallery-section,
+    #slideshow-section {
       padding-top: 50px;
 
-      .insta-gallery-container {
+      .insta-gallery-container,
+      .slideshow-container {
         width: 90%;
         .gallery-title {
           .mobile-delicious-medium();
