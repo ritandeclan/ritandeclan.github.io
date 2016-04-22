@@ -418,6 +418,9 @@ body #welcome-section .intro .shout-container .btn-shout-container #btn-yeah .bt
   margin: 0;
   padding: 0;
 }
+body .welcome-section .intro {
+  padding: 20px 0;
+}
 body #countdown-section .countdown-container {
   width: 950px;
   height: auto;
@@ -4643,6 +4646,9 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 63px;
     line-height: 63px;
   }
+  body .welcome-section {
+    padding-top: 50px;
+  }
   body #countdown-section .countdown-container {
     width: 90%;
     margin: 0 auto;
@@ -5511,6 +5517,9 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #welcome-section .intro .intro-lead {
     font-size: 70px;
   }
+  body .welcome-section {
+    padding-top: 50px;
+  }
   body #insta-gallery-section .insta-gallery-container,
   body #slideshow-section .insta-gallery-container,
   body #insta-gallery-section .slideshow-container,
@@ -5640,6 +5649,9 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 50px;
     line-height: 50px;
     margin: 20px 0;
+  }
+  body .welcome-section {
+    padding-top: 40px;
   }
   body #countdown-section .countdown-container {
     width: 90%;
