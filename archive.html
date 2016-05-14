@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rita and Declan</title>
+  <meta name="description" content="Our Wedding Site">
+  <meta name="author" content="Declan and Megan Van Welie">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <script src="public/assets/js/jquery.min.js"></script>
+
+<!-- font awesome cdn -->
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="public/assets/css/wedding.css">
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPdeuERTfCRCXVBY3WTzdIvrvQ3QDqZdA">
+  </script>
+
+  <script type="text/javascript"
+    src="public/assets/js/wedding.js">
+  </script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-66454930-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+
+<body>
+
+  <section id="header-section">
+    <div id="mobile-menu">
+      <h3>
+        <a>
+          MENU
+        </a>
+      </h3>
+    </div>
+
+    <div class="header-link-container">
+      <div class="welcome-link">
+        <h3>
+          <a href="#welcome-section">Welcome</a>
+        </h3>
+      </div>
+      <div class="map-link">
+        <h3>
+          <a href="#map-section">Map</a>
+        </h3>
+      </div>
+      <div class="info-link">
+        <h3>
+          <a href="#menu-section">Info</a>
+        </h3>
+      </div>
+      <div class="insta-gallery-link">
+        <h3>
+          <a href="#insta-gallery-section">Gallery</a>
+        </h3>
+      </div>
+      <div class="registry-link">
+        <h3>
+          <a href="#registry-section">Registry</a>
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <!--   <section id="alert-section">
+    <div class="alert-container">
+      <p class="title">
+      </p>
+      <p class="intro-message btwn">
+      </p>
+      <p class="intro-message">
+        <br>
+      </p>
+    </div>
+  </section> -->
+
+  <section id="welcome-section" class="section">
+    <div class="intro">
+      <h3 class="intro-lead">
+        We're getting married!
+      </h3>
+      <div class="us-img-container">
+        <img class="us-img" src="public/assets/img/beach-raspberries-edit.jpg"></img>
+      </div>
+      <p class="standout-text">
+        ...and we can't wait!
+      </p>
+      <p class="intro-message btwn">
+        (Check out the countdown)
+      </p>
+    </div> 
+  </section>
+
+   <section id="countdown-section" class="section">
+    <div class="countdown-container container">
+      <p class="countdown">
+        Countdown
+      </p>
+      <div id="time-container">
+        <div class="days-container">
+            <p id="days" class="number">
+            </p>
+            <p class="unit">
+              days&#44;
+            </p>
+        </div>
+        <div class="hours-container">
+            <p id="hours" class="number">
+            </p>
+            <p class="unit">
+              hours&#44;
+            </p>
+        </div>
+        <div class="minutes-container">
+            <p id="minutes" class="number">
+            </p>
+            <p class="unit">
+              minutes&#44;
+            </p>
+        </div>
+        <div class="seconds-container">
+            <p id="seconds" class="number">
+            </p>
+            <p class="unit">
+              seconds
+            </p>
+        </div>
+      </div>
+      <div id="freakout-container">
+        <p class="freakout">
+          omg, it's here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="welcome-section section">
+    <div class="intro">
+      <p class="intro-message btwn">
+        Where
+      </p>
+      <p class="standout-text">
+        The Hotel Escalante
+      </p>
+      <p class="intro-message btwn">
+        in
+      </p>
+      <p class="standout-text">
+        Naples, Florida
+      </p>
+      <p class="intro-message btwn">
+        When
+      </p>
+      <p class="standout-text">
+        April 30th, 2016 at 5 o'clock
+      </p>
+      <p class="intro-message btwn">
+        What to wear
+      </p>
+      <p class="standout-text">
+         Your coolest <br/>(in all senses)<br/> "Floridian semi-casual" <br/> wedding attire
+      </p>
+      <!-- <p class="intro-message">
+        To those coming, we'll see you soon!
+        <br>
+        For those who can't, we'll miss you!
+        <br>
+        Still need to RSVP? Please reach out:
+      </p>
+      <div class="shout-container">
+        <div class="btn-shout-container">
+          <div id="btn-shout">
+            <h3 class="btn-msg">Holler</h3>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <section id="card-section" class="section">
+    <div class="card"></div>
+  </section>
+
+  <section id="weather-section" class="section">
+    <div class="weather-container">
+      <div class="naples-weather">
+        <i class="fa fa-sun-o fa-5x fa-spin custom"></i>
+        <p class="message">
+            Naples, Florida weather:
+        </p>
+        <p id="naples-weather" class="message italic">
+        </p>
+        <p id="naples-temp" class="message italic temp">
+        </p>
+      </div>
+
+      <div class="your-weather">
+        <div class="clouds">
+          <i class="fa fa-cloud fa-5x"></i>
+          <i class="fa fa-cloud fa-5x behind"></i>
+          <i class="fa fa-cloud fa-5x above"></i>
+        </div>
+        <p class="message">
+            Your weather:
+        </p>
+        <p id="your-weather" class="message italic">
+        </p>
+        <p id="your-temp" class="message italic temp">
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="map-section" class="section">
+    <div class="map-container">
+
+      <div id="map-item-description">
+        <div class="item-description-container">
+          <h3 class="item-name intro">
+            Explore Naples!
+          </h3>
+          <h3 class="item-name">
+            Browse the links in the list &amp; The map markers below
+          </h3>
+        </div>
+      </div>
+
+      <div id="map-legend">
+
+        <div id="instructions">
+          <h3 class="legend-section-name">Scroll the list below, open categories to reveal links, and browse links for more info</h3>
+        </div>
+
+        <div id="location-list">
+
+          <div id="venue" class="toggle-trigger">
+            <h3 class="legend-section-name">The Venue</h3>
+          </div>
+
+          <div id="parking" class="toggle-trigger">
+            <h3 class="legend-section-name">Parking</h3>
+          </div>
+
+          <div id="hotels" class="toggle-trigger">
+            <h3 class="legend-section-name">Hotels</h3>
+          </div>
+
+          <div id="airbnb" class="toggle-trigger">
+            <h3 class="legend-section-name">Airbnb</h3>
+          </div>
+
+          <div id="restaurants" class="toggle-trigger">
+            <h3 class="legend-section-name">Restaurants</h3>
+          </div>
+
+          <div id="bars" class="toggle-trigger">
+            <h3 class="legend-section-name">Bars</h3>
+          </div>
+
+          <div id="attractions" class="toggle-trigger">
+            <h3 class="legend-section-name">Attractions</h3>
+          </div>
+
+          <div id="beaches" class="toggle-trigger">
+            <h3 class="legend-section-name">Beaches</h3>
+          </div>
+      </div>
+
+      </div>
+
+      <div id="map-canvas"></div>
+
+    </div>
+
+  </section>
+
+  <section id="menu-section" class="section">
+    <div class="menu-container">
+      <h3 class="title">
+        Menu
+      </h3>
+      <div class="message-item">
+        <!-- <i class="fa fa-cutlery fa-lg"></i> -->
+        <p class="intro-message btwn title">
+          Cocktail Reception
+        </p>
+        <p class="intro-message">
+          Veranda E Calamari
+        </p>
+        <p class="intro-message">
+          Vegetarian Spring Rolls
+        </p>
+        <p class="intro-message">
+          Pork Pot Stickers with Asian Ginger Soy
+        </p>
+        <p class="intro-message">
+          Vegetarian Pot Stickers
+        </p>
+      </div>
+      <div class="message-item">
+        <!-- <i class="fa fa-cutlery fa-lg"></i> -->
+        <p class="intro-message btwn title">
+          Seated Dinner
+        </p>
+        <p class="intro-message btwn sub-head">
+          Course I
+        </p>
+        <p class="intro-message">
+           Asian pear, Homboldt Fog, Organic Baby Greens and Tarragon Walnut Vinaigrette
+        </p>
+        <p class="intro-message btwn sub-head">
+          Course II
+        </p>
+        <p class="intro-message">
+           BBQ Boneless Beef Short Ribs, Maui Onion Rings &amp; Garlic Mashed Potatoes
+        </p>
+        <p class="intro-message btwn sub-head or">
+           Or
+        </p>
+        <p class="intro-message">
+           Hand Cut Ramen Noodles with Togarashi Fried Avocado, Sesame Miso Mushroom Broth
+        </p>
+        <p class="intro-message btwn sub-head or">
+           Or
+        </p>
+        <p class="intro-message">
+           Hawaiian Opakapaka Served with Curried Sweet Potatoes, Tomato Cardamom Beurre Blanc and Asparagus
+        </p>
+        <p class="intro-message btwn sub-head">
+          Course III
+        </p>
+        <p class="intro-message">
+           Mixed Berry Pavlova
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="parking-section" class="section">
+    <div class="parking-container" class="container">
+      <h3 class="title">
+        Parking Details
+      </h3>
+      <div class="message-item">
+        <i class="fa fa-car fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.fifthavenuesouth.com/parking-transist/" target="_blank">Parking Garage Located on 8th St S at 4th Ave</a>
+        </p>
+        <p class="intro-message">
+          Located between 5th Avenue S and 4th Ave S Entrance off 8th St S.
+          <br>
+          400 8th St S, Naples, FL 34102
+        </p>
+      </div>
+      <div class="message-item">
+        <i class="fa fa-car fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.fifthavenuesouth.com/parking-transist/" target="_blank">Parking Garage on Park St at 6th Ave S</a>
+        </p>
+        <p class="intro-message">
+          Entrance off of 6th Ave S.
+          <br>
+          801-899 6th Ave S, Naples, FL 34102
+        </p>
+      </div>
+      <div class="message-item">
+        <i class="fa fa-car fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.fifthavenuesouth.com/parking-transist/" target="_blank">Street Parking</a>
+        </p>
+        <p class="intro-message">
+          There is limited street parking near the Hotel Escalante
+          <br>
+           3rd St. South, and most side streets off of 5th Ave
+        </p>
+      </div>
+      <div class="message-item last">
+        <div class="display-listings show-map" >
+          <h3><a href="#map-section">View Map</a></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- 
+  <section id="before-party-section">
+    <div class="before-party-container">
+      <h3 class="title">
+        Before Party
+      </h3>
+      <div class="message-item">
+        <i class="fa fa-beer fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.flylcpa.com/" target="_blank">Southwest Florida International Airport (RSW)</a>
+        </p>
+        <p class="intro-message">
+          45-minute drive to Naples
+        </p>
+      </div>
+      <div class="message-item">
+        <i class="fa fa-plane fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.miami-airport.com/" target="_blank">Miami International Airport (MIA)</a>
+        </p>
+        <p class="intro-message">
+           2-hour drive to Naples
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="directions-section" class="section">
+    <div class="directions-container" class="container">
+      <h3 class="title">
+        Getting There
+      </h3>
+      <div class="message-item">
+        <i class="fa fa-plane fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.flylcpa.com/" target="_blank">Southwest Florida International Airport (RSW)</a>
+        </p>
+        <p class="intro-message">
+          45-minute drive to Naples
+        </p>
+      </div>
+      <div class="message-item">
+        <i class="fa fa-plane fa-lg"></i>
+        <p class="intro-message btwn">
+          <a href="http://www.miami-airport.com/" target="_blank">Miami International Airport (MIA)</a>
+        </p>
+        <p class="intro-message">
+           2-hour drive to Naples
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="staying-section" class="section">
+    <div class="staying-container" class="container">
+      <h3 class="title">
+        Where to Stay
+      </h3>
+
+      <div class="message-item first">
+        <p class="intro-message">
+          Unfortunately, the Hotel Escalante has only enough space for our immediate family to stay. Luckily, Naples is a big vacation town, with a wide range of accommodation.
+        </p>
+      </div>
+      <div class="message-item">
+        <p class="intro-message btwn">
+          <a href="http://www.tripadvisor.com/Hotels-g34467-Naples_Florida-Hotels.html" target="_blank">
+            Hotels
+          </a>
+        </p>
+        <p class="intro-message">
+          If you still need a place to stay for the wedding, we've booked room blocks at two awesome spots with great rates !
+          <br>
+          The rooms are reserved for April 29th &amp; 30th. Please call to reserve your room, and mention you're part of the Fawcett &amp; Van Welie party!
+        </p>
+        <i class="fa fa-bed fa-lg"></i>
+        <p class="intro-message btwn title">
+          <a href="http://www.trianon.com/oldnaples.html" target="_blank">Trianon Hotel Old Naples</a>
+        </p>
+        <p class="intro-message">
+         <a class="phone" href="tel:+18774825228">(877) 482-5228</a>
+        </p>
+        <p class="intro-message">
+          $169 per night with room block discount
+        </p>
+        <i class="fa fa-bed fa-lg"></i>
+        <p class="intro-message btwn title">
+          <a href="http://www.coveinnnaples.com/" target="_blank">Cove Inn</a>
+        </p>
+        <p class="intro-message">
+          <a class="phone" href="tel:+12392627161">(239) 262-7161</a>
+        </p>
+        <p class="intro-message">
+          $100 per night with room block discount
+        </p>
+
+      </div>
+
+      <div class="message-item">
+
+        <p class="intro-message">
+          Here's a partial list other hotels you might explore:
+        </p>
+        <div class="display-listings" id="hotel-listings">
+          <h3>Show Hotel Listings</h3>
+        </div>
+        <div class="listings-container" id="hotel-container">
+          <div class="item">
+            <a class="item-name tripadvisor" href="http://www.tripadvisor.com/Hotels-g34467-Naples_Florida-Hotels.html" target="_blank">Naples hotels on TripAdvisor</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="message-item">
+        <p class="intro-message btwn">
+          <a href="https://www.airbnb.com/s/Naples--FL" target="_blank">
+            Airbnb
+          </a>
+        </p>
+        <p class="intro-message">
+          We encourage you to explore Airbnb for a more interesting and affordable stay. A few highlights: in addition to more traditional bed-and-breakfasts, you can stay on a house boat, in a house with a pool and spa, or at a condo with a lazy river.
+        </p>
+        <p class="intro-message">
+          Click below to explore some of the options:
+        </p>
+        <div class="display-listings" id="airbnb-listings">
+          <h3>Show AirBnb Listings</h3>
+        </div>
+        <div class="listings-container" id="airbnb-container">
+          <div class="item">
+            <a class="item-name airbnb" href="https://www.airbnb.com/s/Naples--FL" target="_blank">Naples listings on Airbnb</a>
+          </div>
+        </div>
+      </div>
+      <div class="message-item last">
+        <div class="display-listings show-map">
+          <h3><a href="#map-section">View Map</a></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what-to-do-section" class="section">
+    <div class="what-to-do-container" class="container">
+      <div class="message-item">
+        <h3 class="title honeymoon">
+          Honeymoon Schmoneymoon
+        </h3>
+        <p class="intro-message">
+          We'll be in Naples Sunday, April 24th through Monday, May 2rd, and would love to hang out with you! Didn't think we'd ditch you alone in Florida, did you?!
+        </p>
+        <p class="title honeymoon btwn">
+          Wedding Week Events
+        </p>
+        <p class="intro-message">
+          Wanna hang out? 
+          <br>
+          Check items, fill in your details, and hit the button. 
+          <br>
+          We'll reach out with more info!
+        </p>
+        <div class="activity-ideas">
+          <form id="wedding-events-rsvp">
+            <div class='item'>
+              <h3 class="day">
+                Monday, April 25th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:30 p.m.</p>
+                <p class='item-name'>Pizza on the pier</p>
+                <input class="event-checkbox" type="checkbox" name="4.25-pizza" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Tuesday, April 26th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">8:45 a.m.</p>
+                <p class='item-name'>Power yoga</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-yoga" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Shelling at Sanibel Beach</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-shelling" value="yes-please">
+              </div>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Lunch at Island Cow</p>
+                <input class="event-checkbox" type="checkbox" name="4.26-island-cow" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Wednesday, April 27th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">Afternoon</p>
+                <p class='item-name'>Everglades National Park</p>
+                <input class="event-checkbox" type="checkbox" name="4.27-everglades" value="yes-please">
+              </div>
+            </div>
+            <div class='item'>
+              <h3 class="day">
+                Thursday, April 28th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">6:00 p.m.</p>
+                <p class='item-name'>South African Braai (BBQ)</p>
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
+                <p class="event-details">
+                  Royal Palm Cottage
+                  <br>
+                  660 8th Ave S
+                  <br>
+                  Naples, FL 34102
+                </p>
+              </div>
+            </div>
+            <div class='item last'>
+              <h3 class="day">
+                Friday, April 29th
+              </h3>
+              <div class="event-item">
+                <p class="event-time">5:00 p.m.</p>
+                <p class='item-name'>Meet &amp; Greet at <br> Sunset Beach Bar</p>
+                <input class="event-checkbox" type="checkbox" name="4.28-braii" value="yes-please">
+                <p class="event-details">
+                  851 Gulf Shore Blvd N
+                  <br>
+                  Naples, FL 34102
+                </p>
+              </div>
+            </div>
+            <div class="input-container">
+              <input class="answer name" type="text" placeholder="Your name" name="your-name"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer email" type="email" placeholder="Your email" name="your-email"></input>
+            </div>
+            <div class="input-container">
+              <input class="answer phone" type="tel" placeholder="Your phone number" name="your-phone"></input>
+            </div>
+            <div class="shout-container">
+              <div class="btn-shout-container">
+                <div id="btn-yeah">
+                  <h3 class="btn-msg">Count me in</h3>
+                </div>
+              </div>
+            </div> 
+          </form>
+          <div id="submit-success-message">
+            <div class="submit-success-message-container">
+              <h3 class="submit-message">Woo hoo!</h3>
+              <h3 class="submit-sub">Can't wait to wrestle an alligator with you!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-decline-message">
+            <div class="submit-decline-message-container">
+              <h3 class="submit-message">We'll miss you!</h3>
+              <h3 class="submit-sub">But we'll send you a postcard from the beach!</h3>
+              <i class="fa fa-thumbs-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="submit-failure-message">
+            <div class="submit-failure-message-container">
+              <h3 class="submit-message">Whoops!</h3>
+              <h3 class="submit-sub">
+                Looks like something went wrong.
+                <br>
+                Please try again, or reach out to:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-meh-o fa-3x"></i>
+            </div>
+          </div>
+          <div id="required-fields">
+            <div class="required-fields-container"> 
+              <h3 class="submit-message">We need more info, please!</h3>
+              <h3 class="submit-sub">
+                Please fill in the fields highlighted above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+          <div id="choose-events">
+            <div class="choose-events-container">
+              <h3 class="submit-message">You didn't pick any events!</h3>
+              <h3 class="submit-sub">
+                Please choose one or more of the events above
+                <br>
+                then, try submitting the form again.
+                <br>
+                If you're still having problems, email:
+                <br>
+                <a href="mailto:declanandrita@gmail.com" class="email-us">declanandrita@gmail.com</a>!
+              </h3>
+              <i class="fa fa-hand-o-up fa-3x"></i>
+            </div>
+          </div>
+        </div>
+        <p class="title honeymoon btwn">
+          Other Activites
+        </p>
+        <div class="activity-ideas">
+          <div class='item'>
+            <a class='item-name' href='http://www.tripadvisor.com/ShowUserReviews-g34091-d531902-r103184921-Barefoot_Beach_Preserve-Bonita_Springs_Florida.html' target='_blank'>Beach time</a>
+          </div>
+          <div class='item'>
+            <a class='item-name' href='http://www.tripadvisor.com/Attraction_Review-g34467-d1943815-Reviews-Naples_Fishing_Charters-Naples_Florida.html' target='_blank'>A chartered fishing voyage</a>
+          </div>
+          <div class='item'>
+            <a class='item-name' href='http://www.tripadvisor.com/Attraction_Review-g34467-d1062162-Reviews-Double_R_s_Fishing_and_Tour_Co-Naples_Florida.html' target='_blank'>Discovering manatees</a>
+          </div>
+          <div class='item'>
+            <a class='item-name' href='http://www.tripadvisor.com/Attraction_Review-g34467-d1798646-Reviews-Up_a_Creek_Kayak_Tours-Naples_Florida.html' target='_blank'>A kayak journey</a>
+          </div>
+          <div class='item'>
+            <a class='item-name' href='http://www.tripadvisor.com/Attraction_Review-g34467-d1818812-Reviews-Corey_Billie_s_Airboat_Rides-Naples_Florida.html' target='_blank'>An Everglades airboat ride</a>
+          </div>
+        </div>
+        <p class="intro-message">
+          Please explore the <a href="#map-section">map</a> above for even more ideas.
+        </p>
+        <p class="intro-message">
+          If you have other adventure ideas, please <a href="mailto:declanandrita@gmail.com?subject=Wedding%20Activity%20Ideas">let us know</a> and we can organize something.
+        </p>
+    </div>
+    </div>
+  </section>
+
+  <section id="scavenger-hunt-section" class="section">
+    <div class="scavenger-hunt-container container">
+      <h3 class="title">
+        Scavenger Hunt
+      </h3>
+      <div class="message-item">
+        <p class="intro-message">
+         Post proof you've witnessed the following to Instagram with
+         <br>
+         #ritandeclan and a tag describing the subject.
+         <br>
+         The person with the most posts by 10 o'clock on April 30th
+         <br>
+         wins a bottle of South African bubbles.
+         <br>
+         <span class="rule"> One Rule: </span> No laws or bones must be broken playing this game
+        </p>
+      </div>
+      <div id="scavenger-list">
+        <div class="list">
+          <p class="list-item yellow">
+            Taqueria San Julian (home of the best tacos)
+          </p>
+          <p class="list-item white">
+            Rita Drinking a Margarita
+          </p>
+          <p class="list-item red">
+            A Bridesmaid
+          </p>
+          <p class="list-item yellow">
+            An Orange
+          </p>
+          <p class="list-item blue">
+            An Alligator
+          </p>
+          <p class="list-item white">
+            Scallop Seashell
+          </p>
+          <p class="list-item">
+            Art on Third Street S
+          </p>
+          <p class="list-item red">
+            A flamingo
+          </p>
+          <p class="list-item yellow">
+            Bad Ass Coffee
+          </p>
+          <p class="list-item">
+            A Turtle
+          </p>
+          <p class="list-item white">
+            Crab Pinchers
+          </p>
+          <p class="list-item">
+            An Historic Palm Cottage
+          </p>
+          <p class="list-item red">
+            A Sand Castle
+          </p>
+          <p class="list-item white">
+            A Picture with a South African
+          </p>
+          <p class="list-item blue">
+            Tin City
+          </p>
+          <p class="list-item">
+            Chickee Bar Tiki Bar at the Cove Point Inn
+          </p>
+          <p class="list-item red">
+            A Coconut
+          </p>
+          <p class="list-item blue">
+            A Mangrove Tree
+          </p>
+          <p class="list-item yellow">
+            Crayton Grove
+          </p>
+          <p class="list-item white">
+            The Naples Pier at Sunset
+          </p>
+          <p class="list-item">
+            A Pelican
+          </p>
+          <p class="list-item red">
+            Rita's Italian Ice Concession Stand at Lowdermilk Park
+          </p>
+          <p class="list-item">
+            The Hotel Escalante Fountain
+          </p>
+          <p class="list-item white">
+            A Monkey
+          </p>
+          <p class="list-item yellow">
+            The Clam Pass Beach Boardwalk
+          </p>
+          <p class="list-item">
+            5th Avenue South
+          </p>
+          <p class="list-item blue">
+            Monkey Bread
+          </p>
+          <p class="list-item yellow">
+            A Sundowner at Rhode's End
+          </p>
+          <p class="list-item red">
+            A Picture with the Newly-Married Bride and Groom
+          </p>
+          <p class="list-item">
+            A Fish
+          </p>
+        </div>
+      </div>
+      <div class="shout-container">
+        <div class="btn-shout-container">
+          <div id="btn-show-list">
+            <h3 class="btn-msg">Show list</h3>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <section id="slideshow-section" class="section">
+
+    <div class="slideshow-container" class="container">
+      <div class="gallery-message">
+        <p class="gallery-instructions">
+          (Obligatory)
+        </p>
+      </div>
+      <p class='gallery-title'>
+        Baby Picture Slideshow
+      </p>
+    </div>
+
+    <div class="slideshow-wrapper">
+      <div id="slideshow">
+        <iframe id="vp1expWu" title="Video Player" src="https://s3.amazonaws.com/embed.animoto.com/play.html?w=swf/production/vp1&e=1461263128&f=expWuS3zoZp08f6NZRO2Wg&d=0&m=p&r=360p+480p+720p&volume=100&start_res=360p&i=m&asset_domain=s3-p.animoto.com&animoto_domain=animoto.com&options=" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="insta-gallery-section" class="section">
+    <div class="insta-gallery-container" class="container">
+
+      <p class='gallery-title'>
+        Insta-Gallery
+      </p>
+      <div class='gallery-message'>
+        <p class='gallery-instructions'>
+          If you have a public Instagram account, <br> tag your pictures with:
+        </p>
+        <p class='gallery-instructions white'>#Ritandeclan</p>
+      </div>
+      <div id="insta-gallery">
+      </div>
+
+      <div class="shout-container">
+        <div class="btn-shout-container">
+          <div id="more-instas">
+            <h3 class="btn-msg">Load More</h3>
+          </div>
+        </div>
+      </div>  
+
+      <div id="insta-end" class='gallery-message'>
+        <p class='gallery-instructions'>
+          That's all the instas for now...
+          <br>
+          Upload more!
+        </p>
+        <i class="fa fa-hand-peace-o fa-lg"></i>
+    </div>
+  </section>
+
+  <section id="registry-section" class="section">
+    <div class="alert-container" class="container">
+      <h3 class="title registry">
+        Registry
+      </h3>
+      <div class="message-item">
+        <h3 class="intro-message btwn">
+          Please, please don't get us anything
+        </h3>
+        <p class="intro-message">
+          But if you absolutely must...
+          <br>
+          we've setup this <a href="https://www.zola.com/registry/ritandeclan">registry</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signature-section" class="section">
+    <div class="signature-container" class="container">
+      <div class="message">
+        <p class="signature">Made with</p>
+        <p class="heart-container"><i class="fa fa-heart fa-3x heart"></i></p>
+        <p class="signature">by Declan, Megan, &amp; Rita</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
