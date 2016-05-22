@@ -1,0 +1,617 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@font-face {
+  font-family: 'GillSans-Light';
+  src: url('../fonts/GillSans-Light.eot');
+  src: url('../fonts/GillSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-Light.woff2') format('woff2'), url('../fonts/GillSans-Light.woff') format('woff'), url('../fonts/GillSans-Light.ttf') format('truetype'), url('../fonts/GillSans-Light.svg#GillSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url('../fonts/GillSans.eot');
+  src: url('../fonts/GillSans.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans.woff2') format('woff2'), url('../fonts/GillSans.woff') format('woff'), url('../fonts/GillSans.ttf') format('truetype'), url('../fonts/GillSans.svg#GillSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Bold';
+  src: url('../fonts/GillSans-Bold.eot');
+  src: url('../fonts/GillSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/GillSans-Bold.woff2') format('woff2'), url('../fonts/GillSans-Bold.woff') format('woff'), url('../fonts/GillSans-Bold.ttf') format('truetype'), url('../fonts/GillSans-Bold.svg#GillSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'delicious';
+  src: url('../fonts/delicious-webfont.eot');
+  src: url('../fonts/delicious-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/delicious-webfont.woff2') format('woff2'), url('../fonts/delicious-webfont.woff') format('woff'), url('../fonts/delicious-webfont.ttf') format('truetype'), url('../fonts/delicious-webfont.svg#deliciousregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #75d0bb;
+  color: #656478;
+  margin: 0;
+}
+body #header-section {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #75d0bb;
+  height: 50px;
+  border-bottom: 6px double white;
+}
+body #header-section #mobile-menu {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  padding: 15px 0;
+}
+body #header-section #mobile-menu h3 {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+}
+body #header-section #mobile-menu h3 a {
+  display: block;
+  color: #656478;
+  text-decoration: none;
+  position: block;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+body #header-section #mobile-menu h3 a:hover {
+  color: white;
+  cursor: pointer;
+}
+body #header-section .header-link-container {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 15px;
+  background-color: #75d0bb;
+  height: auto;
+}
+body #header-section .header-link-container .original-site-link {
+  background-color: #75d0bb;
+  position: relative;
+  display: block;
+  float: right;
+}
+body #header-section .header-link-container .original-site-link h3 {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
+  margin: 0;
+}
+body #header-section .header-link-container .original-site-link h3 a {
+  position: relative;
+  display: block;
+  background-color: #75d0bb;
+  color: #656478;
+  text-decoration: none;
+  position: inline;
+  width: auto;
+  height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+body #header-section .header-link-container .original-site-link h3 a:hover {
+  color: white;
+  cursor: pointer;
+}
+body .section {
+  border-bottom: 6px double white;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+body .welcome-section,
+body #welcome-section.section {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: none;
+}
+body .welcome-section .intro,
+body #welcome-section.section .intro {
+  width: 900px;
+  position: fixed;
+  display: block;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  margin: 50px auto 0 auto;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+body .welcome-section .intro .intro-lead,
+body #welcome-section.section .intro .intro-lead {
+  position: relative;
+  display: block;
+  width: 80%;
+  border: 10px double #e9243c;
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 136px;
+  line-height: 175px;
+  padding: 20px 0;
+  margin: 20px auto;
+  background-color: #f7b7c7;
+}
+body .welcome-section .intro .intro-message,
+body #welcome-section.section .intro .intro-message {
+  color: #656478;
+  font-family: 'GillSans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  width: 900px;
+  margin: 70px auto;
+}
+body .welcome-section .intro .intro-message.btwn,
+body #welcome-section.section .intro .intro-message.btwn {
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 25px;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+  width: 900px;
+}
+body .welcome-section .intro .standout-text,
+body #welcome-section.section .intro .standout-text {
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 90px;
+  line-height: 90px;
+  margin: 32px auto;
+}
+body .welcome-section .intro .us-img-container,
+body #welcome-section.section .intro .us-img-container {
+  width: 500px;
+  height: auto;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 50px auto;
+  border: 10px double white;
+}
+body .welcome-section .intro .us-img-container .us-img,
+body #welcome-section.section .intro .us-img-container .us-img {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+body .welcome-section .intro .shout-container,
+body #welcome-section.section .intro .shout-container {
+  position: relative;
+  display: block;
+  height: auto;
+  margin: 20px auto;
+}
+body .welcome-section .intro .shout-container .btn-shout-container,
+body #welcome-section.section .intro .shout-container .btn-shout-container {
+  position: relative;
+  display: inline;
+  width: auto;
+  float: none;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto;
+}
+body .welcome-section .intro .shout-container .btn-shout-container.error,
+body #welcome-section.section .intro .shout-container .btn-shout-container.error {
+  padding: 0;
+  border: 10px solid #e9243c;
+}
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah {
+  width: 173px;
+  height: 25px;
+  margin: 15px auto;
+  padding: 4px 6px;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #75d0bb;
+  border: 10px double white;
+  padding-top: 7px;
+  margin: 0 auto;
+}
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah:hover {
+  cursor: pointer;
+}
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout:hover,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah:hover,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout:active,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout:active,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah:active,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah:active {
+  color: #75d0bb;
+  background-color: white;
+  border: 10px double #75d0bb;
+}
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout.unselected,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout.unselected,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah.unselected,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah.unselected {
+  opacity: 0.5;
+}
+body .welcome-section .intro .shout-container .btn-shout-container #btn-shout .btn-msg,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-shout .btn-msg,
+body .welcome-section .intro .shout-container .btn-shout-container #btn-yeah .btn-msg,
+body #welcome-section.section .intro .shout-container .btn-shout-container #btn-yeah .btn-msg {
+  margin: 0;
+  padding: 0;
+}
+body #thank-you-section {
+  background-color: #f7b7c7;
+}
+body #thank-you-section .thank-you-container {
+  width: 90%;
+  max-width: 1500px;
+  height: 100%;
+  overflow: scroll;
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+body #thank-you-section .thank-you-container #thanks-holder {
+  position: relative;
+  display: block;
+  padding: 20px 0;
+  margin: 20px auto;
+}
+body #thank-you-section .thank-you-container #thanks-holder .thanks {
+  color: white;
+  font-family: 'delicious', 'Lobster', cursive;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 250px;
+  line-height: 175px;
+  margin: 20px auto;
+}
+body #thank-you-section .thank-you-container #thanks-holder .thanks.yellow {
+  color: #f18d11;
+}
+body #thank-you-section .thank-you-container #thanks-holder .thanks.pink {
+  color: #f7b7c7;
+}
+body #thank-you-section .thank-you-container #thanks-holder .thanks.red {
+  color: #e9243c;
+}
+body #thank-you-section .thank-you-container #thanks-holder .thanks.grey {
+  color: #656478;
+}
+body .welcome-section .intro {
+  padding: 20px 0;
+}
+body #signature-section {
+  padding: 0;
+  position: fixed;
+  display: block;
+  bottom: 0;
+  z-index: 5;
+  background-color: #75d0bb;
+  border-top: 6px double white;
+  border-bottom: none;
+}
+body #signature-section .signature-container {
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0;
+}
+body #signature-section .signature-container .message {
+  display: inline;
+  position: relative;
+}
+body #signature-section .signature-container .message .signature {
+  display: inline;
+  color: #656478;
+  font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  padding: 15px 0 0 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  height: 25px;
+}
+body #signature-section .signature-container .message .heart-container {
+  width: 50px;
+  position: relative;
+  display: inline;
+}
+body #signature-section .signature-container .message .heart-container .heart {
+  position: relative;
+  display: inline;
+  color: #e9243c;
+  font-size: 16px;
+  line-height: 18px;
+  height: 25px;
+  padding: 0;
+  margin: 0 10px;
+  width: 30px;
+  -webkit-animation: heartBeat 2s ease-in-out infinite;
+  /* Safari 4+ */
+  -moz-animation: heartBeat 2s ease-in-out infinite;
+  /* Fx 5+ */
+  -o-animation: heartBeat 2s ease-in-out infinite;
+  /* Opera 12+ */
+  animation: heartBeat 2s ease-in-out infinite;
+  /* IE 10+, Fx 29+ */
+}
+@-webkit-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@-moz-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@-o-keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@keyframes heartBeat {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size: 18px;
+  }
+  100% {
+    font-size: 16px;
+  }
+}
+@media (max-width: 960px) {
+  body .section {
+    padding: 30px 0;
+  }
+  body #alert-section {
+    padding-top: 80px;
+  }
+  body #header-section .header-link-container {
+    display: block;
+    position: relative;
+    width: 90%;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .original-site-link {
+    height: 34px;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
+  }
+  body #header-section .header-link-container .original-site-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .original-site-link h3 a {
+    width: auto;
+  }
+  body .welcome-section,
+  body #welcome-section.section {
+    padding: 0;
+  }
+  body .welcome-section .intro,
+  body #welcome-section.section .intro {
+    padding: 90px 0 30px 0;
+  }
+  body .welcome-section .intro .intro-lead,
+  body #welcome-section.section .intro .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body .welcome-section .intro .us-img-container,
+  body #welcome-section.section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  body .welcome-section .intro .intro-message,
+  body #welcome-section.section .intro .intro-message {
+    width: 90%;
+    font-size: 27px;
+    line-height: 34px;
+    margin: 25px auto 32px auto;
+  }
+  body .welcome-section .intro .intro-message.btwn,
+  body #welcome-section.section .intro .intro-message.btwn {
+    width: 90%;
+  }
+  body .welcome-section .intro .standout-text,
+  body #welcome-section.section .intro .standout-text {
+    font-size: 63px;
+    line-height: 63px;
+  }
+  body .welcome-section {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 775px) {
+  body .section {
+    padding: 30px 0;
+  }
+  body #header-section .header-link-container {
+    display: block;
+    position: relative;
+    width: 90%;
+    border-top: none;
+    border-bottom: none;
+    height: 34px;
+  }
+  body #header-section .header-link-container .original-site-link {
+    height: 34px;
+    margin: 0 2%;
+    display: inline-block;
+    position: relative;
+    font-size: 13.5px;
+  }
+  body #header-section .header-link-container .original-site-link h3 {
+    margin: 0;
+    padding-top: 2px;
+  }
+  body #header-section .header-link-container .original-site-link h3 a {
+    width: 100%;
+  }
+  body .welcome-section,
+  body #welcome-section.section {
+    padding: 0;
+  }
+  body .welcome-section .intro,
+  body #welcome-section.section .intro {
+    padding: 90px 0 30px 0;
+  }
+  body .welcome-section .intro .intro-lead,
+  body #welcome-section.section .intro .intro-lead {
+    font-size: 70px;
+  }
+  body .welcome-section {
+    padding-top: 50px;
+  }
+  body #signature-section .signature-container {
+    width: 90%;
+  }
+}
+@media (max-width: 650px) {
+  body .section {
+    padding: 30px 0;
+  }
+  body #header-section .header-link-container {
+    width: 100%;
+    padding: 15px 0 30px 0;
+    height: auto;
+    border-bottom: 6px double white;
+  }
+  body #header-section .header-link-container .original-site-link {
+    width: 100%;
+    margin: 0;
+    display: block;
+    position: relative;
+    font-size: 13.5px;
+  }
+  body #header-section .header-link-container .original-site-link h3 {
+    margin: 0;
+  }
+  body #header-section .header-link-container .original-site-link h3 a {
+    width: 100%;
+  }
+  body .welcome-section,
+  body #welcome-section.section {
+    padding: 0;
+  }
+  body .welcome-section .intro,
+  body #welcome-section.section .intro {
+    padding: 90px 0 30px 0;
+  }
+  body .welcome-section .intro .intro-lead,
+  body #welcome-section.section .intro .intro-lead {
+    font-size: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+  }
+  body .welcome-section .intro .us-img-container,
+  body #welcome-section.section .intro .us-img-container {
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+  }
+  body .welcome-section .intro .intro-message,
+  body #welcome-section.section .intro .intro-message {
+    width: 90%;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 25px auto 32px auto;
+  }
+  body .welcome-section .intro .intro-message.btwn,
+  body #welcome-section.section .intro .intro-message.btwn {
+    width: 90%;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body .welcome-section .intro .standout-text,
+  body #welcome-section.section .intro .standout-text {
+    font-family: 'delicious', 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 20px 0;
+  }
+  body .welcome-section {
+    padding-top: 40px;
+  }
+  body #signature-section.section .signature-container {
+    width: 90%;
+  }
+}
