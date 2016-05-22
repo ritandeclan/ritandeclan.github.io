@@ -470,7 +470,6 @@ body #signature-section .signature-container .message .heart-container .heart {
   body .welcome-section .intro .us-img-container,
   body #welcome-section.section .intro .us-img-container {
     width: 250px;
-    height: 250px;
     margin: 25px auto;
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -582,7 +581,6 @@ body #signature-section .signature-container .message .heart-container .heart {
   body .welcome-section .intro .us-img-container,
   body #welcome-section.section .intro .us-img-container {
     width: 250px;
-    height: 250px;
     margin: 25px auto;
   }
   body .welcome-section .intro .intro-message,
