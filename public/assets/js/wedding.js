@@ -6,6 +6,22 @@ $(document).ready(function(){
     $("#meal").css("padding-left", "0");
   }
 
+  var thanks = function(noOfTimes){
+
+    var thanksHolder = $("#thanks-holder");
+
+    var thanksMessage = $(".thanks");
+
+    for (var i=0 ;i < noOfTimes ;i++){
+      var newThanksMessage = thanksMessage.clone()
+
+      thanksHolder.append(newThanksMessage);
+    }
+
+  }
+
+  thanks(200);
+
   var mapStyles =
     [
       {
