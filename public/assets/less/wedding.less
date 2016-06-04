@@ -2681,7 +2681,21 @@ body {
           a {
             text-decoration: none;
             color: @deco-red;
+
+            &:hover,
+            &:active {
+              color: @deco-light-pink;
+              cursor: pointer;
+            }
           }
+        }
+
+        .fa.fa-frown-o.fa-lg {
+          color: white;
+          font-size: 60px;
+          position: relative;
+          display: block;
+          margin-top: 20px;
         }
 
         &#insta-end {
