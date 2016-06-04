@@ -140,34 +140,43 @@ body #welcome-section.section .intro {
   color: white;
   text-align: center;
 }
-body .welcome-section .intro .intro-lead,
-body #welcome-section.section .intro .intro-lead {
+body .welcome-section .intro .intro-container,
+body #welcome-section.section .intro .intro-container {
   position: relative;
   display: block;
   width: 80%;
   border: 10px double #e9243c;
   color: white;
+  padding: 18px 0;
+  margin: 0 auto 10px auto;
+  background-color: #f7b7c7;
+}
+body .welcome-section .intro .intro-container .intro-lead,
+body #welcome-section.section .intro .intro-container .intro-lead {
+  position: relative;
+  display: block;
+  color: white;
   font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
   font-size: 136px;
-  line-height: 175px;
-  padding: 20px 0;
-  margin: 20px auto;
+  line-height: 120px;
+  padding: 5px 0 10px 0;
+  margin: 0 auto;
   background-color: #f7b7c7;
 }
-body .welcome-section .intro .intro-message,
-body #welcome-section.section .intro .intro-message {
+body .welcome-section .intro .intro-container .intro-message,
+body #welcome-section.section .intro .intro-container .intro-message {
+  position: relative;
+  display: inline;
   color: #656478;
   font-family: 'GillSans', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
-  width: 900px;
-  margin: 70px auto;
 }
-body .welcome-section .intro .intro-message.btwn,
-body #welcome-section.section .intro .intro-message.btwn {
+body .welcome-section .intro .intro-container .intro-message.btwn,
+body #welcome-section.section .intro .intro-container .intro-message.btwn {
   font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -175,27 +184,28 @@ body #welcome-section.section .intro .intro-message.btwn {
   margin: 0 auto;
   padding: 0;
   text-transform: uppercase;
-  width: 900px;
 }
-body .welcome-section .intro .standout-text,
-body #welcome-section.section .intro .standout-text {
+body .welcome-section .intro .intro-container .standout-text,
+body #welcome-section.section .intro .intro-container .standout-text {
+  position: relative;
+  display: inline;
   color: white;
   font-family: 'delicious', 'Lobster', cursive;
   font-weight: normal;
   letter-spacing: 1px;
-  font-size: 90px;
-  line-height: 90px;
-  margin: 32px auto;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 15px auto;
 }
 body .welcome-section .intro .us-img-container,
 body #welcome-section.section .intro .us-img-container {
-  width: 500px;
+  width: 300px;
   height: auto;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -o-border-radius: 50%;
-  margin: 50px auto;
+  margin: 0 auto;
   border: 10px double white;
 }
 body .welcome-section .intro .us-img-container .us-img,
@@ -426,6 +436,13 @@ body #signature-section .signature-container .message .heart-container .heart {
     font-size: 16px;
   }
 }
+@media (max-width: 1120px) {
+  body #thank-you-section .thank-you-container #thanks-holder .thanks {
+    font-size: 190px;
+    line-height: 170px;
+    margin: 20px auto;
+  }
+}
 @media (max-width: 960px) {
   body .section {
     padding: 30px 0;
@@ -457,18 +474,14 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #welcome-section.section {
     padding: 0;
   }
-  body .welcome-section .intro,
-  body #welcome-section.section .intro {
-    padding: 90px 0 30px 0;
-  }
-  body .welcome-section .intro .intro-lead,
-  body #welcome-section.section .intro .intro-lead {
+  body .welcome-section .intro .intro-container .intro-lead,
+  body #welcome-section.section .intro .intro-container .intro-lead {
     font-size: 84px;
     line-height: 84px;
     margin: 0 auto;
   }
-  body .welcome-section .intro .us-img-container,
-  body #welcome-section.section .intro .us-img-container {
+  body .welcome-section .intro .intro-container .us-img-container,
+  body #welcome-section.section .intro .intro-container .us-img-container {
     width: 250px;
     margin: 25px auto;
     border-radius: 50%;
@@ -476,24 +489,31 @@ body #signature-section .signature-container .message .heart-container .heart {
     -webkit-border-radius: 50%;
     -o-border-radius: 50%;
   }
-  body .welcome-section .intro .intro-message,
-  body #welcome-section.section .intro .intro-message {
+  body .welcome-section .intro .intro-container .intro-message,
+  body #welcome-section.section .intro .intro-container .intro-message {
     width: 90%;
-    font-size: 27px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 18px;
     margin: 25px auto 32px auto;
   }
-  body .welcome-section .intro .intro-message.btwn,
-  body #welcome-section.section .intro .intro-message.btwn {
+  body .welcome-section .intro .intro-container .intro-message.btwn,
+  body #welcome-section.section .intro .intro-container .intro-message.btwn {
     width: 90%;
+    font-size: 20px;
+    line-height: 18px;
   }
-  body .welcome-section .intro .standout-text,
-  body #welcome-section.section .intro .standout-text {
-    font-size: 63px;
-    line-height: 63px;
+  body .welcome-section .intro .intro-container .standout-text,
+  body #welcome-section.section .intro .intro-container .standout-text {
+    font-size: 40px;
+    line-height: 40px;
   }
   body .welcome-section {
     padding-top: 50px;
+  }
+  body #thank-you-section .thank-you-container #thanks-holder .thanks {
+    font-size: 150px;
+    line-height: 120px;
+    margin: 15px auto;
   }
 }
 @media (max-width: 775px) {
@@ -530,12 +550,38 @@ body #signature-section .signature-container .message .heart-container .heart {
   body #welcome-section.section .intro {
     padding: 90px 0 30px 0;
   }
-  body .welcome-section .intro .intro-lead,
-  body #welcome-section.section .intro .intro-lead {
+  body .welcome-section .intro .intro-container .intro-lead,
+  body #welcome-section.section .intro .intro-container .intro-lead {
     font-size: 70px;
   }
-  body .welcome-section {
-    padding-top: 50px;
+  body #welcome-section.section .intro {
+    padding-top: 20px;
+  }
+  body #welcome-section.section .intro .intro-container .intro-lead {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0 auto;
+  }
+  body #welcome-section.section .intro .intro-container .us-img-container {
+    width: 250px;
+    margin: 25px auto;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  body #welcome-section.section .intro .intro-container .intro-message {
+    font-size: 15px;
+    line-height: 12px;
+    margin: 18px auto 20px auto;
+  }
+  body #welcome-section.section .intro .intro-container .intro-message.btwn {
+    font-size: 15px;
+    line-height: 12px;
+  }
+  body #welcome-section.section .intro .intro-container .standout-text {
+    font-size: 25px;
+    line-height: 25px;
   }
   body #signature-section .signature-container {
     width: 90%;
@@ -570,46 +616,106 @@ body #signature-section .signature-container .message .heart-container .heart {
   }
   body .welcome-section .intro,
   body #welcome-section.section .intro {
-    padding: 90px 0 30px 0;
+    padding: 30px 0 30px 0;
   }
-  body .welcome-section .intro .intro-lead,
-  body #welcome-section.section .intro .intro-lead {
-    font-size: 70px;
-    line-height: 70px;
+  body .welcome-section .intro .intro-container .intro-lead,
+  body #welcome-section.section .intro .intro-container .intro-lead {
+    font-size: 60px;
+    line-height: 60px;
     margin: 0 auto;
   }
-  body .welcome-section .intro .us-img-container,
-  body #welcome-section.section .intro .us-img-container {
+  body .welcome-section .intro .intro-container .us-img-container,
+  body #welcome-section.section .intro .intro-container .us-img-container {
     width: 250px;
     margin: 25px auto;
   }
-  body .welcome-section .intro .intro-message,
-  body #welcome-section.section .intro .intro-message {
-    width: 90%;
+  body .welcome-section .intro .intro-container .intro-message,
+  body #welcome-section.section .intro .intro-container .intro-message {
+    display: block;
     font-size: 22px;
     line-height: 22px;
     margin: 25px auto 32px auto;
   }
-  body .welcome-section .intro .intro-message.btwn,
-  body #welcome-section.section .intro .intro-message.btwn {
-    width: 90%;
+  body .welcome-section .intro .intro-container .intro-message.btwn,
+  body #welcome-section.section .intro .intro-container .intro-message.btwn {
+    display: block;
     font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
   }
-  body .welcome-section .intro .standout-text,
-  body #welcome-section.section .intro .standout-text {
+  body .welcome-section .intro .intro-container .standout-text,
+  body #welcome-section.section .intro .intro-container .standout-text {
+    display: block;
     font-family: 'delicious', 'Lobster', cursive;
     font-weight: normal;
     font-size: 50px;
     line-height: 50px;
-    margin: 20px 0;
+    margin: 5px 0;
   }
   body .welcome-section {
     padding-top: 40px;
   }
   body #signature-section.section .signature-container {
     width: 90%;
+  }
+  body #thank-you-section .thank-you-container #thanks-holder .thanks {
+    font-size: 80px;
+    line-height: 60px;
+    margin: 12px auto;
+  }
+}
+@media (max-width: 500px) {
+  body #welcome-section.section .intro {
+    padding-top: 15px;
+  }
+  body #welcome-section.section .intro .intro-container .intro-lead {
+    font-size: 40px;
+    line-height: 38px;
+    padding: 0 0 5px 0;
+  }
+  body #welcome-section.section .intro .intro-container .intro-message {
+    display: block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 18px auto 20px auto;
+  }
+  body #welcome-section.section .intro .intro-container .intro-message.btwn {
+    display: block;
+    font-family: 'GillSans-Bold', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  body #welcome-section.section .intro .intro-container .standout-text {
+    display: block;
+    font-family: 'delicious', 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 2px 0;
+    font-size: 40px;
+    line-height: 38px;
+  }
+  body #welcome-section.section .intro .us-img-container {
+    margin: 15px auto;
+    width: 200px;
+  }
+  body #thank-you-section .thank-you-container {
+    width: 100%;
+  }
+  body #thank-you-section .thank-you-container #thanks-holder {
+    width: 100%;
+  }
+  body #thank-you-section .thank-you-container #thanks-holder .thanks {
+    font-size: 55px;
+    line-height: 40px;
+    margin: 12px auto;
+  }
+  body #signature-section.section .signature-container .message .heart-container .fa.fa-heart.fa-3x.heart {
+    margin: 0 6px;
+  }
+  body #signature-section.section .signature-container .message .signature {
+    font-size: 10px;
   }
 }
