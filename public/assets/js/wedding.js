@@ -444,55 +444,57 @@ $(document).ready(function(){
 
 // Ajax call for Naples temp, desc, and weather.
 
-  var noMoreInstas = function() {
-    $("#more-instas").hide();
-    $("#insta-end").show();
-  }
+  // var noMoreInstas = function() {
+  //   $("#more-instas").hide();
+  //   $("#insta-end").show();
+  // }
 
-  var getInstasUrl = "https://api.instagram.com/v1/tags/ritandeclan/media/recent?client_id=8953bce455c5461f910bf9050de3891f";
+  // var getInstasUrl = "https://api.instagram.com/v1/tags/ritandeclan/media/recent?access_token=8953bce455c5461f910bf9050de3891f";
 
-  var getInstas = function() {
+  // var getInstas = function() {
 
-      $.ajax({
-        url: getInstasUrl,
-        type: 'GET',
-        crossDomain: true,
-        dataType: 'jsonp'
-      }).success(function(data) {
+  //     $.ajax({
+  //       url: getInstasUrl,
+  //       type: 'GET',
+  //       crossDomain: true,
+  //       dataType: 'jsonp'
+  //     }).success(function(data) {
 
-          nextUrl = data['pagination']['next_url'];
+  //         debugger;
 
-          if (nextUrl !== undefined) {
-            getInstasUrl = nextUrl;
-          } else {
-            getInstasUrl = null;
-            noMoreInstas();
-          }
+  //         nextUrl = data['pagination']['next_url'];
 
-          instas = data['data'];
+  //         if (nextUrl !== undefined) {
+  //           getInstasUrl = nextUrl;
+  //         } else {
+  //           getInstasUrl = null;
+  //           noMoreInstas();
+  //         }
 
-          for (var i = 0; i < instas.length; i++) {
-            if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
-              $("#insta-gallery").append("<video class='instas' src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
-            } else {
-              $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
-            }
+  //         instas = data['data'];
 
-          }
+  //         for (var i = 0; i < instas.length; i++) {
+  //           if (instas[i]['videos'] !== null && instas[i]['videos'] !== undefined) {
+  //             $("#insta-gallery").append("<video class='instas' src=" + instas[i]['videos']['standard_resolution']['url'] + " margin='5px' border='10px solid white' width='272px' height='272px' controls></video>");
+  //           } else {
+  //             $("#insta-gallery").append("<img class='instas' src="+ instas[i]['images']['standard_resolution']['url'] + "></img>");
+  //           }
 
-        });
+  //         }
 
-  }
+  //       });
 
-  getInstas();
+  // }
 
-  $("#more-instas").on("click", function(){
+  // getInstas();
 
-    if (getInstasUrl !== null && getInstasUrl !== undefined) {
-      getInstas();
-    } 
+  // $("#more-instas").on("click", function(){
 
-  });
+  //   if (getInstasUrl !== null && getInstasUrl !== undefined) {
+  //     getInstas();
+  //   } 
+
+  // });
 
 
   nameEmailReset = function() { 

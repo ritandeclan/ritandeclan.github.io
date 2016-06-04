@@ -4228,6 +4228,13 @@ body #slideshow-section .insta-gallery-container .gallery-message .gallery-instr
   color: white;
   padding-bottom: 15px;
 }
+body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions a,
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions a,
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions a,
+body #slideshow-section .insta-gallery-container .gallery-message .gallery-instructions a {
+  text-decoration: none;
+  color: #e9243c;
+}
 body #insta-gallery-section .slideshow-container .gallery-message#insta-end,
 body #slideshow-section .slideshow-container .gallery-message#insta-end,
 body #insta-gallery-section .insta-gallery-container .gallery-message#insta-end,
