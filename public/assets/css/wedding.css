@@ -4228,6 +4228,34 @@ body #slideshow-section .insta-gallery-container .gallery-message .gallery-instr
   color: white;
   padding-bottom: 15px;
 }
+body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions a,
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions a,
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions a,
+body #slideshow-section .insta-gallery-container .gallery-message .gallery-instructions a {
+  text-decoration: none;
+  color: #e9243c;
+}
+body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions a:hover,
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions a:hover,
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions a:hover,
+body #slideshow-section .insta-gallery-container .gallery-message .gallery-instructions a:hover,
+body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions a:active,
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions a:active,
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions a:active,
+body #slideshow-section .insta-gallery-container .gallery-message .gallery-instructions a:active {
+  color: #f7b7c7;
+  cursor: pointer;
+}
+body #insta-gallery-section .slideshow-container .gallery-message .fa.fa-frown-o.fa-lg,
+body #slideshow-section .slideshow-container .gallery-message .fa.fa-frown-o.fa-lg,
+body #insta-gallery-section .insta-gallery-container .gallery-message .fa.fa-frown-o.fa-lg,
+body #slideshow-section .insta-gallery-container .gallery-message .fa.fa-frown-o.fa-lg {
+  color: white;
+  font-size: 60px;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
 body #insta-gallery-section .slideshow-container .gallery-message#insta-end,
 body #slideshow-section .slideshow-container .gallery-message#insta-end,
 body #insta-gallery-section .insta-gallery-container .gallery-message#insta-end,
