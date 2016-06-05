@@ -4,92 +4,39 @@ $(document).ready(function(){
 
     var thanksHolder = $("#thanks-holder");
 
-    var thanksMessage = $(".thanks");
-
     for (var i=0 ;i < noOfTimes ;i++){
-      var newThanksMessage = thanksMessage.clone()
 
-      thanksHolder.append(newThanksMessage);
+      var thanksMessage = '<h3 class="thanks">Thank you!</h3>';
+
+      thanksHolder.append(thanksMessage);
     }
 
   }
 
   thanks(200);
 
-  // Mobile Menu Open / Close
+  function isScrolledIntoView(elem)
+  {
+    var $elem = $(elem);
+    var $window = $(window);
 
-  // var mobileMenu = $("#mobile-menu");
-  // var headerLinkContainer = $(".header-link-container");
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
 
-  // var open = false;
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
 
-  // removeWindowListeners = function() {
+    return ((elemBottom <= docViewBottom));
+  }
 
-  //   $(document).off("mouseup.document");
+  $(document).on('scroll', function(){
 
-  // }
+    if (isScrolledIntoView('#thanks-holder')) {
 
-  // removeMenuListener = function() {
+      thanks(200);
 
-  //   mobileMenu.off("click.toggle");
+    }
 
-  // }
-
-  // clickOutsideClose = function() {
-
-  //   $(document).on("mouseup.document", function (e) {
-
-  //     if ($(window).width() < 650 && open ) {
-
-  //       headerLinkContainer.slideToggle(
-  //         function(){
-  //           mobileMenuClick();
-  //           open =false;
-  //           removeWindowListeners();
-  //         }
-  //       );
-
-  //     }
-  //   });
-
-  // }
-
-  // mobileMenuClick = function() {
-
-  //   mobileMenu.on("click.toggle", function(){
-
-  //     if (!open) {
-
-  //       headerLinkContainer.slideToggle(
-  //         function(){
-  //           clickOutsideClose();
-  //           open = true;
-  //           removeMenuListener();
-  //         }
-  //       );
-
-  //     } else {
-
-  //       headerLinkContainer.slideToggle(function(){
-  //         open = false;
-  //       });
-
-  //     }
-
-  //   });
-
-  // }
-
-  // mobileMenuClick();
-
-  //   $(window).on('resize', function () {
-
-  //   if ($(window).width() > 650) {
-  //     headerLinkContainer.show();
-  //   }
-
-  // });
-
-
+  })
 
 });
