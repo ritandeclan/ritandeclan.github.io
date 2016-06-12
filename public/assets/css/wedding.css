@@ -4228,6 +4228,13 @@ body #slideshow-section .insta-gallery-container .gallery-message .gallery-instr
   color: white;
   padding-bottom: 15px;
 }
+body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions .white,
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions .white,
+body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions .white,
+body #slideshow-section .insta-gallery-container .gallery-message .gallery-instructions .white {
+  color: white;
+  display: inline;
+}
 body #insta-gallery-section .slideshow-container .gallery-message .gallery-instructions a,
 body #slideshow-section .slideshow-container .gallery-message .gallery-instructions a,
 body #insta-gallery-section .insta-gallery-container .gallery-message .gallery-instructions a,
@@ -4448,6 +4455,9 @@ body #slideshow-section .slideshow-container .gallery-message {
 body #slideshow-section .slideshow-container .gallery-message .gallery-instructions {
   margin-top: 0;
   color: #75d0bb;
+}
+body #slideshow-section .slideshow-container .gallery-message .gallery-instructions .white {
+  color: white;
 }
 body #slideshow-section .slideshow-container .gallery-title {
   margin-bottom: 25px;
